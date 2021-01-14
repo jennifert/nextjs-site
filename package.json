@@ -1,0 +1,38 @@
+{
+  "name": "jenntesolin.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "axe": "axe www.jenntesolin.com --tags wcag2a --save axe-result.json",
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennifert/jenntesolin.com.git"
+  },
+  "author": "Jennifer Tesolin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennifert/jenntesolin.com/issues"
+  },
+  "homepage": "https://github.com/jennifert/jenntesolin.com#readme",
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "^4.1.0",
+    "imagemin-cli": "^6.0.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.6"
+  }
+}
