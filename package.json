@@ -1,6 +1,6 @@
 {
   "name": "jenntesolin.com",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/jennifert/jenntesolin.com.git"
   },
   "author": "Jennifer Tesolin",
-  "license": "ISC",
+  "license": "CC-BY-NC-SA",
   "bugs": {
     "url": "https://github.com/jennifert/jenntesolin.com/issues"
   },
