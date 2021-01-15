@@ -7,17 +7,22 @@ export default function Nav() {
             <ul className="flex justify-between items-center p-8">
                 <li>
                     <Link href="/">
-                        <a className="text-blue-500 no-underline">Home</a>
+                        <a className="text-blue-500 hover:underline">Home</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/about">
+                        <a className="text-blue-500 hover:underline">About</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/blog">
+                        <a className="text-blue-500 hover:underline">Blog</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/">
-                        <a className="text-blue-500 no-underline">Blog</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        <a className="text-blue-500 no-underline">Portfolio</a>
+                        <a className="text-blue-500 hover:underline">Portfolio</a>
                     </Link>
                 </li>
             </ul>

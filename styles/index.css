@@ -23,9 +23,9 @@
     @apply font-semibold;
   }
 
-  /* a {
+  a {
    @apply text-blue-600 underline;
-  } */
+  }
 
 
   body{

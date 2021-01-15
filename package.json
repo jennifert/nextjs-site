@@ -18,7 +18,7 @@
     "url": "git+https://github.com/jennifert/jenntesolin.com.git"
   },
   "author": "Jennifer Tesolin",
-  "license": "CC-BY-NC-SA",
+  "license": "",
   "bugs": {
     "url": "https://github.com/jennifert/jenntesolin.com/issues"
   },
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.1.0",
-    "imagemin-cli": "^6.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.9.6"
