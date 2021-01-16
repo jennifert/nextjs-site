@@ -5,9 +5,9 @@ Twitter: jenntes
 Github: jennifert
 
 /* SITE */
-Last update: 2020-10-16 10:00:22 -0500
+Last update: 2021-01-14 22:00:22 -0500
 Language:English
 DocType: HTML5
 Standards: HTML5, CSS, ES2015
-Components: NPM Build, Next.JS
+Components: NPM Build, Next.JS, Tailwind Css 1.9.x
 Software: VS Code, Affinity Photo, Sketch
