@@ -21,7 +21,7 @@ export default function Nav() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/portfolio">
                         <a className="text-blue-500 hover:underline">Portfolio</a>
                     </Link>
                 </li>
@@ -31,4 +31,4 @@ export default function Nav() {
         </nav>
     )
 }
-// aria-current="page"<- add to make current page active for screen readers
+// TODO: aria-current="page"<- add to make current page active for screen readers

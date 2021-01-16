@@ -3,9 +3,55 @@ https://www.npmjs.com/package/@axe-core/cli
 https://vimeo.com/upgrade - videos go here, under paid plan send to youtube, linkedin
 https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 
-create pages: 
+create pages:
+ - latest blogs: change to component (include on 404 and index page)
+ - move images cdn: https://reactician.com/articles/optimizing-images-with-the-nextjs-image-component https://nextjs.org/docs/basic-features/image-optimization#loader (may need to change from digital ocean) or https://nextjs.org/docs/api-reference/next/image#loader (digital ocean)
+ - text dark mode
  - based on iCloud cookie-notice-template_en.pages
- - privacy page (cookies part of it)
+    - privacy page (cookies part of it)
+ - add profile card to about: https://www.smashingmagazine.com/2020/02/tailwindcss-react-project
+ - change favicon.ico
+ -picture gallery
+    - https://github.com/EllisMin/nextjs-infinite-scroll-ex
+    - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
+    - 
+ - site map:
+     - Add a XML sitemap in /api directory (https://linguinecode.com/post/add-robots-txt-file-sitemaps-nextjs)
+     - https://www.npmjs.com/package/sitemap 
+     - Add your XML sitemap to robots.txt
+        Sitemap: https://jenntesolin.com/sitemap.xml
 
+        User-agent: *
+        Allow: /*
+
+        Disallow: /sitemap.xml
+        Turn a list of urls into a sitemap xml.
+        Options:
+        --help                 Print this text
+        --version              Print the version
+        --validate             Ensure the passed in file is conforms to the sitemap spec
+        --index                Create an index and stream that out. Writes out sitemaps along the way.
+        --index-base-url       Base url the sitemaps will be hosted eg. https://example.com/sitemaps/
+        --limit=45000          Set a custom limit to the items per sitemap
+        --parse                Parse fed xml and spit out config
+        --prepend=sitemap.xml  Prepend the streamed in sitemap configs to sitemap.xml
+        --gzip                 Compress output
+        --single-line-json     When used with parse, it spits out each entry as json rather than the whole json.
+
+        # examples
+
+        Generate a sitemap index file as well as sitemaps
+        npx sitemap --gzip --index --index-base-url https://example.com/path/to/sitemaps/ < listofurls.txt > sitemap-index.xml.gz
+
+        Add to a sitemap
+        npx sitemap --prepend sitemap.xml < listofurls.json
+
+        Turn an existing sitemap into configuration understood by the sitemap library
+        npx sitemap --parse sitemap.xml
+
+        Use XMLLib to validate your sitemap (requires xmllib)
+        npx sitemap --validate sitemap.xml
 Edit Sections
     - Meta component
+
+    
