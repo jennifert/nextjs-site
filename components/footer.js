@@ -6,7 +6,7 @@ export default function Footer() {
                 <nav aria-label="Social Media">
                 <ul className="flex justify-center my-5">
                         <li>
-                            <a className="p-2 m-2" href="https://github.com/jennifert?tab=repositories" target="_blank" rel="nofollow">
+                        <a className="p-2 m-2" href="https://github.com/jennifert?tab=repositories" target="_blank" rel="nofollow noreferrer" aria-label="Github Repositories">
                                 <Image
                                     src="/imgs/social-041-round_github.png"
                                     alt="Github"
@@ -16,7 +16,7 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a className="p-2 m-2" href="https://twitter.com/jenntes" target="_blank" rel="nofollow">
+                        <a className="p-2 m-2" href="https://twitter.com/jenntes" target="_blank" rel="nofollow noreferrer" aria-label="Twitter Feed">
                                 <Image
                                     src="/imgs/social-005-round_twitter.png"
                                     alt="Twitter"
@@ -26,7 +26,7 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a className="p-2 m-2" href="/feed.xml" rel="nofollow">
+                        <a className="p-2 m-2" href="/feed.xml" rel="nofollow noreferrer" aria-label="Site Feed">
                                 <Image
                                 src="/imgs/social-020-round_rss.png"
                                     alt="RSS"
@@ -36,7 +36,7 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a className="p-2 m-2" href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" target="_blank" rel="nofollow">
+                        <a className="p-2 m-2" href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" target="_blank" rel="nofollow noreferrer" aria-label="LinkedIn Profile">
                                 <Image
                                 src="/imgs/social-011-round_linkedin.png"
                                     alt="LinkedIn"
