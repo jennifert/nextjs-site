@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
         <div className="min-h-screen">
             <a href="#main-content" className="sr-only focus:not-sr-only">Skip to main content</a>
             <header className="p-4 shadow rounded bg-white">
-                <h2 className="text-black leading-normal">{SITE_TITLE}</h2>
+                <p className="text-black leading-normal site-title">{SITE_TITLE}</p>
                 <Nav />
             </header>
             <main>{children}</main>

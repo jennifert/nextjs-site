@@ -13,7 +13,7 @@
     @apply text-3xl;
     @apply font-semibold;
   }
-  h2 {
+  h2, .site-title {
     @apply text-2xl;
     @apply font-semibold;
   }

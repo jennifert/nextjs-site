@@ -21,8 +21,9 @@ function HomePage() {
             <Head>
                 <title>{SITE_TITLE}</title>
             </Head>
-            <h1>Home</h1>
-            <section id="latest-portfolio" aria-labelledby="about-portfolio">
+            <h1 id="main-content" className="py-5">Home</h1>
+            <p>Welcome to my website that features my portfolio consisting of Github Repositories and Photography, as well as tutorials that include tips and tricks for web development and at the odd times traveling.</p>
+            <section id="latest-portfolio" aria-labelledby="about-portfolio" className="py-5">
                 <h2 id="about-portfolio">Latest Portfolio Pieces</h2>
                 <div className="flex flex-wrap">
                     {portfoliodata}
