@@ -9,7 +9,7 @@ export default function Nav({ children, href }) {
         <nav aria-label="Site menu">
 
             <ul className="flex justify-between items-center p-8">
-                <li>
+                <li> 
                     {router.pathname === "/" ? <Link href="/"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Home</a></Link>
                         : <Link href="/"><a className="text-blue-700">Home</a></Link>}
                 </li>
@@ -31,3 +31,4 @@ export default function Nav({ children, href }) {
         </nav>
     )
 }
+// TODO: Fix link colour, and current actie styles, poor contrast
