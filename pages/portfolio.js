@@ -18,11 +18,11 @@ const portfoliodata = data.map((data) => {
 export default function Portfolio() {
     return (
         <Layout>
-            <h1>Portfolio</h1>
             <Head>
                 <title>Portfolio - {SITE_TITLE}</title>
             </Head>
 
+            <h1 id="main-content" className="py-5">Portfolio</h1>
             <div className="flex flex-wrap">
                 {portfoliodata}
             </div>

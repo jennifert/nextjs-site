@@ -54,11 +54,10 @@ export default function Footer(props) {
                             </a>
                         </li>
                     </ul>
-                </nav>
+            </nav>
+            <div className="flex justify-center">
                 <p>&copy; {(new Date().getFullYear())} Jennifer Tesolin.</p>
-                {/* <p>Header Image By: <a href="https://unsplash.com/@scottwebb" target="_blank" rel="nofollow">Scott
-                Webb</a></p> */}
-            <p>Icons by Font Awesome Pro 5</p>
-            </footer>
+            </div>
+        </footer>
     )
 }

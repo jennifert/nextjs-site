@@ -1,23 +1,30 @@
 [
     {
         "id": 1,
-        "title": "Jeanette",
-        "summary": "Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.",
-        "repo": "jpenddreth0@census.gov",
-        "demo": "Female"
+        "title": "Slim 3 YAML Search Web Service",
+        "summary": "A web service built using slim 3 and the 'mnapoli/front-yaml' composer library to search in Yaml tags in a folder _post.",
+        "repo": "https://github.com/jennifert/Slim-3-web-Service-with-Sample-TypeScript-client-side-code",
+        "demo": ""
     },
     {
         "id": 2,
-        "title": "John",
-        "summary": "Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.",
-        "repo": "jpenddreth0@census.gov",
-        "demo": "Female"
+        "title": "Archer CMS",
+        "summary": "A github repo that is my MERN project for the Fall 2017 Juno (HackerYou) Fullstack Master class. ",
+        "repo": "https://github.com/jennifert/archer-cms",
+        "demo": ""
     },
     {
         "id": 3,
-        "title": "Jenn",
-        "summary": "Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.",
-        "repo": "jpenddreth0@census.gov",
-        "demo": "Female"
+        "title": "Beginner JavaScript Demos",
+        "summary": "These are just some small demos using JavaScript libraries and technology. Started as a code area for demos I created. Expected to have other JS bits.",
+        "repo": "https://github.com/jennifert/JavaScript-Demos",
+        "demo": ""
+    },
+    {
+        "id": 4,
+        "title": "Github Gists",
+        "summary": "Here are a few helpful gists to get you started on your development journey. Gists include: NPM Build Scripts, Jekyll Config files, and more.",
+        "repo": "https://gist.github.com/jennifert",
+        "demo": ""
     }
 ]

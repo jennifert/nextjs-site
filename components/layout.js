@@ -9,13 +9,13 @@ export default function Layout({ children, home }) {
     <>
         <Meta />
         <div className="min-h-screen">
-            <a href="#main-content" className="sr-only focus:not-sr-only">Skip to main content</a>
+            <span className="sr-only sm:not-sr-only"><a href="#main-content">Skip to main content</a></span>
             <header className="p-4 shadow rounded bg-white">
-                <p className="text-black leading-normal site-title">{SITE_TITLE}</p>
+                <span className="text-black leading-normal site-title">{SITE_TITLE}</span>
                 <Nav />
             </header>
-            <main>{children}</main>
-            <Footer />
+            <main className="p-4">{children}</main>
+            <Footer className="p-4" />
         </div>
     </>
     )

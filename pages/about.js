@@ -6,11 +6,12 @@ import Layout from '../components/layout'
 export default function About() {
     return (
         <Layout>
-            <h1>About</h1>
             <Head>
                 <title>About - {SITE_TITLE}</title>
             </Head>
-            <section>
+
+            <section aria-labelledby="main-content">
+                <h1 id="main-content" className="py-5">About</h1>
                 <p>
                     Hello my name is Jennifer Tesolin, and I have been a professional web developer since 2006 (and as a hobbyist since since 2000). Some web technologies I have worked with include PHP, ASP.net, JavaScript, Wordpress, Digital Ocean, Node, React, and HTML emails.
                 </p>

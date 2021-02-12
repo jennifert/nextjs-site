@@ -6,11 +6,11 @@ import Layout from '../components/layout'
 export default function Blog() {
     return (
         <Layout>
-            <h1>Blog Posts</h1>
             <Head>
                 <title>Blog Posts - {SITE_TITLE}</title>
             </Head>
-            <section>
+            <section aria-labelledby="main-content">
+                <h1 id="main-content" className="py-5">Blog Posts</h1>
                 <p>posts will be here</p>
             </section>
         </Layout>
