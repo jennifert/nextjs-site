@@ -4,7 +4,15 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 import { SITE_TITLE } from '../lib/constants'
 
+import React, { useEffect } from 'react';
+import Prism from "Prismjs";
+import "prismjs/components/prism-java"; //https://prismjs.com/#supported-languages
+import "prismjs/components/prism-jsx.min";
+import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js";
 export default function Layout({ children, home }) {
+    useEffect(() => {
+        Prism.highlightAll();
+    }, []);
     return (
     <>
         <Meta />

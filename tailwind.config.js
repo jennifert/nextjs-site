@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: 'media',
+//   darkMode: 'media',
   future: {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
@@ -24,5 +24,5 @@ module.exports = {
     variants: {
         backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     },
-  plugins: [],
+    plugins: []
 }
