@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+    @apply font-semibold;
+  }
+  h2, .site-title {
+    @apply text-2xl;
+    @apply font-semibold;
+  }
+
+  h3 {
+    @apply text-xl;
+    @apply font-semibold;
+  }
+
+  a {
+   @apply text-blue-700 underline;
+  }
+
+
+  body{
+    @apply text-base;
+  }
+}

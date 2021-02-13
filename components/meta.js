@@ -5,17 +5,38 @@ export default function Meta() {
   return (
     <Head>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width" />
-      {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" /> */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+      />
+      <meta name="description" content="Description" />
+      <meta name="keywords" content="Keywords" />
+      <title>Next.js PWA Example</title>
+
+      <link rel="manifest" href="/manifest.json" />
+      <link
+        href="/icons/favicon-16x16.png"
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+      />
+      <link
+        href="/icons/favicon-32x32.png"
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+      />
+      <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+      <meta name="theme-color" content="#317EFB" />
+      {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
 
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
       <meta name="description" content={`${SITE_TITLE}'s website for beginners.`} />
       <link type="text/plain" rel="author" href="/humans.txt" />
-      
-      {/* TODO: COme back and fix 
-      
+
     <link rel="canonical" href="CURRENT LINK">
     <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <meta name="application-name" content={`${SITE_TITLE}'s website for beginners.`} />

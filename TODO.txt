@@ -3,34 +3,28 @@ https://www.npmjs.com/package/@axe-core/cli
 https://vimeo.com/upgrade - videos go here, under paid plan send to youtube, linkedin
 https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 
+
+
 To Fix:
 https://jenntesolin-com-7ny3x.ondigitalocean.app/
-Failures: No `<meta name="theme-color">` tag found.
-Failures: Manifest does not have a PNG icon of at least 512px
-Manifest doesn't have a maskable icon (https://web.dev/maskable-icon-audit/)
-Does not provide a valid apple-touch-icon
-Does not register a service worker that controls page and start_url
-start_url does not respond with a 200 when offline
-Timed out waiting for start_url to respond.
-https://web.dev/works-offline/
-
+move app into progresssive ode with latest tailwind.
+update axe ccode to save to tests/axe: axe www.deque.com --dir ./axe-results/
+remove colour from link in menu page. its already in styles
 <p>Header Image By: <a href="https://unsplash.com/@scottwebb" target="_blank" rel="nofollow">Scott
                 Webb</a></p> 
                 <p>Icons by Font Awesome Pro 5</p>
 
+ - site styles: https://tailwindcss.com/docs/background-color
+https://tailwindcss.com/docs/text-color
+https://tailwindcss.com/docs/font-size
+
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
     - make analytis program: https://plausible.io/
- - add profile card to about: https://www.smashingmagazine.com/2020/02/tailwindcss-react-project
  - change favicon.ico
  -picture gallery
-    - https://github.com/EllisMin/nextjs-infinite-scroll-ex
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
 Edit Sections
-    - Meta component o rsimilar to layout head here: https://github.com/ondrabus/personal-site/blob/master/pages/fetch-api-cheatsheet.tsx
+    - Meta component or similar to layout head here: https://github.com/ondrabus/personal-site/blob/master/pages/fetch-api-cheatsheet.tsx
 
     /"parcel": "^2.0.0-beta.1",
-
-Workoffline:
-    https://github.com/hanford/next-offline
-https://github.com/vercel/next.js/tree/canary/examples/with-next-offline
