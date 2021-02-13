@@ -22,7 +22,7 @@ export default function Portfolio() {
                 <title>Portfolio - {SITE_TITLE}</title>
             </Head>
 
-            <h1 id="main-content" className="py-5">Portfolio</h1>
+            <h1 id="main-content">Portfolio</h1>
             <div className="flex flex-wrap">
                 {portfoliodata}
             </div>

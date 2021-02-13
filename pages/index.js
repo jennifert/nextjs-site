@@ -21,7 +21,7 @@ function HomePage() {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <h1 id="main-content" className="py-5">Home</h1>
+      <h1 id="main-content">Home</h1>
       <p>Welcome to my website that features my portfolio consisting of Github Repositories and Photography, as well as tutorials that include tips and tricks for web development and at the odd times traveling.</p>
 
       <p>

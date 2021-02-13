@@ -11,7 +11,7 @@ export default function Gallery() {
             </Head>
 
             <section aria-labelledby="main-content">
-                <h1 id="main-content" className="py-5">Gallery</h1>
+                <h1 id="main-content">Gallery</h1>
                 <p>
                     Photo gallery will be here.
                 </p>

@@ -1,34 +1,40 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import Form from '../components/form'
+import { SITE_TITLE } from '../lib/constants'
 
 export default function Nav({ children, href }) {
-    const router = useRouter()
+    // const router = useRouter()
 
     return (
-        <nav aria-label="Site menu">
+        <nav aria-label="Site menu" className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-indigo-500 mb-3">
+            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+                <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+                    <p className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white focus:ring-2 focus:ring-white">
+                        {SITE_TITLE}
+                    </p>
+                </div>
+                <div className="lg:flex flex-grow items-center" id="menu-items">
 
-            <ul className="flex justify-between items-center p-8">
-                <li> 
-                    {router.pathname === "/" ? <Link href="/"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Home</a></Link>
-                        : <Link href="/"><a className="text-blue-700">Home</a></Link>}
-                </li>
-                <li>
-                    {router.pathname === "/blog" ? <Link href="/blog"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Blog</a></Link>
-                        : <Link href="/blog"><a className="text-blue-700">Blog</a></Link>}
-                </li>
-                <li>
-                    {router.pathname === "/gallery" ? <Link href="/gallery"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Gallery</a></Link>
-                        : <Link href="/gallery"><a className="text-blue-700">Gallery</a></Link>}
-                </li>
-                <li>
-                    {router.pathname === "/portfolio" ? <Link href="/portfolio"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Portfolio</a></Link>
-                        : <Link href="/portfolio"><a className="text-blue-700">Portfolios</a></Link>}
-                </li>
-            </ul>
+                    <ul className="flex flex-col lg:flex-row list-none mr-auto">
+                        <li className="nav-item">
+                            <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Home</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/blog"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Blog</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/gallery"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Gallery</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/portfolio"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Portfolios</a></Link>
+                        </li>
+                    </ul>
 
-            <Form />
+                    <Form />
+                </div>
+
+            </div>
         </nav>
     )
 }
-// TODO: Fix link colour, and current actie styles, poor contrast

@@ -24,7 +24,7 @@ export default function Blog() {
                 <title>Blog Posts - {SITE_TITLE}</title>
             </Head>
             <section aria-labelledby="main-content">
-                <h1 id="main-content" className="py-5">Blog Posts</h1>
+                <h1 id="main-content">Blog Posts</h1>
                 <p>posts will be here</p>
                 <p>
                     body copy blah blah.
@@ -36,7 +36,7 @@ export default function Blog() {
                     </code>
                 </pre>
                 <p>More blah blah blah</p>
-                <pre class="language-java" >
+                <pre className="language-java" >
                     <code>
                         {code2}
                     </code>

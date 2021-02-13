@@ -17,6 +17,17 @@ remove colour from link in menu page. its already in styles
  - site styles: https://tailwindcss.com/docs/background-color
 https://tailwindcss.com/docs/text-color
 https://tailwindcss.com/docs/font-size
+https://tailwindcss.com/docs/customizing-colors
+
+
+if blog is md: https://github.com/tailwindlabs/tailwindcss-typography
+
+<div id="errors" className="bg-red-500"></div>
+
+<li className="nav-item">
+                            {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
+                                : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
+                        </li>
 
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)

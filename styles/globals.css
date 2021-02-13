@@ -17,11 +17,6 @@
     @apply font-semibold;
   }
 
-  a {
-   @apply text-blue-700 underline;
-  }
-
-
   body{
     @apply text-base;
   }
