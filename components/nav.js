@@ -18,16 +18,16 @@ export default function Nav({ children, href }) {
 
                     <ul className="flex flex-col lg:flex-row list-none mr-auto">
                         <li className="nav-item">
-                            <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Home</a></Link>
+                            <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Home</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/blog"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Blog</a></Link>
+                            <Link href="/blog"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Blog</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/gallery"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Gallery</a></Link>
+                            <Link href="/gallery"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Gallery</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/portfolio"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline focus:ring-2 focus:ring-white">Portfolios</a></Link>
+                            <Link href="/portfolio"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Portfolios</a></Link>
                         </li>
                     </ul>
 

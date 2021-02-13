@@ -22,6 +22,7 @@ module.exports = {
             backgroundColor: ['responsive', 'hover', 'focus', 'active'],
             textDecoration: ['active'],
             textColor: ['visited'],
+            boxShadow: ['responsive', 'hover', 'focus'],
         },
     },
     plugins: [],
