@@ -37,6 +37,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.1.1"
+    "@axe-core/cli": "^4.1.1",
+    "webpack": "^4.46.0"
   }
 }
