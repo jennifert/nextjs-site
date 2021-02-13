@@ -23,7 +23,7 @@ function HomePage() {
             </Head>
             <h1 id="main-content" className="py-5">Home</h1>
             <p>Welcome to my website that features my portfolio consisting of Github Repositories and Photography, as well as tutorials that include tips and tricks for web development and at the odd times traveling.</p>
-            <p><a href="/blog/2021/sample">Check out this sample blog post.</a> It uses prim highlighting.</p>
+            <p><Link href="/blog">Check out this sample blog post.</Link> It uses prisimjs highlighting.</p>
             <section id="latest-portfolio" aria-labelledby="about-portfolio" className="py-5">
                 <h2 id="about-portfolio">Latest Portfolio Pieces</h2>
                 <div className="flex flex-wrap">
