@@ -14,12 +14,12 @@ export default function Nav({ children, href }) {
                         : <Link href="/"><a className="text-blue-700">Home</a></Link>}
                 </li>
                 <li>
-                    {router.pathname === "/about" ? <Link href="/about"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">About</a></Link>
-                        : <Link href="/about"><a className="text-blue-700">About</a></Link>}
-                </li>
-                <li>
                     {router.pathname === "/blog" ? <Link href="/blog"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Blog</a></Link>
                         : <Link href="/blog"><a className="text-blue-700">Blog</a></Link>}
+                </li>
+                <li>
+                    {router.pathname === "/gallery" ? <Link href="/gallery"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Gallery</a></Link>
+                        : <Link href="/gallery"><a className="text-blue-700">Gallery</a></Link>}
                 </li>
                 <li>
                     {router.pathname === "/portfolio" ? <Link href="/portfolio"><a className="px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base" aria-current="page">Portfolio</a></Link>

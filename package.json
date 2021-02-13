@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "npm run build && next export -o _static",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "axe": "axe www.jenntesolin.com --tags wcag2a --save axe-result.json",
+    "axe": "axe jenntesolin-com-7ny3x.ondigitalocean.app --tags wcag2a --save axe-result.json",
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
   },
