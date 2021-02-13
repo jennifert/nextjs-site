@@ -3,7 +3,7 @@ const runtimeCaching = require('next-pwa/cache')
 
 const sitemap = require('nextjs-sitemap-generator');
 sitemap({
-    baseUrl: 'https://jenntesolin-com-7ny3x.ondigitalocean.app',
+    baseUrl: 'https://jenntesolin-com-sff2s.ondigitalocean.app/',
     pagesDirectory: __dirname + "/pages",
     targetDirectory: '_static/'
 });

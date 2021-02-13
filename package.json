@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && mv _static/sitemap.xml public/sitemap.xml",
     "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "export": "npm run build && next export -o _static",
     "test": "echo \"Error: no test specified\" && exit 1",
