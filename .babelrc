@@ -1,0 +1,25 @@
+{
+    "presets": [
+        "next/babel"
+    ],
+    "plugins":[
+        [
+            "prismjs",
+            {
+                "languages": [
+                    "javascript",
+                    "css",
+                    "html",
+                    "java",
+                    "php"
+                ],
+                "plugins": [
+                    "line-numbers",
+                    "show-language"
+                ],
+                "theme": "okaidia",
+                "css": true
+            }
+        ]
+    ]
+}

@@ -3,15 +3,12 @@ import Meta from '../components/meta'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
-import React, { useEffect } from 'react';
-import Prism from "prismjs";
-import "prismjs/components/prism-java"; //https://prismjs.com/#supported-languages
-import "prismjs/components/prism-jsx.min";
-import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"; //TODO: look into seeing of this can be removed.
+// import React, { useEffect } from 'react';
+// import Prism from "prismjs";
 export default function Layout({ children, home }) {
-    useEffect(() => {
-        Prism.highlightAll();
-    }, []);
+    // useEffect(() => {
+    //     Prism.highlightAll();
+    // }, []);
     return (
     <>
         <Meta />

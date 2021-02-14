@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
+import { PrismCode } from '../components/prism'
 
 const code = `
 const foo = 'foo';
@@ -11,10 +12,10 @@ console.log(foo + bar);
 
 const code2 = `
 class HelloWorld {
-            public static void main(String[] args) {
-                System.out.println("Hello, World!");
-            }
-        }
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
 `.trim();
 
 export default function Blog() {
@@ -30,17 +31,27 @@ export default function Blog() {
                     body copy blah blah.
                 </p>
 
-                <pre className="line-numbers">
+                {/* <pre className="line-numbers">
                     <code className="language-js">
                         {code}
                     </code>
-                </pre>
+                </pre> */}
+                <PrismCode
+                    code={code}
+                    language="js"
+                    plugins={["line-numbers"]}
+                />
                 <p>More blah blah blah</p>
-                <pre className="language-java" >
-                    <code>
+                {/* <pre className="line-numbers">
+                    <code className="language-java">
                         {code2}
                     </code>
-                </pre>
+                </pre> */}
+                <PrismCode
+                    code={code2}
+                    language="java"
+                    plugins={["line-numbers"]}
+                />
             </section>
         </Layout>
     )

@@ -10,7 +10,7 @@ export default function Footer(props) {
                 <nav aria-label="Social Media">
                 <ul className="flex justify-center my-5">
                         <li>
-                        <a className="p-2 m-2" href="https://github.com/jennifert?tab=repositories" target="_blank" rel="nofollow noreferrer" aria-label="Github Repositories">
+                        <a className="p-2 m-2" href="https://github.com/jennifert?tab=repositories" rel="nofollow noreferrer" aria-label="Github Repositories">
                             <Image
                                 loader={socialLoader}
                                 src="/github-square_nmpyub.svg"
@@ -21,7 +21,7 @@ export default function Footer(props) {
                             </a>
                         </li>
                         <li>
-                        <a className="p-2 m-2" href="https://twitter.com/jenntes" target="_blank" rel="nofollow noreferrer" aria-label="Twitter Feed">
+                        <a className="p-2 m-2" href="https://twitter.com/jenntes" rel="nofollow noreferrer" aria-label="Twitter Feed">
                             <Image
                                 loader={socialLoader}
                                 src="/twitter-square_zgyods.svg"
@@ -43,7 +43,7 @@ export default function Footer(props) {
                             </a>
                         </li>
                         <li>
-                        <a className="p-2 m-2" href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" target="_blank" rel="nofollow noreferrer" aria-label="LinkedIn Profile">
+                        <a className="p-2 m-2" href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" rel="nofollow noreferrer" aria-label="LinkedIn Profile">
                             <Image
                                 loader={socialLoader}
                                 src="/linkedin_t8xmbz.svg"

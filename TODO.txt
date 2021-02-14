@@ -1,37 +1,36 @@
-https://www.npmjs.com/package/@axe-core/cli
-
-https://vimeo.com/upgrade - videos go here, under paid plan send to youtube, linkedin
+https://vimeo.com/upgrade - videos go here, under paid plan send to YouTube, LinkedIn
 https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 
-
+https://jenntesolin-com-sff2s.ondigitalocean.app/
 
 To Fix:
-https://jenntesolin-com-7ny3x.ondigitalocean.app/
-move app into progresssive ode with latest tailwind.
-update axe ccode to save to tests/axe: axe www.deque.com --dir ./axe-results/
+update axe code to save to tests/axe: axe www.deque.com --dir ./axe-results/
 remove colour from link in menu page. its already in styles
-<p>Header Image By: <a href="https://unsplash.com/@scottwebb" target="_blank" rel="nofollow">Scott
-                Webb</a></p> 
-                <p>Icons by Font Awesome Pro 5</p>
 
  - site styles: https://tailwindcss.com/docs/background-color
 https://tailwindcss.com/docs/text-color
 https://tailwindcss.com/docs/font-size
 https://tailwindcss.com/docs/customizing-colors
 
+- customize error page (500, etc.): https://nextjs.org/docs/advanced-features/custom-error-page#customizing-the-error-page
+
+if use fetch: https://developerhandbook.com/react/getting-started-nextjs/
 
 if blog is md: https://github.com/tailwindlabs/tailwindcss-typography
 
-<div id="errors" className="bg-red-500"></div>
-
+Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
                                 : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
                         </li>
-
+- automate rss/atom generation
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
-    - make analytis program: https://plausible.io/
+    - legal: Icons by Font Awesome Pro 5
+    - make analytic program: https://plausible.io/: 
+        https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
+        https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
+        
  - change favicon.ico
  -picture gallery
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
@@ -39,3 +38,16 @@ Edit Sections
     - Meta component or similar to layout head here: https://github.com/ondrabus/personal-site/blob/master/pages/fetch-api-cheatsheet.tsx
 
     /"parcel": "^2.0.0-beta.1",
+
+    Fix if time:
+    - https://web.dev/offline-start-url/?utm_source=lighthouse&utm_medium=devtools
+    - https://web.dev/maskable-icon-audit/?utm_source=lighthouse&utm_medium=devtoolss
+
+    Removed code:
+
+// import "prismjs/components/prism-java"; //https://prismjs.com/#supported-languages
+// import "prismjs/components/prism-jsx.min";
+// import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"; 
+
+Above replaced with help from:
+https://betterstack.dev/blog/code-highlighting-in-react-using-prismjs/

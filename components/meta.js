@@ -2,34 +2,34 @@ import Head from 'next/head'
 import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL } from '../lib/constants'
 
 export default function Meta() {
-  return (
-    <Head>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta
-        name="viewport"
-        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-      />
-      <meta name="description" content="Description" />
-      <meta name="keywords" content="Keywords" />
-      <title>Next.js PWA Example</title>
+    return (
+        <Head>
+            <html lang="en" />
+            <meta charSet="utf-8" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width" />
+            <meta name="description" content={`${SITE_TITLE}'s website for beginners.`} />
+            <meta name="keywords" content="Keywords" />
+            <link type="text/plain" rel="author" href="/humans.txt" />
+            <title>JennTesolin.com</title>
 
-      <link rel="manifest" href="/manifest.json" />
-      <link
-        href="/icons/favicon-16x16.png"
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-      />
-      <link
-        href="/icons/favicon-32x32.png"
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-      />
-      <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-      <meta name="theme-color" content="#317EFB" />
-      {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
+            <link rel="manifest" href="/manifest.json" />
+            <link
+                href="/icons/favicon-16x16.png"
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+            />
+            <link
+                href="/icons/favicon-32x32.png"
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+            />
+            <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+            <meta name="theme-color" content="#317EFB" />
+            <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+            {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
 
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,6 +57,6 @@ export default function Meta() {
 
   <meta name="theme-color" content="#fafafa">
       */}
-    </Head>
-  )
+        </Head>
+    )
 }
