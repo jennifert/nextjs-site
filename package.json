@@ -25,10 +25,7 @@
   },
   "homepage": "https://github.com/jennifert/jenntesolin.com#readme",
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^10.0.7",
     "autoprefixer": "^10.0.4",
-    "gray-matter": "^4.0.2",
     "next": "latest",
     "next-pwa": "^5.0.5",
     "postcss": "^8.1.10",

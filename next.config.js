@@ -4,9 +4,9 @@ const runtimeCaching = require('next-pwa/cache')
 const generateSitemap = require('./scripts/generate-sitemap');
 const generateFeed = require('./scripts/generate-rss');
 
-const withMDX = require('@next/mdx')({
-    extension: /\.(md|mdx)?$/,
-})
+// const withMDX = require('@next/mdx')({
+//     extension: /\.(md|mdx)?$/,
+// })
 
 module.exports = withPWA({
     pwa: {
@@ -24,7 +24,7 @@ module.exports = withPWA({
         }
         return config;
     },
-}),
-    withMDX({
-        pageExtensions: ['js', 'jsx', 'mdx'],
-    })
+})
+    // ,withMDX({
+    //     pageExtensions: ['js', 'jsx', 'mdx'],
+    // })
