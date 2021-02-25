@@ -13,7 +13,7 @@ export default function Custom404() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">404 - Page not Found</h1>
                 <p>
-                    Sorry, the page you are looking for cannot be found. IF you came here from a link, Feel free to <a href="mailto:me@jenntesolin.com">send me an email</a> from the page you arrived from. Please try the search box above
+                    Sorry, the page you are looking for cannot be found. If you came here from a link, Feel free to <a href="mailto:me@jenntesolin.com">send me an email</a> from the page you arrived from. Please try the search box above
                 </p>
             </section>
             

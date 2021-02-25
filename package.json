@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp _static/sitemap.xml public/sitemap.xml",
+    "build": "next build",
     "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "export": "npm run build && next export -o _static",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "axe": "axe jenntesolin-com-7ny3x.ondigitalocean.app --tags wcag2a --save axe-result.json",
+    "axe": "axe jenntesolin-com-sff2s.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
   },
@@ -25,11 +25,12 @@
   },
   "homepage": "https://github.com/jennifert/jenntesolin.com#readme",
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.7",
     "autoprefixer": "^10.0.4",
     "gray-matter": "^4.0.2",
     "next": "latest",
     "next-pwa": "^5.0.5",
-    "nextjs-sitemap-generator": "^1.3.0",
     "postcss": "^8.1.10",
     "prismjs": "^1.23.0",
     "react": "^17.0.1",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@axe-core/cli": "^4.1.1",
     "babel-plugin-prismjs": "^2.0.1",
+    "globby": "^11.0.2",
     "webpack": "^4.46.0"
   }
 }

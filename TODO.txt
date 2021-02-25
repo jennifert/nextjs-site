@@ -1,29 +1,21 @@
 https://vimeo.com/upgrade - videos go here, under paid plan send to YouTube, LinkedIn
 https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 
-https://jenntesolin-com-sff2s.ondigitalocean.app/
+https://jenntesolin-com-sff2s.ondigitalocean.app
 
 To Fix:
-update axe code to save to tests/axe: axe www.deque.com --dir ./axe-results/
-remove colour from link in menu page. its already in styles
-
- - site styles: https://tailwindcss.com/docs/background-color
-https://tailwindcss.com/docs/text-color
-https://tailwindcss.com/docs/font-size
-https://tailwindcss.com/docs/customizing-colors
 
 - customize error page (500, etc.): https://nextjs.org/docs/advanced-features/custom-error-page#customizing-the-error-page
 
 if use fetch: https://developerhandbook.com/react/getting-started-nextjs/
 
-if blog is md: https://github.com/tailwindlabs/tailwindcss-typography
+if blog is md: https://github.com/tailwindlabs/tailwindcss-typography https://mdxjs.com/getting-started/next 
 
 Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
                                 : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
                         </li>
-- automate rss/atom generation
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
     - legal: Icons by Font Awesome Pro 5
@@ -37,17 +29,15 @@ Show Via aria active page (will need to fix when un active nav styles more final
 Edit Sections
     - Meta component or similar to layout head here: https://github.com/ondrabus/personal-site/blob/master/pages/fetch-api-cheatsheet.tsx
 
-    /"parcel": "^2.0.0-beta.1",
-
     Fix if time:
     - https://web.dev/offline-start-url/?utm_source=lighthouse&utm_medium=devtools
     - https://web.dev/maskable-icon-audit/?utm_source=lighthouse&utm_medium=devtoolss
 
-    Removed code:
 
-// import "prismjs/components/prism-java"; //https://prismjs.com/#supported-languages
-// import "prismjs/components/prism-jsx.min";
-// import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"; 
-
-Above replaced with help from:
+help from:
 https://betterstack.dev/blog/code-highlighting-in-react-using-prismjs/
+
+ - site styles: https://tailwindcss.com/docs/background-color
+https://tailwindcss.com/docs/text-color
+https://tailwindcss.com/docs/font-size
+https://tailwindcss.com/docs/customizing-colors

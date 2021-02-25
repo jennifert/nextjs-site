@@ -3,12 +3,7 @@ import Meta from '../components/meta'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
-// import React, { useEffect } from 'react';
-// import Prism from "prismjs";
 export default function Layout({ children, home }) {
-    // useEffect(() => {
-    //     Prism.highlightAll();
-    // }, []);
     return (
     <>
         <Meta />

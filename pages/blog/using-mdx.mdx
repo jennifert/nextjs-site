@@ -1,8 +1,9 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import { SITE_TITLE } from '../lib/constants'
-import Layout from '../components/layout'
-import { PrismCode } from '../components/prism'
+---
+title: 'This is a Draft Post'
+excerpt: 'This is an example of a draft post. It is only visible in the local dev environment.'
+date: '2020-03-18T05:35:07.322Z'
+draft: true
+---
 
 const code = `
 const foo = 'foo';
@@ -18,9 +19,8 @@ class HelloWorld {
 }
 `.trim();
 
-export default function Blog() {
-    return (
-        <Layout>
+export default () => (
+ <Layout>
             <Head>
                 <title>Blog Posts - {SITE_TITLE}</title>
             </Head>
@@ -31,17 +31,10 @@ export default function Blog() {
                     body copy blah blah.
                 </p>
                 <PrismCode
-                    code={code}
-                    language="js"
-                    plugins={["line-numbers"]}
-                />
-                <p>More blah blah blah</p>
-                <PrismCode
                     code={code2}
                     language="java"
                     plugins={["line-numbers"]}
                 />
             </section>
         </Layout>
-    )
-}
+)

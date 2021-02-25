@@ -1,12 +1,12 @@
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
-const sitemap = require('nextjs-sitemap-generator');
-sitemap({
-    baseUrl: 'https://jenntesolin-com-sff2s.ondigitalocean.app',
-    pagesDirectory: __dirname + "/pages",
-    targetDirectory: '_static/'
-});
+const generateSitemap = require('./scripts/generate-sitemap');
+const generateFeed = require('./scripts/generate-rss');
+
+const withMDX = require('@next/mdx')({
+    extension: /\.(md|mdx)?$/,
+})
 
 module.exports = withPWA({
     pwa: {
@@ -17,4 +17,14 @@ module.exports = withPWA({
         loader: 'cloudinary',
         path: 'https://res.cloudinary.com/dkeghqshh/image/upload/v1612975699/',
     },
-})
+    webpack: (config, { isServer }) => {
+        if (isServer) {
+            generateSitemap();
+            generateFeed();
+        }
+        return config;
+    },
+}),
+    withMDX({
+        pageExtensions: ['js', 'jsx', 'mdx'],
+    })

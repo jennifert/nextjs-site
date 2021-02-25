@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL } from '../lib/constants'
-
+import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL, SITE_DESCRIPTION, SITE_DOMAIN } from '../lib/constants'
+//TODO: try to use SIte COnstant File fir all fields. Then be sure they are properly in the site as well
 export default function Meta() {
     return (
         <Head>
@@ -8,10 +8,11 @@ export default function Meta() {
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width" />
-            <meta name="description" content={`${SITE_TITLE}'s website for beginners.`} />
+            <meta name="description" content={SITE_DESCRIPTION} />
             <meta name="keywords" content="Keywords" />
             <link type="text/plain" rel="author" href="/humans.txt" />
-            <title>JennTesolin.com</title>
+            <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+            <title>{SITE_TITLE}</title>
 
             <link rel="manifest" href="/manifest.json" />
             <link
@@ -28,7 +29,6 @@ export default function Meta() {
             />
             <link rel="apple-touch-icon" href="/apple-icon.png"></link>
             <meta name="theme-color" content="#317EFB" />
-            <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
             {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
 
       <link rel="manifest" href="/site.webmanifest" />
