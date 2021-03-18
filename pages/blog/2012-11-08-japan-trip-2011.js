@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-// import { PrismCode } from '../../components/prism'
+import { PrismCode } from '../../components/prism'
 
 // const code = `
 // const foo = 'foo';
@@ -10,13 +10,13 @@ import Layout from '../../components/layout'
 // console.log(foo + bar);
 // `.trim();
 
-// const code2 = `
-// class HelloWorld {
-//     public static void main(String[] args) {
-//         System.out.println("Hello, World!");
-//     }
-// }
-// `.trim();
+const code2 = `
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+`.trim();
 
 export default function VacationPlan() {
     const POST_TITLE = 'Planning a vacation to Japan';
@@ -51,20 +51,20 @@ export default function VacationPlan() {
                 <h2>Save money while traveling</h2>
                 <p>Quick note of approximate Yen (<strong>¥</strong>) to dollars (Canadian and United States). At the time of writing $1 = 80<strong>¥</strong> (approx). Also, taxes is about 5% (based on <a href="http://www.lonelyplanet.com/japan/practical-information/money-costs" rel="nofollow noreferrer">Lonely Planet practical information</a>).</p>
                 <p>The easiest way to save money by traveling is to buy your meals from one of the many convenience stores. Most times you can get a full meal for about 500-700<strong>¥</strong> (or $5-$7 in Canadian Currency). There are also small family owned shops if you do not buy meals from convenience stores. These stores have a curtain across part of the booth and what looks like a vending machine (it dispenses your order ticket) and are usually 900¥ or less.</p>
-                <p>Buy a small container of laundry detergent before you go, some times can be washed in the sink.</p>
+                <p>Buy a small container of laundry detergent before you go, some times items can be washed in the sink.</p>
                 <p>Wait as long as possible to buy souvenirs, and try to research beforehand, for items like electronics. Try using search engines or places like yahoo answers - there are many people who can tell the names of great stores or hidden locations.</p>
-                <p>Use a travel card (such as <a href="http://www.yak.ca/yak-travel-card" rel="nofollow noreferrer">Yak's</a>) for emergencies, and try installing programs like <a href="http://www.skype.com/intl/en-us/prices/" rel="nofollow noreferrer">Skype</a>. Skype has pay as you go options, or monthly plans, and many hotels have free Internet access, although, you may feel safer with a program like <a href="http://www.raynersoftware.com/netshade/" rel="nofollow noreferrer">Netshade</a> which can use vpn and proxy connections to protect yourself online. If you use a smart phone over seas, please be sure to turn on the roaming setting,and turn off data.</p>
+                <p>Use a travel card (such as <a href="http://www.yak.ca/yak-travel-card" rel="nofollow noreferrer">Yak's</a>) for emergencies, and try installing programs like <a href="http://www.skype.com/intl/en-us/prices/" rel="nofollow noreferrer">Skype</a>. Skype has pay as you go options, or monthly plans, and many hotels have free Internet access, although, you may feel safer with a <a href="https://www.howtogeek.com/133680/htg-explains-what-is-a-vpn/" rel="nofollow noreferrer">VPN program</a> which can be used to protect yourself online. If you use a smart phone over seas, please be sure to turn on the roaming setting, and turn off data.</p>
                 <h2>References and more information</h2>
                 <p><a title="View book on Amazon" href="http://www.amazon.ca/gp/product/1741042313/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741042313&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japanese Phrasebook</a></p>
                 <p><a href="http://www.amazon.ca/gp/product/1741790425/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741790425&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japan</a></p>
                 <p><a title="Plan tours and more" href="http://www.jtb-sunrisetours.jp/" rel="nofollow noreferrer">Sunrise Tours</a></p>
                 <p><a href="http://www.voyage.gc.ca/register/" rel="nofollow noreferrer">Registration of Canadians Abroad</a></p>
                 <p><a title="Travel information for Canadians" href="http://www.voyage.gc.ca/countries_pays/report_rapport-eng.asp?id=140000" rel="nofollow noreferrer">Japan Travel Advice and Advisory</a> from the Government of Canada</p>
-                {/* <PrismCode
+                <PrismCode
                     code={code2}
                     language="java"
                     plugins={["line-numbers"]}
-                /> */}
+                />
             </section>
         </Layout>
     )
