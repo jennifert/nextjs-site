@@ -9,8 +9,6 @@ To Fix:
 
 if use fetch: https://developerhandbook.com/react/getting-started-nextjs/
 
-if blog is md: https://github.com/tailwindlabs/tailwindcss-typography https://mdxjs.com/getting-started/next 
-
 Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
@@ -22,7 +20,7 @@ Show Via aria active page (will need to fix when un active nav styles more final
     - make analytic program: https://plausible.io/: 
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
-        
+ - blog posts  
  - change favicon.ico
  -picture gallery
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery

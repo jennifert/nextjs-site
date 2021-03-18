@@ -26,6 +26,7 @@
   "homepage": "https://github.com/jennifert/jenntesolin.com#readme",
   "dependencies": {
     "autoprefixer": "^10.0.4",
+    "html-react-parser": "^1.2.4",
     "next": "latest",
     "next-pwa": "^5.0.5",
     "postcss": "^8.1.10",

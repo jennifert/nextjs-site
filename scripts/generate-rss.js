@@ -23,6 +23,7 @@ const generateFeed = async () => {
         'posts/*.mdx'
     ])
 
+    
     const RSS_FEED = `
       <?xml version="1.0" encoding="utf-8"?>
       <rss version="2.0">
@@ -36,7 +37,6 @@ const generateFeed = async () => {
             <atom:link href="${`${SITE_DOMAIN}/feed.xml`}" rel="self" type="application/rss+xml"/>
             <language>en</language>
             <copyright>${COPYRIGHT}</copyright>
-        </channel>
           ${pages
             .map(page => {
                 const path = page
@@ -57,7 +57,8 @@ const generateFeed = async () => {
                     </item>
                   `
             })
-            .join('')}
+        .join('')}
+        </channel>
       </rss>
   `
             /*
@@ -65,6 +66,34 @@ const generateFeed = async () => {
                         <description>{{ post.content | xml_escape }}</description>
                         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
                         <category>{{ tag | xml_escape }}</category>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JennTesolin.com</title>
+    <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
+    <description>JennTesolin.com's website for beginners.</description>
+    <pubDate>Thu, 18 Mar 2021 20:48:21 GMT</pubDate>
+    <lastBuildDate>Thu, 18 Mar 2021 20:48:21 GMT</lastBuildDate>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>Planning a vacation to Japan</title>
+            <description>Planning a trip overseas, especially when you are a beginner at speaking a language can be tricky. Here is some information to get you started on planning a trip to Japan.</description>
+            <pubDate>Thu, 08 Nov 2012 19:00:21 -0500</pubDate>
+            <category>Travel</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</guid>
+        </item>
+    </channel>
+</rss>
+
+
+
             */
     fs.writeFileSync('public/feed.xml', RSS_FEED)
 

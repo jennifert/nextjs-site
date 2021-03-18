@@ -2,11 +2,7 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 const generateSitemap = require('./scripts/generate-sitemap');
-const generateFeed = require('./scripts/generate-rss');
-
-// const withMDX = require('@next/mdx')({
-//     extension: /\.(md|mdx)?$/,
-// })
+// const generateFeed = require('./scripts/generate-rss');
 
 module.exports = withPWA({
     pwa: {
@@ -20,11 +16,8 @@ module.exports = withPWA({
     webpack: (config, { isServer }) => {
         if (isServer) {
             generateSitemap();
-            generateFeed();
+            // generateFeed();
         }
         return config;
     },
 })
-    // ,withMDX({
-    //     pageExtensions: ['js', 'jsx', 'mdx'],
-    // })

@@ -1,7 +1,7 @@
-define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
+define("./workbox-79663c73.js",['exports'], function (exports) { 'use strict';
 
     try {
-      self['workbox:core:6.1.1'] && _();
+      self['workbox:core:6.1.2'] && _();
     } catch (e) {}
 
     /*
@@ -76,7 +76,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
       license that can be found in the LICENSE file or at
       https://opensource.org/licenses/MIT.
     */
-    const messages = {
+    const messages$1 = {
       'invalid-value': ({
         paramName,
         validValueDescription,
@@ -356,7 +356,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
     */
 
     const generatorFunction = (code, details = {}) => {
-      const message = messages[code];
+      const message = messages$1[code];
 
       if (!message) {
         throw new Error(`Unable to find message for code '${code}'.`);
@@ -476,7 +476,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
     };
 
     try {
-      self['workbox:routing:6.1.1'] && _();
+      self['workbox:routing:6.1.2'] && _();
     } catch (e) {}
 
     /*
@@ -1487,7 +1487,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
     }
 
     try {
-      self['workbox:strategies:6.1.1'] && _();
+      self['workbox:strategies:6.1.2'] && _();
     } catch (e) {}
 
     function toRequest(input) {
@@ -1605,85 +1605,83 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
        */
 
 
-      fetch(input) {
-        return this.waitUntil((async () => {
-          const {
-            event
-          } = this;
-          let request = toRequest(input);
+      async fetch(input) {
+        const {
+          event
+        } = this;
+        let request = toRequest(input);
 
-          if (request.mode === 'navigate' && event instanceof FetchEvent && event.preloadResponse) {
-            const possiblePreloadResponse = await event.preloadResponse;
+        if (request.mode === 'navigate' && event instanceof FetchEvent && event.preloadResponse) {
+          const possiblePreloadResponse = await event.preloadResponse;
 
-            if (possiblePreloadResponse) {
-              {
-                logger.log(`Using a preloaded navigation response for ` + `'${getFriendlyURL(request.url)}'`);
-              }
-
-              return possiblePreloadResponse;
-            }
-          } // If there is a fetchDidFail plugin, we need to save a clone of the
-          // original request before it's either modified by a requestWillFetch
-          // plugin or before the original request's body is consumed via fetch().
-
-
-          const originalRequest = this.hasCallback('fetchDidFail') ? request.clone() : null;
-
-          try {
-            for (const cb of this.iterateCallbacks('requestWillFetch')) {
-              request = await cb({
-                request: request.clone(),
-                event
-              });
-            }
-          } catch (err) {
-            throw new WorkboxError('plugin-error-request-will-fetch', {
-              thrownError: err
-            });
-          } // The request can be altered by plugins with `requestWillFetch` making
-          // the original request (most likely from a `fetch` event) different
-          // from the Request we make. Pass both to `fetchDidFail` to aid debugging.
-
-
-          const pluginFilteredRequest = request.clone();
-
-          try {
-            let fetchResponse; // See https://github.com/GoogleChrome/workbox/issues/1796
-
-            fetchResponse = await fetch(request, request.mode === 'navigate' ? undefined : this._strategy.fetchOptions);
-
-            if ("development" !== 'production') {
-              logger.debug(`Network request for ` + `'${getFriendlyURL(request.url)}' returned a response with ` + `status '${fetchResponse.status}'.`);
-            }
-
-            for (const callback of this.iterateCallbacks('fetchDidSucceed')) {
-              fetchResponse = await callback({
-                event,
-                request: pluginFilteredRequest,
-                response: fetchResponse
-              });
-            }
-
-            return fetchResponse;
-          } catch (error) {
+          if (possiblePreloadResponse) {
             {
-              logger.error(`Network request for ` + `'${getFriendlyURL(request.url)}' threw an error.`, error);
-            } // `originalRequest` will only exist if a `fetchDidFail` callback
-            // is being used (see above).
-
-
-            if (originalRequest) {
-              await this.runCallbacks('fetchDidFail', {
-                error,
-                event,
-                originalRequest: originalRequest.clone(),
-                request: pluginFilteredRequest.clone()
-              });
+              logger.log(`Using a preloaded navigation response for ` + `'${getFriendlyURL(request.url)}'`);
             }
 
-            throw error;
+            return possiblePreloadResponse;
           }
-        })());
+        } // If there is a fetchDidFail plugin, we need to save a clone of the
+        // original request before it's either modified by a requestWillFetch
+        // plugin or before the original request's body is consumed via fetch().
+
+
+        const originalRequest = this.hasCallback('fetchDidFail') ? request.clone() : null;
+
+        try {
+          for (const cb of this.iterateCallbacks('requestWillFetch')) {
+            request = await cb({
+              request: request.clone(),
+              event
+            });
+          }
+        } catch (err) {
+          throw new WorkboxError('plugin-error-request-will-fetch', {
+            thrownError: err
+          });
+        } // The request can be altered by plugins with `requestWillFetch` making
+        // the original request (most likely from a `fetch` event) different
+        // from the Request we make. Pass both to `fetchDidFail` to aid debugging.
+
+
+        const pluginFilteredRequest = request.clone();
+
+        try {
+          let fetchResponse; // See https://github.com/GoogleChrome/workbox/issues/1796
+
+          fetchResponse = await fetch(request, request.mode === 'navigate' ? undefined : this._strategy.fetchOptions);
+
+          if ("development" !== 'production') {
+            logger.debug(`Network request for ` + `'${getFriendlyURL(request.url)}' returned a response with ` + `status '${fetchResponse.status}'.`);
+          }
+
+          for (const callback of this.iterateCallbacks('fetchDidSucceed')) {
+            fetchResponse = await callback({
+              event,
+              request: pluginFilteredRequest,
+              response: fetchResponse
+            });
+          }
+
+          return fetchResponse;
+        } catch (error) {
+          {
+            logger.log(`Network request for ` + `'${getFriendlyURL(request.url)}' threw an error.`, error);
+          } // `originalRequest` will only exist if a `fetchDidFail` callback
+          // is being used (see above).
+
+
+          if (originalRequest) {
+            await this.runCallbacks('fetchDidFail', {
+              error,
+              event,
+              originalRequest: originalRequest.clone(),
+              request: pluginFilteredRequest.clone()
+            });
+          }
+
+          throw error;
+        }
       }
       /**
        * Calls `this.fetch()` and (in the background) runs `this.cachePut()` on
@@ -1717,42 +1715,40 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
        */
 
 
-      cacheMatch(key) {
-        return this.waitUntil((async () => {
-          const request = toRequest(key);
-          let cachedResponse;
-          const {
+      async cacheMatch(key) {
+        const request = toRequest(key);
+        let cachedResponse;
+        const {
+          cacheName,
+          matchOptions
+        } = this._strategy;
+        const effectiveRequest = await this.getCacheKey(request, 'read');
+
+        const multiMatchOptions = _extends({}, matchOptions, {
+          cacheName
+        });
+
+        cachedResponse = await caches.match(effectiveRequest, multiMatchOptions);
+
+        {
+          if (cachedResponse) {
+            logger.debug(`Found a cached response in '${cacheName}'.`);
+          } else {
+            logger.debug(`No cached response found in '${cacheName}'.`);
+          }
+        }
+
+        for (const callback of this.iterateCallbacks('cachedResponseWillBeUsed')) {
+          cachedResponse = (await callback({
             cacheName,
-            matchOptions
-          } = this._strategy;
-          const effectiveRequest = await this.getCacheKey(request, 'read');
+            matchOptions,
+            cachedResponse,
+            request: effectiveRequest,
+            event: this.event
+          })) || undefined;
+        }
 
-          const multiMatchOptions = _extends({}, matchOptions, {
-            cacheName
-          });
-
-          cachedResponse = await caches.match(effectiveRequest, multiMatchOptions);
-
-          {
-            if (cachedResponse) {
-              logger.debug(`Found a cached response in '${cacheName}'.`);
-            } else {
-              logger.debug(`No cached response found in '${cacheName}'.`);
-            }
-          }
-
-          for (const callback of this.iterateCallbacks('cachedResponseWillBeUsed')) {
-            cachedResponse = (await callback({
-              cacheName,
-              matchOptions,
-              cachedResponse,
-              request: effectiveRequest,
-              event: this.event
-            })) || undefined;
-          }
-
-          return cachedResponse;
-        })());
+        return cachedResponse;
       }
       /**
        * Puts a request/response pair in the cache (and invokes any applicable
@@ -2306,7 +2302,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
       license that can be found in the LICENSE file or at
       https://opensource.org/licenses/MIT.
     */
-    const messages$1 = {
+    const messages = {
       strategyStart: (strategyName, request) => `Using ${strategyName} to respond to '${getFriendlyURL(request.url)}'`,
       printFinalResponse: response => {
         if (response) {
@@ -2394,7 +2390,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
         }
 
         {
-          logger.groupCollapsed(messages$1.strategyStart(this.constructor.name, request));
+          logger.groupCollapsed(messages.strategyStart(this.constructor.name, request));
 
           if (response) {
             logger.log(`Got response from network.`);
@@ -2402,7 +2398,7 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
             logger.log(`Unable to get a response from the network.`);
           }
 
-          messages$1.printFinalResponse(response);
+          messages.printFinalResponse(response);
           logger.groupEnd();
         }
 
@@ -2441,4 +2437,4 @@ define("./workbox-3296d035.js",['exports'], function (exports) { 'use strict';
     exports.registerRoute = registerRoute;
 
 });
-//# sourceMappingURL=workbox-3296d035.js.map
+//# sourceMappingURL=workbox-79663c73.js.map

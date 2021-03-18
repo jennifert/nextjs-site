@@ -1,62 +1,22 @@
-
-      <?xml version="1.0" encoding="utf-8"?>
-      <rss version="2.0">
-        <channel>
-            <title>JennTesolin.com</title>
-            <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
-            <description>JennTesolin.com's website for beginners.</description>
-            <pubDate>Thu, 25 Feb 2021 17:50:26 GMT</pubDate>
-            <lastBuildDate>Thu, 25 Feb 2021 17:50:26 GMT</lastBuildDate>
-            <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-            <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
-            <language>en</language>
-            <copyright>&copy; 2021 Jennifer Tesolin.</copyright>
-        </channel>
-          
-                    <item>
-                        <title>/404</title>
-                        <description></description>
-                        <pubDate></pubDate>
-                        <category></category>
-                        <link>https://jenntesolin-com-sff2s.ondigitalocean.app/404</link>
-                        <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/404</guid>
-                    </item>
-                  
-                    <item>
-                        <title>/blog</title>
-                        <description></description>
-                        <pubDate></pubDate>
-                        <category></category>
-                        <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog</link>
-                        <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog</guid>
-                    </item>
-                  
-                    <item>
-                        <title>/gallery</title>
-                        <description></description>
-                        <pubDate></pubDate>
-                        <category></category>
-                        <link>https://jenntesolin-com-sff2s.ondigitalocean.app/gallery</link>
-                        <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/gallery</guid>
-                    </item>
-                  
-                    <item>
-                        <title></title>
-                        <description></description>
-                        <pubDate></pubDate>
-                        <category></category>
-                        <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
-                        <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app</guid>
-                    </item>
-                  
-                    <item>
-                        <title>/portfolio</title>
-                        <description></description>
-                        <pubDate></pubDate>
-                        <category></category>
-                        <link>https://jenntesolin-com-sff2s.ondigitalocean.app/portfolio</link>
-                        <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/portfolio</guid>
-                    </item>
-                  
-      </rss>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JennTesolin.com</title>
+    <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
+    <description>JennTesolin.com's website for beginners.</description>
+    <pubDate>Thu, 18 Mar 2021 20:48:21 GMT</pubDate>
+    <lastBuildDate>Thu, 18 Mar 2021 20:48:21 GMT</lastBuildDate>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>Planning a vacation to Japan</title>
+            <description>Planning a trip overseas, especially when you are a beginner at speaking a language can be tricky. Here is some information to get you started on planning a trip to Japan.</description>
+            <pubDate>Thu, 08 Nov 2012 19:00:21 -0500</pubDate>
+            <category>Travel</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</guid>
+        </item>
+    </channel>
+</rss>

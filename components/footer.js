@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import parse from 'html-react-parser';
+
 import { COPYRIGHT } from '../lib/constants'
 const socialLoader = ({ src, width, quality }) => {
     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social${src}?w=${width}&q=${quality || 75}`
@@ -56,7 +58,7 @@ export default function Footer(props) {
                     </ul>
             </nav>
             <div className="flex justify-center">
-                <p>{COPYRIGHT}</p>
+                <p>{parse(COPYRIGHT)}</p>
             </div>
         </footer>
     )
