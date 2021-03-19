@@ -11,9 +11,9 @@ export default function Custom404() {
             </Head>
 
             <section aria-labelledby="main-content">
-                <h1 id="main-content">404 - Page not Found</h1>
+                <h1 id="main-content">500 - Server-side error occurred</h1>
                 <p>
-                    Sorry, the page you are looking for cannot be found. If you came here from a link, Feel free to <a href="mailto:me@jenntesolin.com">send me an email</a> from the page you arrived from. Please try the search box above, or alternatively, <a href="https://web.archive.org/web/*/jenntesolin.com" rel="nofollow noreferrer">check the way back machine for a copy</a>.
+                    Sorry, the server is having trouble loading the page. Feel free to <a href="https://github.com/jennifert/nextjs-site/issues" rel="nofollow noreferrer">create an issue on GitHub</a>. You can try the search box above, or alternatively, <a href="https://web.archive.org/web/*/jenntesolin.com" rel="nofollow noreferrer">check the way back machine for a copy</a>.
                 </p>
             </section>
             

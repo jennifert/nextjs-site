@@ -21,9 +21,9 @@
   "author": "Jennifer Tesolin",
   "license": "",
   "bugs": {
-    "url": "https://github.com/jennifert/jenntesolin.com/issues"
+    "url": "https://github.com/jennifert/nextjs-site/issues"
   },
-  "homepage": "https://github.com/jennifert/jenntesolin.com#readme",
+  "homepage": "https://github.com/jennifert/nextjs-site/#readme",
   "dependencies": {
     "autoprefixer": "^10.0.4",
     "html-react-parser": "^1.2.4",

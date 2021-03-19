@@ -5,10 +5,6 @@ https://jenntesolin-com-sff2s.ondigitalocean.app
 
 To Fix:
 
-- customize error page (500, etc.): https://nextjs.org/docs/advanced-features/custom-error-page#customizing-the-error-page
-
-if use fetch: https://developerhandbook.com/react/getting-started-nextjs/
-
 Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
@@ -17,25 +13,13 @@ Show Via aria active page (will need to fix when un active nav styles more final
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
     - legal: Icons by Font Awesome Pro 5
-    - make analytic program: https://plausible.io/: 
+    - analytics stuff
+- analytic program: https://plausible.io/: 
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
- - blog posts  
+ - blog posts
+ - fix link styles in content/white area and spacing between text (blog posts)
  - change favicon.ico
  -picture gallery
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
-Edit Sections
-    - Meta component or similar to layout head here: https://github.com/ondrabus/personal-site/blob/master/pages/fetch-api-cheatsheet.tsx
-
-    Fix if time:
-    - https://web.dev/offline-start-url/?utm_source=lighthouse&utm_medium=devtools
-    - https://web.dev/maskable-icon-audit/?utm_source=lighthouse&utm_medium=devtoolss
-
-
-help from:
-https://betterstack.dev/blog/code-highlighting-in-react-using-prismjs/
-
- - site styles: https://tailwindcss.com/docs/background-color
-https://tailwindcss.com/docs/text-color
-https://tailwindcss.com/docs/font-size
-https://tailwindcss.com/docs/customizing-colors
+- once everything done run lighthouse

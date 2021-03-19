@@ -5,6 +5,15 @@ import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 import data from '../components/data/portfolio.json';
 import PorfolioCard from '../components/portfoliocard'
+import { PrismCode } from '../components/prism'
+
+const code = `
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+`.trim();
 
 const portfoliodata = data.slice(0, 3).map((data) => {
     return (
@@ -27,12 +36,24 @@ function HomePage() {
             <p>
                 Feel free to <a href="mailto:me@jenntesolin.com">send me an email</a> if there is any content you want to see, or any issues to fix.
             </p>
-            <p><Link href="/blog/2012-11-08-japan-trip-2011">Check out this sample blog post.</Link> It uses prisimjs highlighting.</p>
             <section id="latest-portfolio" aria-labelledby="about-portfolio" className="py-5">
                 <h2 id="about-portfolio">Latest Portfolio Pieces</h2>
                 <div className="flex flex-wrap">
                     {portfoliodata}
                 </div>
+            </section>
+            <section id="latest-blogs" aria-labelledby="blogs-heading" className="py-5">
+                <h2 id="blogs-heading">Latest Blog Posts</h2>
+                <p>This is still under development. Please check out the blog link in the header to see what posts have been moved over, or <a className="underline focus:ring-2" href="https://jenntesolin.com/blog/" rel="nofollow noreferrer">visit the production site</a>.</p>
+                <p>Sample code will look like:</p>
+                <PrismCode
+                    code={code}
+                    language="java"
+                    plugins={["line-numbers"]}
+                />
+                {/* <div className="flex flex-wrap">
+                    {portfoliodata}
+                </div> */}
             </section>
 
         </Layout>

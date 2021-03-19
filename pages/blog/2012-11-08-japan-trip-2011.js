@@ -2,22 +2,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
-
-// const code = `
-// const foo = 'foo';
-// const bar = 'bar';
-// console.log(foo + bar);
-// `.trim();
-
-const code2 = `
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-`.trim();
-
 export default function VacationPlan() {
     const POST_TITLE = 'Planning a vacation to Japan';
     return (
@@ -60,11 +44,6 @@ export default function VacationPlan() {
                 <p><a title="Plan tours and more" href="http://www.jtb-sunrisetours.jp/" rel="nofollow noreferrer">Sunrise Tours</a></p>
                 <p><a href="http://www.voyage.gc.ca/register/" rel="nofollow noreferrer">Registration of Canadians Abroad</a></p>
                 <p><a title="Travel information for Canadians" href="http://www.voyage.gc.ca/countries_pays/report_rapport-eng.asp?id=140000" rel="nofollow noreferrer">Japan Travel Advice and Advisory</a> from the Government of Canada</p>
-                <PrismCode
-                    code={code2}
-                    language="java"
-                    plugins={["line-numbers"]}
-                />
             </section>
         </Layout>
     )
