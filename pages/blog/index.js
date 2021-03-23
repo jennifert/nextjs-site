@@ -59,14 +59,16 @@ export default function Blog() {
                         <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
                     </li>
                 </ul>
-
+                */}
+                
                 <h2>PHP</h2>
                 <ul>
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog"><a className="underline focus:ring-2">WordPress Quick-tip: Display x number of posts outside your blog</a></Link> on <time datetime="2013-05-23T19:30">May 23, 2013</time>
                     </li>
                 </ul>
                 
+                {/*
                 <h2>Raspberri Pi</h2>
                 <ul>
                     <li>

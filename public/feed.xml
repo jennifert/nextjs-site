@@ -4,12 +4,36 @@
     <title>JennTesolin.com</title>
     <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
     <description>JennTesolin.com's website for beginners.</description>
-    <pubDate>Thu, 18 Mar 2021 20:48:21 GMT</pubDate>
-    <lastBuildDate>Thu, 18 Mar 2021 20:48:21 GMT</lastBuildDate>
+    <pubDate>Tue, 23 Mar 2021 17:10:21 GMT</pubDate>
+    <lastBuildDate>Tue, 23 Mar 2021 17:10:21 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>WordPress Quick-tip: Display x number of posts outside your blog</title>
+            <description>Describes how to display posts outside of the WordPress system.</description>
+            <pubDate>Thu, 23 May 2013 19:30:00 -0500</pubDate>
+            <category>Travel</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog</guid>
+        </item>
+        <item>
+            <title>jQuery time picker issues and .net</title>
+            <description>Issues with custom fields of JavaScript time pickers in ASP.net and a way to resolve them.</description>
+            <pubDate>Thu, 23 May 2013 19:00:00 -0500</pubDate>
+            <category>Travel</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-jquery-time-picker-issues-and-net</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-jquery-time-picker-issues-and-net</guid>
+        </item>
+        <item>
+            <title>Bootstrap and asp.net 4.0 master pages</title>
+            <description>Working with bootstrap in master pages has issues out of the box. This post describes how to resolve issues in your master pages.</description>
+            <pubDate>Wed, 10 Apr 2013 19:00:21 -0500</pubDate>
+            <category>Travel</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages</guid>
+        </item>
         <item>
             <title>Planning a vacation to Japan</title>
             <description>Planning a trip overseas, especially when you are a beginner at speaking a language can be tricky. Here is some information to get you started on planning a trip to Japan.</description>
