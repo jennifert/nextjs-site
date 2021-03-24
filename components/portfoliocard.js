@@ -3,7 +3,7 @@ export default function PorfolioCard(props) {
 
     return (
 
-        <div className="xl:w-1/3 md:w-1/2 p-4" key={props.id}>
+        <div className="xl:w-1/3 md:w-1/2 px-4" key={props.id}>
             <div className="border border-gray-300 p-6 rounded-lg">
                 <h2 className="text-lg  font-medium title-font mb-2">{props.title}</h2>
                 <p className="leading-relaxed text-base">

@@ -6,18 +6,25 @@
   h1 {
     @apply text-3xl;
     @apply font-semibold;
+    @apply mb-5;
   }
   h2, .site-title {
     @apply text-2xl;
     @apply font-semibold;
+    @apply my-3;
   }
 
   h3 {
     @apply text-xl;
     @apply font-semibold;
+    @apply mb-3;
   }
 
   body{
     @apply text-base;
+  }
+
+  .alert-warning{
+      @apply bg-yellow-200 relative text-yellow-600 py-3 px-3 rounded-lg;
   }
 }

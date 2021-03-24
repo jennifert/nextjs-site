@@ -11,10 +11,34 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>Great apps and programs for web development</title>
+            <description>A list of resources and software that can be used in web development (outdated).</description>
+            <pubDate>Thu, 30 May 2013 19:00:00 -0500</pubDate>
+            <category>Lists</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-30-great-apps-and-programs-for-web-development</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-30-great-apps-and-programs-for-web-development</guid>
+        </item>
+        <item>
+            <title>PHP and UTF8 encoding issues - Tips and tricks to resolve</title>
+            <description>Working with special characters can be a pain in php. Here are some tips to ease these difficulties.</description>
+            <pubDate>Sat, 25 May 2013 19:00:00 -0500</pubDate>
+            <category>PHP</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve</guid>
+        </item>
+        <item>
+            <title>iOS 7 Wishlist</title>
+            <description>Items that would be great to see in iOS 7.</description>
+            <pubDate>Fri, 24 May 2013 19:30:00 -0500</pubDate>
+            <category>Lists</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-24-ios-7-wishlist</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-24-ios-7-wishlist</guid>
+        </item>
+        <item>
             <title>WordPress Quick-tip: Display x number of posts outside your blog</title>
             <description>Describes how to display posts outside of the WordPress system.</description>
             <pubDate>Thu, 23 May 2013 19:30:00 -0500</pubDate>
-            <category>Travel</category>
+            <category>PHP</category>
             <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog</link>
             <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog</guid>
         </item>
@@ -22,7 +46,7 @@
             <title>jQuery time picker issues and .net</title>
             <description>Issues with custom fields of JavaScript time pickers in ASP.net and a way to resolve them.</description>
             <pubDate>Thu, 23 May 2013 19:00:00 -0500</pubDate>
-            <category>Travel</category>
+            <category>.NET</category>
             <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-jquery-time-picker-issues-and-net</link>
             <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-05-23-jquery-time-picker-issues-and-net</guid>
         </item>
@@ -30,7 +54,7 @@
             <title>Bootstrap and asp.net 4.0 master pages</title>
             <description>Working with bootstrap in master pages has issues out of the box. This post describes how to resolve issues in your master pages.</description>
             <pubDate>Wed, 10 Apr 2013 19:00:21 -0500</pubDate>
-            <category>Travel</category>
+            <category>.NET</category>
             <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages</link>
             <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages</guid>
         </item>

@@ -36,13 +36,13 @@ function HomePage() {
             <p>
                 Feel free to <a href="mailto:me@jenntesolin.com">send me an email</a> if there is any content you want to see, or any issues to fix.
             </p>
-            <section id="latest-portfolio" aria-labelledby="about-portfolio" className="py-5">
+            <section id="latest-portfolio" aria-labelledby="about-portfolio">
                 <h2 id="about-portfolio">Latest Portfolio Pieces</h2>
                 <div className="flex flex-wrap">
                     {portfoliodata}
                 </div>
             </section>
-            <section id="latest-blogs" aria-labelledby="blogs-heading" className="py-5">
+            <section id="latest-blogs" aria-labelledby="blogs-heading">
                 <h2 id="blogs-heading">Latest Blog Posts</h2>
                 <p>This is still under development. Please check out the blog link in the header to see what posts have been moved over, or <a className="underline focus:ring-2" href="https://jenntesolin.com/blog/" rel="nofollow noreferrer">visit the production site</a>.</p>
                 <p>Sample code will look like:</p>
@@ -51,9 +51,6 @@ function HomePage() {
                     language="java"
                     plugins={["line-numbers"]}
                 />
-                {/* <div className="flex flex-wrap">
-                    {portfoliodata}
-                </div> */}
             </section>
 
         </Layout>

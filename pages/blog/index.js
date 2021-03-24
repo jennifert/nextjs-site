@@ -45,14 +45,18 @@ export default function Blog() {
                         <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
                     </li>
                 </ul>
-
+                */}
+                
                 <h2>Lists</h2>
                 <ul>
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2013-05-30-great-apps-and-programs-for-web-development"><a className="underline focus:ring-2">Great apps and programs for web development</a></Link> on <time datetime="2013-05-30T19:00">May 30, 2013</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2013-05-24-ios-7-wishlist"><a className="underline focus:ring-2">iOS 7 Wishlist</a></Link> on <time datetime="2013-05-24T19:00">May 24, 2013</time>
                     </li>
                 </ul>
-
+                {/*
                 <h2>MySql</h2>
                 <ul>
                     <li>
@@ -63,6 +67,9 @@ export default function Blog() {
                 
                 <h2>PHP</h2>
                 <ul>
+                    <li>
+                        <Link href="/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve"><a className="underline focus:ring-2">PHP and UTF8 encoding issues - Tips and tricks to resolve</a></Link> on <time datetime="2013-05-25T19:00">May 25, 2013</time>
+                    </li>
                     <li>
                         <Link href="/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog"><a className="underline focus:ring-2">WordPress Quick-tip: Display x number of posts outside your blog</a></Link> on <time datetime="2013-05-23T19:30">May 23, 2013</time>
                     </li>
