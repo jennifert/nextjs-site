@@ -5,6 +5,9 @@ const generateSitemap = require('./scripts/generate-sitemap');
 // const generateFeed = require('./scripts/generate-rss');
 
 module.exports = withPWA({
+    // future: {
+    //     webpack5: true,
+    // },
     pwa: {
         dest: 'public',
         runtimeCaching,

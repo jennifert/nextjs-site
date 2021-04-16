@@ -50,6 +50,9 @@ export default function Blog() {
                 <h2>Lists</h2>
                 <ul>
                     <li>
+                        <Link href="/blog/2013-07-06-quick-tips-firefox-notepad"><a className="underline focus:ring-2">Quick Tips: Firefox and Notepad++</a></Link> on <time datetime="2013-05-30T19:00">July 06, 2013</time>
+                    </li>
+                    <li>
                         <Link href="/blog/2013-05-30-great-apps-and-programs-for-web-development"><a className="underline focus:ring-2">Great apps and programs for web development</a></Link> on <time datetime="2013-05-30T19:00">May 30, 2013</time>
                     </li>
                     <li>

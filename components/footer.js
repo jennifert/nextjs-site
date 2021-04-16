@@ -23,17 +23,6 @@ export default function Footer(props) {
                             </a>
                         </li>
                         <li>
-                        <a className="p-2 m-2" href="https://twitter.com/jenntes" rel="nofollow noreferrer" aria-label="Twitter Feed">
-                            <Image
-                                loader={socialLoader}
-                                src="/twitter-square_zgyods.svg"
-                                    alt="Twitter"
-                                    width={30}
-                                    height={30}
-                                />
-                            </a>
-                        </li>
-                        <li>
                         <a className="p-2 m-2" href="/feed.xml" rel="nofollow noreferrer" aria-label="Site Feed">
                             <Image
                                 loader={socialLoader}
