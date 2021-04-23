@@ -212,22 +212,6 @@
         ]
       },
       {
-        "description": "Ensures <img> elements have alternate text or a role of none or presentation",
-        "help": "Images must have alternate text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/image-alt?application=webdriverjs",
-        "id": "image-alt",
-        "impact": null,
-        "nodes": [],
-        "tags": [
-          "cat.text-alternatives",
-          "wcag2a",
-          "wcag111",
-          "section508",
-          "section508.22.a",
-          "ACT"
-        ]
-      },
-      {
         "description": "Ensures input buttons have discernible text",
         "help": "Input buttons must have discernible text",
         "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/input-button-name?application=webdriverjs",
@@ -471,7 +455,7 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\" class=\"py-5\">",
+            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\">",
             "impact": null,
             "none": [
               {
@@ -484,6 +468,32 @@
             ],
             "target": [
               "#latest-portfolio"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-allowed-attr",
+                "impact": "critical",
+                "message": "ARIA attributes are used correctly for the defined role",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<section id=\"latest-blogs\" aria-labelledby=\"blogs-heading\">",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "aria-unsupported-attr",
+                "impact": "critical",
+                "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "#latest-blogs"
             ]
           },
           {
@@ -549,32 +559,6 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<a class=\"p-2 m-2\" href=\"https://twitter.com/jenntes\" rel=\"nofollow noreferrer\" aria-label=\"Twitter Feed\">",
-            "impact": null,
-            "none": [
-              {
-                "data": null,
-                "id": "aria-unsupported-attr",
-                "impact": "critical",
-                "message": "ARIA attribute is supported",
-                "relatedNodes": []
-              }
-            ],
-            "target": [
-              "a[href$=\"jenntes\"]"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-allowed-attr",
-                "impact": "critical",
-                "message": "ARIA attributes are used correctly for the defined role",
-                "relatedNodes": []
-              }
-            ],
             "html": "<a class=\"p-2 m-2\" href=\"/feed.xml\" rel=\"nofollow noreferrer\" aria-label=\"Site Feed\">",
             "impact": null,
             "none": [
@@ -614,6 +598,32 @@
             ],
             "target": [
               "a[aria-label=\"LinkedIn\\ Profile\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-allowed-attr",
+                "impact": "critical",
+                "message": "ARIA attributes are used correctly for the defined role",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "aria-unsupported-attr",
+                "impact": "critical",
+                "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -687,11 +697,11 @@
               }
             ],
             "any": [],
-            "html": "<img style=\"max-width:100%;display:block;margin:0;border:none;padding:0\" alt=\"\" aria-hidden=\"true\" role=\"presentation\" src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+\">",
+            "html": "<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span></span>",
             "impact": null,
             "none": [],
             "target": [
-              "a[aria-label=\"Github\\ Repositories\"] > div > div > img[alt=\"\"][aria-hidden=\"true\"][role=\"presentation\"]"
+              ".line-numbers-rows"
             ]
           },
           {
@@ -723,7 +733,7 @@
             "impact": null,
             "none": [],
             "target": [
-              "a[href$=\"jenntes\"] > div > div > img[alt=\"\"][aria-hidden=\"true\"][role=\"presentation\"]"
+              "a[aria-label=\"Github\\ Repositories\"] > div > div > img[alt=\"\"][role=\"presentation\"][aria-hidden=\"true\"]"
             ]
           },
           {
@@ -755,7 +765,7 @@
             "impact": null,
             "none": [],
             "target": [
-              "a[aria-label=\"Site\\ Feed\"] > div > div > img[alt=\"\"][aria-hidden=\"true\"][role=\"presentation\"]"
+              "a[aria-label=\"Site\\ Feed\"] > div > div > img[alt=\"\"][role=\"presentation\"][aria-hidden=\"true\"]"
             ]
           },
           {
@@ -787,7 +797,7 @@
             "impact": null,
             "none": [],
             "target": [
-              "a[aria-label=\"LinkedIn\\ Profile\"] > div > div > img[alt=\"\"][aria-hidden=\"true\"][role=\"presentation\"]"
+              "a[aria-label=\"LinkedIn\\ Profile\"] > div > div > img[alt=\"\"][role=\"presentation\"][aria-hidden=\"true\"]"
             ]
           }
         ],
@@ -822,6 +832,24 @@
             "target": [
               "#search-form"
             ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-required-attr",
+                "impact": "critical",
+                "message": "All required ARIA attributes are present",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
+            ]
           }
         ],
         "tags": [
@@ -854,6 +882,24 @@
             "target": [
               "#search-form"
             ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-required-children",
+                "impact": "critical",
+                "message": "Required ARIA children are present",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
+            ]
           }
         ],
         "tags": [
@@ -885,6 +931,24 @@
             "none": [],
             "target": [
               "#search-form"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-required-parent",
+                "impact": "critical",
+                "message": "Required ARIA parent role present",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -938,6 +1002,45 @@
             ],
             "target": [
               "#search-form"
+            ]
+          },
+          {
+            "all": [],
+            "any": [],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "fallbackrole",
+                "impact": "serious",
+                "message": "Only one role value used",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "invalidrole",
+                "impact": "critical",
+                "message": "ARIA role is valid",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "abstractrole",
+                "impact": "serious",
+                "message": "Abstract roles are not used",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "unsupportedrole",
+                "impact": "critical",
+                "message": "ARIA role is supported",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -997,11 +1100,36 @@
               }
             ],
             "any": [],
-            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\" class=\"py-5\">",
+            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\">",
             "impact": null,
             "none": [],
             "target": [
               "#latest-portfolio"
+            ]
+          },
+          {
+            "all": [
+              {
+                "data": null,
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "message": "ARIA attribute values are valid",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-errormessage",
+                "impact": "critical",
+                "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+                "relatedNodes": []
+              }
+            ],
+            "any": [],
+            "html": "<section id=\"latest-blogs\" aria-labelledby=\"blogs-heading\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#latest-blogs"
             ]
           },
           {
@@ -1072,31 +1200,6 @@
               }
             ],
             "any": [],
-            "html": "<a class=\"p-2 m-2\" href=\"https://twitter.com/jenntes\" rel=\"nofollow noreferrer\" aria-label=\"Twitter Feed\">",
-            "impact": null,
-            "none": [],
-            "target": [
-              "a[href$=\"jenntes\"]"
-            ]
-          },
-          {
-            "all": [
-              {
-                "data": null,
-                "id": "aria-valid-attr-value",
-                "impact": "critical",
-                "message": "ARIA attribute values are valid",
-                "relatedNodes": []
-              },
-              {
-                "data": null,
-                "id": "aria-errormessage",
-                "impact": "critical",
-                "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
-                "relatedNodes": []
-              }
-            ],
-            "any": [],
             "html": "<a class=\"p-2 m-2\" href=\"/feed.xml\" rel=\"nofollow noreferrer\" aria-label=\"Site Feed\">",
             "impact": null,
             "none": [],
@@ -1127,6 +1230,31 @@
             "none": [],
             "target": [
               "a[aria-label=\"LinkedIn\\ Profile\"]"
+            ]
+          },
+          {
+            "all": [
+              {
+                "data": null,
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "message": "ARIA attribute values are valid",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-errormessage",
+                "impact": "critical",
+                "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+                "relatedNodes": []
+              }
+            ],
+            "any": [],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -1172,11 +1300,29 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\" class=\"py-5\">",
+            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\">",
             "impact": null,
             "none": [],
             "target": [
               "#latest-portfolio"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-valid-attr",
+                "impact": "critical",
+                "message": "ARIA attribute name is valid",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<section id=\"latest-blogs\" aria-labelledby=\"blogs-heading\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#latest-blogs"
             ]
           },
           {
@@ -1226,24 +1372,6 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<a class=\"p-2 m-2\" href=\"https://twitter.com/jenntes\" rel=\"nofollow noreferrer\" aria-label=\"Twitter Feed\">",
-            "impact": null,
-            "none": [],
-            "target": [
-              "a[href$=\"jenntes\"]"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-valid-attr",
-                "impact": "critical",
-                "message": "ARIA attribute name is valid",
-                "relatedNodes": []
-              }
-            ],
             "html": "<a class=\"p-2 m-2\" href=\"/feed.xml\" rel=\"nofollow noreferrer\" aria-label=\"Site Feed\">",
             "impact": null,
             "none": [],
@@ -1267,6 +1395,24 @@
             "none": [],
             "target": [
               "a[aria-label=\"LinkedIn\\ Profile\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "aria-valid-attr",
+                "impact": "critical",
+                "message": "ARIA attribute name is valid",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -1349,19 +1495,25 @@
                   {
                     "html": "<h2 class=\"text-lg  font-medium title-font mb-2\">Slim 3 YAML Search Web Service</h2>",
                     "target": [
-                      ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(1) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
+                      ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(1) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
                     ]
                   },
                   {
                     "html": "<h2 class=\"text-lg  font-medium title-font mb-2\">Archer CMS</h2>",
                     "target": [
-                      ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(2) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
+                      ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(2) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
                     ]
                   },
                   {
                     "html": "<h2 class=\"text-lg  font-medium title-font mb-2\">Beginner JavaScript Demos</h2>",
                     "target": [
-                      ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(3) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
+                      ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(3) > .border-gray-300.p-6.rounded-lg > .text-lg.font-medium.title-font"
+                    ]
+                  },
+                  {
+                    "html": "<h2 id=\"blogs-heading\">Latest Blog Posts</h2>",
+                    "target": [
+                      "#blogs-heading"
                     ]
                   }
                 ]
@@ -1472,6 +1624,24 @@
             "target": [
               "#about-portfolio"
             ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "blogs-heading",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has no elements referenced with ARIA or labels that share the same id attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<h2 id=\"blogs-heading\">Latest Blog Posts</h2>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#blogs-heading"
+            ]
           }
         ],
         "tags": [
@@ -1570,11 +1740,29 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\" class=\"py-5\">",
+            "html": "<section id=\"latest-portfolio\" aria-labelledby=\"about-portfolio\">",
             "impact": null,
             "none": [],
             "target": [
               "#latest-portfolio"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "latest-blogs",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has no static elements that share the same id attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<section id=\"latest-blogs\" aria-labelledby=\"blogs-heading\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#latest-blogs"
             ]
           },
           {
@@ -1588,11 +1776,29 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"qStuw_YVJJ4AyHqd9MI0W\",\"nextExport\":true,\"autoExport\":true,\"isFallback\":false}</script>",
+            "html": "<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"n0knHyCaAfamAQCnuP3MG\",\"nextExport\":true,\"autoExport\":true,\"isFallback\":false}</script>",
             "impact": null,
             "none": [],
             "target": [
               "#__NEXT_DATA__"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "__next-route-announcer__",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has no static elements that share the same id attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "#__next-route-announcer__"
             ]
           }
         ],
@@ -1697,6 +1903,101 @@
           "cat.language",
           "wcag2a",
           "wcag311",
+          "ACT"
+        ]
+      },
+      {
+        "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+        "help": "Images must have alternate text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/image-alt?application=webdriverjs",
+        "id": "image-alt",
+        "impact": null,
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "has-alt",
+                "impact": "critical",
+                "message": "Element has an alt attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"Github\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "alt-space-value",
+                "impact": "critical",
+                "message": "Element has a valid alt attribute value",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "img[alt=\"Github\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "has-alt",
+                "impact": "critical",
+                "message": "Element has an alt attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"RSS\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "alt-space-value",
+                "impact": "critical",
+                "message": "Element has a valid alt attribute value",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "img[alt=\"RSS\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "has-alt",
+                "impact": "critical",
+                "message": "Element has an alt attribute",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"LinkedIn\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "alt-space-value",
+                "impact": "critical",
+                "message": "Element has a valid alt attribute value",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              "img[alt=\"LinkedIn\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
           "ACT"
         ]
       },
@@ -1826,7 +2127,7 @@
               }
             ],
             "target": [
-              ".px-3.text-xs[href$=\"blog\"]"
+              "a[href$=\"blog\"]"
             ]
           },
           {
@@ -1918,32 +2219,6 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<a href=\"/blog\">Check out this sample blog post.</a>",
-            "impact": null,
-            "none": [
-              {
-                "data": null,
-                "id": "focusable-no-name",
-                "impact": "serious",
-                "message": "Element is not in tab order or has accessible text",
-                "relatedNodes": []
-              }
-            ],
-            "target": [
-              "p:nth-child(4) > a[href$=\"blog\"]"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "has-visible-text",
-                "impact": "minor",
-                "message": "Element has text that is visible to screen readers",
-                "relatedNodes": []
-              }
-            ],
             "html": "<a href=\"https://github.com/jennifert/Slim-3-web-Service-with-Sample-TypeScript-client-side-code\" class=\"no-underline hover:underline focus:ring-2 focus:ring-white\" rel=\"noopener noreferrer nofollow\">Visit <!-- -->Slim 3 YAML Search Web Service<!-- --> Repository</a>",
             "impact": null,
             "none": [
@@ -1956,7 +2231,7 @@
               }
             ],
             "target": [
-              ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(1) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
+              ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(1) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
             ]
           },
           {
@@ -1982,7 +2257,7 @@
               }
             ],
             "target": [
-              ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(2) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
+              ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(2) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
             ]
           },
           {
@@ -2008,12 +2283,45 @@
               }
             ],
             "target": [
-              ".xl\\:w-1\\/3.md\\:w-1\\/2.p-4:nth-child(3) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
+              ".xl\\:w-1\\/3.md\\:w-1\\/2.px-4:nth-child(3) > .border-gray-300.p-6.rounded-lg > .mt-2.text-center.leading-none > .mr-3.inline-flex.py-1 > .no-underline.hover\\:underline[rel=\"noopener\\ noreferrer\\ nofollow\"]"
             ]
           },
           {
             "all": [],
             "any": [
+              {
+                "data": null,
+                "id": "has-visible-text",
+                "impact": "minor",
+                "message": "Element has text that is visible to screen readers",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<a class=\"underline focus:ring-2\" href=\"https://jenntesolin.com/blog/\" rel=\"nofollow noreferrer\">visit the production site</a>",
+            "impact": null,
+            "none": [
+              {
+                "data": null,
+                "id": "focusable-no-name",
+                "impact": "serious",
+                "message": "Element is not in tab order or has accessible text",
+                "relatedNodes": []
+              }
+            ],
+            "target": [
+              ".underline"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "has-visible-text",
+                "impact": "minor",
+                "message": "Element has text that is visible to screen readers",
+                "relatedNodes": []
+              },
               {
                 "data": null,
                 "id": "aria-label",
@@ -2042,30 +2350,11 @@
             "any": [
               {
                 "data": null,
-                "id": "aria-label",
-                "impact": "serious",
-                "message": "aria-label attribute exists and is not empty",
+                "id": "has-visible-text",
+                "impact": "minor",
+                "message": "Element has text that is visible to screen readers",
                 "relatedNodes": []
-              }
-            ],
-            "html": "<a class=\"p-2 m-2\" href=\"https://twitter.com/jenntes\" rel=\"nofollow noreferrer\" aria-label=\"Twitter Feed\">",
-            "impact": null,
-            "none": [
-              {
-                "data": null,
-                "id": "focusable-no-name",
-                "impact": "serious",
-                "message": "Element is not in tab order or has accessible text",
-                "relatedNodes": []
-              }
-            ],
-            "target": [
-              "a[href$=\"jenntes\"]"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
+              },
               {
                 "data": null,
                 "id": "aria-label",
@@ -2092,6 +2381,13 @@
           {
             "all": [],
             "any": [
+              {
+                "data": null,
+                "id": "has-visible-text",
+                "impact": "minor",
+                "message": "Element has text that is visible to screen readers",
+                "relatedNodes": []
+              },
               {
                 "data": null,
                 "id": "aria-label",
@@ -2308,24 +2604,6 @@
             "target": [
               ".my-5 > li:nth-child(3)"
             ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "listitem",
-                "impact": "serious",
-                "message": "List item has a <ul>, <ol> or role=\"list\" parent element",
-                "relatedNodes": []
-              }
-            ],
-            "html": "<li>",
-            "impact": null,
-            "none": [],
-            "target": [
-              ".my-5 > li:nth-child(4)"
-            ]
           }
         ],
         "tags": [
@@ -2337,19 +2615,19 @@
     ],
     "testEngine": {
       "name": "axe-core",
-      "version": "4.1.2"
+      "version": "4.1.4"
     },
     "testEnvironment": {
       "orientationAngle": 0,
       "orientationType": "landscape-primary",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/88.0.4324.150 Safari/537.36",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.85 Safari/537.36",
       "windowHeight": 600,
       "windowWidth": 800
     },
     "testRunner": {
       "name": "axe"
     },
-    "timestamp": "2021-02-17T15:48:49.606Z",
+    "timestamp": "2021-04-22T15:42:57.097Z",
     "toolOptions": {
       "reporter": "v1",
       "runOnly": {

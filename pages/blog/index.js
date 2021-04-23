@@ -59,14 +59,17 @@ export default function Blog() {
                         <Link href="/blog/2013-05-24-ios-7-wishlist"><a className="underline focus:ring-2">iOS 7 Wishlist</a></Link> on <time datetime="2013-05-24T19:00">May 24, 2013</time>
                     </li>
                 </ul>
-                {/*
+                
                 <h2>MySql</h2>
                 <ul>
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2013-08-26-quick-tip-mysql-concat"><a className="underline focus:ring-2">Quick tips: MySql Concat</a></Link> on <time datetime="2013-08-26T19:00">August 26, 2013</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2013-08-11-quick-tips-mysql-case"><a className="underline focus:ring-2">Quick tips: MySql Case</a></Link> on <time datetime="2013-08-11T19:00">August 11, 2013</time>
                     </li>
                 </ul>
-                */}
+               
                 
                 <h2>PHP</h2>
                 <ul>

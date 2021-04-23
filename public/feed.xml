@@ -4,12 +4,28 @@
     <title>JennTesolin.com</title>
     <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
     <description>JennTesolin.com's website for beginners.</description>
-    <pubDate>Tue, 23 Mar 2021 17:10:21 GMT</pubDate>
-    <lastBuildDate>Tue, 23 Mar 2021 17:10:21 GMT</lastBuildDate>
+    <pubDate>Thu, 22 apr 2021 20:37:21 GMT</pubDate>
+    <lastBuildDate>Thu, 22 apr 2021 20:37:21 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>Quick tips: MySql Concat</title>
+            <description>How to join two mySQL table columns in a query instead of a programming language.</description>
+            <pubDate>Mon, 26 Aug 2013 19:00:00 -0500</pubDate>
+            <category>MySql</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</guid>
+        </item>
+        <item>
+            <title>Quick tips: MySql Case</title>
+            <description>mySQL case is like a switch statement. This tip describes how to use it.</description>
+            <pubDate>Sun, 11 Aug 2013 19:00:00 -0500</pubDate>
+            <category>MySql</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</guid>
+        </item>
         <item>
             <title>Quick Tips: Firefox and Notepad++</title>
             <description>Disabling JavaScript in Firefox 23, and NOtepad++ Shortcut</description>
