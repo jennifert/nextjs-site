@@ -1,7 +1,6 @@
 /* TEAM */
 Developer: Jennifer Tesolin
 Site: me@jenntesolin.com
-Twitter: jenntes
 Github: jennifert
 
 /* SITE */
