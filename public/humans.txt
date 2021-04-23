@@ -8,5 +8,5 @@ Last update: 2021-04-23 06:00:22 -0500
 Language: English
 DocType: HTML5
 Standards: HTML5, CSS, javascript
-Components: NPM Build, Next.JS
+Components: NPM Build, Next.JS, JSON
 Software: VS Code, Affinity Photo, Sketch
