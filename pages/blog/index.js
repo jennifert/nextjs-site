@@ -30,16 +30,16 @@ export default function Blog() {
                     </li>
                 </ul>
 
-                {/* 
+                
 
                 <h2>JavaScript</h2>
                 <ul>
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2013-11-05-bootstrap-3-and-google-maps"><a className="underline focus:ring-2">Bootstrap 3 and Google Maps</a></Link> on <time datetime="2013-11-05T19:00">November 05, 2013</time>
                     </li>
                 </ul>
 
-                <h2>Jekyll</h2>
+                {/* <h2>Jekyll</h2>
                 <ul>
                     <li>
                         <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
@@ -63,6 +63,9 @@ export default function Blog() {
                 <h2>MySql</h2>
                 <ul>
                     <li>
+                        <Link href="/blog/2013-10-23-quick-tip-mysql-replace"><a className="underline focus:ring-2">Quick Tip: MySql Replace</a></Link> on <time datetime="2013-08-26T19:00">October 23, 2013</time>
+                    </li>
+                    <li>
                         <Link href="/blog/2013-08-26-quick-tip-mysql-concat"><a className="underline focus:ring-2">Quick tips: MySql Concat</a></Link> on <time datetime="2013-08-26T19:00">August 26, 2013</time>
                     </li>
                     <li>
@@ -81,14 +84,17 @@ export default function Blog() {
                     </li>
                 </ul>
                 
-                {/*
+                
                 <h2>Raspberri Pi</h2>
                 <ul>
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time datetime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2013-09-05-raspbeerri-pi-list-of-projects-and-resources"><a className="underline focus:ring-2">Raspberry Pi: List of Projects and resource</a></Link> on <time datetime="2013-09-05T19:00">September 05, 2013</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2013-09-05-a-look-at-raspmbc-video-streaming"><a className="underline focus:ring-2">A look at Raspmbc video streaming</a></Link> on <time datetime="2013-09-05T19:00">September 05, 2013</time>
                     </li>
                 </ul>
-
+{/*
                 <h2>Servers</h2>
                 <ul>
                     <li>

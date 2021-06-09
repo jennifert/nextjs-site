@@ -4,12 +4,44 @@
     <title>JennTesolin.com</title>
     <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
     <description>JennTesolin.com's website for beginners.</description>
-    <pubDate>Fri, 23 Apr 2021 17:00:21 GMT</pubDate>
+    <pubDate>Tue, 08 Jun 2021 20:50:21 GMT</pubDate>
     <lastBuildDate>Fri, 23 Apr 2021 17:00:21 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>Bootstrap 3 and Google Maps</title>
+            <description>There are changes in Bootstrap 3 that stops Google maps from displaying correctly in modals, or tabs.  This post described how to update your code from Bootstrap 2.</description>
+            <pubDate>true, 05 Nov 2013 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-05-bootstrap-3-and-google-maps</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-05-bootstrap-3-and-google-maps</guid>
+        </item>
+        <item>
+            <title>Quick Tip: MySql Replace</title>
+            <description>Perform a search and replace within a string from your mySQL statement instead on your code.</description>
+            <pubDate>Wed, 23 Oct 2013 19:00:00 -0500</pubDate>
+            <category>MySql</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-10-23-quick-tip-mysql-replace</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-10-23-quick-tip-mysql-replace</guid>
+        </item>
+        <item>
+            <title>Raspberry Pi: List of Projects and resource</title>
+            <description>An initial dive into streaming content on the Raspberry Pi device.</description>
+            <pubDate>Sun, 05 Sept 2013 20:00:00 -0500</pubDate>
+            <category>Raspberri Pi</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-09-05-raspbeerri-pi-list-of-projects-and-resources</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-09-05-raspbeerri-pi-list-of-projects-and-resources</guid>
+        </item>
+        <item>
+            <title>A look at Raspmbc video streaming</title>
+            <description>An initial dive into streaming content on the Raspberry Pi device.</description>
+            <pubDate>Sun, 05 Sept 2013 19:00:00 -0500</pubDate>
+            <category>Raspberri Pi</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-09-05-a-look-at-raspmbc-video-streaming</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-09-05-a-look-at-raspmbc-video-streaming</guid>
+        </item>
         <item>
             <title>Quick tips: MySql Concat</title>
             <description>How to join two mySQL table columns in a query instead of a programming language.</description>
