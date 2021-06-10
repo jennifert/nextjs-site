@@ -11,9 +11,25 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>Using Require JS with Bootstrap, Google maps, and more</title>
+            <description>A way to integrate Google maps in a bootstrap framework which has been loaded by RequireJS</description>
+            <pubDate>Wed, 06 Nov 2013 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more</guid>
+        </item>
+        <item>
+            <title>Quick Tip: Using Font Awesome 4 With Bootstrap 3</title>
+            <description>Various ways to include the Font-Awesome 4 library in Bootstrap 3.</description>
+            <pubDate>Wed, 06 Nov 2013 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3</guid>
+        </item>
+        <item>
             <title>Bootstrap 3 and Google Maps</title>
             <description>There are changes in Bootstrap 3 that stops Google maps from displaying correctly in modals, or tabs.  This post described how to update your code from Bootstrap 2.</description>
-            <pubDate>true, 05 Nov 2013 19:00:00 -0500</pubDate>
+            <pubDate>Tue, 05 Nov 2013 19:00:00 -0500</pubDate>
             <category>JavaScript</category>
             <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-05-bootstrap-3-and-google-maps</link>
             <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-05-bootstrap-3-and-google-maps</guid>

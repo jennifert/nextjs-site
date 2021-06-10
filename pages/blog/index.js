@@ -30,10 +30,18 @@ export default function Blog() {
                     </li>
                 </ul>
 
-                
+                <h2>CSS</h2>
+                <ul>
+                    <li>
+                        <Link href="/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3"><a className="underline focus:ring-2">Quick Tip: Using Font Awesome 4 With Bootstrap 3</a></Link> on <time datetime="2013-11-06T19:00">November 06, 2013</time>
+                    </li>
+                </ul>
 
                 <h2>JavaScript</h2>
                 <ul>
+                    <li>
+                        <Link href="/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more"><a className="underline focus:ring-2">Using Require JS with Bootstrap, Google maps, and more</a></Link> on <time datetime="2013-11-06T20:00">November 06, 2013</time>
+                    </li>
                     <li>
                         <Link href="/blog/2013-11-05-bootstrap-3-and-google-maps"><a className="underline focus:ring-2">Bootstrap 3 and Google Maps</a></Link> on <time datetime="2013-11-05T19:00">November 05, 2013</time>
                     </li>

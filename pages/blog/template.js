@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import Image from 'next/image'
 import { PrismCode } from '../../components/prism'
 
 const code = `
@@ -18,6 +19,10 @@ class HelloWorld {
 }
 `.trim();
 
+const blogLoader = ({ src, width, quality }) => {
+    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+}
+
 export default function Template() {
     const POST_TITLE = 'The post name';
     return (
@@ -33,6 +38,18 @@ export default function Template() {
                     language="java"
                     plugins={["line-numbers"]}
                 />
+
+                <Image
+                    loader={blogLoader}
+                    src="/custom-bootstrap-3_gt447z.png"
+                    alt="Screenshot "
+                    width={400}
+                    height={233}
+                />
+
+                <h2>Resources:</h2>
+                <p><a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/css/#forms" rel="nofollow noreferrer">Bootstrap 3: forms</a><br />
+                    <a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/examples/" rel="nofollow noreferrer">Font-Awesome 4: Examples</a></p>
             </section>
         </Layout>
     )
