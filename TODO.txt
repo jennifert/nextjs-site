@@ -10,7 +10,7 @@ Show Via aria active page (will need to fix when un active nav styles more final
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
                                 : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
                         </li>
-- bullet lists, h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming
+- h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming, alert styles; http://localhost:3000/blog/2013-11-05-bootstrap-3-and-google-maps
 - make all keyboard input (double check old posts/images)
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
@@ -20,8 +20,8 @@ Show Via aria active page (will need to fix when un active nav styles more final
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
  - blog posts
- - fix link styles in content/white area and spacing between text (blog posts)
  - change favicon.ico
  -picture gallery
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
+- fix: Warning: next-head-count is missing. https://nextjs.org/docs/messages/next-head-count-missing
 - once everything done run lighthouse

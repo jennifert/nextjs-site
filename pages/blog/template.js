@@ -47,6 +47,14 @@ export default function Template() {
                     height={233}
                 />
 
+                {/* <ul className="list-disc list-inside m-2">
+
+                </ul>
+
+                <ol className="list-decimal list-inside m-2">
+
+                </ol> */}
+
                 <h2>Resources:</h2>
                 <p><a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/css/#forms" rel="nofollow noreferrer">Bootstrap 3: forms</a><br />
                     <a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/examples/" rel="nofollow noreferrer">Font-Awesome 4: Examples</a></p>

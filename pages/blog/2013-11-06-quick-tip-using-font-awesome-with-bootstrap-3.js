@@ -7,6 +7,7 @@ import { PrismCode } from '../../components/prism'
 const blogLoader = ({ src, width, quality }) => {
     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
 }
+
 const code = `
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -37,7 +38,7 @@ export default function FontAwesomeBootstrapThree() {
                     plugins={["line-numbers"]}
                 />
 
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="https://github.com/jennifert/JavaScript-Demos/blob/master/Bootstrap/fontawesome_bootstrap3.html" rel="nofollow noreferrer">Download full page code on JavaScript Github Repo</a></li>
                 </ul>
 

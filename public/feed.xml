@@ -11,6 +11,22 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>Fixing Ubuntu 12.04 network issue</title>
+            <description>Resoling a common network issue in Ubuntu 12.04 that occurs after an LTS upgrade.</description>
+            <pubDate>Thu, 09 Jan 2014 19:00:00 -0500</pubDate>
+            <category>Servers</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-01-09-fixing-ubuntu-12-04-network-issue</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-01-09-fixing-ubuntu-12-04-network-issue</guid>
+        </item>
+        <item>
+            <title>Asp.net Menu Control - Styling with Bootstrap</title>
+            <description>Styling a Bootstrap nav bar in ASP.net.</description>
+            <pubDate>Thu, 07 Nov 2013 19:00:00 -0500</pubDate>
+            <category>.NET</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-07-asp-net-menu-control-styling-with-bootstrap-nav</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2013-11-07-asp-net-menu-control-styling-with-bootstrap-nav</guid>
+        </item>
+        <item>
             <title>Using Require JS with Bootstrap, Google maps, and more</title>
             <description>A way to integrate Google maps in a bootstrap framework which has been loaded by RequireJS</description>
             <pubDate>Wed, 06 Nov 2013 19:00:00 -0500</pubDate>

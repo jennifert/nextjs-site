@@ -42,7 +42,7 @@ export default function PhpUtfEncode() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>Typically, having the proper character encoding on a page can be a bit of a pain, even if you have the right meta-tag. Here are some tips on how to ease the issue.</p>
-                <ol className="list-decimal">
+                <ol className="list-decimal list-inside m-2">
                     <li>Add the following to the top of your php page:
                         <PrismCode
                             code={code}

@@ -16,7 +16,7 @@ export default function RaspMBC() {
                 <p>The <a className="underline focus:ring-2" href="http://www.raspberrypi.org/faqs" rel="nofollow noreferrer">Raspberry Pi Foundation</a> described the pi as "The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It’s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video.". This post is to assist in setting up your Raspberry Pi With an XMBC build called Raspmbc.</p>
                 <h2>Choosing the Modal</h2>
                 <p>If you are going to be doing video streaming (especially over HDMI), it is recommended to buy the Version B. This is because. the modal has more memory than previous model, and has better video streaming. It can be purchased at any of the following sites:</p>
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="https://www.amazon.ca/Raspberry-Pi-Model-Quad-Bluetooth/dp/B0899VXM8F/ref=sr_1_7?dchild=1&keywords=Raspberry+Pi+4+Model+B&qid=1619209356&s=electronics&sr=1-7" rel="nofollow noreferrer">Amazon.ca</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.farnell.com/pi/" rel="nofollow noreferrer">Element 14</a></li>
                     <li><a className="underline focus:ring-2" href="http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi" rel="nofollow noreferrer">RS</a></li>
@@ -27,17 +27,17 @@ export default function RaspMBC() {
                 <p>Like me, you may have luck finding the other components needed to use the device around your house - the key is to mix and match. For example,  I found an old mini USB cable to USB port from an old hard drive, then connected that to my iPhone USB to wall plug (but for safely, when not in use, I power down the machine).</p>
                 <p>Here is a list of all components.</p>
                 <h3>Analog Tv Use:</h3>
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li>Composite video cable</li>
                     <li>RCA audio cable</li>
                 </ul>
                 <h3>With HDMI:</h3>
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li>HDMI cable only</li>
                     <li>HDMI (to __ device sold separately)</li>
                 </ul>
                 <h3>Everything:</h3>
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li>Ethernet cable or Wireless USB</li>
                     <li>MicroUSB Cord</li>
                     <li>Optional: Usb to wall outlet</li>
@@ -81,7 +81,7 @@ export default function RaspMBC() {
                 </ol>
                 <p>That's it. Hope it helps someone.</p>
                 <h2>Resources for this post and further research</h2>
-                <ul>
+                <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="http://www.packtpub.com/raspberry-pi-media-center/book" rel="nofollow noreferrer">Raspberri Pi: Media Centre</a></li>
                     <li><a title="Used for extra info" href="http://elinux.org/RPi_Hardware_Basic_Setup#Typical_Hardware_You_Will_Need" rel="nofollow noreferrer">Equipment</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/quick-start-guide" rel="nofollow noreferrer">Quick start guide</a></li>
