@@ -11,6 +11,14 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>WordPress Development Tips</title>
+            <description>Some quick tips for developing in WordPress.</description>
+            <pubDate>Mon, 20 Jan 2014 19:00:00 -0500</pubDate>
+            <category>PHP</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-01-20-wordpress-development-tips</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-01-20-wordpress-development-tips</guid>
+        </item>
+        <item>
             <title>Fixing Ubuntu 12.04 network issue</title>
             <description>Resoling a common network issue in Ubuntu 12.04 that occurs after an LTS upgrade.</description>
             <pubDate>Thu, 09 Jan 2014 19:00:00 -0500</pubDate>

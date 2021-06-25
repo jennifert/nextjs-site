@@ -88,6 +88,9 @@ export default function Blog() {
                 <h2>PHP</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
+                        <Link href="/blog/2014-01-20-wordpress-development-tips"><a className="underline focus:ring-2">WordPress Development Tips</a></Link> on <time dateTime="2014-01-20T19:00">January 20, 2014</time>
+                    </li>
+                    <li>
                         <Link href="/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve"><a className="underline focus:ring-2">PHP and UTF8 encoding issues - Tips and tricks to resolve</a></Link> on <time dateTime="2013-05-25T19:00">May 25, 2013</time>
                     </li>
                     <li>

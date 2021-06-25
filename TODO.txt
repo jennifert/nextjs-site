@@ -10,6 +10,9 @@ Show Via aria active page (will need to fix when un active nav styles more final
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
                                 : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
                         </li>
+- https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
+
+
 - h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming, alert styles; http://localhost:3000/blog/2013-11-05-bootstrap-3-and-google-maps
 - make all keyboard input (double check old posts/images)
  - based on iCloud cookie-notice-template_en.pages
