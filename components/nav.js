@@ -27,7 +27,7 @@ export default function Nav({ children, href }) {
                             <Link href="/gallery"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Gallery</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/portfolio"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Portfolios</a></Link>
+                            <Link href="/portfolio"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white">Portfolio</a></Link>
                         </li>
                     </ul>
 
