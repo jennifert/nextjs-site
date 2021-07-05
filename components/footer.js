@@ -16,7 +16,7 @@ export default function Footer(props) {
                             <Image
                                 loader={socialLoader}
                                 src="/github-square_nmpyub.svg"
-                                    alt="Github"
+                                    alt="Github Repository"
                                     width={30}
                                 height={30}
                                 />
@@ -27,7 +27,7 @@ export default function Footer(props) {
                             <Image
                                 loader={socialLoader}
                                 src="/rss-square_hsohh9.svg"
-                                    alt="RSS"
+                                    alt="Site RSS Feed"
                                     width={30}
                                     height={30}
                                 />
@@ -38,7 +38,7 @@ export default function Footer(props) {
                             <Image
                                 loader={socialLoader}
                                 src="/linkedin_t8xmbz.svg"
-                                    alt="LinkedIn"
+                                    alt="LinkedIn Profile"
                                     width={30}
                                     height={30}
                                 />

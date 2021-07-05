@@ -4,7 +4,7 @@
       {
         "description": "Ensures <area> elements of image maps have alternate text",
         "help": "Active <area> elements must have alternate text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/area-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/area-alt?application=webdriverjs",
         "id": "area-alt",
         "impact": null,
         "nodes": [],
@@ -22,7 +22,7 @@
       {
         "description": "Ensures every ARIA button, link and menuitem has an accessible name",
         "help": "ARIA commands must have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-command-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-command-name?application=webdriverjs",
         "id": "aria-command-name",
         "impact": null,
         "nodes": [],
@@ -35,7 +35,7 @@
       {
         "description": "Ensures every ARIA input field has an accessible name",
         "help": "ARIA input fields must have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-input-field-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-input-field-name?application=webdriverjs",
         "id": "aria-input-field-name",
         "impact": null,
         "nodes": [],
@@ -49,7 +49,7 @@
       {
         "description": "Ensures every ARIA meter node has an accessible name",
         "help": "ARIA meter nodes must have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-meter-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-meter-name?application=webdriverjs",
         "id": "aria-meter-name",
         "impact": null,
         "nodes": [],
@@ -62,7 +62,7 @@
       {
         "description": "Ensures every ARIA progressbar node has an accessible name",
         "help": "ARIA progressbar nodes must have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-progressbar-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-progressbar-name?application=webdriverjs",
         "id": "aria-progressbar-name",
         "impact": null,
         "nodes": [],
@@ -73,9 +73,35 @@
         ]
       },
       {
+        "description": "Ensures elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-required-children?application=webdriverjs",
+        "id": "aria-required-children",
+        "impact": null,
+        "nodes": [],
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131"
+        ]
+      },
+      {
+        "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+        "help": "Certain ARIA roles must be contained by particular parents",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-required-parent?application=webdriverjs",
+        "id": "aria-required-parent",
+        "impact": null,
+        "nodes": [],
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131"
+        ]
+      },
+      {
         "description": "Ensure aria-roledescription is only used on elements with an implicit or explicit role",
         "help": "Use aria-roledescription on elements with a semantic role",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-roledescription?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-roledescription?application=webdriverjs",
         "id": "aria-roledescription",
         "impact": null,
         "nodes": [],
@@ -88,7 +114,7 @@
       {
         "description": "Ensures every ARIA toggle field has an accessible name",
         "help": "ARIA toggle fields have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-toggle-field-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-toggle-field-name?application=webdriverjs",
         "id": "aria-toggle-field-name",
         "impact": null,
         "nodes": [],
@@ -102,7 +128,7 @@
       {
         "description": "Ensures every ARIA tooltip node has an accessible name",
         "help": "ARIA tooltip nodes must have an accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-tooltip-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-tooltip-name?application=webdriverjs",
         "id": "aria-tooltip-name",
         "impact": null,
         "nodes": [],
@@ -115,7 +141,7 @@
       {
         "description": "Ensures <audio> elements have captions",
         "help": "<audio> elements must have a captions track",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/audio-caption?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/audio-caption?application=webdriverjs",
         "id": "audio-caption",
         "impact": null,
         "nodes": [],
@@ -130,7 +156,7 @@
       {
         "description": "Ensures <blink> elements are not used",
         "help": "<blink> elements are deprecated and must not be used",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/blink?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/blink?application=webdriverjs",
         "id": "blink",
         "impact": null,
         "nodes": [],
@@ -145,7 +171,7 @@
       {
         "description": "Ensures <dl> elements are structured correctly",
         "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/definition-list?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/definition-list?application=webdriverjs",
         "id": "definition-list",
         "impact": null,
         "nodes": [],
@@ -158,7 +184,7 @@
       {
         "description": "Ensures <dt> and <dd> elements are contained by a <dl>",
         "help": "<dt> and <dd> elements must be contained by a <dl>",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/dlitem?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/dlitem?application=webdriverjs",
         "id": "dlitem",
         "impact": null,
         "nodes": [],
@@ -171,7 +197,7 @@
       {
         "description": "Ensures every id attribute value of active elements is unique",
         "help": "IDs of active elements must be unique",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/duplicate-id-active?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/duplicate-id-active?application=webdriverjs",
         "id": "duplicate-id-active",
         "impact": null,
         "nodes": [],
@@ -182,9 +208,22 @@
         ]
       },
       {
-        "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
-        "help": "Frames must have title attribute",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/frame-title?application=webdriverjs",
+        "description": "Ensures <frame> and <iframe> elements with focusable content do not have tabindex=-1",
+        "help": "Frames with focusable content must not have tabindex=-1",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/frame-focusable-content?application=webdriverjs",
+        "id": "frame-focusable-content",
+        "impact": null,
+        "nodes": [],
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag211"
+        ]
+      },
+      {
+        "description": "Ensures <iframe> and <frame> elements have an accessible name",
+        "help": "Frames must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/frame-title?application=webdriverjs",
         "id": "frame-title",
         "impact": null,
         "nodes": [],
@@ -200,7 +239,7 @@
       {
         "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
         "help": "HTML elements with lang and xml:lang must have the same base language",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/html-xml-lang-mismatch?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/html-xml-lang-mismatch?application=webdriverjs",
         "id": "html-xml-lang-mismatch",
         "impact": null,
         "nodes": [],
@@ -214,7 +253,7 @@
       {
         "description": "Ensures input buttons have discernible text",
         "help": "Input buttons must have discernible text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/input-button-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/input-button-name?application=webdriverjs",
         "id": "input-button-name",
         "impact": null,
         "nodes": [],
@@ -229,7 +268,7 @@
       {
         "description": "Ensures <input type=\"image\"> elements have alternate text",
         "help": "Image buttons must have alternate text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/input-image-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/input-image-alt?application=webdriverjs",
         "id": "input-image-alt",
         "impact": null,
         "nodes": [],
@@ -245,7 +284,7 @@
       {
         "description": "Ensures <marquee> elements are not used",
         "help": "<marquee> elements are deprecated and must not be used",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/marquee?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/marquee?application=webdriverjs",
         "id": "marquee",
         "impact": null,
         "nodes": [],
@@ -258,7 +297,7 @@
       {
         "description": "Ensures <meta http-equiv=\"refresh\"> is not used",
         "help": "Timed refresh must not exist",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/meta-refresh?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/meta-refresh?application=webdriverjs",
         "id": "meta-refresh",
         "impact": null,
         "nodes": [],
@@ -274,7 +313,7 @@
       {
         "description": "Ensures <object> elements have alternate text",
         "help": "<object> elements must have alternate text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/object-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/object-alt?application=webdriverjs",
         "id": "object-alt",
         "impact": null,
         "nodes": [],
@@ -289,7 +328,7 @@
       {
         "description": "Ensures [role='img'] elements have alternate text",
         "help": "[role='img'] elements have an alternative text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/role-img-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/role-img-alt?application=webdriverjs",
         "id": "role-img-alt",
         "impact": null,
         "nodes": [],
@@ -303,9 +342,9 @@
         ]
       },
       {
-        "description": "Elements that have scrollable content should be accessible by keyboard",
+        "description": "Elements that have scrollable content must be accessible by keyboard",
         "help": "Ensure that scrollable region has keyboard access",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/scrollable-region-focusable?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/scrollable-region-focusable?application=webdriverjs",
         "id": "scrollable-region-focusable",
         "impact": null,
         "nodes": [],
@@ -317,8 +356,8 @@
       },
       {
         "description": "Ensures select element has an accessible name",
-        "help": "Select element must have and accessible name",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/select-name?application=webdriverjs",
+        "help": "Select element must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/select-name?application=webdriverjs",
         "id": "select-name",
         "impact": null,
         "nodes": [],
@@ -335,7 +374,7 @@
       {
         "description": "Ensures that server-side image maps are not used",
         "help": "Server-side image maps must not be used",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/server-side-image-map?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/server-side-image-map?application=webdriverjs",
         "id": "server-side-image-map",
         "impact": null,
         "nodes": [],
@@ -350,7 +389,7 @@
       {
         "description": "Ensures svg elements with an img, graphics-document or graphics-symbol role have an accessible text",
         "help": "svg elements with an img role have an alternative text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/svg-img-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/svg-img-alt?application=webdriverjs",
         "id": "svg-img-alt",
         "impact": null,
         "nodes": [],
@@ -366,7 +405,7 @@
       {
         "description": "Ensure that each cell in a table using the headers refers to another cell in that table",
         "help": "All cells in a table element that use the headers attribute must only refer to other cells of that same table",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/td-headers-attr?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/td-headers-attr?application=webdriverjs",
         "id": "td-headers-attr",
         "impact": null,
         "nodes": [],
@@ -381,7 +420,7 @@
       {
         "description": "Ensure that each table header in a data table refers to data cells",
         "help": "All th elements and elements with role=columnheader/rowheader must have data cells they describe",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/th-has-data-cells?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/th-has-data-cells?application=webdriverjs",
         "id": "th-has-data-cells",
         "impact": null,
         "nodes": [],
@@ -396,7 +435,7 @@
       {
         "description": "Ensures <video> elements have captions",
         "help": "<video> elements must have captions",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/video-caption?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/video-caption?application=webdriverjs",
         "id": "video-caption",
         "impact": null,
         "nodes": [],
@@ -414,7 +453,7 @@
       {
         "description": "Ensures ARIA attributes are allowed for an element's role",
         "help": "Elements must only use allowed ARIA attributes",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-allowed-attr?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-allowed-attr?application=webdriverjs",
         "id": "aria-allowed-attr",
         "impact": null,
         "nodes": [
@@ -437,6 +476,13 @@
                 "id": "aria-unsupported-attr",
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
                 "relatedNodes": []
               }
             ],
@@ -464,6 +510,13 @@
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
                 "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
+                "relatedNodes": []
               }
             ],
             "target": [
@@ -489,6 +542,13 @@
                 "id": "aria-unsupported-attr",
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
                 "relatedNodes": []
               }
             ],
@@ -516,6 +576,13 @@
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
                 "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
+                "relatedNodes": []
               }
             ],
             "target": [
@@ -541,6 +608,13 @@
                 "id": "aria-unsupported-attr",
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
                 "relatedNodes": []
               }
             ],
@@ -568,6 +642,13 @@
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
                 "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
+                "relatedNodes": []
               }
             ],
             "target": [
@@ -593,6 +674,13 @@
                 "id": "aria-unsupported-attr",
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
                 "relatedNodes": []
               }
             ],
@@ -620,6 +708,13 @@
                 "impact": "critical",
                 "message": "ARIA attribute is supported",
                 "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-prohibited-attr",
+                "impact": "serious",
+                "message": "ARIA attribute is allowed",
+                "relatedNodes": []
               }
             ],
             "target": [
@@ -636,7 +731,7 @@
       {
         "description": "Ensures aria-hidden='true' is not present on the document body.",
         "help": "aria-hidden='true' must not be present on the document body",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-hidden-body?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-hidden-body?application=webdriverjs",
         "id": "aria-hidden-body",
         "impact": null,
         "nodes": [
@@ -668,7 +763,7 @@
       {
         "description": "Ensures aria-hidden elements do not contain focusable elements",
         "help": "ARIA hidden element must not contain focusable elements",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-hidden-focus?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-hidden-focus?application=webdriverjs",
         "id": "aria-hidden-focus",
         "impact": null,
         "nodes": [
@@ -811,7 +906,7 @@
       {
         "description": "Ensures elements with ARIA roles have all required ARIA attributes",
         "help": "Required ARIA attributes must be provided",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-required-attr?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-required-attr?application=webdriverjs",
         "id": "aria-required-attr",
         "impact": null,
         "nodes": [
@@ -859,109 +954,9 @@
         ]
       },
       {
-        "description": "Ensures elements with an ARIA role that require child roles contain them",
-        "help": "Certain ARIA roles must contain particular children",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-required-children?application=webdriverjs",
-        "id": "aria-required-children",
-        "impact": null,
-        "nodes": [
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-required-children",
-                "impact": "critical",
-                "message": "Required ARIA children are present",
-                "relatedNodes": []
-              }
-            ],
-            "html": "<form role=\"search\" action=\"\" method=\"post\" id=\"search-form\" name=\"searchForm\">",
-            "impact": null,
-            "none": [],
-            "target": [
-              "#search-form"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-required-children",
-                "impact": "critical",
-                "message": "Required ARIA children are present",
-                "relatedNodes": []
-              }
-            ],
-            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
-            "impact": null,
-            "none": [],
-            "target": [
-              "#__next-route-announcer__"
-            ]
-          }
-        ],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag131"
-        ]
-      },
-      {
-        "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
-        "help": "Certain ARIA roles must be contained by particular parents",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-required-parent?application=webdriverjs",
-        "id": "aria-required-parent",
-        "impact": null,
-        "nodes": [
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-required-parent",
-                "impact": "critical",
-                "message": "Required ARIA parent role present",
-                "relatedNodes": []
-              }
-            ],
-            "html": "<form role=\"search\" action=\"\" method=\"post\" id=\"search-form\" name=\"searchForm\">",
-            "impact": null,
-            "none": [],
-            "target": [
-              "#search-form"
-            ]
-          },
-          {
-            "all": [],
-            "any": [
-              {
-                "data": null,
-                "id": "aria-required-parent",
-                "impact": "critical",
-                "message": "Required ARIA parent role present",
-                "relatedNodes": []
-              }
-            ],
-            "html": "<p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\"></p>",
-            "impact": null,
-            "none": [],
-            "target": [
-              "#__next-route-announcer__"
-            ]
-          }
-        ],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag131"
-        ]
-      },
-      {
         "description": "Ensures all elements with a role attribute use a valid value",
         "help": "ARIA roles used must conform to valid values",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-roles?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-roles?application=webdriverjs",
         "id": "aria-roles",
         "impact": null,
         "nodes": [
@@ -1053,7 +1048,7 @@
       {
         "description": "Ensures all ARIA attributes have valid values",
         "help": "ARIA attributes must conform to valid values",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-valid-attr-value?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-valid-attr-value?application=webdriverjs",
         "id": "aria-valid-attr-value",
         "impact": null,
         "nodes": [
@@ -1267,7 +1262,7 @@
       {
         "description": "Ensures attributes that begin with aria- are valid ARIA attributes",
         "help": "ARIA attributes must conform to valid names",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/aria-valid-attr?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-valid-attr?application=webdriverjs",
         "id": "aria-valid-attr",
         "impact": null,
         "nodes": [
@@ -1425,7 +1420,7 @@
       {
         "description": "Ensures buttons have discernible text",
         "help": "Buttons must have discernible text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/button-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/button-name?application=webdriverjs",
         "id": "button-name",
         "impact": null,
         "nodes": [
@@ -1460,7 +1455,7 @@
       {
         "description": "Ensures each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
         "help": "Page must have means to bypass repeated blocks",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/bypass?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/bypass?application=webdriverjs",
         "id": "bypass",
         "impact": null,
         "nodes": [
@@ -1552,7 +1547,7 @@
       {
         "description": "Ensures each HTML document contains a non-empty <title> element",
         "help": "Documents must have <title> element to aid in navigation",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/document-title?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/document-title?application=webdriverjs",
         "id": "document-title",
         "impact": null,
         "nodes": [
@@ -1585,7 +1580,7 @@
       {
         "description": "Ensures every id attribute value used in ARIA and in labels is unique",
         "help": "IDs used in ARIA and labels must be unique",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/duplicate-id-aria?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/duplicate-id-aria?application=webdriverjs",
         "id": "duplicate-id-aria",
         "impact": null,
         "nodes": [
@@ -1653,7 +1648,7 @@
       {
         "description": "Ensures every id attribute value is unique",
         "help": "id attribute value must be unique",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/duplicate-id?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/duplicate-id?application=webdriverjs",
         "id": "duplicate-id",
         "impact": null,
         "nodes": [
@@ -1776,7 +1771,7 @@
                 "relatedNodes": []
               }
             ],
-            "html": "<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"n0knHyCaAfamAQCnuP3MG\",\"nextExport\":true,\"autoExport\":true,\"isFallback\":false}</script>",
+            "html": "<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"kqz7jBCR4ctWVvTrlu5P7\",\"nextExport\":true,\"autoExport\":true,\"isFallback\":false}</script>",
             "impact": null,
             "none": [],
             "target": [
@@ -1810,8 +1805,8 @@
       },
       {
         "description": "Ensures form field does not have multiple label elements",
-        "help": "Form field should not have multiple label elements",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/form-field-multiple-labels?application=webdriverjs",
+        "help": "Form field must not have multiple label elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/form-field-multiple-labels?application=webdriverjs",
         "id": "form-field-multiple-labels",
         "impact": null,
         "nodes": [
@@ -1843,7 +1838,7 @@
       {
         "description": "Ensures every HTML document has a lang attribute",
         "help": "<html> element must have a lang attribute",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/html-has-lang?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/html-has-lang?application=webdriverjs",
         "id": "html-has-lang",
         "impact": null,
         "nodes": [
@@ -1876,7 +1871,7 @@
       {
         "description": "Ensures the lang attribute of the <html> element has a valid value",
         "help": "<html> element must have a valid value for the lang attribute",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/html-lang-valid?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/html-lang-valid?application=webdriverjs",
         "id": "html-lang-valid",
         "impact": null,
         "nodes": [
@@ -1909,7 +1904,7 @@
       {
         "description": "Ensures <img> elements have alternate text or a role of none or presentation",
         "help": "Images must have alternate text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/image-alt?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/image-alt?application=webdriverjs",
         "id": "image-alt",
         "impact": null,
         "nodes": [
@@ -2004,7 +1999,7 @@
       {
         "description": "Ensures every form element has a label",
         "help": "Form elements must have labels",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/label?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/label?application=webdriverjs",
         "id": "label",
         "impact": null,
         "nodes": [
@@ -2048,7 +2043,7 @@
       {
         "description": "Ensures links have discernible text",
         "help": "Links must have discernible text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/link-name?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/link-name?application=webdriverjs",
         "id": "link-name",
         "impact": null,
         "nodes": [
@@ -2425,7 +2420,7 @@
       {
         "description": "Ensures that lists are structured correctly",
         "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/list?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/list?application=webdriverjs",
         "id": "list",
         "impact": null,
         "nodes": [
@@ -2475,7 +2470,7 @@
       {
         "description": "Ensures <li> elements are used semantically",
         "help": "<li> elements must be contained in a <ul> or <ol>",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.1/listitem?application=webdriverjs",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/listitem?application=webdriverjs",
         "id": "listitem",
         "impact": null,
         "nodes": [
@@ -2611,23 +2606,109 @@
           "wcag2a",
           "wcag131"
         ]
+      },
+      {
+        "description": "Nested interactive controls are not announced by screen readers",
+        "help": "Ensure interactive controls are not nested",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.2/nested-interactive?application=webdriverjs",
+        "id": "nested-interactive",
+        "impact": null,
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "no-focusable-content",
+                "impact": "serious",
+                "message": "Element does not have focusable descendants",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<button type=\"submit\" class=\"flex text-center rounded-md bg-indigo-300 hover:bg-pink-700 focus:ring-2 focus:ring-white focus:ring-opacity-50 p-2 text-black\">Search</button>",
+            "impact": null,
+            "none": [],
+            "target": [
+              "button"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "no-focusable-content",
+                "impact": "serious",
+                "message": "Element does not have focusable descendants",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"Github\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "img[alt=\"Github\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "no-focusable-content",
+                "impact": "serious",
+                "message": "Element does not have focusable descendants",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"RSS\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "img[alt=\"RSS\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "no-focusable-content",
+                "impact": "serious",
+                "message": "Element does not have focusable descendants",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<img alt=\"LinkedIn\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" decoding=\"async\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%\">",
+            "impact": null,
+            "none": [],
+            "target": [
+              "img[alt=\"LinkedIn\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag412"
+        ]
       }
     ],
     "testEngine": {
       "name": "axe-core",
-      "version": "4.1.4"
+      "version": "4.2.3"
     },
     "testEnvironment": {
       "orientationAngle": 0,
       "orientationType": "landscape-primary",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.85 Safari/537.36",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/91.0.4472.114 Safari/537.36",
       "windowHeight": 600,
       "windowWidth": 800
     },
     "testRunner": {
       "name": "axe"
     },
-    "timestamp": "2021-04-22T15:42:57.097Z",
+    "timestamp": "2021-07-05T21:13:17.279Z",
     "toolOptions": {
       "reporter": "v1",
       "runOnly": {

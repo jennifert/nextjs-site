@@ -9,7 +9,7 @@ export default function Form() {
 
                     <button type="submit" className="flex text-center rounded-md bg-indigo-300 hover:bg-pink-700 focus:ring-2 focus:ring-white focus:ring-opacity-50 p-2 text-black">
                         Search
-                </button>
+                    </button>
                 </div>
             </form>
         </div>

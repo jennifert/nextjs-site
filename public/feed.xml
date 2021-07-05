@@ -11,6 +11,14 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>Setting up Bluetooth on the Raspberry Pi</title>
+            <description>Setting up a bluetooth dongle can be quite interesting when using Raspmbc. Here is a guide on setting up.</description>
+            <pubDate>Mon, 17 Mar 2014 19:00:00 -0500</pubDate>
+            <category>Raspberri Pi</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi</guid>
+        </item>
+        <item>
             <title>WordPress Development Tips</title>
             <description>Some quick tips for developing in WordPress.</description>
             <pubDate>Mon, 20 Jan 2014 19:00:00 -0500</pubDate>

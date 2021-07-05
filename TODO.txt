@@ -5,6 +5,8 @@ https://jenntesolin-com-sff2s.ondigitalocean.app
 
 To Fix:
 
+- make all resource links UL.
+
 Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
                             {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
@@ -28,3 +30,22 @@ Show Via aria active page (will need to fix when un active nav styles more final
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
 - fix: Warning: next-head-count is missing. https://nextjs.org/docs/messages/next-head-count-missing
 - once everything done run lighthouse
+- search content: 
+    https://medium.com/@matswainson/building-a-search-component-for-your-next-js-markdown-blog-9e75e0e7d210
+    https://github.com/nextapps-de/flexsearch
+    add: noValidate - html5 built in not accessible. Will need to code own. 
+    https://juicystudio.com/article/accessible_browser_validation_html5.php
+    https://blog.jordanholt.dev/client-side-validation-using-built-in-form-validation/
+    https://codeburst.io/form-validation-with-next-js-react-part-1-ecceb50bc209
+    https://codeburst.io/form-validation-with-next-js-react-part-2-60753d98c252
+
+    <span classname="error-message">Search field cannot be empty</span>
+     <input type="search" name="search" id="search" required aria-invalid="true" className="px-2 py-2 h-10 border border-solid rounded-full text-sm leading-snug text-indigo-700 bg-indigo-100 shadow-none outline-none w-full font-normal flex-1 border-l-0 mr-2  focus:ring-2 focus:ring-black" />
+
+     have list of errors if have more than search.
+
+     <section id='errors-list' aria-live="assertive" tabindex="-1">
+        ol, anchor tag(s) to effected fields.
+     </section>
+
+     best to do on blur, aria-live assertive on form names. also, keep search form filled in.

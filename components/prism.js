@@ -3,17 +3,17 @@ import Prism from "prismjs"
 export class PrismCode extends React.Component {
     constructor(props) {
         super(props)
-        this.ref = React.createRef()
+        this.ref = React.createRef();
     }
     componentDidMount() {
-        this.highlight()
+        this.highlight();
     }
     componentDidUpdate() {
-        this.highlight()
+        this.highlight();
     }
     highlight = () => {
         if (this.ref && this.ref.current) {
-            Prism.highlightElement(this.ref.current)
+            Prism.highlightElement(this.ref.current);
         }
     }
     render() {
