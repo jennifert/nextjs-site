@@ -35,8 +35,10 @@ export default function BluetoothPi() {
                 <p>Some bluetooth items will not work on Raspmbc such as audio. It has been suggested (Raspberry pi official forums) to instead use OpenELEC or Xbian. </p>
 
                 <h2>Resources:</h2>
-                <p><a className="underline focus:ring-2" href="https://web.archive.org/web/20140706151942/http://www.ctheroux.com/2012/08/a-step-by-step-guide-to-setup-a-bluetooth-keyboard-and-mouse-on-the-raspberry-pi/" rel="nofollow noreferrer">Step by step guide for setting up keyboard and mouse on Pi</a><br />
-                    <a className="underline focus:ring-2" href="https://web.archive.org/web/20210127000542/http://www.correlatedcontent.com/blog/bluetooth-keyboard-on-the-raspberry-pi/" rel="nofollow noreferrer">Bluetooth keyboard on the Pi</a></p>
+                <ul className="list-disc list-inside m-2">
+                    <li><a className="underline focus:ring-2" href="https://web.archive.org/web/20140706151942/http://www.ctheroux.com/2012/08/a-step-by-step-guide-to-setup-a-bluetooth-keyboard-and-mouse-on-the-raspberry-pi/" rel="nofollow noreferrer">Step by step guide for setting up keyboard and mouse on Pi</a></li>
+                    <li><a className="underline focus:ring-2" href="https://web.archive.org/web/20210127000542/http://www.correlatedcontent.com/blog/bluetooth-keyboard-on-the-raspberry-pi/" rel="nofollow noreferrer">Bluetooth keyboard on the Pi</a></li>
+                </ul>
             </section>
         </Layout>
     )

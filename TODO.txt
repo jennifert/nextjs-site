@@ -5,7 +5,9 @@ https://jenntesolin-com-sff2s.ondigitalocean.app
 
 To Fix:
 
-- make all resource links UL.
+- make sure focus elements are noticeable - if element has a 1px border, focus outline should be 2.
+- make form and sections landmarks.
+- change skip link to main, not h1
 
 Show Via aria active page (will need to fix when un active nav styles more final).
 <li className="nav-item">
@@ -33,6 +35,8 @@ Show Via aria active page (will need to fix when un active nav styles more final
 - search content: 
     https://medium.com/@matswainson/building-a-search-component-for-your-next-js-markdown-blog-9e75e0e7d210
     https://github.com/nextapps-de/flexsearch
+
+    submit button: https://devdojo.com/tailwindcss/buttons
     add: noValidate - html5 built in not accessible. Will need to code own. 
     https://juicystudio.com/article/accessible_browser_validation_html5.php
     https://blog.jordanholt.dev/client-side-validation-using-built-in-form-validation/

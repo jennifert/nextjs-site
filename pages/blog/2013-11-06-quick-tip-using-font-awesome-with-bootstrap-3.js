@@ -62,10 +62,12 @@ export default function FontAwesomeBootstrapThree() {
                 <h2>Notes:</h2>
                 <p>Bootstrap 3 requires IE9+ or latest Safari, Chrome, or Firefox. Font Awesome 5 has issues with @font-face in IE 8 and does not support IE 7 (read the  <a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/get-started/" rel="nofollow noreferrer">Getting Started</a> page near the bottom to read more).</p>
                 <h2>Resources:</h2>
-                <p><a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/css/#forms" rel="nofollow noreferrer">Bootstrap 3: forms</a><br />
-                    <a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/examples/" rel="nofollow noreferrer">Font-Awesome 4: Examples</a><br />
-                    <a className="underline focus:ring-2" href="https://github.com/MaxCDN/bootstrap-cdn/issues/180" rel="nofollow noreferrer">Found CDN for no icons from github Issue Post.</a><br />
-                    <a className="underline focus:ring-2" href="http://www.bootstrapcdn.com/" rel="nofollow noreferrer">Bootstrap CDN</a></p>
+                <ul className="list-disc list-inside m-2">
+                    <li><a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/css/#forms" rel="nofollow noreferrer">Bootstrap 3: forms</a></li>
+                    <li><a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/examples/" rel="nofollow noreferrer">Font-Awesome 4: Examples</a></li>
+                    <li><a className="underline focus:ring-2" href="https://github.com/MaxCDN/bootstrap-cdn/issues/180" rel="nofollow noreferrer">Found CDN for no icons from github Issue Post.</a></li>
+                    <li><a className="underline focus:ring-2" href="http://www.bootstrapcdn.com/" rel="nofollow noreferrer">Bootstrap CDN</a></li>
+                </ul>
             </section>
         </Layout>
     )

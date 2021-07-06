@@ -15,7 +15,7 @@ export default function Blog() {
                 {/* <h2>Apple</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time dateTime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet"><a className="underline focus:ring-2">Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO</a></Link> on <time dateTime="2014-03-28T19:00">March 28, 2014</time>
                     </li>
                 </ul> */}
 
@@ -37,6 +37,13 @@ export default function Blog() {
                 <ul className="list-disc list-inside m-2">
                     <li>
                         <Link href="/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3"><a className="underline focus:ring-2">Quick Tip: Using Font Awesome 4 With Bootstrap 3</a></Link> on <time dateTime="2013-11-06T19:00">November 06, 2013</time>
+                    </li>
+                </ul>
+
+                <h2>HTML</h2>
+                <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet"><a className="underline focus:ring-2">Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO</a></Link> on <time dateTime="2014-03-28T19:00">March 28, 2014</time>
                     </li>
                 </ul>
 
@@ -101,6 +108,9 @@ export default function Blog() {
                 
                 <h2>Raspberri Pi</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2014-04-24-rasplex-media-server"><a className="underline focus:ring-2">Using RasPlex for Your Media Server</a></Link> on <time dateTime="2014-03-24T19:00">April 24, 2014</time>
+                    </li>
                     <li>
                         <Link href="/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi"><a className="underline focus:ring-2">Setting up Bluetooth on the Raspberry Pi</a></Link> on <time dateTime="2014-03-17T19:00">March 17, 2014</time>
                     </li>

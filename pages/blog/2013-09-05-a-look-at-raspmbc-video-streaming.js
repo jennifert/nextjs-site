@@ -80,7 +80,7 @@ export default function RaspMBC() {
                     <li>Advanced (seamless channels): <a className="underline focus:ring-2" href="http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/" rel="nofollow noreferrer">http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/</a></li>
                 </ol>
                 <p>That's it. Hope it helps someone.</p>
-                <h2>Resources for this post and further research</h2>
+                <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="http://www.packtpub.com/raspberry-pi-media-center/book" rel="nofollow noreferrer">Raspberri Pi: Media Centre</a></li>
                     <li><a title="Used for extra info" href="http://elinux.org/RPi_Hardware_Basic_Setup#Typical_Hardware_You_Will_Need" rel="nofollow noreferrer">Equipment</a></li>

@@ -4,12 +4,28 @@
     <title>JennTesolin.com</title>
     <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
     <description>JennTesolin.com's website for beginners.</description>
-    <pubDate>Tue, 08 Jun 2021 20:50:21 GMT</pubDate>
-    <lastBuildDate>Fri, 23 Apr 2021 17:00:21 GMT</lastBuildDate>
+    <pubDate>Tue, 06 Jul 2021 18:11:00 GMT</pubDate>
+    <lastBuildDate>Tue, 06 Jul 2021 18:11:00 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
+        <item>
+            <title>Using RasPlex for your Media Server</title>
+            <description>This post describes using raspex as a media server operating system instead of Raspmbc</description>
+            <pubDate>Thu, 24 Apr 2014 19:00:00 -0500</pubDate>
+            <category>Raspberri Pi</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-04-24-rasplex-media-server</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-04-24-rasplex-media-server</guid>
+        </item>
+        <item>
+            <title>Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO</title>
+            <description>A quick look at using Emmet.IO short codes to build a Bootstrap example page in a flash.</description>
+            <pubDate>Fri, 28 Mar 2014 19:00:00 -0500</pubDate>
+            <category>HTML</category>
+            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet</link>
+            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet</guid>
+        </item>
         <item>
             <title>Setting up Bluetooth on the Raspberry Pi</title>
             <description>Setting up a bluetooth dongle can be quite interesting when using Raspmbc. Here is a guide on setting up.</description>

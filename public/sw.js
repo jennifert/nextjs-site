@@ -1,1 +1,128 @@
-if(!self.define){const e=e=>{"require"!==e&&(e+=".js");let s=Promise.resolve();return t[e]||(s=new Promise((async s=>{if("document"in self){const t=document.createElement("script");t.src=e,document.head.appendChild(t),t.onload=s}else importScripts(e),s()}))),s.then((()=>{if(!t[e])throw new Error(`Module ${e} didn’t register its module`);return t[e]}))},s=(s,t)=>{Promise.all(s.map(e)).then((e=>t(1===e.length?e[0]:e)))},t={require:Promise.resolve(s)};self.define=(s,n,a)=>{t[s]||(t[s]=Promise.resolve().then((()=>{let t={};const i={uri:location.origin+s.slice(1)};return Promise.all(n.map((s=>{switch(s){case"exports":return t;case"module":return i;default:return e(s)}}))).then((e=>{const s=a(...e);return t.default||(t.default=s),t}))})))}}define("./sw.js",["./workbox-ea903bce"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/BingSiteAuth.xml",revision:"48510fe94841e0f189eab42be34272b4"},{url:"/Japan_Trip_2011.pdf",revision:"162335a55b62f9e20b099cae6615c67b"},{url:"/_next/static/As2mgO4qS_D_Bd5sQx1de/_buildManifest.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/As2mgO4qS_D_Bd5sQx1de/_ssgManifest.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/411-11873e14f496de718e48.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/420-d810a4487fa2a7ab7d69.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/framework-92300432a1172ef1338b.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/main-1b0f1fd287f08bad6012.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/404-d2ee7b7d6461f3d0f548.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/500-134cc07c58c536a1bcbc.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/_app-9cd73debe4347ff271a9.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/_error-a0e21b9b223f827fe1f2.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog-1ed44a2a7c496e37d0d8.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2012-11-08-japan-trip-2011-37a16ce5b5655997bef9.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages-f28fc05030a16214b23f.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-05-23-jquery-time-picker-issues-and-net-511f112a580a33afee34.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog-ed6384ef49ecf589d087.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-05-24-ios-7-wishlist-75a2bc375165ff3f1d35.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve-5d0b7983eefeed64efa0.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-05-30-great-apps-and-programs-for-web-development-4e99c433e8dcc3cb0668.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-07-06-quick-tips-firefox-notepad-82078f500fa33abf423e.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-08-11-quick-tips-mysql-case-d7c8fa325ee01abdb2dd.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-08-26-quick-tip-mysql-concat-4abee889ea6c2366c795.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-09-05-a-look-at-raspmbc-video-streaming-d88c91050e4aabc1ffd8.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-09-05-raspbeerri-pi-list-of-projects-and-resources-e59dfd5d877731a9e6df.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-10-23-quick-tip-mysql-replace-575c05f8cffc267fa085.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-11-05-bootstrap-3-and-google-maps-b87ce9e6c9309e865335.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3-3454fb5565d5663c7cb4.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more-c62d7a3d71dd80597d9f.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2013-11-07-asp-net-menu-control-styling-with-bootstrap-nav-7af15138f72ebcac432e.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2014-01-09-fixing-ubuntu-12-04-network-issue-5b8f2ff13dde8221a7c7.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2014-01-20-wordpress-development-tips-67c4694ba566ee011623.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi-4eb3d478de0f1a2f88ed.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/blog/template-d2d8c2c79b0d5ea2d64c.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/gallery-02ce9bfce143e1709a25.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/index-b1c740b792eab1e960ee.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/portfolio-12d013734b9e105b4b1c.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/pages/sitemap-a64c6408ecb7f845e11b.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/polyfills-a54b4f32bdc1ef890ddd.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/chunks/webpack-6aa24242c38afc8913a0.js",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/css/8e7a7d9be4a07040337e.css",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/_next/static/css/b920969f6c1ec85dce08.css",revision:"As2mgO4qS_D_Bd5sQx1de"},{url:"/favicon.ico",revision:"21b739d43fcb9bbb83d8541fe4fe88fa"},{url:"/feed.xml",revision:"443d37283952798f23ccbaba9b764a53"},{url:"/google720ae23eb610f397.html",revision:"b656528f4b8ad1c3a40974b2bd449ef3"},{url:"/humans.txt",revision:"4c279ded7e893cc8396263ba46fcfd52"},{url:"/manifest.json",revision:"319085021f7000d71b795d54d1b0398f"},{url:"/robots.txt",revision:"81044e0a6407ec221462d85721544a16"},{url:"/sitemap.xml",revision:"171b06c266e92b52d09a5323d8ab91af"},{url:"/vercel.svg",revision:"4b4f1876502eb6721764637fe5c41702"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:s,event:t,state:n})=>s&&"opaqueredirect"===s.type?new Response(s.body,{status:200,statusText:"OK",headers:s.headers}):s}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:mp3|mp4)$/i,new e.StaleWhileRevalidate({cacheName:"static-media-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const s=e.pathname;return!s.startsWith("/api/auth/")&&!!s.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600,purgeOnQuotaError:!0})]}),"GET")}));
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  const singleRequire = name => {
+    if (name !== 'require') {
+      name = name + '.js';
+    }
+    let promise = Promise.resolve();
+    if (!registry[name]) {
+      
+        promise = new Promise(async resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = name;
+            document.head.appendChild(script);
+            script.onload = resolve;
+          } else {
+            importScripts(name);
+            resolve();
+          }
+        });
+      
+    }
+    return promise.then(() => {
+      if (!registry[name]) {
+        throw new Error(`Module ${name} didn’t register its module`);
+      }
+      return registry[name];
+    });
+  };
+
+  const require = (names, resolve) => {
+    Promise.all(names.map(singleRequire))
+      .then(modules => resolve(modules.length === 1 ? modules[0] : modules));
+  };
+  
+  const registry = {
+    require: Promise.resolve(require)
+  };
+
+  self.define = (moduleName, depsNames, factory) => {
+    if (registry[moduleName]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    registry[moduleName] = Promise.resolve().then(() => {
+      let exports = {};
+      const module = {
+        uri: location.origin + moduleName.slice(1)
+      };
+      return Promise.all(
+        depsNames.map(depName => {
+          switch(depName) {
+            case "exports":
+              return exports;
+            case "module":
+              return module;
+            default:
+              return singleRequire(depName);
+          }
+        })
+      ).then(deps => {
+        const facValue = factory(...deps);
+        if(!exports.default) {
+          exports.default = facValue;
+        }
+        return exports;
+      });
+    });
+  };
+}
+define("./sw.js",['./workbox-6b19f60b'], function (workbox) { 'use strict';
+
+  /**
+  * Welcome to your Workbox-powered service worker!
+  *
+  * You'll need to register this file in your web app.
+  * See https://goo.gl/nhQhGp
+  *
+  * The rest of the code is auto-generated. Please don't update this file
+  * directly; instead, make changes to your Workbox build configuration
+  * and re-run your build process.
+  * See https://goo.gl/2aRDsh
+  */
+
+  importScripts();
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+
+        return response;
+      }
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: []
+  }), 'GET');
+
+});
+//# sourceMappingURL=sw.js.map

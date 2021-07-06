@@ -43,7 +43,7 @@ export default function TwentyThirteenWebApps() {
                     <li>Evernote</li>
                     <li>Textastic</li>
                 </ul>
-                <h2>Guide:</h2>
+                <h2>Server Guides:</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="https://coolestguidesontheplanet.com/install-configure-apache-mysql-php-phpmyadmin-osx-10-8-mountain-lion/"  rel="nofollow noreferrer">Enabling built in Mountain lion web tools</a>: PHP, MySQL, Apache</li>
                     <li><a className="underline focus:ring-2" href="https://web.archive.org/web/20151024074313/http://apacheguide.org/"  rel="nofollow noreferrer">Apache Guide</a>: First and most comprehensive guide to install Apache, MySQL, etc. Please note that while its a great guide, some of the versions may be out dated. Its always recommended to use the latest stable version.</li>

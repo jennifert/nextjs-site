@@ -24,7 +24,7 @@ export default function MysqlConcat() {
                     language="sql"
                     plugins={["line-numbers"]}
                 />
-                <p>Check out out the official  <a className="underline focus:ring-2" href="https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_concat" rel="nofollow noreferrer">Manual Reference</a> for more examples and information.</p>
+                <p>Check out out the <a className="underline focus:ring-2" href="https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_concat" rel="nofollow noreferrer">Official Manual Reference</a> for more examples and information.</p>
                 <p>Hope this helps someone else!</p>
             </section>
         </Layout>

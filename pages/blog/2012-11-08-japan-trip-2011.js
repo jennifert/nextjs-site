@@ -38,12 +38,14 @@ export default function VacationPlan() {
                 <p>Buy a small container of laundry detergent before you go, some times items can be washed in the sink.</p>
                 <p>Wait as long as possible to buy souvenirs, and try to research beforehand, for items like electronics. Try using search engines or places like yahoo answers - there are many people who can tell the names of great stores or hidden locations.</p>
                 <p>Use a travel card (such as <a className="underline focus:ring-2" href="http://www.yak.ca/yak-travel-card" rel="nofollow noreferrer">Yak's</a>) for emergencies, and try installing programs like <a className="underline focus:ring-2" href="http://www.skype.com/intl/en-us/prices/" rel="nofollow noreferrer">Skype</a>. Skype has pay as you go options, or monthly plans, and many hotels have free Internet access, although, you may feel safer with a <a className="underline focus:ring-2" href="https://www.howtogeek.com/133680/htg-explains-what-is-a-vpn/" rel="nofollow noreferrer">VPN program</a> which can be used to protect yourself online. If you use a smart phone over seas, please be sure to turn on the roaming setting, and turn off data.</p>
-                <h2>References and more information</h2>
-                <p><a className="underline focus:ring-2" title="View book on Amazon" href="http://www.amazon.ca/gp/product/1741042313/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741042313&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japanese Phrasebook</a></p>
-                <p><a className="underline focus:ring-2" href="http://www.amazon.ca/gp/product/1741790425/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741790425&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japan</a></p>
-                <p><a className="underline focus:ring-2" title="Plan tours and more" href="http://www.jtb-sunrisetours.jp/" rel="nofollow noreferrer">Sunrise Tours</a></p>
-                <p><a className="underline focus:ring-2" href="http://www.voyage.gc.ca/register/" rel="nofollow noreferrer">Registration of Canadians Abroad</a></p>
-                <p><a className="underline focus:ring-2" title="Travel information for Canadians" href="http://www.voyage.gc.ca/countries_pays/report_rapport-eng.asp?id=140000" rel="nofollow noreferrer">Japan Travel Advice and Advisory</a> from the Government of Canada</p>
+                <h2>Resources:</h2>
+                <ul className="list-disc list-inside m-2">
+                    <li><a className="underline focus:ring-2" title="View book on Amazon" href="http://www.amazon.ca/gp/product/1741042313/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741042313&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japanese Phrasebook</a></li>
+                    <li><a className="underline focus:ring-2" href="http://www.amazon.ca/gp/product/1741790425/ref=as_li_tf_tl?ie=UTF8&amp;camp=15121&amp;creative=330641&amp;creativeASIN=1741790425&amp;linkCode=as2&amp;tag=jennisportf-20" rel="nofollow noreferrer">Lonely Planet Japan</a></li>
+                    <li><a className="underline focus:ring-2" title="Plan tours and more" href="http://www.jtb-sunrisetours.jp/" rel="nofollow noreferrer">Sunrise Tours</a></li>
+                    <li><a className="underline focus:ring-2" href="http://www.voyage.gc.ca/register/" rel="nofollow noreferrer">Registration of Canadians Abroad</a></li>
+                    <li><a className="underline focus:ring-2" title="Travel information for Canadians" href="http://www.voyage.gc.ca/countries_pays/report_rapport-eng.asp?id=140000" rel="nofollow noreferrer">Japan Travel Advice and Advisory</a> from the Government of Canada</li>
+                </ul>
             </section>
         </Layout>
     )
