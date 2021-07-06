@@ -5,10 +5,10 @@ const globby = require("globby");
 const HOME_OG_IMAGE_URL = ''
 const SITE_TITLE = 'JennTesolin.com'
 const SEARCH_URL = '/search/'
-const SITE_URL = 'https://jenntesolin-com-sff2s.ondigitalocean.app'
+const SITE_URL = 'https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/'
 const SITE_AUTHOR = 'Jennifer Tesolin'
 const ARTICLE_LICENSE = 'http://creativecommons.org/licenses/by-nc-sa/3.0/'
-const SITE_DOMAIN = 'https://jenntesolin-com-sff2s.ondigitalocean.app'
+const SITE_DOMAIN = 'https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/'
 const COPYRIGHT = `&copy; ${new Date().getFullYear()} Jennifer Tesolin.`
 const SITE_DESCRIPTION = `${SITE_TITLE}'s website for beginners.`
 const getDate = new Date().toUTCString();
@@ -73,12 +73,12 @@ const generateFeed = async () => {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JennTesolin.com</title>
-    <link>https://jenntesolin-com-sff2s.ondigitalocean.app</link>
+    <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/</link>
     <description>JennTesolin.com's website for beginners.</description>
     <pubDate>Thu, 18 Mar 2021 20:48:21 GMT</pubDate>
     <lastBuildDate>Thu, 18 Mar 2021 20:48:21 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <atom:link href="https://jenntesolin-com-sff2s.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://nextjs-jenn-tes-f8e9r.ondigitalocean.app//feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
@@ -86,8 +86,8 @@ const generateFeed = async () => {
             <description>Planning a trip overseas, especially when you are a beginner at speaking a language can be tricky. Here is some information to get you started on planning a trip to Japan.</description>
             <pubDate>Thu, 08 Nov 2012 19:00:21 -0500</pubDate>
             <category>Travel</category>
-            <link>https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</link>
-            <guid isPermaLink="true">https://jenntesolin-com-sff2s.ondigitalocean.app/blog/2012-11-08-japan-trip-2011</guid>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app//blog/2012-11-08-japan-trip-2011</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app//blog/2012-11-08-japan-trip-2011</guid>
         </item>
     </channel>
 </rss>

@@ -1,7 +1,7 @@
 https://vimeo.com/upgrade - videos go here, under paid plan send to YouTube, LinkedIn
 https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 
-https://jenntesolin-com-sff2s.ondigitalocean.app
+https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/
 
 To Fix:
 

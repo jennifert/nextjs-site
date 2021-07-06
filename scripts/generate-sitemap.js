@@ -2,7 +2,7 @@ const fs = require("fs");
 const globby = require("globby");
 // import { SITE_DOMAIN } from './lib/constants'
 //TODO: figure out why vars are not being pulled in from lib constant (even when had require, or type modules)
-const SITE_DOMAIN = 'https://jenntesolin-com-sff2s.ondigitalocean.app'
+const SITE_DOMAIN = 'https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/'
 const getDate = new Date().toISOString();
 
 const generateSitemap = async () => {
