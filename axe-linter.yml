@@ -1,0 +1,3 @@
+rules:
+  anchor-is-valid: false
+#   above rule temporary - cannot detect properly in LINK component. axe-core test should be run periodically

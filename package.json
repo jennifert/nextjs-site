@@ -1,44 +1,47 @@
 {
-  "name": "jenntesolin.com",
-  "version": "4.0.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
-    "export": "npm run build && next export -o _static",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "axe": "axe jenntesolin-com-sff2s.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
-    "git": "git add . && git commit -m",
-    "postgit": "git push --all"
-  },
-  "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jennifert/nextjs-site.git"
-  },
-  "author": "Jennifer Tesolin",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/jennifert/nextjs-site/issues"
-  },
-  "homepage": "https://github.com/jennifert/nextjs-site/#readme",
-  "dependencies": {
-    "autoprefixer": "^10.0.4",
-    "html-react-parser": "^1.2.4",
-    "next": "latest",
-    "next-pwa": "^5.0.5",
-    "postcss": "^8.1.10",
-    "prismjs": "^1.24.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "tailwindcss": "^2.0.2"
-  },
-  "devDependencies": {
-    "@axe-core/cli": "^4.1.1",
-    "babel-plugin-prismjs": "^2.0.1",
-    "globby": "^11.0.2",
-    "webpack": "^5.41.0"
-  }
+    "name": "jenntesolin.com",
+    "version": "4.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
+        "dev": "next dev",
+        "build": "next build",
+        "export": "npm run build && next export -o _static",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jennifert/nextjs-site.git"
+    },
+    "author": "Jennifer Tesolin",
+    "license": "",
+    "bugs": {
+        "url": "https://github.com/jennifert/nextjs-site/issues"
+    },
+    "homepage": "https://github.com/jennifert/nextjs-site/#readme",
+    "dependencies": {
+        "autoprefixer": "^10.0.4",
+        "html-react-parser": "^1.2.4",
+        "next": "latest",
+        "next-pwa": "^5.0.5",
+        "postcss": "^8.1.10",
+        "prismjs": "^1.24.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "tailwindcss": "^2.0.2"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^12.0.0",
+        "babel-jest": "^27.0.6",
+        "babel-plugin-prismjs": "^2.0.1",
+        "globby": "^11.0.2",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^27.0.6",
+        "jest-axe": "^5.0.1",
+        "webpack": "^5.41.0"
+    }
 }

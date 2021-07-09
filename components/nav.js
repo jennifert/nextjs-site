@@ -1,10 +1,8 @@
 import Link from 'next/link'
-// import { useRouter } from 'next/router'
 import Form from '../components/form'
 import { SITE_TITLE } from '../lib/constants'
 
 export default function Nav({ children, href }) {
-    // const router = useRouter()
 
     return (
         <nav aria-label="Site menu" className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-indigo-500 mb-3">

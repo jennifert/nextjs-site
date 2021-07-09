@@ -4,7 +4,7 @@ https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/
 
 To Fix:
-
+- chnage link styles (no-underline to underline, and on hover change colour or add another underline)
 - make sure focus elements are noticeable - if element has a 1px border, focus outline should be 2.
 - make form and sections landmarks.
 - change skip link to main, not h1
@@ -53,3 +53,17 @@ Show Via aria active page (will need to fix when un active nav styles more final
      </section>
 
      best to do on blur, aria-live assertive on form names. also, keep search form filled in.
+
+Check out: 
+@tailwindcss/forms
+@tailwindcss/typography
+next-seo
+
+add to package.json after testing:
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all" 
+    postbuild": "npm run git"
+
+    Removed:
+    will add jest-axe/
+        "axe": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
