@@ -12,12 +12,12 @@ export default function Blog() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{BLOG_TITLE}</h1>
                 
-                {/* <h2>Apple</h2>
+                <h2>Apple</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet"><a className="underline focus:ring-2">Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO</a></Link> on <time dateTime="2014-03-28T19:00">March 28, 2014</time>
+                        <Link href="/blog/2016-06-12-itunes-view-change"><a className="underline focus:ring-2">Change your iTunes media view mode</a></Link> on <time dateTime="2016-06-12T19:00">June 12, 2016</time>
                     </li>
-                </ul> */}
+                </ul>
 
                 <h2>Asp.Net</h2>
 
@@ -57,16 +57,27 @@ export default function Blog() {
                     </li>
                 </ul>
 
-                {/* <h2>Jekyll</h2>
+                <h2>Jekyll</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time dateTime="2012-11-08T19:00">November 08, 2012</time>
+                        <Link href="/blog/2016-02-04-jekyll-on-azure-or-github"><a className="underline focus:ring-2">Configure Jekyll on Microsoft Azure or Github pages</a></Link> on <time dateTime="2016-02-04T19:00">February 04, 2016</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2015-10-28-fix-jekyll-pagination-upgrade-to-3"><a className="underline focus:ring-2">Fix pagination after upgrading to Jekyll 3</a></Link> on <time dateTime="2015-10-28T19:00">August 28, 2015</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2015-08-08-jekyll-config-file"><a className="underline focus:ring-2">Jekyll: The configuration file</a></Link> on <time dateTime="2015-08-08T19:00">August 08, 2015</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2015-05-22-Jekyll-Custom-Easy-Search-jQuery"><a className="underline focus:ring-2">Jekyll: Easy searching with JSON and jQuery</a></Link> on <time dateTime="2015-05-22T19:00">May 22, 2015</time>
                     </li>
                 </ul>
-                */}
                 
                 <h2>Lists</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2016-08-24-top-5-console-additions-pokemon-go"><a className="underline focus:ring-2">Top 5 additions from the console games that would improve Pokemon Go</a></Link> on <time dateTime="2016-08-24T19:00">August 24, 2016</time>
+                    </li>
                     <li>
                         <Link href="/blog/2013-07-06-quick-tips-firefox-notepad"><a className="underline focus:ring-2">Quick Tips: Firefox and Notepad++</a></Link> on <time dateTime="2013-05-30T19:00">July 06, 2013</time>
                     </li>
@@ -94,6 +105,9 @@ export default function Blog() {
                 
                 <h2>PHP</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2016-06-14-compare-integars-php"><a className="underline focus:ring-2">Comparing integer variables using PHP</a></Link> on <time dateTime="2016-06-14T19:00">June 14, 2016</time>
+                    </li>
                     <li>
                         <Link href="/blog/2014-01-20-wordpress-development-tips"><a className="underline focus:ring-2">WordPress Development Tips</a></Link> on <time dateTime="2014-01-20T19:00">January 20, 2014</time>
                     </li>
@@ -124,6 +138,9 @@ export default function Blog() {
 
                 <h2>Servers</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2015-03-14-IIS7-Development-Environment"><a className="underline focus:ring-2">Creating a development environment for IIS 7+</a></Link> on <time dateTime="2015-03-14T19:00">March 14, 2015</time>
+                    </li>
                     <li>
                         <Link href="/blog/2014-01-09-fixing-ubuntu-12-04-network-issue"><a className="underline focus:ring-2">Fixing Ubuntu 12.04 network issue</a></Link> on <time dateTime="2014-01-09T19:00">January 09, 2014</time>
                     </li>
