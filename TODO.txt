@@ -59,6 +59,18 @@ Check out:
 @tailwindcss/typography
 next-seo
 
+add styles to make imgs responive:
+<img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/store.jpg" alt="Man looking at item at a store">
+<div class="relative h-64 m-8 overflow-hidden rounded-lg bg-indigo-500">
+  <div class="absolute top-0 right-0 block w-9/12 h-full">
+    <img
+      alt="Snowy mountain lake"
+      class="object-cover min-w-full h-full"
+      src="https://images.unsplash.com/photo-1607025952930-da2ac6748e7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    />
+  </div>
+</div>
+
 add to package.json after testing:
     "git": "git add . && git commit -m",
     "postgit": "git push --all" 
@@ -67,3 +79,6 @@ add to package.json after testing:
     Removed:
     will add jest-axe/
         "axe": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
+
+
+warn  - No ESLint configuration detected. Run next lint to begin setup

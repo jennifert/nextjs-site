@@ -44,13 +44,42 @@ function HomePage() {
             </section>
             <section id="latest-blogs" aria-labelledby="blogs-heading">
                 <h2 id="blogs-heading">Latest Blog Posts</h2>
-                <p>This is still under development. Please check out the blog link in the header to see what posts have been moved over, or <a className="underline focus:ring-2" href="https://jenntesolin.com/blog/" rel="nofollow noreferrer">visit the production site</a>.</p>
-                <p>Sample code will look like:</p>
-                <PrismCode
-                    code={code}
-                    language="java"
-                    plugins={["line-numbers"]}
-                />
+                {/* TODO: put in Own componnet - try to pull from rss feed. if not, run script to convert rss to json on build. */}
+                <div className="flex flex-wrap">
+                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                        <div className="border border-gray-300 p-6 rounded-lg">
+                            <h2 className="text-lg  font-medium title-font mb-2"><Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="underline hover:underline focus:ring-2 focus:ring-white">Jekyll Static Sites on the Digital App Platform</a></Link></h2>
+                            <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
+                            <div className="text-center mt-2 leading-none flex justify-between w-full">
+                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
+                                    <Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="no-underline hover:underline focus:ring-2 focus:ring-white"><span className="sr-only">"Jekyll Static Sites on the Digital App Platform" was posted on:</span> <time dateTime="2021-03-11T19:00">March 03, 2021</time></a></Link>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                        <div className="border border-gray-300 p-6 rounded-lg">
+                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-01-13-mac-homebrew"><a className="underline hover:underline focus:ring-2 focus:ring-white">Installing Homebrew and Fixing Ruby on your Mac</a></Link></h2>
+                            <p className="leading-relaxed text-base">Post that describes how to fix the default Ruby install on your Mac and install Homebrew.</p>
+                            <div className="text-center mt-2 leading-none flex justify-between w-full">
+                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
+                                    <Link href="/blog/2021-01-13-mac-homebrew"><a className="no-underline hover:underline focus:ring-2 focus:ring-white"><span className="sr-only">"Installing Homebrew and Fixing Ruby on your Mac" was posted on:</span> <time dateTime="2021-01-13T19:00">January 13, 2021</time></a></Link>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                        <div className="border border-gray-300 p-6 rounded-lg">
+                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2020-10-14-great-apps-and-programs-for-web-development"><a className="underline hover:underline focus:ring-2 focus:ring-white">Great apps and programs for web development</a></Link></h2>
+                            <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
+                            <div className="text-center mt-2 leading-none flex justify-between w-full">
+                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
+                                    <Link href="/blog/2020-10-14-great-apps-and-programs-for-web-development"><a className="no-underline hover:underline focus:ring-2 focus:ring-white"><span className="sr-only">"Great apps and programs for web development" was posted on:</span> <time dateTime="2013-05-30T19:00">October 14, 2020</time></a></Link>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </Layout>

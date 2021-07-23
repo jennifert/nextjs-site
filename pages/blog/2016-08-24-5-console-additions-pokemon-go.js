@@ -4,7 +4,7 @@ import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 
 export default function PokemonConsoleToGo() {
-    const POST_TITLE = 'Top 5 additions from the console games that would improve Pokemon Go';
+    const POST_TITLE = '5 additions from the console games that would improve Pokemon Go';
     return (
         <Layout>
             <Head>

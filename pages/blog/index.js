@@ -11,9 +11,12 @@ export default function Blog() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{BLOG_TITLE}</h1>
-                
+                <p>All blog posts are visible in this page separated by category. Check out the <Link href="/series"><a className="underline focus:ring-2">series</a></Link> page to show step by step how to set up a development environment.</p>
                 <h2>Apple</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2018-09-26-using-ios-and-android-together"><a className="underline focus:ring-2">Using iOS and Android devices together</a></Link> on <time dateTime="2018-09-26T19:00">September 09, 2018</time>
+                    </li>
                     <li>
                         <Link href="/blog/2016-06-12-itunes-view-change"><a className="underline focus:ring-2">Change your iTunes media view mode</a></Link> on <time dateTime="2016-06-12T19:00">June 12, 2016</time>
                     </li>
@@ -50,6 +53,12 @@ export default function Blog() {
                 <h2>JavaScript</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
+                        <Link href="/blog/2018-04-18-installing-node-js-and-grunt"><a className="underline focus:ring-2">Installing Node JS and Grunt</a></Link> on <time dateTime="2018-04-18T20:00">April 18, 2018</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2017-05-27-highcharts-new-window"><a className="underline focus:ring-2">Quick Tip: Highcharts credit in a new window</a></Link> on <time dateTime="2017-05-27T20:00">May 27, 2017</time>
+                    </li>
+                    <li>
                         <Link href="/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more"><a className="underline focus:ring-2">Using Require JS with Bootstrap, Google maps, and more</a></Link> on <time dateTime="2013-11-06T20:00">November 06, 2013</time>
                     </li>
                     <li>
@@ -59,6 +68,12 @@ export default function Blog() {
 
                 <h2>Jekyll</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="underline focus:ring-2">Jekyll Static Sites on the Digital App Platform</a></Link> on <time dateTime="2021-03-11T19:00">March 03, 2021</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2019-12-11-Jekyll-Set-Up-Publish"><a className="underline focus:ring-2">Jekyll: Setting up your development environment</a></Link> on <time dateTime="2019-12-11T19:00">December 11, 2019</time>
+                    </li>
                     <li>
                         <Link href="/blog/2016-02-04-jekyll-on-azure-or-github"><a className="underline focus:ring-2">Configure Jekyll on Microsoft Azure or Github pages</a></Link> on <time dateTime="2016-02-04T19:00">February 04, 2016</time>
                     </li>
@@ -76,13 +91,13 @@ export default function Blog() {
                 <h2>Lists</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2016-08-24-top-5-console-additions-pokemon-go"><a className="underline focus:ring-2">Top 5 additions from the console games that would improve Pokemon Go</a></Link> on <time dateTime="2016-08-24T19:00">August 24, 2016</time>
+                        <Link href="/blog/2017-01-06-6-library-resources"><a className="underline focus:ring-2">6 resources that you may find at your local library</a></Link> on <time dateTime="2017-01-06T19:00">January 06, 2017</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2016-08-24-5-console-additions-pokemon-go"><a className="underline focus:ring-2">5 additions from the console games that would improve Pokemon Go</a></Link> on <time dateTime="2016-08-24T19:00">August 24, 2016</time>
                     </li>
                     <li>
                         <Link href="/blog/2013-07-06-quick-tips-firefox-notepad"><a className="underline focus:ring-2">Quick Tips: Firefox and Notepad++</a></Link> on <time dateTime="2013-05-30T19:00">July 06, 2013</time>
-                    </li>
-                    <li>
-                        <Link href="/blog/2013-05-30-great-apps-and-programs-for-web-development"><a className="underline focus:ring-2">Great apps and programs for web development</a></Link> on <time dateTime="2013-05-30T19:00">May 30, 2013</time>
                     </li>
                     <li>
                         <Link href="/blog/2013-05-24-ios-7-wishlist"><a className="underline focus:ring-2">iOS 7 Wishlist</a></Link> on <time dateTime="2013-05-24T19:00">May 24, 2013</time>
@@ -105,6 +120,9 @@ export default function Blog() {
                 
                 <h2>PHP</h2>
                 <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2017-01-07-word-press-and-campaign-monitor"><a className="underline focus:ring-2">Quick Tip: WordPress and Campaign Monitor</a></Link> on <time dateTime="2017-01-07T19:00">January 07, 2017</time>
+                    </li>
                     <li>
                         <Link href="/blog/2016-06-14-compare-integars-php"><a className="underline focus:ring-2">Comparing integer variables using PHP</a></Link> on <time dateTime="2016-06-14T19:00">June 14, 2016</time>
                     </li>
@@ -133,6 +151,19 @@ export default function Blog() {
                     </li>
                     <li>
                         <Link href="/blog/2013-09-05-a-look-at-raspmbc-video-streaming"><a className="underline focus:ring-2">A look at Raspmbc video streaming</a></Link> on <time dateTime="2013-09-05T19:00">September 05, 2013</time>
+                    </li>
+                </ul>
+
+                <h2>Software</h2>
+                <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2021-01-13-mac-homebrew"><a className="underline focus:ring-2">Installing Homebrew and Fixing Ruby on your Mac</a></Link> on <time dateTime="2021-01-13T19:00">January 13, 2021</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2020-10-14-great-apps-and-programs-for-web-development"><a className="underline focus:ring-2">Great apps and programs for web development</a></Link> on <time dateTime="2013-05-30T19:00">October 14, 2020</time>
+                    </li>
+                    <li>
+                        <Link href="/blog/2019-12-12-git-github"><a className="underline focus:ring-2">Installing Git and Github on your Mac</a></Link> on <time dateTime="2019-12-12T19:00">December 12, 2019</time>
                     </li>
                 </ul>
 

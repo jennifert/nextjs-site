@@ -4,19 +4,99 @@
     <title>JennTesolin.com</title>
     <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/</link>
     <description>JennTesolin.com's website for beginners.</description>
-    <pubDate>Wed, 21 Jul 2021 18:11:00 GMT</pubDate>
-    <lastBuildDate>Wed, 21 Jul 2021 18:11:00 GMT</lastBuildDate>
+    <pubDate>Thu, 22 Jul 2021 20:11:00 GMT</pubDate>
+    <lastBuildDate>Thu, 22 Jul 2021 20:11:00 GMT</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <atom:link href="https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
-            <title>Top 5 additions from the console games that would improve Pokemon Go</title>
+            <title>Jekyll Static Sites on the Digital App Platform</title>
+            <description>Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</description>
+            <pubDate>Wed, 11 Mar 2021 19:00:00 -0500</pubDate>
+            <category>Jekyll</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2021-03-11-jekyll-on-digital-ocean</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2021-03-11-jekyll-on-digital-ocean</guid>
+        </item>
+        <item>
+            <title>Installing Homebrew and Fixing Ruby on your Mac</title>
+            <description>This post describes how to install homebrew, as as well as casks (software applications).</description>
+            <pubDate>Wed, 13 Jan 2021 19:00:00 -0500</pubDate>
+            <category>Software</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2021-01-13-mac-homebrew</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2021-01-13-mac-homebrew</guid>
+        </item>
+        <item>
+            <title>Great apps and programs for web development</title>
+            <description>A list of resources and software that can be used in web development.</description>
+            <pubDate>Wed, 14 Oct 2020 19:00:00 -0500</pubDate>
+            <category>Software</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2020-10-14-great-apps-and-programs-for-web-development</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2020-10-14-great-apps-and-programs-for-web-development</guid>
+        </item>
+        <item>
+            <title>Installing Git and Github on your Mac</title>
+            <description>This post describes how to install git and github on your mac using homebrew or by DMG.</description>
+            <pubDate>Sun, 12 Dec 2019 19:00:00 -0500</pubDate>
+            <category>Software</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2019-12-12-git-github</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2019-12-12-git-github</guid>
+        </item>
+        <item>
+            <title>Jekyll: Setting up your development environment</title>
+            <description>A guide that describes how to set up the Jekyll static site generator on desktop.</description>
+            <pubDate>Sat, 11 Dec 2019 19:00:00 -0500</pubDate>
+            <category>Jekyll</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2019-12-11-Jekyll-Set-Up-Publish</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2019-12-11-Jekyll-Set-Up-Publish</guid>
+        </item>
+        <item>
+            <title>Using iOS and Android devices together</title>
+            <description>Using an android in an Apple environment can be a bit tricky, but here are some tricks and resources to help you out.</description>
+            <pubDate>Sun, 26 Sep 2018 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2018-09-26-using-ios-and-android-together</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2018-09-26-using-ios-and-android-together</guid>
+        </item>
+        <item>
+            <title>Installing Node JS and Grunt</title>
+            <description>This tutorial focuses on installing NodeJS, and provides resources for using Grunt.</description>
+            <pubDate>Wed, 18 Apr 2018 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2018-04-18-installing-node-js-and-grunt</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2018-04-18-installing-node-js-and-grunt</guid>
+        </item>
+        <item>
+            <title>Quick Tip: Highcharts credit in a new window</title>
+            <description>Here is a great fiddle by Torstein Hønsi, that shows how to have highcharts credits open in a new window/tab.</description>
+            <pubDate>Sat, 27 May 2017 19:00:00 -0500</pubDate>
+            <category>JavaScript</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-05-27-highcharts-new-window</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-05-27-highcharts-new-window</guid>
+        </item>
+        <item>
+            <title>Quick Tip: WordPress and Campaign Monitor</title>
+            <description>Campaign monitor can be integrated into WordPress. This post explains how to add a subscription form and auto email</description>
+            <pubDate>Sat, 07 Jan 2017 19:00:00 -0500</pubDate>
+            <category>Lists</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-01-07-word-press-and-campaign-monitor</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-01-07-word-press-and-campaign-monitor</guid>
+        </item>
+        <item>
+            <title>6 resources that you may find at your local library</title>
+            <description>The library has more services than just book or disc lending. This post describes what can be found in the city of Toronto, Canada. Some of which are also available in various Canadian and U.S cities as well.</description>
+            <pubDate>Fri, 06 Jan 2017 19:00:00 -0500</pubDate>
+            <category>Lists</category>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-01-06-6-library-resources</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2017-01-06-6-library-resources</guid>
+        </item>
+        <item>
+            <title>5 additions from the console games that would improve Pokemon Go</title>
             <description>Pokemon Go is a great idea for a game but as someone who has played the console games in the past there are quite a few things that seem to be missing. Here is a list of concepts that can help improve the game play.</description>
             <pubDate>Wed, 24 Aug 2016 19:00:00 -0500</pubDate>
             <category>Lists</category>
-            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2016-08-24-top-5-console-additions-pokemon-go</link>
-            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2016-08-24-top-5-console-additions-pokemon-go</guid>
+            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2016-08-24-5-console-additions-pokemon-go</link>
+            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2016-08-24-5-console-additions-pokemon-go</guid>
         </item>
         <item>
             <title>Comparing integer variables using PHP</title>
@@ -201,14 +281,6 @@
             <category>Lists</category>
             <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</link>
             <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2013-07-06-quick-tips-firefox-notepad</guid>
-        </item>
-        <item>
-            <title>Great apps and programs for web development</title>
-            <description>A list of resources and software that can be used in web development (outdated).</description>
-            <pubDate>Thu, 30 May 2013 19:00:00 -0500</pubDate>
-            <category>Lists</category>
-            <link>https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2013-05-30-great-apps-and-programs-for-web-development</link>
-            <guid isPermaLink="true">https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/blog/2013-05-30-great-apps-and-programs-for-web-development</guid>
         </item>
         <item>
             <title>PHP and UTF8 encoding issues - Tips and tricks to resolve</title>

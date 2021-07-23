@@ -16,7 +16,6 @@ module.exports = withPWA({
     webpack: (config, { isServer }) => {
         if (isServer) {
             generateSitemap();
-            // generateFeed();
         }
         return config;
     },

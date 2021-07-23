@@ -22,7 +22,7 @@
                     // "editorconfig",
                     // "mongodb",
                     // "markdown",
-                    // "json",
+                    "json",
                     "liquid",
                     "gitignore",
                     // "python",
