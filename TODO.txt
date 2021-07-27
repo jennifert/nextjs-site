@@ -4,21 +4,11 @@ https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/
 
 To Fix:
-- chnage link styles (no-underline to underline, and on hover change colour or add another underline)
 - make sure focus elements are noticeable - if element has a 1px border, focus outline should be 2.
-- make form and sections landmarks.
-- change skip link to main, not h1
-
-Show Via aria active page (will need to fix when un active nav styles more final).
-<li className="nav-item">
-                            {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" aria-current="page">Home</a></Link>
-                                : <Link href="/"><a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline md:underline">Home</a></Link>}
-                        </li>
+- make form and sections landmarks.                      
 - https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
-
-
-- h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming, alert styles; http://localhost:3000/blog/2013-11-05-bootstrap-3-and-google-maps
-- make all keyboard input (double check old posts/images)
+- h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming
+- alert styles; http://localhost:3000/blog/2013-11-05-bootstrap-3-and-google-maps
  - based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
     - legal: Icons by Font Awesome Pro 5
@@ -26,17 +16,14 @@ Show Via aria active page (will need to fix when un active nav styles more final
 - analytic program: https://plausible.io/: 
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
- - blog posts
- - change favicon.ico
+ - change favicon.ico, and other ap icons
  -picture gallery
     - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
-- fix: Warning: next-head-count is missing. https://nextjs.org/docs/messages/next-head-count-missing
-- once everything done run lighthouse
+    - https://www.nick-basile.com/blog/post/building-a-photo-gallery-with-css-grid-and-tailwind-css/
 - search content: 
     https://medium.com/@matswainson/building-a-search-component-for-your-next-js-markdown-blog-9e75e0e7d210
     https://github.com/nextapps-de/flexsearch
 
-    submit button: https://devdojo.com/tailwindcss/buttons
     add: noValidate - html5 built in not accessible. Will need to code own. 
     https://juicystudio.com/article/accessible_browser_validation_html5.php
     https://blog.jordanholt.dev/client-side-validation-using-built-in-form-validation/
@@ -54,31 +41,21 @@ Show Via aria active page (will need to fix when un active nav styles more final
 
      best to do on blur, aria-live assertive on form names. also, keep search form filled in.
 
-Check out: 
-@tailwindcss/forms
-@tailwindcss/typography
-next-seo
+Style forms: 
+https://github.com/tailwindlabs/tailwindcss-forms
+https://v1.tailwindcss.com/components/forms
+https://github.com/tailwindlabs/tailwindcss-line-clamp
 
 add styles to make imgs responive:
-<img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/store.jpg" alt="Man looking at item at a store">
-<div class="relative h-64 m-8 overflow-hidden rounded-lg bg-indigo-500">
-  <div class="absolute top-0 right-0 block w-9/12 h-full">
-    <img
-      alt="Snowy mountain lake"
-      class="object-cover min-w-full h-full"
-      src="https://images.unsplash.com/photo-1607025952930-da2ac6748e7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-    />
-  </div>
-</div>
+https://tailwindcss.com/docs/object-fit
+https://tailwind-elements.com/docs/standard/components/images/
 
+- once everything done run lighthouse
 add to package.json after testing:
     "git": "git add . && git commit -m",
     "postgit": "git push --all" 
     postbuild": "npm run git"
 
     Removed:
-    will add jest-axe/
+    will add jest-axe
         "axe": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
-
-
-warn  - No ESLint configuration detected. Run next lint to begin setup

@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/jennifert/nextjs-site/#readme",
     "dependencies": {
+        "@tailwindcss/forms": "^0.3.3",
         "autoprefixer": "^10.0.4",
         "html-react-parser": "^1.2.4",
         "next": "latest",

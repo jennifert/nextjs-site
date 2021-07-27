@@ -23,7 +23,12 @@ module.exports = {
             textDecoration: ['active'],
             textColor: ['visited'],
             boxShadow: ['responsive', 'hover', 'focus'],
+            accessibility: ['hover', 'active'],
         },
     },
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/forms")({
+            strategy: 'class',
+        }),
+    ],
 }
