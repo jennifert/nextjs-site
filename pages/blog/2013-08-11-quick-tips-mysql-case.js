@@ -24,7 +24,7 @@ export default function MySqlCase() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p>One project I worked on had a table with different spellings  between English and French between an individual's title (masculine vs feminine in French). Since I did not want to spend too much time programming in the application itself, I came across the mysql 'case' function during research.:</p>
+                <p>One project I worked on had a table with different spellings  between English and French between an individual&apos;s title (masculine vs feminine in French). Since I did not want to spend too much time programming in the application itself, I came across the mysql &quot;case&quot; function during research.:</p>
                 <p>mySQL case is like a switch statement. Check out the official  <a className="underline focus:ring-2" href="https://dev.mysql.com/doc/refman/5.7/en/case.html" rel="nofollow noreferrer">Manual Reference</a> for a more through explanation.</p>
                 <PrismCode
                     code={code}

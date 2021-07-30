@@ -84,7 +84,7 @@ export default function JekyllDev() {
 
                 <h2>A new Jekyll instance</h2>
                 <p><em>Skip to next section to import your WordPress blog.</em></p>
-                <p>First, run the the below command, replacing "my-site-name" with the folder name for your site.</p>
+                <p>First, run the the below command, replacing &quot;my-site-name&quot; with the folder name for your site.</p>
                 <PrismCode
                     code={code3}
                     language="shell-session"
@@ -98,7 +98,7 @@ export default function JekyllDev() {
                     width={700}
                     height={394}
                 />
-                <p>Jekyll will now generate a site in the folder "my-site-name".</p>
+                <p>Jekyll will now generate a site in the folder &quot;my-site-name&quot;.</p>
                 
                 <p>To override the default jekyll theme, you will need to create two folders as seen in the list below. These are <code>assets</code>, <code>sass</code>, <code>_includes</code> and <code>_layouts</code>. For more information check out <a className="underline focus:ring-2" href="https://jekyllrb.com/docs/themes/#overriding-theme-defaults" rel="nofollow noreferrer">overriding theme defaults</a>.</p>
 
@@ -108,8 +108,8 @@ export default function JekyllDev() {
                     <li><code>_sites</code>: This is where the pages will be built into for your production build.</li>
                     <li><code>about.md</code>: is the about page for your site.</li>
                     <li><code>feed.xml</code>: will have your rss feed. This generates on its own.</li>
-                    <li><code>index.md</code>: your site's main page.</li>
-                    <li><code>404.html</code>: your sites "page not found" file.</li>
+                    <li><code>index.md</code>: your site&apos;s main page.</li>
+                    <li><code>404.html</code>: your sites &quot;page not found&quot; file.</li>
                     <li><code>gemfile</code>: a list of ruby plugins installed</li>
                     <li><code>assets</code>: where you can store your js and other files</li>
                     <li><code>sass</code>: your sass code</li>

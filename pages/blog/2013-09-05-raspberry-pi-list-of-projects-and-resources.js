@@ -23,7 +23,7 @@ export default function PiProjects() {
                 </ul>
                 <h2>Other Guides</h2>
                 <ul className="list-disc list-inside m-2">
-                    <li><a className="underline focus:ring-2" href="http://lifehacker.com/5976912/a-beginners-guide-to-diying-with-the-raspberry-pi"rel="nofollow noreferrer">A Beginner's Guide to DIYing</a></li>
+                    <li><a className="underline focus:ring-2" href="http://lifehacker.com/5976912/a-beginners-guide-to-diying-with-the-raspberry-pi"rel="nofollow noreferrer">A Beginner&apos;s Guide to DIYing</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewforum.php?f=15"rel="nofollow noreferrer">Raspberry Pi: Project listings</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=76&amp;t=48364"rel="nofollow noreferrer">Without Monitor - setup</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberryshake.com/raspberry-pi-wireless-network-setup/"rel="nofollow noreferrer">Wireless network setup</a></li>
@@ -41,7 +41,7 @@ export default function PiProjects() {
                 <h2>Troubleshooting</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=30&amp;t=15327">omxplayer download &amp; install</a> (and how to use via command line)</li>
-                    <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17598#p176433"rel="nofollow noreferrer">Playing DVD's (and Bluray)</a></li>
+                    <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?t=17598#p176433"rel="nofollow noreferrer">Playing DVD&apos;s (and Bluray)</a></li>
                     <li><a className="underline focus:ring-2" href="http://raspi.tv/2012/watch-encrypted-dvd-on-raspberry-pi-by-streaming-to-omxplayer"rel="nofollow noreferrer">Watch encrypted DVD on Raspberry Pi by streaming to omxplayer</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=35&amp;t=17877"rel="nofollow noreferrer">Play DVD disks on RaspBMC - HOWTO</a></li>
                 </ul>

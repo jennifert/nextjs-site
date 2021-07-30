@@ -79,7 +79,7 @@ export default function JekyllConfig() {
                 <ul className="list-disc list-inside m-2">
                     <li>title: This is usually your company name, etc.</li>
                     <li>description: is used to fill in the meta-tag for description.</li>
-                    <li>baseurl: As the official docs put it "serves the site from specified URL". Do NOT include your host name.</li>
+                    <li>baseurl: As the official docs put it &quot;serves the site from specified URL&quot;. Do NOT include your host name.</li>
                     <li>url: the url of your blog</li>
                     <li>timezone: What time zone your in. Be sure to use a format such as: America/Toronto, or America/New_York.</li>
                     <li>plugins: Any plugins that the site uses.</li>
@@ -98,7 +98,7 @@ export default function JekyllConfig() {
                     <li>markdown_ext:  file extensions you may use for markdown files.</li>
                     <li>permalink: what your website links will look like. For example: /blog/:year/:month/:day/:title/</li>
                     <li>paginate: how many articles do you want to see per page (as an integer number)</li>
-                    <li>paginate_path: what site link format your paginated results will be. In format: "blog/page:num"</li>
+                    <li>paginate_path: what site link format your paginated results will be. In format: &quot;blog/page:num&quot;</li>
                     <li>gems: Jekyll specific gems included in the build file.</li>
                     <li>names: your site name</li>
                     <li>feed path: location of rss/atom file</li>
@@ -110,7 +110,7 @@ export default function JekyllConfig() {
                 />
 
                 <h2>Author information</h2>
-                <p>This section is used to display information on the company/site owner using information such as name, email, twitter handle, Github repository, location, etc. The sub information must be 1 tab under "<code>author:</code>"</p>
+                <p>This section is used to display information on the company/site owner using information such as name, email, twitter handle, Github repository, location, etc. The sub information must be 1 tab under &quot;<code>author:</code>&quot;</p>
                 <PrismCode
                     code={code3}
                     language="yaml"

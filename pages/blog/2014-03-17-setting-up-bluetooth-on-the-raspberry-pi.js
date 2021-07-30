@@ -30,7 +30,7 @@ export default function BluetoothPi() {
                 <i>Creating device failed: org.bluez.Error.AuthenticationRejected: Authentication Rejected</i>
                 <p>So following another article, it is recommended to type in:</p>
                 <p><kbd>sudo nano /usr/bin/bluez-simple-agent</kbd></p>
-                <p>Now, in this file, change 'KeyboardDisplay' with 'DisplayYesNo'.</p>
+                <p>Now, in this file, change &quot;KeyboardDisplay&quot; with &quot;DisplayYesNo&quot;.</p>
                 <h2>Note:</h2>
                 <p>Some bluetooth items will not work on Raspmbc such as audio. It has been suggested (Raspberry pi official forums) to instead use OpenELEC or Xbian. </p>
 

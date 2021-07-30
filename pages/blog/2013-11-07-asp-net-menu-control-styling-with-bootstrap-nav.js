@@ -67,8 +67,8 @@ export default function AspNetBootstrapNav() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p>Thanks to an interesting post titled "<a className="underline focus:ring-2" href="https://techbrij.com/responsive-menu-twitter-bootstrap-asp-net" rel="nofollow noreferrer">Responsive ASP.NET Menu Control With Twitter Bootstrap</a>", I was able to update the Bootstrap with master pages example with asp.net menu controls instead of being hard coded.</p>
-                <p>For the menu control, you basically add the below code in lace of the div with "nav-collapse collapse". The menu in this code is based off the Bootstrap Example "<a className="underline focus:ring-2" href="https://getbootstrap.com/2.3.2/examples/hero.html">Basic marketing site</a>".</p>
+                <p>Thanks to an interesting post titled &quot;<a className="underline focus:ring-2" href="https://techbrij.com/responsive-menu-twitter-bootstrap-asp-net" rel="nofollow noreferrer">Responsive ASP.NET Menu Control With Twitter Bootstrap</a>&quot;, I was able to update the Bootstrap with master pages example with asp.net menu controls instead of being hard coded.</p>
+                <p>For the menu control, you basically add the below code in lace of the div with &quot;nav-collapse collapse&quot;. The menu in this code is based off the Bootstrap Example &quot;<a className="underline focus:ring-2" href="https://getbootstrap.com/2.3.2/examples/hero.html">Basic marketing site</a>&quot;.</p>
                 <p>The one downside to the menu control is that the control will inject inline styles. &nbsp;Also, to display the search form in the menu bar, use the code from the <a className="underline focus:ring-2" href="https://getbootstrap.com/2.3.2/components.html#navbar" rel="nofollow noreferrer">bootstrap documentation</a>, then change the &lt;form&gt; to a &lt;span&gt;.</p>
 
                 <h2>Before:</h2>

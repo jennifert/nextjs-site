@@ -72,26 +72,26 @@ export default function IisDevEnvironmentSeven() {
                 <p>Since our folder is created, lets go ahead and relocate the server to use that!</p>
                 <p>Go in to the Default Web site and click: <code>Default Web Site &gt; Manage Web Sites &gt; Advanced Settings &gt; Physical Path</code>. Modify the path to be at the location you created at the top of this step.</p>
                 <h2>Install PHP</h2>
-                <p>Go back into the "Turn Windows Features on or off" menu, then expand the category "Application Development Features". Finally, enable the "CGI" check box.</p>
+                <p>Go back into the &quot;Turn Windows Features on or off&quot; menu, then expand the category &quot;Application Development Features&quot;. Finally, enable the &quot;CGI&quot; check box.</p>
                 <p>Download the latest stable version for PHP (Non Thread Safe) and unzip into a directory so that the path is similar to: <code>c:\PHP5</code></p>
-                <p>Next, rename "php.ini-production" to "php.ini". Open the file, and edit to match the items below:</p>
+                <p>Next, rename &quot;php.ini-production&quot; to &quot;php.ini&quot;. Open the file, and edit to match the items below:</p>
                 <PrismCode
                     code={code}
                     language="ini"
                     plugins={["line-numbers"]}
                 />
-                <p>Now, in the IIS manager, left click once on your server name, and then select "Handler Mappings"</p>
+                <p>Now, in the IIS manager, left click once on your server name, and then select &quot;Handler Mappings&quot;</p>
                 <p>Click <code>Actions &gt; Add Module Mapping</code> and then enter the following:</p>
                 <p>Request path: <kbd>*.php</kbd><br/>
                     Module: <kbd>FastCgiModule</kbd><br />
                     Executable: <kbd>c:\PHP5\php-cgi.exe</kbd><br />
                     Name: <kbd>PHP_via_FastCGI</kbd></p>
                 
-                <p>In the same Window, Click <code>Request Restrictions &gt; Mapping</code>. Next, check off "invoke handler only if request is mapped to", then click "File or Folder". Now, click  "OK" in all dialog boxes to accept changes.</p>
+                <p>In the same Window, Click <code>Request Restrictions &gt; Mapping</code>. Next, check off &quot;invoke handler only if request is mapped to&quot;, then click &quot;File or Folder&quot;. Now, click  &quot;OK&quot; in all dialog boxes to accept changes.</p>
 
-                <p>In the IIS manager, click on your Default website, and then "Default Document", and then add index.php to the list.</p>
+                <p>In the IIS manager, click on your Default website, and then &quot;Default Document&quot;, and then add index.php to the list.</p>
 
-                <p>Finally, restart your Default Web Site, and check out the "Security recommendations" link in the Resource section for more ways to secure this instance.</p>
+                <p>Finally, restart your Default Web Site, and check out the &quot;Security recommendations&quot; link in the Resource section for more ways to secure this instance.</p>
 
                 <h3>Install MySQL</h3>
                 <p>Download the latest stable version (at the time of writing, 5.x), but be sure to just skip to the download (near bottom of page). <b>July 21, 2021 note:</b> if you use PHP version 5.6 or below, MYSQL will not function well with MYSQL 8.</p>
@@ -109,13 +109,13 @@ export default function IisDevEnvironmentSeven() {
                 <h2>Install the URL rewrite plug-in for IIS</h2>
                 <p>Go to the <a className="underline focus:ring-2" href="https://www.iis.net/downloads/microsoft/url-rewrite" rel="nofollow noreferrer">Microsoft Site</a> to download the latest version.</p>
                 <p>Once installed successfully, restart the server again.</p>
-                <p>This step will allow you to use "Pretty URLs" on your blog.</p>
+                <p>This step will allow you to use &quot;Pretty URLs&quot; on your blog.</p>
 
                 <h2>Download and install WordPress</h2>
                 <p>From <a className="underline focus:ring-2" href="https://wordpress.org/download/#download-install" rel="nofollow noreferrer">WordPress.org</a> download the latest versions (4.1.1 at the time of writing). Also, check out the  <a className="underline focus:ring-2" href="https://make.wordpress.org/polyglots/teams/" rel="nofollow noreferrer">translations</a> to download WordPress in your language, though some of these ay not be the latest.</p>
                 <p>To use WordPress just for something like a blog, unzip into your web root, and change the file name: <code>C:\webroot\blog</code></p>
-                <p>To have WordPress at the root, move all the files instead the unzipped "wordpress" folder right into your root: <code>C:\webroot\</code></p>
-                <p>Next, edit the file "wp-config.php" (you may need to rename the sample config).  Change the WordPress user name, password, and database to match what was created after installing MySql.</p>
+                <p>To have WordPress at the root, move all the files instead the unzipped &quot;wordpress&quot; folder right into your root: <code>C:\webroot\</code></p>
+                <p>Next, edit the file &quot;wp-config.php&quot; (you may need to rename the sample config).  Change the WordPress user name, password, and database to match what was created after installing MySql.</p>
                 <p>Open up the <a className="underline focus:ring-2" href="https://api.wordpress.org/secret-key/1.1/salt/" rel="nofollow noreferrer">secret generator</a> to automatically generate your secret keys. Paste this into your wp-config.php file.</p>
                 <p>Next, add the below line (to stop WordPress from asking your ftp information) and paste just above the comment that asks you to stop editing:</p>
                 <PrismCode
@@ -134,7 +134,7 @@ export default function IisDevEnvironmentSeven() {
                 <p>For issues, consult the <a className="underline focus:ring-2" href="https://wordpress.org/support/article/how-to-install-wordpress/" rel="nofollow noreferrer">WordPress Docs</a>.</p>
 
                 <h2>Add Mime Types to IIS</h2>
-                <p>If you are not able to see content such as: fonts, JSON, videos, etc., you may need to add the mime type to your "web.config" file as seen below. Instead of adding to your web.config, this can also be done in the <a className="underline focus:ring-2" href="https://sourcedaddy.com/windows-7/defining-new-mime-type.html" rel="nofollow noreferrer">IIS server itself</a>.</p>
+                <p>If you are not able to see content such as: fonts, JSON, videos, etc., you may need to add the mime type to your &quot;web.config&quot; file as seen below. Instead of adding to your web.config, this can also be done in the <a className="underline focus:ring-2" href="https://sourcedaddy.com/windows-7/defining-new-mime-type.html" rel="nofollow noreferrer">IIS server itself</a>.</p>
                 <PrismCode
                     code={code4}
                     language="xml"

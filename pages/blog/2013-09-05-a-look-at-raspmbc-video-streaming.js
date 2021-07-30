@@ -13,7 +13,7 @@ export default function RaspMBC() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p><b>Important:</b> This post is outdated, and is in the queue for an overhaul.</p>
-                <p>The <a className="underline focus:ring-2" href="http://www.raspberrypi.org/faqs" rel="nofollow noreferrer">Raspberry Pi Foundation</a> described the pi as "The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It’s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video.". This post is to assist in setting up your Raspberry Pi With an XMBC build called Raspmbc.</p>
+                <p>The <a className="underline focus:ring-2" href="http://www.raspberrypi.org/faqs" rel="nofollow noreferrer">Raspberry Pi Foundation</a> described the pi as &quot;The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It&apos;s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video.&quot;. This post is to assist in setting up your Raspberry Pi With an XMBC build called Raspmbc.</p>
                 <h2>Choosing the Modal</h2>
                 <p>If you are going to be doing video streaming (especially over HDMI), it is recommended to buy the Version B. This is because. the modal has more memory than previous model, and has better video streaming. It can be purchased at any of the following sites:</p>
                 <ul className="list-disc list-inside m-2">
@@ -22,7 +22,7 @@ export default function RaspMBC() {
                     <li><a className="underline focus:ring-2" href="http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi" rel="nofollow noreferrer">RS</a></li>
                     <li>Also, be sure to check your local computer shop. While these are currently not being sold in big box stores, other smaller computer shops may have some in.</li>
                 </ul>
-                <h2>Storage/Operating System "Drive"</h2>
+                <h2>Storage/Operating System &quot;Drive&quot;</h2>
                 <p>This mini computer does not have a traditional hard drive. Instead, it uses SD cards to house the operating system. It is also recommended to pick up a class 10 SD card (if you do not opt for the <a className="underline focus:ring-2" href="http://www.element14.com/community/docs/DOC-55184/l/raspberry-pi-8gb-sd-card-pre-installed-with-noobs" rel="nofollow noreferrer">noob package</a>). If your just using the machine for streaming, an 8 GB one should suffice, otherwise I believe the highest supported is 32 GB.</p>
                 <p>Like me, you may have luck finding the other components needed to use the device around your house - the key is to mix and match. For example,  I found an old mini USB cable to USB port from an old hard drive, then connected that to my iPhone USB to wall plug (but for safely, when not in use, I power down the machine).</p>
                 <p>Here is a list of all components.</p>
@@ -60,15 +60,15 @@ export default function RaspMBC() {
                 Enable airplay: System &gt; Network &gt; “Allow XBMC to receive <em>AirPlay</em> content<br />
                 Turn of thumbnails: Settings &gt; Video &gt; File lists &gt; disable “Extract thumbnail and video information</p>
                 <h3>Set-up PlayOn</h3>
-                <p>Unfortunately, <a className="underline focus:ring-2" href="http://forum.xbmc.org/showthread.php?pid=1375570" rel="nofollow noreferrer">plex media centre</a> did not work with my set up, so for Netflix and other channels, I used playOn. It was around $50 (CAD) (about 30 US) and can work well on an XP virtual machine. I recommend testing only my media (free) before purchasing. The below is based on <a className="underline focus:ring-2" href="http://www.playon.tv/support/playon-for-mac" rel="nofollow noreferrer">playOn's parallel's guide</a>.</p>
+                <p>Unfortunately, <a className="underline focus:ring-2" href="http://forum.xbmc.org/showthread.php?pid=1375570" rel="nofollow noreferrer">plex media centre</a> did not work with my set up, so for Netflix and other channels, I used playOn. It was around $50 (CAD) (about 30 US) and can work well on an XP virtual machine. I recommend testing only my media (free) before purchasing. The below is based on <a className="underline focus:ring-2" href="http://www.playon.tv/support/playon-for-mac" rel="nofollow noreferrer">playOn&apos;s parallel&apos;s guide</a>.</p>
                 <h4>Need:</h4>
                 <p><a className="underline focus:ring-2" href="http://www.vmware.com/products/fusion/" rel="nofollow noreferrer">VmWare Fusion</a> (be sure to update software) Feel free to try <a className="underline focus:ring-2" href="https://www.virtualbox.org/" rel="nofollow noreferrer">Virtual Box</a>, which is free virtualization software.<br />
                     <a className="underline focus:ring-2" href="http://www.hotspotshield.com/‎" rel="nofollow noreferrer">Hotspot Shield</a> (for outside of US)</p>
                 <h4>Set up Virtual Machine:</h4>
                 <ol>
-                    <li>Create an XP machine with 2GB RAM in "bridge Networking - Auto-detect" Mode and a static virtual disk (not expanding). Use at least a 16GB virtual disk. Playon Suggests utilizing 2 cores to stream.</li>
-                    <li>Once XP is loaded, uninstall everything you don't need (MSN Browser, paint, games, etc.).</li>
-                    <li>Right click on "My computer", select Advanced settings - and set your settings to "Best performance"</li>
+                    <li>Create an XP machine with 2GB RAM in &quot;bridge Networking - Auto-detect&quot; Mode and a static virtual disk (not expanding). Use at least a 16GB virtual disk. Playon Suggests utilizing 2 cores to stream.</li>
+                    <li>Once XP is loaded, uninstall everything you don&apos;t need (MSN Browser, paint, games, etc.).</li>
+                    <li>Right click on &quot;My computer&quot;, select Advanced settings - and set your settings to &quot;Best performance&quot;</li>
                     <li>Install the latest service packs and windows updates</li>
                     <li>Stop and disable indexing service.</li>
                     <li>Install PlayOn with default settings.</li>
@@ -79,7 +79,7 @@ export default function RaspMBC() {
                     <li>Basic: Files &gt; Add Videos... &gt; Browse &gt; UPnP Devices &gt; PlayOn... &gt; OK</li>
                     <li>Advanced (seamless channels): <a className="underline focus:ring-2" href="http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/" rel="nofollow noreferrer">http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/</a></li>
                 </ol>
-                <p>That's it. Hope it helps someone.</p>
+                <p>That&apos;s it. Hope it helps someone.</p>
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="http://www.packtpub.com/raspberry-pi-media-center/book" rel="nofollow noreferrer">Raspberri Pi: Media Centre</a></li>

@@ -346,7 +346,7 @@ export default function InstallNodeGrunt() {
                     width={400}
                     height={233}
                     />
-                <p>Open your favorite text editor, and edit the file "package.json" replace the text so it will fit your project:</p>
+                <p>Open your favorite text editor, and edit the file &quot;package.json&quot; replace the text so it will fit your project:</p>
                 <PrismCode
                     code={code4}
                     language="json"
@@ -376,7 +376,7 @@ export default function InstallNodeGrunt() {
                 />
 
                 <h3>Create your grunt file</h3>
-                <p>In your text editor, create a file called "Gruntfile.js" and save this into your project directory. A sample copy is below:</p>
+                <p>In your text editor, create a file called &quot;Gruntfile.js&quot; and save this into your project directory. A sample copy is below:</p>
                 <PrismCode
                     code={code8}
                     language="javascript"
@@ -412,8 +412,8 @@ export default function InstallNodeGrunt() {
                     <li><a className="underline focus:ring-2" href="https://gruntjs.com/getting-started" rel="nofollow noreferrer">Grunt: Getting started documentation</a></li>
                     <li><a className="underline focus:ring-2" href="https://gruntjs.com/getting-started#installing-the-cli" rel="nofollow noreferrer">Grunt: Installing the CLI</a></li>
                     <li><a className="underline focus:ring-2" href="https://gruntjs.com/getting-started#preparing-a-new-grunt-project" rel="nofollow noreferrer">Preparing a new Grunt Package</a></li>
-                    <li><a className="underline focus:ring-2" href="https://gruntjs.com/sample-gruntfile" rel="nofollow noreferrer">Gruntjs.com's Sample Grunt File</a>.</li>
-                    <li><a className="underline focus:ring-2" href="https://tutsplus.com/tutorials/search/grunt" rel="nofollow noreferrer">Tutsplus.com's Grunt tutorials</a></li>
+                    <li><a className="underline focus:ring-2" href="https://gruntjs.com/sample-gruntfile" rel="nofollow noreferrer">Gruntjs.com&apos;s Sample Grunt File</a>.</li>
+                    <li><a className="underline focus:ring-2" href="https://tutsplus.com/tutorials/search/grunt" rel="nofollow noreferrer">Tutsplus.com&apos;s Grunt tutorials</a></li>
                     <li><a className="underline focus:ring-2" href="https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt" rel="nofollow noreferrer">A Simple Guide to Getting Started With Grunt ― Scotch</a></li>
                     <li><a className="underline focus:ring-2" href="https://chrome.google.com/webstore/detail/grunt-devtools/fbiodiodggnlakggeeckkjccjhhjndnb?hl=en" rel="nofollow noreferrer">Google Chrome Grunt dev tools.</a></li>
                     <li><a className="underline focus:ring-2" href="https://www.justinmccandless.com/post/a-tutorial-for-getting-started-with-grunt/" rel="nofollow noreferrer">A tutorial for getting started with Grunt</a></li>

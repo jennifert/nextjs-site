@@ -18,7 +18,7 @@ export default function MysqlConcat() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p>While working on a project, I was looking for a way to join to mysql columns without using php or .Net. This function is called '<code>concat</code>' and allows you to join together 2 columns as one.</p>
+                <p>While working on a project, I was looking for a way to join to mysql columns without using php or .Net. This function is called &quot;<code>concat</code>&quot; and allows you to join together 2 columns as one.</p>
                 <PrismCode
                     code={code}
                     language="sql"

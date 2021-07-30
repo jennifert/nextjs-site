@@ -12,7 +12,7 @@ export default function AndroidAndIos() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p>Using an android in an Apple environment can be a bit tricky, but here are some tricks and resources to help you out. This post is an update to one titled "Moving from an iOS Device to Android (iCloud)".</p>
+                <p>Using an android in an Apple environment can be a bit tricky, but here are some tricks and resources to help you out. This post is an update to one titled &quot;Moving from an iOS Device to Android (iCloud)&quot;.</p>
                 <p>I am not in partnership or sponsored in anyway by the below programs, they are what I have researched and used over the years.</p>
                 <h2>Calendar</h2>
                 <p><a className="underline focus:ring-2" href="https://play.google.com/store/apps/details?id=org.dmfs.caldav.icloud" rel="nofollow noreferrer">SmoothSync for Cloud Calendar</a>: SmoothSync for Cloud Calendar syncs your iCloud calendars and reminders. Please note this is for Apple Calendars, it will not sync events from your Google Calendar to your Mac.</p>

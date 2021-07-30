@@ -56,6 +56,15 @@ add to package.json after testing:
     "postgit": "git push --all" 
     postbuild": "npm run git"
 
-    Removed:
-    will add jest-axe
-        "axe": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app/ --tags wcag2a --save tests/axe-result.json",
+    "axe-firefox": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app --tags wcag2a --save --browser=firefox tests/axe-result.json",
+        "axe-chrome": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app --tags wcag2a --save tests/axe-result.json",
+        "test": "axe www.deque.com, dequeuniversity.com"
+
+We created the .eslintrc file for you and included the base Next.js ESLint configuration.
+(node:6738) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./2020/" in the "exports" field module resolution of the package at /Users/jenn/GitHub/jenntesolin.com/node_modules/es-abstract/package.json.
+Update this package.json to use a subpath pattern like "./2020/*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:6738) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./helpers/" in the "exports" field module resolution of the package at /Users/jenn/GitHub/jenntesolin.com/node_modules/es-abstract/package.json.
+Update this package.json to use a subpath pattern like "./helpers/*".
+info  - Using webpack 5. Reason: Enabled by default https://nextjs.org/docs/messages/webpack5
+Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules

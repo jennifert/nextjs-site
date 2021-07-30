@@ -44,7 +44,7 @@ export default function BootstrapThreeGmap() {
                     language="javascript"
                     plugins={["line-numbers"]}
                 />
-                <p>That's it!</p>
+                <p>That&apos;s it!</p>
                 <p><a className="underline focus:ring-2" href="https://github.com/jennifert/JavaScript-Demos/tree/master/GoogleMaps/BootstrapV3" rel="nofollow noreferrer">Check out a demo on my github account</a> (there is a code for a single point, and multiple).</p>
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

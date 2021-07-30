@@ -97,7 +97,7 @@ export default function MacHomebrew() {
                 <h2>Getting ready</h2>
 
                 <h3>Step 1: Open Your Terminal program</h3>
-                <p>Search in launchpad or spotlight for "Terminal.app"</p>
+                <p>Search in launchpad or spotlight for &quot;Terminal.app&quot;</p>
 
                 <h3>Step 2: Accept the license agreements</h3>
                 <p>Copy and paste the below commands in your terminal. Be sure to read and accept the agreements.</p>
@@ -208,7 +208,7 @@ export default function MacHomebrew() {
                     plugins={["line-numbers"]}
                 />
 
-                <p>Unfortunately, I could not find a way to bulk install casks anymore, so you will need to run them one at a time (replacing "firefox" with the formulae name).</p>
+                <p>Unfortunately, I could not find a way to bulk install casks anymore, so you will need to run them one at a time (replacing &quot;firefox&quot; with the formulae name).</p>
                 <PrismCode
                     code={code14}
                     language="shell-session"

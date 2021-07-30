@@ -29,7 +29,7 @@ export default function FontAwesomeBootstrapThree() {
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>This is a quick post on how to use <a className="underline focus:ring-2" href="http://fontawesome.io/" rel="nofollow noreferrer">Font Awesome</a> with Bootstrap 3.</p>
                 <p>First, these examples will be using the Font Awesome CDN. Alternatively, there are many other ways to include in your project. Visit their website at: <a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/get-started/" rel="nofollow noreferrer">fontawesome.com Getting Started</a> page.</p>
-                <p>To use font-awesome, you will need to have a customized version of the latest version of Bootstrap 3 "Without icons". This blog shows two ways to you can accomplish this.</p>
+                <p>To use font-awesome, you will need to have a customized version of the latest version of Bootstrap 3 &quot;Without icons&quot;. This blog shows two ways to you can accomplish this.</p>
                 <h2>Bootstrap CDN:</h2>
                 <p>The first way is to use the Official bootstrap CDN with no Glyphicons included.</p>
                 <PrismCode
@@ -43,8 +43,8 @@ export default function FontAwesomeBootstrapThree() {
                 </ul>
 
                 <h2>Custom Bootstrap CSS</h2>
-                <p>The second way is to <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/customize/">configure your own download</a>. The steps are under: "LESS files" &gt; "Components" (middle column) &gt; Uncheck "Glyphicons".</p>
-                <p>Enter in any other information (or remove JS not being used, and then scroll to the bottom of the page and click "Compile and download".</p>
+                <p>The second way is to <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/customize/">configure your own download</a>. The steps are under: &quot;LESS files&quot; &gt; &quot;Components&quot; (middle column) &gt; Uncheck &quot;Glyphicons&quot;.</p>
+                <p>Enter in any other information (or remove JS not being used, and then scroll to the bottom of the page and click &quot;Compile and download&quot;.</p>
                 <PrismCode
                     code={code2}
                     language="html"

@@ -56,14 +56,14 @@ export default function PhpUtfEncode() {
                             language="php"
                             plugins={["line-numbers"]}
                         /></li>
-                    <li>Make sure the php file is in UTF-8, not ASCII: Text editors such as sublime, can convert the page to UTF-8 for you, as post editors (and IDE's) may actually use ASCII. To convert the file to UTF-8 in sublime Text, go to file &gt;  Save with encoding &gt; UTF-8. Its rcomended that PDO databases access is used. Check out this Tuts+ Article: <a className="underline focus:ring-2" href="https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059" rel="nofollow noreferrer">Why You Should Be Using PHP's PDO for Database Access</a> for more information</li>
+                    <li>Make sure the php file is in UTF-8, not ASCII: Text editors such as sublime, can convert the page to UTF-8 for you, as post editors (and IDE&apos;s) may actually use ASCII. To convert the file to UTF-8 in sublime Text, go to file &gt;  Save with encoding &gt; UTF-8. Its recommended that PDO databases access is used. Check out this Tuts+ Article: <a className="underline focus:ring-2" href="https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059" rel="nofollow noreferrer">Why You Should Be Using PHP&apos;s PDO for Database Access</a> for more information</li>
                     <li>Be sure yor web view uses the UTF meta encoding tag as well:
                         <PrismCode
                             code={code3}
                             language="html"
                             plugins={["line-numbers"]}
                         /></li>
-                    <li>Lastly, be sure to check your code editor's settings to make sure you are viewing it in UTF-8 encoding.</li>
+                    <li>Lastly, be sure to check your code editor&apos;s settings to make sure you are viewing it in UTF-8 encoding.</li>
                 </ol>
             </section>
         </Layout>

@@ -22,4 +22,3 @@ export default function PorfolioCard(props) {
         </div>
     )
 }
-// TODO: fix links contrast

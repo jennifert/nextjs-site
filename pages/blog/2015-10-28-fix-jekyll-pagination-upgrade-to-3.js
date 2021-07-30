@@ -23,7 +23,7 @@ export default function PaginationJekyllThree() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>In Jekyll 3, pagination is deprecated. This post describes how to resolve the error:</p>
-                <code>**Deprecation: You appear to have pagination turned on, but you haven't included the `jekyll-paginate` gem. Ensure you have `gems: [jekyll-paginate]` in your configuration file**.</code>
+                <code>**Deprecation: You appear to have pagination turned on, but you haven&apos;t included the `jekyll-paginate` gem. Ensure you have `gems: [jekyll-paginate]` in your configuration file**.</code>
                 <p>First, make sure you have the gem installed by typing in your terminal:</p>
                 <PrismCode
                     code={code}

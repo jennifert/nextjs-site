@@ -147,7 +147,7 @@ export default function Blog() {
                         <Link href="/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi"><a className="underline focus:ring-2">Setting up Bluetooth on the Raspberry Pi</a></Link> on <time dateTime="2014-03-17T19:00">March 17, 2014</time>
                     </li>
                     <li>
-                        <Link href="/blog/2013-09-05-raspbeerri-pi-list-of-projects-and-resources"><a className="underline focus:ring-2">Raspberry Pi: List of Projects and resource</a></Link> on <time dateTime="2013-09-05T19:00">September 05, 2013</time>
+                        <Link href="/blog/2013-09-05-raspberry-pi-list-of-projects-and-resources"><a className="underline focus:ring-2">Raspberry Pi: List of Projects and resource</a></Link> on <time dateTime="2013-09-05T19:00">September 05, 2013</time>
                     </li>
                     <li>
                         <Link href="/blog/2013-09-05-a-look-at-raspmbc-video-streaming"><a className="underline focus:ring-2">A look at Raspmbc video streaming</a></Link> on <time dateTime="2013-09-05T19:00">September 05, 2013</time>

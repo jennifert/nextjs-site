@@ -36,7 +36,7 @@ export default function InstallingGit() {
                     plugins={["line-numbers"]}
                 />
 
-                <p>Or if you use Github, you first install the github cask by running the below command into your terminal. Once installed, click "Install command line tool" from the menu.</p>
+                <p>Or if you use Github, you first install the github cask by running the below command into your terminal. Once installed, click &quot;Install command line tool&quot; from the menu.</p>
                 <PrismCode
                     code={code2}
                     language="shell-session"
@@ -46,7 +46,7 @@ export default function InstallingGit() {
                 <h2>Installing with DMG files</h2>
                 <p>Download the DMG file from the <a className="underline focus:ring-2" href="https://sourceforge.net/projects/git-osx-installer/" rel="nofollow noreferrer">Official Binary installer from Sourceforge</a>.</p>
                 <p>Alternatively, if you use github, you can download the <a className="underline focus:ring-2" href="https://desktop.github.com/" rel="nofollow noreferrer">github desktop DMG</a> file, then install the git command line tools from the app itself.</p>
-                <p>To install the git command line tools from within the GitHub application, click on the app name "GitHub Desktop", then choose "Install command line tool".</p>
+                <p>To install the git command line tools from within the GitHub application, click on the app name &quot;GitHub Desktop&quot;, then choose &quot;Install command line tool&quot;.</p>
                 <Image
                     loader={blogLoader}
                     src="/github-cmd-tools_lni0uq.png"

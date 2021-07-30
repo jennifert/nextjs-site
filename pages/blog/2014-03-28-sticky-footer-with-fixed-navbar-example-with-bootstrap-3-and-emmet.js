@@ -50,7 +50,7 @@ export default function EmmetBootStrapStickyFooter() {
                     <li>In same class as above but in dropdown dropdown-toggle, add data-toggle=&quot;dropdown&quot;</li>
                     <li>Edit h1 tag in: page-header class div</li>
                     <li>Update copyright information</li>
-                    <li>Move js path that's between script tags to src=&quot;&quot;</li>
+                    <li>Move js path that&apos;s between script tags to src=&quot;&quot;</li>
                 </ol>
 
                 <h2>Step 2: Insert the rest of the header information</h2>

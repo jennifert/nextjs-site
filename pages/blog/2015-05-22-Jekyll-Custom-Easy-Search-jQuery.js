@@ -155,7 +155,7 @@ export default function JekyllSearchJSONjQuery() {
                 />
 
                 <h2>Step 4: Add the jQuery to your site</h2>
-                <p>To query the search.json, I used jQuery's <code>getJSON</code> method. For this, you will need the below code first:</p>
+                <p>To query the search.json, I used jQuery&aspo;s <code>getJSON</code> method. For this, you will need the below code first:</p>
 
                 <h3>Function 1:</h3>
                 <PrismCode

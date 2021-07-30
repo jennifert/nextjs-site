@@ -22,7 +22,7 @@ export default function RasPlexOS() {
                 <p><small>Note: This is an update to the <a className="underline focus:ring-2" href="https://web.archive.org/web/20210318194931/http://jenntesolin.com/blog/2013/09/05/a-look-at-raspmbc-video-streaming/" rel="nofollow noreferrer">Raspmbc set-up article</a>. RasPlex also requires the use of Plex Media Server which is also free, and easily connects to iTunes and various channels.<br /></small></p>
                 <h2>Set-up the SD card</h2>
                 <p>The first step is to <a className="underline focus:ring-2" href="https://www.rasplex.com/get-started/rasplex-installers.html" rel="nofollow noreferrer">download the installer</a> for your Operating System onto your computer. They have installers available for Mac, Linux, and Windows, please be sure to read the notes on how to mount the installer.</p>
-                <p>Now, you select the version of RasPlex you want, and then select your SD card drive (check disk utility for the name if your not sure). Finally, press "update links", and when that is down "click download". It will ask you the location of the download, then when will display the download progress in the terminal. Once your all set-up, then press "Write SD card".</p>
+                <p>Now, you select the version of RasPlex you want, and then select your SD card drive (check disk utility for the name if your not sure). Finally, press &quot;update links&quot;, and when that is down &quot;click download&quot;. It will ask you the location of the download, then when will display the download progress in the terminal. Once your all set-up, then press &quot;Write SD card&quot;.</p>
                 <Image
                     loader={blogLoader}
                     src="/rasplex-1_u1zwoh.png"
@@ -41,7 +41,7 @@ export default function RasPlexOS() {
                     width={500}
                     height={333}
                 />
-                <p>That's it! This this helps other people as well.</p>
+                <p>That&apos;s it! This this helps other people as well.</p>
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

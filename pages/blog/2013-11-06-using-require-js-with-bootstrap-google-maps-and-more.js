@@ -166,7 +166,7 @@ export default function RequireJs() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>Require JS is a JavaScript file and module loader. Its a great tool for including JavaScript on your website.</p>
-                <p>This post described how to move the previous Google Maps with bootstrap code into a 'config' file for use with require JS.</p>
+                <p>This post described how to move the previous Google Maps with bootstrap code into a &quot;config&quot; file for use with require JS.</p>
                 <Image
                     loader={blogLoader}
                     src="/require-js-directory-structure_mc7qfo.jpg"
@@ -190,7 +190,7 @@ export default function RequireJs() {
                     language="html"
                     plugins={["line-numbers"]}
                 />
-                <p>For the "data-main" use the path to the javascript config file, but do not add the ".js" extension.</p>
+                <p>For the &quot;data-main&quot; use the path to the javascript config file, but do not add the &quot;.js&quot; extension.</p>
 
                 <h2>Step 4</h2>
                 <p>Create a file called config.js and place in js directory. The first part of the file is configuring the locations of the files your going to use.</p>
@@ -203,7 +203,7 @@ export default function RequireJs() {
                 <p>Shims: will make sure jquery loads before bootstrap.</p>
 
                 <h2>Step 5</h2>
-                <p>Next, you will need to "require" the items under your config:</p>
+                <p>Next, you will need to &quot;require&quot; the items under your config:</p>
                 <PrismCode
                     code={code3}
                     language="javascript"
