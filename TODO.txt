@@ -4,16 +4,12 @@ https://coderrocketfuel.com/article/embed-a-vimeo-video-into-a-react-website
 https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/
 
 To Fix:
-- make sure focus elements are noticeable - if element has a 1px border, focus outline should be 2.
-- make form and sections landmarks.                      
-- https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
-- h4 styles, visited styles: http://localhost:3000/blog/2013-09-05-a-look-at-raspmbc-video-streaming
-- alert styles; http://localhost:3000/blog/2013-11-05-bootstrap-3-and-google-maps
- - based on iCloud cookie-notice-template_en.pages
+- links:  link, focus, hover visited
+- make sure focus elements are noticeable - if element has a 1px border, focus outline should be 2. https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
+- based on iCloud cookie-notice-template_en.pages
     - privacy page (cookies part of it)
     - legal: Icons by Font Awesome Pro 5
-    - analytics stuff
-- analytic program: https://plausible.io/: 
+    - analytics stuff https://plausible.io/: 
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
  - change favicon.ico, and other ap icons
@@ -59,6 +55,9 @@ add to package.json after testing:
     "axe-firefox": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app --tags wcag2a --save --browser=firefox tests/axe-result.json",
         "axe-chrome": "axe nextjs-jenn-tes-f8e9r.ondigitalocean.app --tags wcag2a --save tests/axe-result.json",
         "test": "axe www.deque.com, dequeuniversity.com"
+
+
+> after all done: https://papyrus.dev/@PapyrusBlog/how-we-reduced-next.js-page-size-by-3.5x-and-achieved-a-98-lighthouse-score
 
 We created the .eslintrc file for you and included the base Next.js ESLint configuration.
 (node:6738) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./2020/" in the "exports" field module resolution of the package at /Users/jenn/GitHub/jenntesolin.com/node_modules/es-abstract/package.json.
