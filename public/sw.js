@@ -1,1 +1,128 @@
-if(!self.define){const e=e=>{"require"!==e&&(e+=".js");let s=Promise.resolve();return i[e]||(s=new Promise((async s=>{if("document"in self){const i=document.createElement("script");i.src=e,document.head.appendChild(i),i.onload=s}else importScripts(e),s()}))),s.then((()=>{if(!i[e])throw new Error(`Module ${e} didn’t register its module`);return i[e]}))},s=(s,i)=>{Promise.all(s.map(e)).then((e=>i(1===e.length?e[0]:e)))},i={require:Promise.resolve(s)};self.define=(s,n,c)=>{i[s]||(i[s]=Promise.resolve().then((()=>{let i={};const t={uri:location.origin+s.slice(1)};return Promise.all(n.map((s=>{switch(s){case"exports":return i;case"module":return t;default:return e(s)}}))).then((e=>{const s=c(...e);return i.default||(i.default=s),i}))})))}}define("./sw.js",["./workbox-e604aefe"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/BingSiteAuth.xml",revision:"48510fe94841e0f189eab42be34272b4"},{url:"/Japan_Trip_2011.pdf",revision:"162335a55b62f9e20b099cae6615c67b"},{url:"/_next/static/VGQTyFicn7SbhqREfkBRE/_buildManifest.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/VGQTyFicn7SbhqREfkBRE/_ssgManifest.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/3897-b355352d0c4dd076fe21.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/5168-b1ba373164b4273b254f.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/framework-ab9173121bc048aad8e7.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/main-d90492fd94262d0fcf7d.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/404-4117aa461255a584c9e0.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/500-484d9589d86f33b7957b.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/_app-a83035fa3a955327f733.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/_error-03b271b409748e0f7dc7.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog-c0d191effa6474757001.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2012-11-08-japan-trip-2011-fa8dd685d063dad1cb88.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-04-10-bootstrap-and-asp-net-4-0-master-pages-83d44a75e385cc275036.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-05-23-jquery-time-picker-issues-and-net-8041d96e3a138c17e841.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog-42b77d6084a6c5cce8d6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-05-24-ios-7-wishlist-8c70addb7758c9fcc3fb.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve-873bb3bb1102d9a091f3.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-07-06-quick-tips-firefox-notepad-9b6c9ced7f16943f5097.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-08-11-quick-tips-mysql-case-5fe56fbc107161bbcbb6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-08-26-quick-tip-mysql-concat-795e3f2763b31b228201.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-09-05-a-look-at-raspmbc-video-streaming-cffdb33a7ab5780c54d2.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-09-05-raspberry-pi-list-of-projects-and-resources-06d10074f3686401f8fe.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-10-23-quick-tip-mysql-replace-b008dd6c5c5f42e4e706.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-11-05-bootstrap-3-and-google-maps-14d28ad28ad020cbf7ff.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3-ec58b1d30e0c66728063.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more-dde4dec47137f6368d50.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2013-11-07-asp-net-menu-control-styling-with-bootstrap-nav-1e813c73a5ad45e1a5c3.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-01-09-fixing-ubuntu-12-04-network-issue-396bd56d10e89d42eaf6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-01-20-wordpress-development-tips-72daa1016ae09d04bc4c.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-03-17-setting-up-bluetooth-on-the-raspberry-pi-3a6ee68d4d2cb603f834.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet-4fae3d2af9f3860487bb.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-04-24-rasplex-media-server-d71284a537d4fca967cc.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2014-09-24-Moving-a-WordPress-Blog-e8d39a7c77146416dee5.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2015-03-14-IIS7-Development-Environment-1e56939fbb4f53166569.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2015-05-22-Jekyll-Custom-Easy-Search-jQuery-8622e6e13d1229c3e8ff.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2015-08-08-jekyll-config-file-672c23b21eed8fdf1be3.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2015-10-28-fix-jekyll-pagination-upgrade-to-3-19e4c95614a435b05340.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2016-02-04-jekyll-on-azure-or-github-e011b8792e89a66d3897.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2016-06-12-itunes-view-change-abdf5693b010807446cc.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2016-06-14-compare-integars-php-306e61f72f29523c5dd5.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2016-08-24-5-console-additions-pokemon-go-7a8f73ffb2b3430126f3.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2017-01-06-6-library-resources-1b674ac8144f6be44402.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2017-01-07-word-press-and-campaign-monitor-8a9f547062fe16d7b15b.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2017-05-27-highcharts-new-window-50f72e2924ca3720acde.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2018-04-18-installing-node-js-and-grunt-ee485b5ccd7bb8ccaca4.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2018-09-26-using-ios-and-android-together-571a5dc5e505951998a8.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2019-12-11-Jekyll-Set-Up-Publish-2fcc2b92e7c03f8e47c6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2019-12-12-git-github-cfe421e08e8a395a1f51.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2020-10-14-great-apps-and-programs-for-web-development-ff1b92991718d92af1d5.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2021-01-13-mac-homebrew-c90ea8d2c95a9e8d0a88.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/2021-03-11-jekyll-on-digital-ocean-3c12fbe6ed0f8a88f17c.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/blog/template-7bd9aed90bc559834e1e.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/gallery-a513057fcd2393fea694.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/index-7c06992b482920991dbf.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/portfolio-adabc072422f1c5ff1f7.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/series-b418e84c189df4c44641.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/pages/sitemap-26b1a0536eb72e4e4db1.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/polyfills-381dbb3c33243b4920e6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/chunks/webpack-cd727cbba95fcf98ebc6.js",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/css/87bdb0b499f9ae3c228a.css",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/_next/static/css/be274cf79f38fcbaa8e8.css",revision:"VGQTyFicn7SbhqREfkBRE"},{url:"/favicon.ico",revision:"21b739d43fcb9bbb83d8541fe4fe88fa"},{url:"/feed.xml",revision:"87a79035c81a1be44a5b7c18853d0569"},{url:"/google720ae23eb610f397.html",revision:"b656528f4b8ad1c3a40974b2bd449ef3"},{url:"/humans.txt",revision:"4c279ded7e893cc8396263ba46fcfd52"},{url:"/img/bird.jpg",revision:"77c0b9c9d228bc69e74446bc10657ef9"},{url:"/img/drone.jpg",revision:"7ab3a316e3f8d0fd4a297b204505c9c5"},{url:"/img/forest.jpg",revision:"1d204387afb23411bf6e8c95865ced21"},{url:"/img/fox.jpg",revision:"4c867830adcea6e85081156bbfb82807"},{url:"/img/man.jpg",revision:"cd45e53f5b6bbed38cee4d5517c24a54"},{url:"/img/reeds.jpg",revision:"495cc74a725d58d417132c35b3837151"},{url:"/manifest.json",revision:"319085021f7000d71b795d54d1b0398f"},{url:"/robots.txt",revision:"81044e0a6407ec221462d85721544a16"},{url:"/sitemap.xml",revision:"ccf2f95b23c50dec81b9e80007987dc4"},{url:"/test.html",revision:"5a82d04c0dda9da391ed8f71007e7c45"},{url:"/vercel.svg",revision:"4b4f1876502eb6721764637fe5c41702"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:s,event:i,state:n})=>s&&"opaqueredirect"===s.type?new Response(s.body,{status:200,statusText:"OK",headers:s.headers}):s}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp3|mp4)$/i,new e.StaleWhileRevalidate({cacheName:"static-media-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const s=e.pathname;return!s.startsWith("/api/auth/")&&!!s.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600})]}),"GET")}));
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  const singleRequire = name => {
+    if (name !== 'require') {
+      name = name + '.js';
+    }
+    let promise = Promise.resolve();
+    if (!registry[name]) {
+      
+        promise = new Promise(async resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = name;
+            document.head.appendChild(script);
+            script.onload = resolve;
+          } else {
+            importScripts(name);
+            resolve();
+          }
+        });
+      
+    }
+    return promise.then(() => {
+      if (!registry[name]) {
+        throw new Error(`Module ${name} didn’t register its module`);
+      }
+      return registry[name];
+    });
+  };
+
+  const require = (names, resolve) => {
+    Promise.all(names.map(singleRequire))
+      .then(modules => resolve(modules.length === 1 ? modules[0] : modules));
+  };
+  
+  const registry = {
+    require: Promise.resolve(require)
+  };
+
+  self.define = (moduleName, depsNames, factory) => {
+    if (registry[moduleName]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    registry[moduleName] = Promise.resolve().then(() => {
+      let exports = {};
+      const module = {
+        uri: location.origin + moduleName.slice(1)
+      };
+      return Promise.all(
+        depsNames.map(depName => {
+          switch(depName) {
+            case "exports":
+              return exports;
+            case "module":
+              return module;
+            default:
+              return singleRequire(depName);
+          }
+        })
+      ).then(deps => {
+        const facValue = factory(...deps);
+        if(!exports.default) {
+          exports.default = facValue;
+        }
+        return exports;
+      });
+    });
+  };
+}
+define("./sw.js",['./workbox-202dc43a'], function (workbox) { 'use strict';
+
+  /**
+  * Welcome to your Workbox-powered service worker!
+  *
+  * You'll need to register this file in your web app.
+  * See https://goo.gl/nhQhGp
+  *
+  * The rest of the code is auto-generated. Please don't update this file
+  * directly; instead, make changes to your Workbox build configuration
+  * and re-run your build process.
+  * See https://goo.gl/2aRDsh
+  */
+
+  importScripts();
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+
+        return response;
+      }
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: []
+  }), 'GET');
+
+});
+//# sourceMappingURL=sw.js.map

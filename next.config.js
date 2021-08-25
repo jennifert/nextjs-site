@@ -4,6 +4,12 @@ const runtimeCaching = require('next-pwa/cache')
 const generateSitemap = require('./scripts/generate-sitemap');
 
 module.exports = withPWA({
+    reactStrictMode: true,
+    poweredByHeader: false,
+    // i18n: {
+    //     locales: ['en-CA'],
+    //     defaultLocale: 'en-CA',
+    // },
     pwa: {
         dest: 'public',
         runtimeCaching,
