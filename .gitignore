@@ -11,6 +11,7 @@
 # misc
 *.pem
 .DS_Store
+TODO.txt
 
 # Logs
 logs
