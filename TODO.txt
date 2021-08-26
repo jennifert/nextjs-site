@@ -12,10 +12,7 @@ To Fix:
     - analytics stuff https://plausible.io/: 
         https://dev.to/phuctm97/how-to-integrate-plausible-analytics-with-next-js-and-vercel-4a75
         https://dev.to/jopesch/using-plausible-analytics-in-your-next-js-app-l4o
- - change favicon.ico, and other ap icons
- -picture gallery
-    - https://github.com/bradtraversy/react-tailwind-pixabay-gallery
-    - https://www.nick-basile.com/blog/post/building-a-photo-gallery-with-css-grid-and-tailwind-css/
+- change favicon.ico, and other ap icons
 - search content: 
     https://medium.com/@matswainson/building-a-search-component-for-your-next-js-markdown-blog-9e75e0e7d210
     https://github.com/nextapps-de/flexsearch
@@ -37,16 +34,6 @@ To Fix:
 
      best to do on blur, aria-live assertive on form names. also, keep search form filled in.
 
-Style forms: 
-https://github.com/tailwindlabs/tailwindcss-forms
-https://v1.tailwindcss.com/components/forms
-https://github.com/tailwindlabs/tailwindcss-line-clamp
-
-add styles to make imgs responive:
-https://tailwindcss.com/docs/object-fit
-https://tailwind-elements.com/docs/standard/components/images/
-
-- once everything done run lighthouse
 add to package.json after testing:
     "git": "git add . && git commit -m",
     "postgit": "git push --all" 

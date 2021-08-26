@@ -21,9 +21,9 @@ export default function Gallery() {
                 <p>
                     This page has a few photos selected from my old Flickr account.
                 </p>
-                <div className="grid max-w-4xl p-1"> {/* max-w-4xl: max-width: 56rem; */}
-                    <div className="galleryItem rounded h-full text-grey-darkest no-underline shadow-md">
-                        <div className="caption">
+                <div className="flex flex-wrap justify-center flex-1">
+                    <div className="pr-1">
+                        <div className="caption text-grey-darkest">
                             <h2>Mayan Ruins</h2>
                             <p>A structure at the Mayan ruins in Cozumel, Mexico.</p>
                         </div>
@@ -32,32 +32,32 @@ export default function Gallery() {
                                 loader={galleryLoader}
                                 src="/mayan_ruins_oibwvu.jpg"
                                 alt=""
-                                className="w-full block rounded-b"
+                                className="rounded w-full"
                                 layout="fill"
                                 objectFit="cover"
                             />
                         </div>
                     </div>
 
-                    <div className="galleryItem rounded h-full text-grey-darkest no-underline shadow-md">
-                        <div className="caption">
+                    <div className="pr-1">
+                        <div className="caption text-grey-darkest">
                             <h2>Tall Ship</h2>
-                            <p>The sail of a Tall Ship with the Toronto cityscape in the background at dusk.</p>
+                            <p>The sail with the Toronto cityscape in the background at dusk.</p>
                         </div>
                         <div className="thumbnail">
                             <Image
                                 loader={galleryLoader}
                                 src="/tall_ship_ppbewf.jpg"
                                 alt=""
-                                className="w-full block rounded-b"
+                                className="rounded w-full"
                                 layout="fill"
                                 objectFit="none"
                             />
                         </div>
                     </div>
 
-                    <div className="galleryItem rounded h-full text-grey-darkest no-underline shadow-md">
-                        <div className="caption">
+                    <div className="pr-1">
+                        <div className="caption text-grey-darkest">
                             <h2>Peace Arch</h2>
                             <p>The Peace Arch at the Hiroshima Memorial Peace Park.</p>
                         </div>
@@ -66,7 +66,7 @@ export default function Gallery() {
                                 loader={galleryLoader}
                                 src="/peace_arc_vqd9tj.jpg"
                                 alt=""
-                                className="w-full block rounded-b"
+                                className="rounded w-full"
                                 layout="fill"
                                 objectFit="cover"
                             />
