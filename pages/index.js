@@ -86,6 +86,17 @@ function HomePage() {
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/3 md:w-1/2 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
+                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-08-26-website-revamp"><a className="underline hover:underline focus:ring-2 focus:ring-white">Website Revamp</a></Link></h2>
+                            <p className="leading-relaxed text-base">New version of website launched. Here are the aspects of the website that have been overhauled.</p>
+                            <div className="text-center mt-2 leading-none flex justify-between w-full">
+                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
+                                    <time dateTime="2021-08-26T18:00">August 26, 2021</time>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                        <div className="border border-gray-300 p-6 rounded-lg">
                             <h2 className="text-lg  font-medium title-font mb-2"><Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="underline hover:underline focus:ring-2 focus:ring-white">Jekyll Static Sites on the Digital App Platform</a></Link></h2>
                             <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -102,17 +113,6 @@ function HomePage() {
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
                                 <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
                                     <time dateTime="2021-01-13T19:00">January 13, 2021</time>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="xl:w-1/3 md:w-1/2 px-4">
-                        <div className="border border-gray-300 p-6 rounded-lg">
-                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2020-10-14-great-apps-and-programs-for-web-development"><a className="underline hover:underline focus:ring-2 focus:ring-white">Great apps and programs for web development</a></Link></h2>
-                            <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
-                            <div className="text-center mt-2 leading-none flex justify-between w-full">
-                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
-                                    <time dateTime="2013-05-30T19:00">October 14, 2020</time>
                                 </span>
                             </div>
                         </div>

@@ -177,12 +177,21 @@ export default function Blog() {
                     </li>
                 </ul>
 
+                <h2>Site News</h2>
+                <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2021-08-26-website-revamp"><a className="underline focus:ring-2">Website Revamp</a></Link> on <time dateTime="2021-08-26T18:00">August 26, 2021</time>
+                    </li>
+                </ul>
+
                 <h2>Travel</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
                         <Link href="/blog/2012-11-08-japan-trip-2011"><a className="underline focus:ring-2">Planning a vacation to Japan</a></Link> on <time dateTime="2012-11-08T19:00">November 08, 2012</time>
                     </li>
                 </ul>
+
+                <p>All articles are: <a className="underline focus:ring-2" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow noreferrer">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a></p>
             </section>
         </Layout>
     )

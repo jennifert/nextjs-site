@@ -1,7 +1,7 @@
 const fs = require("fs");
 const globby = require("globby");
 // import { SITE_DOMAIN } from './lib/constants'
-const SITE_DOMAIN = 'https://nextjs-jenn-tes-f8e9r.ondigitalocean.app/'
+const SITE_DOMAIN = 'https://jenntesolin.com'
 const getDate = new Date().toISOString();
 
 const generateSitemap = async () => {
