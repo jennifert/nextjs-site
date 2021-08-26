@@ -9,7 +9,7 @@ This is still under construction so please excuse any weird styles.
 
 ## Version Information:
 - Tailwind: 2
-- POstCSS: 8
+- PostCSS: 8
 - Next: 11
 - React & React-Dom: 17
 - ESLint: 7
