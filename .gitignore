@@ -12,7 +12,7 @@
 *.pem
 .DS_Store
 TODO.txt
-pages/blog/template.js
+# pages/blog/template.js
 
 # Logs
 logs

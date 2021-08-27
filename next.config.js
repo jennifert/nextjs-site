@@ -20,7 +20,7 @@ module.exports = withPWA({
     },
     webpack: (config, { isServer }) => {
         if (isServer) {
-            generateSitemap();
+            // generateSitemap();
         }
         return config;
     },
