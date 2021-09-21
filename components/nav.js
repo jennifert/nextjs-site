@@ -7,11 +7,11 @@ export default function Nav({ children, href }) {
     const router = useRouter();
     return (
         <nav aria-label="Site menu" className="navbar-expand-lg bg-indigo-500 mb-3">
-            <div className="container px-4 flex flex-wrap justify-left flex-1">
+            <div className="container px-4 flex-none md:flex md:flex-wrap justify-left flex-1">
                 <p className="leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white focus:ring-2 focus:ring-white">
                     {SITE_TITLE}
                 </p>
-                <ul className="list-none flex items-center">
+                <ul className="nav-ul list-none flex-none md:flex items-center">
                     {/* <ul class="ml-auto flex items-center"> */}
                     <li className="nav-item">
                         {router.pathname === "/" ? <Link href="/"><a className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 underline" aria-current="page">Home</a></Link>
