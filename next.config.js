@@ -1,7 +1,7 @@
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
-const generateSitemap = require('./scripts/generate-sitemap');
+// const generateSitemap = require('./scripts/generate-sitemap');
 
 module.exports = withPWA({
     reactStrictMode: true,

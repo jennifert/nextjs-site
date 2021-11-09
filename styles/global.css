@@ -41,13 +41,4 @@
   .caption h2, .caption p{
       @apply  pl-1;
   }
-
-    .thumbnail {
-        display: block;
-        position: relative;
-        width: 500px;
-        height:460px;
-        transition: border .2s ease-in-out;
-    }
-
 }

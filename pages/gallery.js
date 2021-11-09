@@ -22,12 +22,12 @@ export default function Gallery() {
                     This page has a few photos selected from my old Flickr account.
                 </p>
                 <div className="flex flex-wrap justify-center flex-1">
-                    <div className="pr-1">
+                    <div className="pr-5">
                         <div className="caption text-grey-darkest">
                             <h2>Mayan Ruins</h2>
                             <p>A structure at the Mayan ruins in Cozumel, Mexico.</p>
                         </div>
-                        <div className="thumbnail">
+                        <div className="thumbnail w-96 h-96 relative">
                             <Image
                                 loader={galleryLoader}
                                 src="/mayan_ruins_oibwvu.jpg"
@@ -39,12 +39,12 @@ export default function Gallery() {
                         </div>
                     </div>
 
-                    <div className="pr-1">
+                    <div className="pr-5">
                         <div className="caption text-grey-darkest">
                             <h2>Tall Ship</h2>
-                            <p>The sail with the Toronto cityscape in the background at dusk.</p>
+                            <p>A sail at dusk with Toronto in the horizon.</p>
                         </div>
-                        <div className="thumbnail">
+                        <div className="thumbnail w-96 h-96 relative">
                             <Image
                                 loader={galleryLoader}
                                 src="/tall_ship_ppbewf.jpg"
@@ -56,12 +56,12 @@ export default function Gallery() {
                         </div>
                     </div>
 
-                    <div className="pr-1">
+                    <div className="pr-5">
                         <div className="caption text-grey-darkest">
                             <h2>Peace Arch</h2>
                             <p>The Peace Arch at the Hiroshima Memorial Peace Park.</p>
                         </div>
-                        <div className="thumbnail">
+                        <div className="thumbnail w-96 h-96 relative">
                             <Image
                                 loader={galleryLoader}
                                 src="/peace_arc_vqd9tj.jpg"
