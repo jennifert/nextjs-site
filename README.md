@@ -8,8 +8,10 @@ This is still under construction so please excuse any weird styles.
 - NPM 7.x
 
 ## Version Information:
-- Tailwind: 2
-- PostCSS: 8
-- Next: 11
-- React & React-Dom: 17
-- ESLint: 7
+- Tailwind: 2.x
+- PostCSS: 8.x
+- Next: 12.x
+- Next PWA: 5.x
+- PrismJS: 1.x
+- React & React-Dom: 17.x
+- ESLint: 7.x
