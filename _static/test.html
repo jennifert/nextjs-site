@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.5rem;
+        }
+
+        .grid a img {
+            transition: all .2s ease-in;
+            filter: grayscale(100%);
+        }
+
+        .grid a:hover img {
+            filter: grayscale(0);
+        }
+
+        @media screen and (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /*
+        //Pretty annoying
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        //Absolutely delightful
+        .grid {
+            grid-template-columns: repeat(12, 1fr);
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <main class="bg-indigo-50">
+        <h1>Photo Gallery</p>
+            <div class="grid max-w-4xl mx-auto p-8">
+                <!-- max-w-4xl: max-width: 56rem;-->
+                <a href="https://unsplash.com/photos/YTmgx_ru39U" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>fox.</p>
+                    <img class="w-full block rounded-b" src="img/fox.jpg" alt="A photo of a fox">
+                </a>
+                <a href="https://unsplash.com/photos/M0mVUM80x6A" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>man and drone.</p>
+                    <img class="w-full block rounded-b" src="img/drone.jpg" alt="A photo of a man golding a drone">
+                </a>
+                <a href="https://unsplash.com/photos/TtybI0ORH7w" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>reeds.</p>
+                    <img class="w-full block rounded-b" src="img/reeds.jpg" alt="A photo of some reeds">
+                </a>
+                <a href="https://unsplash.com/photos/tV_1sC603zA" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>man.</p>
+                    <img class="w-full block rounded-b" src="img/man.jpg" alt="A photo of a man surrounded by flowers">
+                </a>
+                <a href="https://unsplash.com/photos/Ceuh97A6OYM" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>forest.</p>
+                    <img class="w-full block rounded-b" src="img/forest.jpg" alt="A photo of a forest">
+                </a>
+                <a href="https://unsplash.com/photos/mpw37yXc_WQ" target="_blank"
+                    class="bg-white rounded h-full text-grey-darkest no-underline shadow-md">
+                    <p>bird.</p>
+                    <img class="w-full block rounded-b" src="img/bird.jpg" alt="A photo of a bird">
+                </a>
+            </div>
+    </main>
+</body>
+
+</html>

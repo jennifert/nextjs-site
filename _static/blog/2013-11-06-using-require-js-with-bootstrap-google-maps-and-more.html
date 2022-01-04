@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>Using Require JS with Bootstrap, Google maps, and more - Blog - JennTesolin.com</title><meta name="next-head-count" content="3"/><link rel="preload" href="/_next/static/css/3cd4133805e42095.css" as="style"/><link rel="stylesheet" href="/_next/static/css/3cd4133805e42095.css" data-n-g=""/><link rel="preload" href="/_next/static/css/b198c42f6e8c50fc.css" as="style"/><link rel="stylesheet" href="/_next/static/css/b198c42f6e8c50fc.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-49fd1cc43182a06e.js" defer=""></script><script src="/_next/static/chunks/framework-7d488969745094b0.js" defer=""></script><script src="/_next/static/chunks/main-be35d80596ba08e0.js" defer=""></script><script src="/_next/static/chunks/pages/_app-1881389691688901.js" defer=""></script><script src="/_next/static/chunks/5168-bd9a8cda6686927e.js" defer=""></script><script src="/_next/static/chunks/5893-09d4f4670498f593.js" defer=""></script><script src="/_next/static/chunks/pages/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more-4123d5f16d1c08e2.js" defer=""></script><script src="/_next/static/iZvigPnHoJzlj-VGIjKUJ/_buildManifest.js" defer=""></script><script src="/_next/static/iZvigPnHoJzlj-VGIjKUJ/_ssgManifest.js" defer=""></script><script src="/_next/static/iZvigPnHoJzlj-VGIjKUJ/_middlewareManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><span class="sr-only"><a href="#main-content">Skip to main content</a></span><header class="pl-4 pr-4"><nav aria-label="Site menu" class="navbar-expand-lg bg-indigo-500 mb-3"><div class="container px-4 flex-none md:flex md:flex-wrap justify-left flex-1"><p class="leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white focus:ring-2 focus:ring-white">JennTesolin.com</p><ul class="nav-ul list-none flex-none md:flex items-center"><li class="nav-item"><a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white" href="/">Home</a></li><li class="nav-item"><a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white" href="/blog">Blog</a></li><li class="nav-item"><a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white" href="/gallery">Gallery</a></li><li class="nav-item"><a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white" href="/portfolio">Portfolio</a></li></ul></div></nav></header><main class="p-4"><section aria-labelledby="main-content"><h1 id="main-content">Using Require JS with Bootstrap, Google maps, and more</h1><p>Require JS is a JavaScript file and module loader. Its a great tool for including JavaScript on your website.</p><p>This post described how to move the previous Google Maps with bootstrap code into a &quot;config&quot; file for use with require JS.</p><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzA2IiBoZWlnaHQ9IjM2NyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="/></span><img alt="Screenshot " src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="Screenshot " srcSet="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog/require-js-directory-structure_mc7qfo.jpg?w=384&amp;q=75 1x, https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog/require-js-directory-structure_mc7qfo.jpg?w=640&amp;q=75 2x" src="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog/require-js-directory-structure_mc7qfo.jpg?w=640&amp;q=75" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span><p>Works off previous Post: <a class="underline focus:ring-2" href="/blog/2013-11-05-bootstrap-3-and-google-maps">Bootstrap 3 and Google Maps</a> .</p><h2>Step 1</h2><p>First, we need to <a class="underline focus:ring-2" href="http://requirejs.org/docs/download.html#requirejs" rel="nofollow noreferrer">download the latest version</a> (at the time of writing its 2.1.9). For production, you will want the minified version.</p><h2>Step 2</h2><p>Check out <a class="underline focus:ring-2" href="https://github.com/millermedeiros/requirejs-plugins" rel="nofollow noreferrer">Miller Medeiros GitHub Repository</a> and download any plugins you would be interested in.</p><h2>Step 3</h2><p>For your script tag, you will just need:</p><pre class="line-numbers"><code class="language-html">&lt;script data-main=&quot;js/config&quot; src=&quot;js/require.js&quot;&gt;&lt;/script&gt;</code></pre><p>For the &quot;data-main&quot; use the path to the javascript config file, but do not add the &quot;.js&quot; extension.</p><h2>Step 4</h2><p>Create a file called config.js and place in js directory. The first part of the file is configuring the locations of the files your going to use.</p><p>Javascript files should be in the same directory as require.js and config.js. When referencing a path, do not add .js extension. The below is whats minimal for Google V3 with Bootstrap 3.</p><pre class="line-numbers"><code class="language-javascript">require.config({
+    paths: {
+        &#x27;jquery&#x27;: &#x27;http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.3&#x27;,
+        &#x27;jquery.bootstrap&#x27;: &#x27;http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min&#x27;,
+        &#x27;async&#x27;: &#x27;async&#x27;,
+        &#x27;goog&#x27;: &#x27;goog&#x27;,
+        &#x27;propertyParser&#x27; : &#x27;propertyParser&#x27;
+    },
+    shim: {
+        &#x27;jquery.bootstrap&#x27;: [&#x27;jquery&#x27;]
+    }
+});</code></pre><p>Shims: will make sure jquery loads before bootstrap.</p><h2>Step 5</h2><p>Next, you will need to &quot;require&quot; the items under your config:</p><pre class="line-numbers"><code class="language-javascript">//require.config code from above here
+require([&#x27;jquery&#x27;,&#x27;jquery.bootstrap&#x27;,&#x27;goog!maps,3,other_params:sensor=false&#x27;], function($) {
+    //jquery code will be moved here
+});</code></pre><h2>Step 5</h2><p>Now, your code will need to be altered a bit for the jquery/bootstrap code to load maps in modal.</p><pre class="line-numbers"><code class="language-javascript">var myLatlng = new google.maps.LatLng(43.65644,-79.380686);
+
+    $(function() {
+
+        //start of modal google map
+      $(&#x27;#mapmodals&#x27;).on(&#x27;shown.bs.modal&#x27;, function () {
+        var mapOptions = {
+              center: myLatlng,
+              zoom: 14,
+              mapTypeControl: false,
+              center:myLatlng,
+              panControl:false,
+              rotateControl:false,
+              streetViewControl: false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById(&quot;map_canvas&quot;),
+                mapOptions);
+
+            var contentString = &#x27;&lt;div id=&quot;mapInfo&quot;&gt;&#x27;+
+            &#x27;&lt;p&gt;&lt;strong&gt;Cineplex Odeon Yong &amp; Dundas&lt;/strong&gt;&lt;br&gt;&#x27;+
+            &#x27;Suite 402&lt;br&gt;10 Dundas Street East&lt;br&gt;&#x27; +
+            &#x27;Toronto, ON&lt;br&gt;&#x27;+
+            &#x27;P: (416) 977-9262&lt;/p&gt;&#x27;+
+            &#x27;&lt;a href=&quot;http://www.google.ca/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CF4QFjAA&amp;url=http%3A%2F%2Fwww.cineplex.com%2FTheatres%2FTheatreDetails%2FCineplex-Odeon-Yonge-Dundas-Cinemas-formerly-AMC-.aspx&amp;ei=wVxnUdfWM8GtqgGc5YGoCQ&amp;usg=AFQjCNFrLpCFDXGjtGx6y1GSkSNvhdrMpA&amp;bvm=bv.45107431,d.aWM&quot; target=&quot;_blank&quot;&gt;Now Playing&lt;/a&gt;&#x27;+
+            &#x27;&lt;/div&gt;&#x27;;
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:&quot;Cineplex Odeon Yong &amp; Dundas&quot;,
+                  maxWidth: 200,
+                  maxHeight: 200
+          });
+
+
+          google.maps.event.addListener(marker, &#x27;click&#x27;, function() {
+             infowindow.open(map,marker);
+          });
+
+          google.maps.event.addDomListener(window, &#x27;load&#x27;);
+          google.maps.event.trigger(map, &quot;resize&quot;);
+          map.setCenter(myLatlng);
+      });
+      //end of modal google map
+    }); //end jquery functions</code></pre><h2>Completed Config.js File</h2><p>The full code is below. Alternatively, you can check out my <a class="underline focus:ring-2" href="https://github.com/jennifert/JavaScript-Demos/tree/master/RequireJs" rel="nofollow noreferrer">JavaScript Repository</a> as well.</p><pre class="line-numbers"><code class="language-javascript">require.config({
+    paths: {
+        &#x27;jquery&#x27;: &#x27;https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.3&#x27;,
+        &#x27;jquery.bootstrap&#x27;: &#x27;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min&#x27;,
+        &#x27;async&#x27;: &#x27;async&#x27;,
+        &#x27;goog&#x27;: &#x27;goog&#x27;,
+        &#x27;propertyParser&#x27; : &#x27;propertyParser&#x27;
+    },
+    shim: {
+        &#x27;jquery.bootstrap&#x27;: [&#x27;jquery&#x27;]
+    }
+});
+
+require([&#x27;jquery&#x27;,&#x27;jquery.bootstrap&#x27;,&#x27;goog!maps,3&#x27;], function($) {
+     var myLatlng = new google.maps.LatLng(43.65644,-79.380686);
+
+    $(function() {
+
+        //start of modal google map
+      $(&#x27;#mapmodals&#x27;).on(&#x27;shown.bs.modal&#x27;, function () {
+        var mapOptions = {
+              center: myLatlng,
+              zoom: 14,
+              mapTypeControl: false,
+              center:myLatlng,
+              panControl:false,
+              rotateControl:false,
+              streetViewControl: false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById(&quot;map_canvas&quot;),
+                mapOptions);
+
+            var contentString = &#x27;&lt;div id=&quot;mapInfo&quot;&gt;&#x27;+
+            &#x27;&lt;p&gt;&lt;strong&gt;Cineplex Odeon Yong &amp; Dundas&lt;/strong&gt;&lt;br&gt;&#x27;+
+            &#x27;Suite 402&lt;br&gt;10 Dundas Street East&lt;br&gt;&#x27; +
+            &#x27;Toronto, ON&lt;br&gt;&#x27;+
+            &#x27;P: (416) 977-9262&lt;/p&gt;&#x27;+
+            &#x27;&lt;a href=&quot;http://www.google.ca/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CF4QFjAA&amp;url=http%3A%2F%2Fwww.cineplex.com%2FTheatres%2FTheatreDetails%2FCineplex-Odeon-Yonge-Dundas-Cinemas-formerly-AMC-.aspx&amp;ei=wVxnUdfWM8GtqgGc5YGoCQ&amp;usg=AFQjCNFrLpCFDXGjtGx6y1GSkSNvhdrMpA&amp;bvm=bv.45107431,d.aWM&quot; target=&quot;_blank&quot;&gt;Now Playing&lt;/a&gt;&#x27;+
+            &#x27;&lt;/div&gt;&#x27;;
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:&quot;Cineplex Odeon Yong &amp; Dundas&quot;,
+                  maxWidth: 200,
+                  maxHeight: 200
+          });
+
+
+          google.maps.event.addListener(marker, &#x27;click&#x27;, function() {
+             infowindow.open(map,marker);
+          });
+
+          google.maps.event.addDomListener(window, &#x27;load&#x27;);
+          google.maps.event.trigger(map, &quot;resize&quot;);
+          map.setCenter(myLatlng);
+      });
+      //end of modal google map
+    }); //end jquery functions
+});</code></pre></section></main><footer><nav aria-label="Social Media"><ul class="flex justify-center my-5"><li><a class="p-2 m-2" href="https://github.com/jennifert?tab=repositories" rel="nofollow noreferrer" aria-label="Github Repositories"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"/></span><img alt="Github Repository" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="Github Repository" srcSet="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/github-square_nmpyub.svg?w=32&amp;q=75 1x, https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/github-square_nmpyub.svg?w=64&amp;q=75 2x" src="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/github-square_nmpyub.svg?w=64&amp;q=75" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span></a></li><li><a class="p-2 m-2" href="/feed.xml" rel="nofollow noreferrer" aria-label="Site Feed"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"/></span><img alt="Site RSS Feed" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="Site RSS Feed" srcSet="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/rss-square_hsohh9.svg?w=32&amp;q=75 1x, https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/rss-square_hsohh9.svg?w=64&amp;q=75 2x" src="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/rss-square_hsohh9.svg?w=64&amp;q=75" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span></a></li><li><a class="p-2 m-2" href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" rel="nofollow noreferrer" aria-label="LinkedIn Profile"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"/></span><img alt="LinkedIn Profile" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="LinkedIn Profile" srcSet="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/linkedin_t8xmbz.svg?w=32&amp;q=75 1x, https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/linkedin_t8xmbz.svg?w=64&amp;q=75 2x" src="https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/social/linkedin_t8xmbz.svg?w=64&amp;q=75" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span></a></li></ul></nav><div class="flex justify-center"><p>© 2022 Jennifer Tesolin.</p></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/blog/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more","query":{},"buildId":"iZvigPnHoJzlj-VGIjKUJ","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
