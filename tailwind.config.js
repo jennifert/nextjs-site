@@ -1,6 +1,5 @@
 module.exports = {
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    darkMode: false, // or 'media' or 'class'
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         // fontSize: {
         //   'xs': '.75rem',
@@ -16,15 +15,6 @@ module.exports = {
         //   '7xl': '5rem',
         // },
         extend: {},
-    },
-    variants: {
-        extend: {
-            backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-            textDecoration: ['active'],
-            textColor: ['visited'],
-            boxShadow: ['responsive', 'hover', 'focus'],
-            accessibility: ['hover', 'active'],
-        },
     },
     plugins: [
         require("@tailwindcss/forms")({
