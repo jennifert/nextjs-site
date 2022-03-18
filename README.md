@@ -5,7 +5,7 @@ This is still under construction so please excuse any weird styles.
 
 ## Requirements
 - Node: 17.x
-- NPM 8.5.x
+- NPM: 8.5.x
 
 ## Version Information:
 - Tailwind: 3.x
