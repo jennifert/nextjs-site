@@ -15,7 +15,8 @@ export default function Gallery() {
             <Head>
                 <title>Gallery - {SITE_TITLE}</title>
             </Head>
-
+            
+            {/* TODO: move Gammery items into json and component. move classes to stylesheet */}
             <section aria-labelledby="main-content">
                 <h1 id="main-content">Gallery</h1>
                 <p>

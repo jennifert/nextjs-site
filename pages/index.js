@@ -82,9 +82,9 @@ function HomePage() {
             </section>
             <section id="latest-blogs" aria-labelledby="blogs-heading">
                 <h2 id="blogs-heading">Latest Blog Posts</h2>
-                {/* TODO: put in Own componnet - try to pull from rss feed. if not, run script to convert rss to json on build. */}
+                {/* TODO: put in Own componnet - pull from rss feed or convert rss to json on build. move classes into css */}
                 <div className="flex flex-wrap">
-                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                    <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
                             <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-08-26-website-revamp"><a className="underline hover:underline focus:ring-2 focus:ring-white">Website Revamp</a></Link></h2>
                             <p className="leading-relaxed text-base">New version of website launched. Here are the aspects of the website that have been overhauled.</p>
@@ -95,7 +95,7 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
-                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                    <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
                             <h2 className="text-lg  font-medium title-font mb-2"><Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="underline hover:underline focus:ring-2 focus:ring-white">Jekyll Static Sites on the Digital App Platform</a></Link></h2>
                             <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
@@ -106,7 +106,7 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
-                    <div className="xl:w-1/3 md:w-1/2 px-4">
+                    <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
                             <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-01-13-mac-homebrew"><a className="underline hover:underline focus:ring-2 focus:ring-white">Installing Homebrew and Fixing Ruby on your Mac</a></Link></h2>
                             <p className="leading-relaxed text-base">Post that describes how to fix the default Ruby install on your Mac and install Homebrew.</p>

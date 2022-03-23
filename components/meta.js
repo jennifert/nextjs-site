@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL, SITE_DESCRIPTION, SITE_DOMAIN } from '../lib/constants'
-//TODO: try to use SIte COnstant File fir all fields. Then be sure they are properly in the site as well
+//TODO: try to use SIte COnstant File for all fields. Then be sure they are properly in the site as well
 export default function Meta() {
     return (
         <Head>

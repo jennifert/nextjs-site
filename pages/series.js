@@ -16,7 +16,8 @@ export default function Series() {
                 <h2>Mac Local Development</h2>
 
                 {/* TODO replace links here with proper ones */}
-                <ol className="list-decimal list-inside m-2">
+                {/* <ol className="list-decimal list-inside m-2"> */}
+                <ol>
                     <li>
                         <Link href="/blog/2021-01-13-mac-homebrew"><a className="underline focus:ring-2">Installing Homebrew and Fixing Ruby on your Mac</a></Link>
                     </li>
@@ -40,7 +41,8 @@ export default function Series() {
                 </ol>
 
                 <h2>Windows Local Development</h2>
-                <ul className="list-disc list-inside m-2">
+                {/* <ul className="list-disc list-inside m-2"> */}
+                <ul>
                     <li>
                         <Link href="/blog/2015-03-14-IIS7-Development-Environment"><a className="underline focus:ring-2">Creating a development environment for IIS 7+</a></Link>
                     </li>

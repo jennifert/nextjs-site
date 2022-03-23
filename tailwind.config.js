@@ -16,6 +16,15 @@ module.exports = {
         // },
         extend: {},
     },
+    // variants: {
+    //     extend: {
+    //         backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    //         textDecoration: ['active'],
+    //         textColor: ['visited'],
+    //         boxShadow: ['responsive', 'hover', 'focus'],
+    //         accessibility: ['hover', 'active'],
+    //     },
+    // },
     plugins: [
         require("@tailwindcss/forms")({
             strategy: 'class',

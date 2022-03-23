@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  body{
+    @apply text-base;
+  }
+
   h1 {
     @apply text-3xl;
     @apply font-semibold;
@@ -26,19 +31,154 @@
     @apply mb-3;
   }
 
-  body{
-    @apply text-base;
+  p {
+    @apply my-3;
+  }
+
+  a{
+      @apply underline;
+      @apply hover:underline;
+      @apply focus:ring-2;
+      @apply focus:ring-white;
+  }
+
+  .caption h2, .caption p{
+      @apply  pl-1;
+  }
+
+  ol{
+      @apply list-decimal;
+  }
+  ul{
+      @apply list-disc;
+  }
+
+  ol, ul{
+      @apply list-inside;
+      @apply m-2;
+  }
+
+  header{
+      @apply pl-4;
+      @apply pr-4;
+  }
+
+  header nav{
+      @apply bg-indigo-500;
+      @apply mb-3;
+  }
+
+  footer, main{
+      @apply p-4;
   }
 
   .alert-warning{
       @apply bg-yellow-200 relative text-yellow-600 py-3 px-3 rounded-lg;
   }
 
-  p {
-    @apply my-3;
+  nav .container{
+      @apply px-4;
+      @apply flex-none;
+      @apply md:flex;
+      @apply md:flex-wrap;
+      @apply flex-1;
   }
 
-  .caption h2, .caption p{
-      @apply  pl-1;
+  nav .site-title{
+      @apply leading-relaxed;
+      @apply inline-block;
+      @apply mr-4;
+      @apply py-2;
+      @apply whitespace-nowrap;
+      @apply uppercase;
+      @apply text-white;
+      @apply focus:ring-2;
+      @apply focus:ring-white;
+      @apply text-base;
+  }
+
+  nav ul{
+      @apply list-none;
+      @apply flex-none;
+      @apply md:flex;
+      @apply items-center;
+  }
+
+  nav ul li a.current-page{
+      @apply px-3; 
+      @apply py-2; 
+      @apply flex; 
+      @apply items-center;
+      @apply text-base; 
+      @apply uppercase; 
+      @apply font-bold; 
+      @apply leading-snug; 
+      @apply text-white; 
+      @apply hover:opacity-75; 
+      @apply underline;
+  }
+
+  nav ul li a.other-page{
+      @apply px-3;
+      @apply py-2;
+      @apply flex;
+      @apply items-center;
+      @apply text-base;
+      @apply uppercase;
+      @apply font-bold;
+      @apply leading-snug;
+      @apply text-white;
+      @apply hover:opacity-75;
+      @apply no-underline;
+      @apply hover:underline;
+      @apply focus:ring-2;
+      @apply focus:ring-white
+  }
+
+  .portfolio-card{
+      @apply border;
+      @apply border-gray-300;
+      @apply p-6;
+      @apply rounded-lg;
+  }
+
+  .portfolio-card .title-font{
+      @apply text-lg;
+      @apply font-medium;
+      @apply mb-2;
+  } 
+
+.portfolio-card-main{
+    @apply text-center;
+    @apply mt-2;
+    @apply leading-none;
+    @apply flex;
+    @apply justify-between;
+    @apply w-full;
+}
+
+.portfolio-card-main span{
+    @apply mr-3;
+    @apply inline-flex;
+    @apply items-center;
+    @apply leading-none;
+    @apply text-sm;
+    @apply py-1;
+}
+
+  .social-logos{
+       @apply list-none;
+       @apply flex;
+       @apply justify-center;
+       @apply my-5;
+  }
+  .social-logos a{
+       @apply p-2;
+       @apply m-2;
+  }
+
+  .copyright{
+       @apply flex;
+       @apply justify-center;
   }
 }

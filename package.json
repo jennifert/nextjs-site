@@ -3,6 +3,10 @@
     "version": "4.0.0",
     "description": "",
     "private": true,
+    "engines": {
+        "npm": ">=8.0.0",
+        "node": ">=17.0.0"
+    },
     "scripts": {
         "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
         "dev": "next dev",
@@ -22,7 +26,7 @@
     },
     "homepage": "https://github.com/jennifert/nextjs-site/#readme",
     "dependencies": {
-        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/forms": "^0.5.0",
         "autoprefixer": "^10.4.2",
         "html-react-parser": "^1.4.8",
         "next": "^12.1.0",
