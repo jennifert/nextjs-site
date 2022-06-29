@@ -4,8 +4,8 @@
     "description": "",
     "private": true,
     "engines": {
-        "npm": ">=8.0.0",
-        "node": ">=18.0.0"
+        "npm": "~8.13.1",
+        "node": "~18.4.0"
     },
     "scripts": {
         "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
