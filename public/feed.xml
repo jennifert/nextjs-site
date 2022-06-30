@@ -11,6 +11,14 @@
     <language>en</language>
     <copyright>2021 Jennifer Tesolin.</copyright>
         <item>
+            <title>Web Development on a Chromebook</title>
+            <description>A set-up on a budget chromebook for web development including IDE, browsers, and more.</description>
+            <pubDate>Thu, 30 Jun 2022 18:00:00 GMT</pubDate>
+            <category>Android</category>
+            <link>https://jenntesolin.com/blog/2022-06-29-chromebook-dev</link>
+            <guid isPermaLink="true">https://jenntesolin.com/blog/2022-06-29-chromebook-dev</guid>
+        </item>
+        <item>
             <title>Website Revamp</title>
             <description>New version of website launched. Here are the aspects of the website that have been overhauled.</description>
             <pubDate>Thu, 26 Aug 2021 18:00:00 GMT</pubDate>
@@ -62,7 +70,7 @@
             <title>Using iOS and Android devices together</title>
             <description>Using an android in an Apple environment can be a bit tricky, but here are some tricks and resources to help you out.</description>
             <pubDate>Sun, 26 Sep 2018 19:00:00 -0500</pubDate>
-            <category>JavaScript</category>
+            <category>Android</category>
             <link>https://jenntesolin.com/blog/2018-09-26-using-ios-and-android-together</link>
             <guid isPermaLink="true">https://jenntesolin.com/blog/2018-09-26-using-ios-and-android-together</guid>
         </item>

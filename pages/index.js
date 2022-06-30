@@ -86,6 +86,17 @@ function HomePage() {
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
+                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2022-06-29-chromebook-dev"><a className="underline hover:underline focus:ring-2 focus:ring-white">Guide to Getting Started on Web Development Using a Chromebook</a></Link></h2>
+                            <p className="leading-relaxed text-base">A set-up on a budget chromebook for web development including IDE, browsers, and more.</p>
+                            <div className="text-center mt-2 leading-none flex justify-between w-full">
+                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
+                                    <time dateTime="2022-06-30T18:00">June 30, 2022</time>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
+                        <div className="border border-gray-300 p-6 rounded-lg">
                             <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-08-26-website-revamp"><a className="underline hover:underline focus:ring-2 focus:ring-white">Website Revamp</a></Link></h2>
                             <p className="leading-relaxed text-base">New version of website launched. Here are the aspects of the website that have been overhauled.</p>
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -102,17 +113,6 @@ function HomePage() {
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
                                 <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
                                     <time dateTime="2021-03-11T19:00">March 03, 2021</time>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
-                        <div className="border border-gray-300 p-6 rounded-lg">
-                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-01-13-mac-homebrew"><a className="underline hover:underline focus:ring-2 focus:ring-white">Installing Homebrew and Fixing Ruby on your Mac</a></Link></h2>
-                            <p className="leading-relaxed text-base">Post that describes how to fix the default Ruby install on your Mac and install Homebrew.</p>
-                            <div className="text-center mt-2 leading-none flex justify-between w-full">
-                                <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
-                                    <time dateTime="2021-01-13T19:00">January 13, 2021</time>
                                 </span>
                             </div>
                         </div>

@@ -15,10 +15,17 @@ export default function Blog() {
                 <h2>Apple</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2018-09-26-using-ios-and-android-together"><a className="underline focus:ring-2">Using iOS and Android devices together</a></Link> on <time dateTime="2018-09-26T19:00">September 09, 2018</time>
+                        <Link href="/blog/2016-06-12-itunes-view-change"><a className="underline focus:ring-2">Change your iTunes media view mode</a></Link> on <time dateTime="2016-06-12T19:00">June 12, 2016</time>
+                    </li>
+                </ul>
+
+                <h2>Android</h2>
+                <ul className="list-disc list-inside m-2">
+                    <li>
+                        <Link href="/blog/2022-06-29-chromebook-dev"><a className="underline focus:ring-2">Guide to Getting Started on Web Development Using a Chromebook</a></Link> on <time dateTime="2022-06-30T18:00">June 30, 2022</time>
                     </li>
                     <li>
-                        <Link href="/blog/2016-06-12-itunes-view-change"><a className="underline focus:ring-2">Change your iTunes media view mode</a></Link> on <time dateTime="2016-06-12T19:00">June 12, 2016</time>
+                        <Link href="/blog/2018-09-26-using-ios-and-android-together"><a className="underline focus:ring-2">Using iOS and Android devices together</a></Link> on <time dateTime="2018-09-26T19:00">September 09, 2018</time>
                     </li>
                 </ul>
 

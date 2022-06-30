@@ -8,7 +8,7 @@
     
     <url>
         <loc>https://jenntesolin.com</loc>
-        <lastmod>2021-08-26T22:40:18.558Z</lastmod>
+        <lastmod>2022-06-30T18:00:18.558Z</lastmod>
     </url>
     
     <url>
@@ -227,7 +227,12 @@
     </url>
     
     <url>
-        <loc>https://jenntesolin.com/blog/index</loc>
+        <loc>https://jenntesolin.com/blog/2022-06-29-chromebook-dev</loc>
         <lastmod>2021-08-26T22:40:18.558Z</lastmod>
+    </url>
+
+    <url>
+        <loc>https://jenntesolin.com/blog/index</loc>
+        <lastmod>2022-06-30T18:00:18.558Z</lastmod>
     </url>
 </urlset>
