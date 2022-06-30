@@ -16,7 +16,7 @@ export default function Series() {
                 <h2>Chromebooks</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2022-06-29-chromebook-dev"><a className="underline focus:ring-2">Getting Started on Web Development Using a Chromebook</a></Link>
+                        <Link href="/blog/2022-06-29-chromebook-dev"><a className="underline focus:ring-2">A Guide for Setting Up a Chromebook for Web Development</a></Link>
                     </li>
                 </ul>
 

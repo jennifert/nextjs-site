@@ -28,7 +28,7 @@ flatpak run com.visualstudio.code
 `.trim();
 
 export default function ChromebookDev() {
-    const POST_TITLE = 'Getting Started on Web Development Using a Chromebook';
+    const POST_TITLE = 'A Guide for Setting Up a Chromebook for Web Development';
     return (
         <Layout>
             <Head>
