@@ -27,13 +27,8 @@ flatpak install flathub com.visualstudio.code
 flatpak run com.visualstudio.code
 `.trim();
 
-
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
-
 export default function ChromebookDev() {
-    const POST_TITLE = 'Web Development on a Chromebook';
+    const POST_TITLE = 'Getting Started on Web Development Using a Chromebook';
     return (
         <Layout>
             <Head>
