@@ -94,11 +94,11 @@ export default function ChromebookDev() {
 
                 <p>First, Google's guide (section Turn on Linux) to <a className="underline focus:ring-2" href="https://www.howtogeek.com/316056/how-to-get-android-apps-to-see-external-storage-on-chromebooks/">Set up Linux on your Chromebook</a></p>
 
-                <iframe src="https://player.vimeo.com/video/725837207?h=e4d9819af7" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Video demo: Turning on your linux environment"></iframe>
+                <iframe src="https://player.vimeo.com/video/725837207?h=e4d9819af7" allow="fullscreen" allowFullScreen title="Video demo: Turning on your linux environment"></iframe>
 
                 <p>Once its successfully installed, make a <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/9592813?hl=en&ref_topic=3415446">back-up of your environment</a> (this way if something goes wrong, you can restore).</p>
 
-                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Backing Up your linux environment to Google Drive"></iframe>
+                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" allow="fullscreen" allowFullScreen title="Backing Up your linux environment to Google Drive"></iframe>
 
                 <p>Check out the <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/10057656?hl=en&ref_topic=3415446">Port-Forwarding</a> guide if you want to see on other devices.</p>
 
@@ -129,13 +129,13 @@ export default function ChromebookDev() {
                 />
 
                 <p>Here is a video demo of installing VS code using the official debian file.</p>
-                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Video demo: Installing VS Code on Chromebook"></iframe>
+                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" allow="fullscreen" allowFullScreen title="Video demo: Installing VS Code on Chromebook"></iframe>
                 <h3>Installing a Package Manager</h3>
                 <p>A popular package manager is called "FlatPak", they have extra programs you can install, including a GUI/Graphic app to search for and install programs.</p>
                 <p>Here are the steps to install Flatpak:</p>
                 <ol className="list-decimal list-inside m-2">
                     <li>Follow the official documentation (starting at step 2): <a className="underline focus:ring-2" href="https://flatpak.org/setup/Chrome%20OS">Chrome OS Quick Setup</a>
-                        <iframe src="https://player.vimeo.com/video/725837334?h=0289253177" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Video demo: Installing Flatpak and GUI"></iframe>
+                        <iframe src="https://player.vimeo.com/video/725837334?h=0289253177" allow="fullscreen" allowFullScreen title="Video demo: Installing Flatpak and GUI"></iframe>
                     </li>
                     <li>If you want to use a GUI to install apps, run this command:
                         <PrismCode
@@ -145,7 +145,7 @@ export default function ChromebookDev() {
                         />
 
                         <p>Using the package manager to find software:</p>
-                        <iframe src="https://player.vimeo.com/video/725837422?h=4b76fd2030" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Video demo: Using the package manager"></iframe>
+                        <iframe src="https://player.vimeo.com/video/725837422?h=4b76fd2030" allow="fullscreen" allowFullScreen title="Video demo: Using the package manager"></iframe>
                     </li>
                     <li>Alternatively, you can search <a className="underline focus:ring-2" href="https://flathub.org/">flathub.org</a>, and install via the command line. The first command below installs Visual Studio Code, while the second one runs the program.
                         <PrismCode
@@ -158,7 +158,7 @@ export default function ChromebookDev() {
 
                 <h3>Removing Linux</h3>
                 <p>Check out the section <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/9145439?hl=en" rel="nofollow noreferrer">"Turn Off Linux"</a> for details to completely remove linux and its files.</p>
-                <iframe src="https://player.vimeo.com/video/725837496?h=07168ac02d" width="640" height="564" frameBorder="0" allow="fullscreen" allowFullScreen title="Video demo: Turn Off Linux"></iframe>
+                <iframe src="https://player.vimeo.com/video/725837496?h=07168ac02d" allow="fullscreen" allowFullScreen title="Video demo: Turn Off Linux"></iframe>
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

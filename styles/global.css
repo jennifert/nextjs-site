@@ -181,4 +181,10 @@
        @apply flex;
        @apply justify-center;
   }
+
+  iframe{
+        @apply border-0;
+        @apply aspect-video;
+        @apply sm:w-full md:w-1/2;
+  }
 }
