@@ -54,7 +54,9 @@ export default function JekyllDev() {
 
                 <h2>Requirements</h2>
                 {/* TODO replace link with proper one */}
-                <p>To use Jekyll, you will need to have Ruby installed. Check out  the blog post <Link href="/blog/2016-02-04-jekyll-on-azure-or-github"><a className="underline focus:ring-2">Install homebrew on Big Sur</a></Link> if your on a Mac. Otherwise, check out <a className="underline focus:ring-2" href="https://rubyinstaller.org/" rel="nofollow noreferrer">Ruby Installer for Windows</a></p>
+                <p>To use Jekyll, you will need to have Ruby installed. Check out  the blog post <Link
+                    href="/blog/2016-02-04-jekyll-on-azure-or-github"
+                    className="underline focus:ring-2">Install homebrew on Big Sur</Link> if your on a Mac. Otherwise, check out <a className="underline focus:ring-2" href="https://rubyinstaller.org/" rel="nofollow noreferrer">Ruby Installer for Windows</a></p>
 
                 <h2>Install Jekyll dependencies:</h2>
                 <p>To install Jekyll, run the command:</p>
@@ -165,7 +167,9 @@ export default function JekyllDev() {
                 />
 
                 <h2>Publishing your new site</h2>
-                <p>The last step is in this process is to push your files on-line. First, instead of <code>jekyll serve</code> you will want to run <code>jekyll build</code> like below. This replaces all of your development links with what your production link. <Link href="/blog/2015-08-08-jekyll-config-file"><a className="underline focus:ring-2">Check out how to set your configuration.</a></Link></p>
+                <p>The last step is in this process is to push your files on-line. First, instead of <code>jekyll serve</code> you will want to run <code>jekyll build</code> like below. This replaces all of your development links with what your production link. <Link
+                    href="/blog/2015-08-08-jekyll-config-file"
+                    className="underline focus:ring-2">Check out how to set your configuration.</Link></p>
                 <PrismCode
                     code={code7}
                     language="shell-session"
@@ -190,15 +194,23 @@ export default function JekyllDev() {
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">
-                    <li><Link href="/blog/2016-02-04-jekyll-on-azure-or-github"><a className="underline focus:ring-2">Configure Jekyll on Microsoft Azure or Github pages</a></Link></li>
-                    <li><Link href="/blog/2015-10-28-fix-jekyll-pagination-upgrade-to-3"><a className="underline focus:ring-2">Fix pagination after upgrading to Jekyll 3</a></Link></li>
-                    <li><Link href="/blog/2015-08-08-jekyll-config-file"><a className="underline focus:ring-2">Jekyll: The configuration file</a></Link></li>
-                    <li><Link href="/blog/2015-05-22-Jekyll-Custom-Easy-Search-jQuery"><a className="underline focus:ring-2">Jekyll: Easy searching with JSON and jQuery</a></Link></li>
+                    <li><Link
+                        href="/blog/2016-02-04-jekyll-on-azure-or-github"
+                        className="underline focus:ring-2">Configure Jekyll on Microsoft Azure or Github pages</Link></li>
+                    <li><Link
+                        href="/blog/2015-10-28-fix-jekyll-pagination-upgrade-to-3"
+                        className="underline focus:ring-2">Fix pagination after upgrading to Jekyll 3</Link></li>
+                    <li><Link
+                        href="/blog/2015-08-08-jekyll-config-file"
+                        className="underline focus:ring-2">Jekyll: The configuration file</Link></li>
+                    <li><Link
+                        href="/blog/2015-05-22-Jekyll-Custom-Easy-Search-jQuery"
+                        className="underline focus:ring-2">Jekyll: Easy searching with JSON and jQuery</Link></li>
                     <li><a className="underline focus:ring-2" href="https://stackoverflow.com/questions/tagged/jekyll" target="_blank" rel="nofollow noreferrer noopener">Jekyll on Stack Overflow</a></li>
                     <li><a className="underline focus:ring-2" href="https://jekyllrb.com/docs/posts/" rel="nofollow noreferrer">Jekyll Docs - Working with drafts</a></li>
                     <li><a className="underline focus:ring-2" href="https://jekyllrb.com/docs/troubleshooting/#installation-problems" rel="nofollow noreferrer">Jekyll Docs - Installation Problems</a></li>
                 </ul>
             </section>
         </Layout>
-    )
+    );
 }

@@ -86,7 +86,9 @@ function HomePage() {
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
-                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2022-06-29-chromebook-dev"><a className="underline hover:underline focus:ring-2 focus:ring-white">A Guide for Setting Up a Chromebook for Web Development</a></Link></h2>
+                            <h2 className="text-lg font-medium title-font mb-2"><Link
+                                href="/blog/2022-06-29-chromebook-dev"
+                                className="underline hover:underline focus:ring-2 focus:ring-white">A Guide for Setting Up a Chromebook for Web Development</Link></h2>
                             <p className="leading-relaxed text-base">A set-up on a budget chromebook for web development including IDE, browsers, and more.</p>
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
                                 <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
@@ -97,7 +99,9 @@ function HomePage() {
                     </div>
                     <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
-                            <h2 className="text-lg font-medium title-font mb-2"><Link href="/blog/2021-08-26-website-revamp"><a className="underline hover:underline focus:ring-2 focus:ring-white">Website Revamp</a></Link></h2>
+                            <h2 className="text-lg font-medium title-font mb-2"><Link
+                                href="/blog/2021-08-26-website-revamp"
+                                className="underline hover:underline focus:ring-2 focus:ring-white">Website Revamp</Link></h2>
                             <p className="leading-relaxed text-base">New version of website launched. Here are the aspects of the website that have been overhauled.</p>
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
                                 <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
@@ -108,7 +112,9 @@ function HomePage() {
                     </div>
                     <div className="xl:w-1/3 md:w-1/2 mb-4 px-4">
                         <div className="border border-gray-300 p-6 rounded-lg">
-                            <h2 className="text-lg  font-medium title-font mb-2"><Link href="/blog/2021-03-11-jekyll-on-digital-ocean"><a className="underline hover:underline focus:ring-2 focus:ring-white">Jekyll Static Sites on the Digital App Platform</a></Link></h2>
+                            <h2 className="text-lg  font-medium title-font mb-2"><Link
+                                href="/blog/2021-03-11-jekyll-on-digital-ocean"
+                                className="underline hover:underline focus:ring-2 focus:ring-white">Jekyll Static Sites on the Digital App Platform</Link></h2>
                             <p className="leading-relaxed text-base">Learn how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.</p>
                             <div className="text-center mt-2 leading-none flex justify-between w-full">
                                 <span className="mr-3 inline-flex items-center leading-none text-sm  py-1">
@@ -121,7 +127,7 @@ function HomePage() {
             </section>
 
         </Layout>
-    )
+    );
 }
 
 export default HomePage

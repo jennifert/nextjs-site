@@ -16,7 +16,7 @@ export default function Series() {
                 <h2>Chromebooks</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2022-06-29-chromebook-dev"><a className="underline focus:ring-2">A Guide for Setting Up a Chromebook for Web Development</a></Link>
+                        <Link href="/blog/2022-06-29-chromebook-dev" className="underline focus:ring-2">A Guide for Setting Up a Chromebook for Web Development</Link>
                     </li>
                 </ul>
 
@@ -25,16 +25,20 @@ export default function Series() {
                 <ul className="list-disc list-inside m-2">
 
                     <li>
-                        <Link href="/blog/2021-01-13-mac-homebrew"><a className="underline focus:ring-2">Installing Homebrew and Fixing Ruby on your Mac</a></Link>
+                        <Link href="/blog/2021-01-13-mac-homebrew" className="underline focus:ring-2">Installing Homebrew and Fixing Ruby on your Mac</Link>
                     </li>
                     <li>
-                        <Link href="/blog/2019-12-12-git-github"><a className="underline focus:ring-2">Installing Git and Github on your Mac</a></Link>
+                        <Link href="/blog/2019-12-12-git-github" className="underline focus:ring-2">Installing Git and Github on your Mac</Link>
                     </li>
                     <li>
-                        <Link href="/blog/2015-03-14-IIS7-Development-Environment"><a className="underline focus:ring-2">Node JS</a></Link>
+                        <Link
+                            href="/blog/2015-03-14-IIS7-Development-Environment"
+                            className="underline focus:ring-2">Node JS</Link>
                     </li>
                     <li>
-                        <Link href="/blog/2019-12-11-Jekyll-Set-Up-Publish"><a className="underline focus:ring-2">Jekyll: Setting up your development environment</a></Link>
+                        <Link
+                            href="/blog/2019-12-11-Jekyll-Set-Up-Publish"
+                            className="underline focus:ring-2">Jekyll: Setting up your development environment</Link>
                     </li>
                     {/* 
                      Apache
@@ -49,11 +53,13 @@ export default function Series() {
                 <h2>Windows Local Development</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
-                        <Link href="/blog/2015-03-14-IIS7-Development-Environment"><a className="underline focus:ring-2">Creating a development environment for IIS 7+</a></Link>
+                        <Link
+                            href="/blog/2015-03-14-IIS7-Development-Environment"
+                            className="underline focus:ring-2">Creating a development environment for IIS 7+</Link>
                     </li>
                 </ul>
                 
             </section>
         </Layout>
-    )
+    );
 }

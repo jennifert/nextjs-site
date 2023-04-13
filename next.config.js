@@ -1,17 +1,10 @@
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+const withPWA = require("next-pwa")({
+    dest: "public",
+});
 
-module.exports = withPWA({
+const nextConfig = withPWA({
     reactStrictMode: true,
     poweredByHeader: false,
-    // i18n: {
-    //     locales: ['en-CA'],
-    //     defaultLocale: 'en-CA',
-    // },
-    pwa: {
-        dest: 'public',
-        runtimeCaching,
-    },
     images: {
         loader: 'cloudinary',
         path: 'https://res.cloudinary.com/dkeghqshh/image/upload/v1612975699/',
@@ -19,4 +12,6 @@ module.exports = withPWA({
     webpack: (config, { isServer }) => {
         return config;
     },
-})
+});
+
+module.exports = nextConfig;

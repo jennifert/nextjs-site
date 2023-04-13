@@ -13,22 +13,22 @@ export default function Nav({ children, href }) {
                 </p>
                 <ul>
                     <li>
-                        {router.pathname === "/" ? <Link href="/"><a className="current-page" aria-current="page">Home</a></Link>
-                            : <Link href="/"><a className="other-page">Home</a></Link>}
+                        {router.pathname === "/" ? <Link href="/" className="current-page" aria-current="page">Home</Link>
+                            : <Link href="/" className="other-page">Home</Link>}
                     </li>
 
                     <li>
-                        {router.pathname === "/blog" ? <Link href="/"><a className="current-page" aria-current="page">Blog</a></Link>
-                            : <Link href="/blog"><a className="other-page">Blog</a></Link>}
+                        {router.pathname === "/blog" ? <Link href="/" className="current-page" aria-current="page">Blog</Link>
+                            : <Link href="/blog" className="other-page">Blog</Link>}
                     </li>
                     <li>
-                        {router.pathname === "/gallery" ? <Link href="/"><a className="current-page" aria-current="page">Gallery</a></Link>
-                            : <Link href="/gallery"><a className="other-page">Gallery</a></Link>}
+                        {router.pathname === "/gallery" ? <Link href="/" className="current-page" aria-current="page">Gallery</Link>
+                            : <Link href="/gallery" className="other-page">Gallery</Link>}
                     </li>
 
                     <li>
-                        {router.pathname === "/portfolio" ? <Link href="/"><a className="current-page" aria-current="page">Portfolio</a></Link>
-                            : <Link href="/portfolio"><a className="other-page">Portfolio</a></Link>}
+                        {router.pathname === "/portfolio" ? <Link href="/" className="current-page" aria-current="page">Portfolio</Link>
+                            : <Link href="/portfolio" className="other-page">Portfolio</Link>}
                     </li>
 
                     {/* <li>
@@ -41,5 +41,5 @@ export default function Nav({ children, href }) {
 
             </div>
         </nav>
-    )
+    );
 }

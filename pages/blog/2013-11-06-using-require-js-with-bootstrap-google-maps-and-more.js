@@ -175,7 +175,9 @@ export default function RequireJs() {
                     height={367}
                 />
 
-                <p>Works off previous Post: <Link href="/blog/2013-11-05-bootstrap-3-and-google-maps"><a className="underline focus:ring-2">Bootstrap 3 and Google Maps</a></Link> .</p>
+                <p>Works off previous Post: <Link
+                    href="/blog/2013-11-05-bootstrap-3-and-google-maps"
+                    className="underline focus:ring-2">Bootstrap 3 and Google Maps</Link> .</p>
 
                 <h2>Step 1</h2>
                 <p>First, we need to <a className="underline focus:ring-2" href="http://requirejs.org/docs/download.html#requirejs" rel="nofollow noreferrer">download the latest version</a> (at the time of writing its 2.1.9). For production, you will want the minified version.</p>
@@ -227,5 +229,5 @@ export default function RequireJs() {
                 />
             </section>
         </Layout>
-    )
+    );
 }
