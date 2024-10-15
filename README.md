@@ -1,7 +1,7 @@
 # nextjs-site
 The current website for jenntesolin.com. Built with NextJS and TailWind CSS.
 
-Will be re-working the code base, and image smoved here at somepoint.
+Will be re-working the code base. Images will be moved here at some point.
 
 ## Requirements
 - Node: 17.x
