@@ -26,22 +26,22 @@
     },
     "homepage": "https://github.com/jennifert/nextjs-site/#readme",
     "dependencies": {
-        "@tailwindcss/forms": "^0.5.3",
-        "autoprefixer": "^10.4.14",
-        "html-react-parser": "^3.0.15",
-        "next": "^14.1.1",
+        "@tailwindcss/forms": "^0.5.9",
+        "autoprefixer": "^10.4.20",
+        "html-react-parser": "^5.1.18",
+        "next": "^14.2.15",
         "next-pwa": "^5.6.0",
-        "postcss": "^8.4.31",
+        "postcss": "^8.4.47",
         "prismjs": "^1.29.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tailwindcss": "^3.3.1"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "tailwindcss": "^3.4.14"
     },
     "devDependencies": {
         "babel-plugin-prismjs": "^2.1.0",
-        "eslint": "^8.38.0",
-        "eslint-config-next": "^13.3.0",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "webpack": "^5.94.0"
+        "eslint": "^9.12.0",
+        "eslint-config-next": "^14.2.15",
+        "eslint-plugin-jsx-a11y": "^6.10.0",
+        "webpack": "^5.95.0"
     }
 }
