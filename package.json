@@ -4,8 +4,8 @@
     "description": "",
     "private": true,
     "engines": {
-        "npm": ">=8.0.0",
-        "node": ">=17.0.0"
+        "npm": ">=10.0.0",
+        "node": ">=23.0.0"
     },
     "scripts": {
         "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
@@ -26,22 +26,23 @@
     },
     "homepage": "https://github.com/jennifert/nextjs-site/#readme",
     "dependencies": {
-        "@tailwindcss/forms": "^0.5.9",
-        "autoprefixer": "^10.4.20",
-        "html-react-parser": "^5.1.18",
-        "next": "^14.2.15",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/postcss": "^4.0.15",
+        "autoprefixer": "^10.4.21",
+        "html-react-parser": "^5.2.2",
+        "next": "^15.2.3",
         "next-pwa": "^5.6.0",
-        "postcss": "^8.4.47",
-        "prismjs": "^1.29.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "tailwindcss": "^3.4.14"
+        "postcss": "^8.5.3",
+        "prismjs": "^1.30.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "tailwindcss": "^4.0.15"
     },
     "devDependencies": {
         "babel-plugin-prismjs": "^2.1.0",
-        "webpack": "^5.95.0",
-        "eslint": "^8.57.1",
-        "eslint-config-next": "^14.2.15",
-        "eslint-plugin-jsx-a11y": "^6.10.0"
+        "eslint": "^9.22.0",
+        "eslint-config-next": "^15.2.3",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "webpack": "^5.98.0"
     }
 }

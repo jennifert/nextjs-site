@@ -19,7 +19,7 @@ export default function Portfolio() {
     return (
         <Layout>
             <Head>
-                <title>Portfolio - {SITE_TITLE}</title>
+                <title>{`Portfolio -  ${SITE_TITLE}`}</title>
             </Head>
 
             <h1 id="main-content">Portfolio</h1>

@@ -33,7 +33,7 @@ function HomePage() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link type="text/plain" rel="author" href="/humans.txt" />
                 <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
-                <title>{SITE_TITLE}</title>
+                <title>{`${SITE_TITLE}`}</title>
                 <link rel="manifest" href="/manifest.json" />
                 {/* <link
                     href="/icons/favicon-16x16.png"

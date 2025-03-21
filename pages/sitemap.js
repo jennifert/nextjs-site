@@ -7,7 +7,7 @@ export default function Sitemap() {
     return (
         <Layout>
             <Head>
-                <title>Sitemap - {SITE_TITLE}</title>
+                <title>{`Sitemap -  ${SITE_TITLE}`}</title>
             </Head>
 
             <section aria-labelledby="main-content">

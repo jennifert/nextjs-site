@@ -58,7 +58,7 @@ export default function IisDevEnvironmentSeven() {
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {BLOG_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

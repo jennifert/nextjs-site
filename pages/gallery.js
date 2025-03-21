@@ -13,7 +13,7 @@ export default function Gallery() {
     return (
         <Layout>
             <Head>
-                <title>Gallery - {SITE_TITLE}</title>
+                <title>{`Gallery -  ${SITE_TITLE}`}</title>
             </Head>
             
             {/* TODO: move Gammery items into json and component. move classes to stylesheet */}

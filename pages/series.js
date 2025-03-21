@@ -7,7 +7,7 @@ export default function Series() {
     return (
         <Layout>
             <Head>
-                <title>Dev Series - {SITE_TITLE}</title>
+                <title>{`Dev Series -  ${SITE_TITLE}`}</title>
             </Head>
 
             <section aria-labelledby="main-content">

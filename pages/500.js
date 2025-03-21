@@ -7,7 +7,7 @@ export default function Custom404() {
     return (
         <Layout>
             <Head>
-                <title>404 - {SITE_TITLE}</title>
+            <title>{`500 -  ${SITE_TITLE}`}</title>
             </Head>
 
             <section aria-labelledby="main-content">
