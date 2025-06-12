@@ -1,17 +1,19 @@
-const withPWA = require("next-pwa")({
-    dest: "public",
-});
+const path = require('path');
 
-const nextConfig = withPWA({
-    reactStrictMode: true,
-    poweredByHeader: false,
-    images: {
-        loader: 'cloudinary',
-        path: 'https://res.cloudinary.com/dkeghqshh/image/upload/v1612975699/',
-    },
-    webpack: (config, { isServer }) => {
-        return config;
-    },
-});
+module.exports = {
+  reactStrictMode: true,
+  poweredByHeader: false,
+  images: {
+    loader: 'default',
+    domains: [],
+  },
+  webpack: (config) => {
+    // 👉 ONLY apply custom loaders to .prismcss virtual extension
+    config.module.rules.push({
+      test: /\.prismcss$/,
+      use: ['style-loader', 'css-loader'],
+    });
 
-module.exports = nextConfig;
+    return config;
+  },
+};

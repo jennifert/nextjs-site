@@ -28,45 +28,8 @@ function HomePage() {
     return (
         <Layout home>
             <Head>
-                <meta charSet="utf-8" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link type="text/plain" rel="author" href="/humans.txt" />
-                <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
-                <title>{`${SITE_TITLE}`}</title>
-                <link rel="manifest" href="/manifest.json" />
-                {/* <link
-                    href="/icons/favicon-16x16.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                />
-                <link
-                    href="/icons/favicon-32x32.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                /> */}
-                {/* <link rel="apple-touch-icon" href="/apple-icon.png"></link> */}
-                <meta name="theme-color" content="#317EFB" />
-
+                <title>{SITE_TITLE}</title>
                 <meta name="description" content={SITE_DESCRIPTION} />
-                <meta name="keywords" content="Keywords" />
-                <link rel="manifest" href="/site.webmanifest" />
-                {/*  
-                    <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
-                    <link rel="shortcut icon" href="/favicon.ico" />
-                    <link type="text/plain" rel="author" href="/humans.txt" />
-
-                    <link rel="canonical" href="CURRENT LINK" />
-                    <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-                    <meta name="application-name" content={`${SITE_TITLE}'s website for beginners.`} />
-
-                    <meta property="og:title" content="" />
-                    <meta property="og:type" content="" />
-                    <meta property="og:url" content="" />
-                    <meta property="og:image" content="" />      
-                */}
             </Head>
             <h1 id="main-content">Home</h1>
             <p>Welcome to my website that features my portfolio consisting of Github Repositories and Photography, as well as tutorials that include tips and tricks for web development and at the odd times traveling.</p>

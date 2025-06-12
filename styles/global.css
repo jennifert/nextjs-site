@@ -1,190 +1,115 @@
-@import 'tailwindcss';
-@reference "tailwindcss/theme.css";
-@tailwind base;
+@import "tailwindcss";
 
 @layer base {
-
-  body{
+  body {
     @apply text-base;
   }
 
   h1 {
-    @apply text-3xl;
-    @apply font-semibold;
-    @apply mb-5;
+    @apply text-3xl font-semibold mb-5;
   }
+
   h2, .site-title {
-    @apply text-2xl;
-    @apply font-semibold;
-    @apply my-3;
+    @apply text-2xl font-semibold my-3;
   }
 
   h3 {
-    @apply text-xl;
-    @apply font-semibold;
-    @apply mb-3;
+    @apply text-xl font-semibold mb-3;
   }
 
   h4 {
-    @apply text-lg;
-    @apply font-semibold;
-    @apply mb-3;
+    @apply text-lg font-semibold mb-3;
   }
 
   p {
     @apply my-3;
   }
 
-  a{
-      @apply underline;
-      @apply hover:underline;
-      @apply focus:ring-2;
-      @apply focus:ring-white;
+  a {
+    @apply underline hover:underline focus:ring-2 focus:ring-white;
   }
 
-  .caption h2, .caption p{
-      @apply  pl-1;
+  .caption h2, .caption p {
+    @apply pl-1;
   }
 
-  ol{
-      @apply list-decimal;
-  }
-  ul{
-      @apply list-disc;
+  ol {
+    @apply list-decimal;
   }
 
-  ol, ul{
-      @apply list-inside;
-      @apply m-2;
+  ul {
+    @apply list-disc;
   }
 
-  header{
-      @apply pl-4;
-      @apply pr-4;
+  ol, ul {
+    @apply list-inside m-2;
   }
 
-  header nav{
-      @apply bg-indigo-500;
-      @apply mb-3;
+  header {
+    @apply px-4;
   }
 
-  footer, main{
-      @apply p-4;
+  header nav {
+    @apply bg-indigo-500 mb-3;
   }
 
-  .alert-warning{
-      @apply bg-yellow-200 relative text-yellow-600 py-3 px-3 rounded-lg;
+  footer, main {
+    @apply p-4;
   }
 
-  nav .container{
-      @apply px-4;
-      @apply flex-none;
-      @apply md:flex;
-      @apply md:flex-wrap;
-      @apply flex-1;
+  .alert-warning {
+    @apply bg-yellow-200 relative text-yellow-600 py-3 px-3 rounded-lg;
   }
 
-  nav .site-title{
-      @apply leading-relaxed;
-      @apply inline-block;
-      @apply mr-4;
-      @apply py-2;
-      @apply whitespace-nowrap;
-      @apply uppercase;
-      @apply text-white;
-      @apply focus:ring-2;
-      @apply focus:ring-white;
-      @apply text-base;
+  nav .container {
+    @apply px-4 flex-none md:flex md:flex-wrap flex-1;
   }
 
-  nav ul{
-      @apply list-none;
-      @apply flex-none;
-      @apply md:flex;
-      @apply items-center;
+  nav .site-title {
+    @apply leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white focus:ring-2 focus:ring-white text-base;
   }
 
-  nav ul li a.current-page{
-      @apply px-3; 
-      @apply py-2; 
-      @apply flex; 
-      @apply items-center;
-      @apply text-base; 
-      @apply uppercase; 
-      @apply font-bold; 
-      @apply leading-snug; 
-      @apply text-white; 
-      @apply hover:opacity-75; 
-      @apply underline;
+  nav ul {
+    @apply list-none flex-none md:flex items-center;
   }
 
-  nav ul li a.other-page{
-      @apply px-3;
-      @apply py-2;
-      @apply flex;
-      @apply items-center;
-      @apply text-base;
-      @apply uppercase;
-      @apply font-bold;
-      @apply leading-snug;
-      @apply text-white;
-      @apply hover:opacity-75;
-      @apply no-underline;
-      @apply hover:underline;
-      @apply focus:ring-2;
-      @apply focus:ring-white
+  nav ul li a.current-page {
+    @apply px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 underline;
   }
 
-  .portfolio-card{
-      @apply border;
-      @apply border-gray-300;
-      @apply p-6;
-      @apply rounded-lg;
+  nav ul li a.other-page {
+    @apply px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75 no-underline hover:underline focus:ring-2 focus:ring-white;
   }
 
-  .portfolio-card .title-font{
-      @apply text-lg;
-      @apply font-medium;
-      @apply mb-2;
-  } 
-
-.portfolio-card-main{
-    @apply text-center;
-    @apply mt-2;
-    @apply leading-none;
-    @apply flex;
-    @apply justify-between;
-    @apply w-full;
-}
-
-.portfolio-card-main span{
-    @apply mr-3;
-    @apply inline-flex;
-    @apply items-center;
-    @apply leading-none;
-    @apply text-sm;
-    @apply py-1;
-}
-
-  .social-logos{
-       @apply list-none;
-       @apply flex;
-       @apply justify-center;
-       @apply my-5;
-  }
-  .social-logos a{
-       @apply p-2;
-       @apply m-2;
+  .portfolio-card {
+    @apply border border-gray-300 p-6 rounded-lg;
   }
 
-  .copyright{
-       @apply flex;
-       @apply justify-center;
+  .portfolio-card .title-font {
+    @apply text-lg font-medium mb-2;
   }
 
-  iframe{
-        @apply border-0;
-        @apply aspect-video;
-        @apply sm:w-full md:w-1/2;
+  .portfolio-card-main {
+    @apply text-center mt-2 leading-none flex justify-between w-full;
+  }
+
+  .portfolio-card-main span {
+    @apply mr-3 inline-flex items-center leading-none text-sm py-1;
+  }
+
+  .social-logos {
+    @apply list-none flex justify-center my-5;
+  }
+
+  .social-logos a {
+    @apply p-2 m-2;
+  }
+
+  .copyright {
+    @apply flex justify-center;
+  }
+
+  iframe {
+    @apply border-0 aspect-video sm:w-full md:w-1/2;
   }
 }
