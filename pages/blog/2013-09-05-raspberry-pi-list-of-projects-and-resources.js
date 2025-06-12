@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function PiProjects() {
     const POST_TITLE = 'Raspberry Pi: List of Projects and resource';
+    const POST_DESCRIPTION = 'This post contains a list of resources and tips and tricks found while putting together my Raspmbc media centre.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

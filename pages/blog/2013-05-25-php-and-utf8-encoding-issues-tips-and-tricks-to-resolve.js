@@ -34,10 +34,12 @@ const code3 = `
 
 export default function PhpUtfEncode() {
     const POST_TITLE = 'PHP and UTF8 encoding issues - Tips and tricks to resolve';
+    const POST_DESCRIPTION = 'Typically, having the proper character encoding on a page can be a bit of a pain, even if you have the right meta-tag. Here are some tips on how to ease the issue.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

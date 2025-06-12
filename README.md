@@ -65,3 +65,11 @@ import 'prismjs/plugins/toolbar/prism-toolbar.css';
 ```
 
 Always use the `?prismcss` suffix when importing Prism plugin styles.
+
+## Development Tasks
+- See [TODO.md](./TODO.md) for detailed ongoing project work.
+
+## License
+
+- 📄 **Code** is licensed under the [MIT License](./LICENSE)
+- 📝 **Content** (articles, posts, images) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)

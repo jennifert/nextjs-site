@@ -4,10 +4,13 @@ import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 
 export default function Blog() {
+    const POST_TITLE = BLOG_TITLE;
+    const POST_DESCRIPTION = 'Sorry, the server is having trouble loading the page';
     return (
         <Layout>
             <Head>
-                <title>{BLOG_TITLE} - {SITE_TITLE}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{BLOG_TITLE}</h1>
@@ -270,7 +273,6 @@ export default function Blog() {
                     </li>
                 </ul>
 
-                <p>All articles are: <a className="underline focus:ring-2" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow noreferrer">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a></p>
             </section>
         </Layout>
     );

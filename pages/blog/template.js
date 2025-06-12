@@ -19,16 +19,18 @@ class HelloWorld {
 }
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function Template() {
     const POST_TITLE = 'The post name';
+    const POST_DESCRIPTION = 'Description of the post';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -40,7 +42,7 @@ export default function Template() {
                 />
 
                 <Image
-                    loader={blogLoader}
+                    // //loader={blogLoader}
                     src="/custom-bootstrap-3_gt447z.png"
                     alt="Screenshot "
                     width={400}

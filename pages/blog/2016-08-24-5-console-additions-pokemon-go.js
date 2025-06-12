@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function PokemonConsoleToGo() {
     const POST_TITLE = '5 additions from the console games that would improve Pokemon Go';
+    const POST_DESCRIPTION = 'Pokemon Go is a great idea for a game but as someone who has played the console games in the past there are quite a few things that seem to be missing.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

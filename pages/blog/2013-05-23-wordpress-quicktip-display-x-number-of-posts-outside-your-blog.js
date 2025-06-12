@@ -79,6 +79,7 @@ while ($query->have_posts()) {
 
 export default function TipDisplayWordpress() {
     const POST_TITLE = 'WordPress Quick-tip: Display x number of posts outside your blog.';
+    const POST_DESCRIPTION = 'Sometime, you want to display posts outside of WordPress. Here are some resources to help.';
    return (
       <Layout>
          <Head>

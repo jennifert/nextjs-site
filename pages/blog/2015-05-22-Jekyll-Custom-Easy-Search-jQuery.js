@@ -122,10 +122,12 @@ getSearchResults('/search.json');
 
 export default function JekyllSearchJSONjQuery() {
     const POST_TITLE = 'Jekyll: Easy searching with JSON and jQuery';
+    const POST_DESCRIPTION = 'This post will describe how to create one a basic search using JSON and jQuery.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

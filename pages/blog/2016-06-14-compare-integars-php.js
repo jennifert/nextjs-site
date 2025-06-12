@@ -17,10 +17,12 @@ if (intval($a)==intval($b)){
 
 export default function PhpCompareInt() {
     const POST_TITLE = 'Comparing integer variables using PHP';
+    const POST_DESCRIPTION = 'This post describes how to compare variables that have integers using PHP.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

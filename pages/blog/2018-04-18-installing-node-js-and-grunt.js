@@ -277,16 +277,18 @@ npm cache clean -f
 npm install --save-dev jshint
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function InstallNodeGrunt() {
     const POST_TITLE = 'Installing Node JS and Grunt';
+    const POST_DESCRIPTION = 'This tutorial focuses on installing the platform, and provides resources for using Grunt.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -298,7 +300,7 @@ export default function InstallNodeGrunt() {
                 <p><b>If you installed with homebrew, skip to Proxy or Grunt step(s)</b></p> {/* TODO link to homebrew post  */}
                 <p>Otherwise, Download the latest stable binary from <a className="underline focus:ring-2" href="https://nodejs.org/en/download/" rel="nofollow noreferrer">nodejs.org</a>. On production servers is recommended to use the latest STABLE version. The default settings will be fine.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/nodejs-home_hckxx5.png"
                     alt=""
                     width={440}
@@ -306,7 +308,7 @@ export default function InstallNodeGrunt() {
                 />
                 <p>Verify your path as per installer message: Make sure that <strong>/usr/local/bin</strong> is in your $PATH.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/node_installer_aargfq.png"
                     alt=""
                     width={400}
@@ -340,7 +342,7 @@ export default function InstallNodeGrunt() {
                     plugins={["line-numbers"]}
                 />
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/node-npm-init_swbv7j.png"
                     alt=""
                     width={400}

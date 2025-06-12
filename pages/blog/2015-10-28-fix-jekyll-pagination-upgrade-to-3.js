@@ -15,10 +15,12 @@ gems :
 
 export default function PaginationJekyllThree() {
     const POST_TITLE = 'Fix pagination after upgrading to Jekyll 3';
+    const POST_DESCRIPTION = 'In Jekyll 3, pagination is deprecated. This post describes how to resolve the error.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

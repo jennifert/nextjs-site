@@ -14,16 +14,18 @@ brew install git-gui
 
 const code2 = `brew install --cask github`.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function InstallingGit() {
     const POST_TITLE = 'Installing Git and Github on your Mac';
+    const POST_DESCRIPTION = 'This post describes how to install git and github on your mac installation.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -48,7 +50,7 @@ export default function InstallingGit() {
                 <p>Alternatively, if you use github, you can download the <a className="underline focus:ring-2" href="https://desktop.github.com/" rel="nofollow noreferrer">github desktop DMG</a> file, then install the git command line tools from the app itself.</p>
                 <p>To install the git command line tools from within the GitHub application, click on the app name &quot;GitHub Desktop&quot;, then choose &quot;Install command line tool&quot;.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/github-cmd-tools_lni0uq.png"
                     alt=""
                     width={700}

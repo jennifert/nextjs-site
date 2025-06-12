@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function IosListSeven() {
     const POST_TITLE = 'iOS 7 Wishlist';
+    const POST_DESCRIPTION = 'Here is a wishlist of things that would be great to have in iOS 7.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

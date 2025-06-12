@@ -38,10 +38,12 @@ $(function () {
 
 export default function HighchartsNewWindow() {
     const POST_TITLE = 'Quick Tip: Highcharts credit in a new window';
+    const POST_DESCRIPTION = 'Here is a great fiddle by Torstein Hønsi, that shows how to have highcharts credits open in a new window/tab.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -54,16 +54,18 @@ const code2 = `
 </asp:Menu>
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function AspNetBootstrapNav() {
     const POST_TITLE = 'Asp.net Menu Control - Styling with Bootstrap';
+    const POST_DESCRIPTION = 'Thanks to an interesting post, was able to update the Bootstrap with master pages example with asp.net menu controls instead of being hard coded.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function UbuntuTwelveIssues() {
     const POST_TITLE = 'Fixing Ubuntu 12.04 network issue';
+    const POST_DESCRIPTION = 'While upgrading an Ubuntu virtual machine from Version 10 LTs to 12.04 LTS, I ran into networking issues with the static IP address and DNS servers.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

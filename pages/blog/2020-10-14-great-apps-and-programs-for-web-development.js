@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function DevPrograms() {
     const POST_TITLE = 'Great apps and programs for web development';
+    const POST_DESCRIPTION = 'A updated list of different applications that you an use to create your projects in. Separate for paid, free, and subscriptions.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

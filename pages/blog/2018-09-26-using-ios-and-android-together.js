@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function AndroidAndIos() {
     const POST_TITLE = 'Using iOS and Android devices together';
+    const POST_DESCRIPTION = 'Using an android in an Apple environment can be a bit tricky, but here are some tricks and resources to help you out.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

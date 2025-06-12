@@ -14,10 +14,12 @@ add_filter ( 'publish_post', 'email_alert' );
 
 export default function WordpressCm() {
     const POST_TITLE = 'Quick Tip: WordPress and Campaign Monitor';
+    const POST_DESCRIPTION = 'Just a quick and easy way to integrate your campaign monitor list.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -4,16 +4,18 @@ import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function RasPlexOS() {
     const POST_TITLE = 'Using RasPlex for your Media Server';
+    const POST_DESCRIPTION = 'Currently outdated: A post on building a raspberry pi media centre.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -24,7 +26,7 @@ export default function RasPlexOS() {
                 <p>The first step is to <a className="underline focus:ring-2" href="https://www.rasplex.com/get-started/rasplex-installers.html" rel="nofollow noreferrer">download the installer</a> for your Operating System onto your computer. They have installers available for Mac, Linux, and Windows, please be sure to read the notes on how to mount the installer.</p>
                 <p>Now, you select the version of RasPlex you want, and then select your SD card drive (check disk utility for the name if your not sure). Finally, press &quot;update links&quot;, and when that is down &quot;click download&quot;. It will ask you the location of the download, then when will display the download progress in the terminal. Once your all set-up, then press &quot;Write SD card&quot;.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/rasplex-1_u1zwoh.png"
                     alt="A sample of the Installer running"
                     width={636}
@@ -35,7 +37,7 @@ export default function RasPlexOS() {
                 <p>Once it reboots, follow the on screen instructions for set-up (note that only your keyboard will work so far). Some of the set-up options include: Blue-tooth, WI-Fi, your Plex Media Server.</p>
                 <p>When you see the menu, press the left keyboard arrow to get to your settings, this is where you can set-up your audio settings, ssh access, and more. At set-up it will choose HDMI audio, just select analog to use stereo speakers.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/RasPlex-2_hnoita.jpg"
                     alt=""
                     width={500}

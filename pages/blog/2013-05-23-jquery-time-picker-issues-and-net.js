@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function JqueryTime() {
     const POST_TITLE = 'jQuery time picker issues and .net';
+    const POST_DESCRIPTION = 'Using jQuery time picker and .net caused issues with control to validate, here is how to fix them.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

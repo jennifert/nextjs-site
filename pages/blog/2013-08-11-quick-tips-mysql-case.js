@@ -17,10 +17,12 @@ End AS titlefr
 `.trim();
 export default function MySqlCase() {
     const POST_TITLE = 'Quick tips: MySql Case';
+    const POST_DESCRIPTION = 'How to change the case in a sql statement using MySQL.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

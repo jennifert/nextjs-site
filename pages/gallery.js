@@ -4,16 +4,19 @@ import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 import Image from 'next/image'
 
-const galleryLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612978441/jenntesolin.com/gallery${src}?&q=${quality || 75}`
-    // return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612978441/jenntesolin.com/gallery${src}?w=${width}&q=${quality || 75}`
-}
+// const galleryLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612978441/jenntesolin.com/gallery${src}?&q=${quality || 75}`
+//      return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612978441/jenntesolin.com/gallery${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function Gallery() {
+    const POST_TITLE = 'Gallery';
+    const POST_DESCRIPTION = 'A gallery of photos that Jennifer Tesolin has taken';
     return (
         <Layout>
             <Head>
-                <title>{`Gallery -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             
             {/* TODO: move Gammery items into json and component. move classes to stylesheet */}
@@ -30,7 +33,7 @@ export default function Gallery() {
                         </div>
                         <div className="thumbnail w-96 h-96 relative">
                             <Image
-                                loader={galleryLoader}
+                                //loader={galleryLoader}
                                 src="/mayan_ruins_oibwvu.jpg"
                                 alt=""
                                 className="rounded w-full"
@@ -47,7 +50,7 @@ export default function Gallery() {
                         </div>
                         <div className="thumbnail w-96 h-96 relative">
                             <Image
-                                loader={galleryLoader}
+                                //loader={galleryLoader}
                                 src="/tall_ship_ppbewf.jpg"
                                 alt=""
                                 className="rounded w-full"
@@ -64,7 +67,7 @@ export default function Gallery() {
                         </div>
                         <div className="thumbnail w-96 h-96 relative">
                             <Image
-                                loader={galleryLoader}
+                                //loader={galleryLoader}
                                 src="/peace_arc_vqd9tj.jpg"
                                 alt=""
                                 className="rounded w-full"

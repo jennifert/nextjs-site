@@ -36,16 +36,18 @@ const code7 = `
 bundle exec jekyll build
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function JekyllDev() {
     const POST_TITLE = 'Jekyll: Setting up your development environment';
+    const POST_DESCRIPTION = 'Jekyll is a static site generator that runs on NodeJS. Its a great alternative to WordPress that eliminates the need for databases.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -94,7 +96,7 @@ export default function JekyllDev() {
                 />
                 <p>Sample output for running <kbd>jekyll new my-site-name</kbd>.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/jekyll-new-cmd1_t6pjkc"
                     alt="Screenshot"
                     width={700}
@@ -127,7 +129,7 @@ export default function JekyllDev() {
 
                 <p>Below is what the directory will look like in the terminal, as well as the output running the <code>serve</code>command to preview your site locally:</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/jekyll-new-cmd2_kgpdsb.png"
                     alt="Jekyll serve command terminal output"
                     width={593}
@@ -144,7 +146,7 @@ export default function JekyllDev() {
                 <h2>Drafts</h2>
                 <p>To work on a post locally (but not moving it live), create a folder at the root called <code>_drafts</code>. Next, add a markdown or html file without the date (for example: template.html instead of 2019-12-11-template.html).</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/jekyll-new-cmd2b_elcfqa.png"
                     alt=""
                     width={403}
@@ -180,7 +182,7 @@ export default function JekyllDev() {
 
                 <p>The first chunk of files below shows the root of my Jekyll site, while the second shows the production ready files. Note that some files from the root of the Jekyll site are not included. These are excluded in <code>_config.yml</code></p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/jekyll-new-cmd3_aie8s2.png"
                     alt=""
                     width={700}

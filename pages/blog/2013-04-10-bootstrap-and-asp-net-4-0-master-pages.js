@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function BootstrapMasterPages() {
     const POST_TITLE = 'Bootstrap and asp.net 4.0 master pages';
+    const POST_DESCRIPTION = 'Working with bootstrap in master pages has issues out of the box. This post describes how to resolve issues in your master pages.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

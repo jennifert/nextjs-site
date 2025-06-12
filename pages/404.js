@@ -4,10 +4,13 @@ import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 
 export default function Custom404() {
+    const POST_TITLE = '404';
+    const POST_DESCRIPTION = 'Sorry, the page you are looking for cannot be found';
     return (
         <Layout>
             <Head>
-                <title>{`404 -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
 
             <section aria-labelledby="main-content">

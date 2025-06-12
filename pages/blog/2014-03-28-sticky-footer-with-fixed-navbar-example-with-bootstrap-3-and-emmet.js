@@ -21,10 +21,12 @@ const code3 = `
 
 export default function EmmetBootStrapStickyFooter() {
     const POST_TITLE = 'Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO';
+    const POST_DESCRIPTION = 'This post described how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

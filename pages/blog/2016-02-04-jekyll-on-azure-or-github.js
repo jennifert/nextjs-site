@@ -30,10 +30,12 @@ class HelloWorld {
 
 export default function ConfigJekyllAzureGithubPages() {
     const POST_TITLE = 'Configure Jekyll on Microsoft Azure or Github pages';
+    const POST_DESCRIPTION = 'This post described how to configure Github pages and Microsoft Azure.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

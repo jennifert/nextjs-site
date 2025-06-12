@@ -63,10 +63,12 @@ package-lock.json
 
 export default function JekyllConfig() {
     const POST_TITLE = 'Jekyll: The configuration file';
+    const POST_DESCRIPTION = 'The Jekyll configuration file _config.yml houses important information for your site. This post highlights some items used in one of my sites.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -15,10 +15,12 @@ define( 'WP_DEBUG', true );
 
 export default function WordpressDevTips() {
     const POST_TITLE = 'WordPress Development Tips';
+    const POST_DESCRIPTION = 'A bunch of (possibly now outdated) WordPress Tips.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

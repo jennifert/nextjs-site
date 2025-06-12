@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function RaspMBC() {
     const POST_TITLE = 'A look at Raspmbc video streaming';
+    const POST_DESCRIPTION = 'Outdated: A guide to video streaming on a raspberry pi.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

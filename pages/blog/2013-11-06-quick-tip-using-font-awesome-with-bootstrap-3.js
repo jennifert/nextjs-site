@@ -4,9 +4,9 @@ import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
 import { PrismCode } from '../../components/prism'
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 const code = `
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -20,10 +20,12 @@ const code2 = `
 
 export default function FontAwesomeBootstrapThree() {
     const POST_TITLE = 'Quick Tip: Using Font Awesome 4 With Bootstrap 3';
+    const POST_DESCRIPTION = 'This is a quick post on how to use Font Awesome 4 With Bootstrap 3 on your pages.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -52,7 +54,7 @@ export default function FontAwesomeBootstrapThree() {
                 />
 
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/custom-bootstrap-3_gt447z.png"
                     alt="Screenshot "
                     width={400}

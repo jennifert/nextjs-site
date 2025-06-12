@@ -11,10 +11,12 @@ FROM examples
 `.trim();
 export default function MysqlConcat() {
     const POST_TITLE = 'Quick Tip: MySQL Concat';
+    const POST_DESCRIPTION = 'While working on a project, I was looking for a way to join to mysql columns without using php or .Net, this function can do it in MYSQL.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

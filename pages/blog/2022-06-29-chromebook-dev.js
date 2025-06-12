@@ -29,10 +29,12 @@ flatpak run com.visualstudio.code
 
 export default function ChromebookDev() {
     const POST_TITLE = 'A Guide for Setting Up a Chromebook for Web Development';
+    const POST_DESCRIPTION = 'A set-up on a budget chromebook for web development including IDE, browsers, and more.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -152,23 +152,25 @@ require(['jquery','jquery.bootstrap','goog!maps,3'], function($) {
 });
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function RequireJs() {
     const POST_TITLE = 'Using Require JS with Bootstrap, Google maps, and more';
+    const POST_DESCRIPTION = 'This post describes how to move the previous Google Maps with bootstrap code into a "config" file for use with require JS.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>Require JS is a JavaScript file and module loader. Its a great tool for including JavaScript on your website.</p>
-                <p>This post described how to move the previous Google Maps with bootstrap code into a &quot;config&quot; file for use with require JS.</p>
+                <p>This post describes how to move the previous Google Maps with bootstrap code into a &quot;config&quot; file for use with require JS.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/require-js-directory-structure_mc7qfo.jpg"
                     alt="Screenshot "
                     width={306}

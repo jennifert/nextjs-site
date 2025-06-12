@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function BluetoothPi() {
     const POST_TITLE = 'Setting up Bluetooth on the Raspberry Pi';
+    const POST_DESCRIPTION = 'Setting up a bluetooth dongle can be quite interesting when using Raspmbc. Here is a guide on setting up.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

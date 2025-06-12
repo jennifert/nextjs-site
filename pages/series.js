@@ -4,10 +4,13 @@ import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 
 export default function Series() {
+    const POST_TITLE = 'Dev Series';
+    const POST_DESCRIPTION = 'Connected blog posts such as chromebook development, mac local development.';
     return (
         <Layout>
             <Head>
-                <title>{`Dev Series -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
 
             <section aria-labelledby="main-content">
@@ -58,7 +61,7 @@ export default function Series() {
                             className="underline focus:ring-2">Creating a development environment for IIS 7+</Link>
                     </li>
                 </ul>
-                
+
             </section>
         </Layout>
     );

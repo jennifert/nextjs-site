@@ -79,16 +79,18 @@ gem update --system
 gem update
 `.trim();
 
-const blogLoader = ({ src, width, quality }) => {
-    return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-}
+// const blogLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function MacHomebrew() {
     const POST_TITLE = 'Installing Homebrew and Fixing Ruby on your Mac';
+    const POST_DESCRIPTION = 'This post describes how to install homebrew, as as well as casks (software applications).';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -118,7 +120,7 @@ export default function MacHomebrew() {
                 <h2>Install homebrew</h2>
                 <p>Homebrew is basically a package manager for the Mac, and in this being used to fix the default Ruby version that comes with the Mac. It will also be used further into the tutorial to install other development items.</p>
                 <Image
-                    loader={blogLoader}
+                    //loader={blogLoader}
                     src="/homebrew-site_mknkil.png"
                     alt="Screenshot "
                     width={700}

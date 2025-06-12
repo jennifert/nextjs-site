@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function WebsiteRevamp() {
     const POST_TITLE = 'Website Revamp';
+    const POST_DESCRIPTION = 'After awhile of toiling, the revamped website has finally been launched.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

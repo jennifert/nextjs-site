@@ -16,10 +16,13 @@ const portfoliodata = data.map((data) => {
 
 
 export default function Portfolio() {
+    const POST_TITLE = 'Portfolio';
+    const POST_DESCRIPTION = 'A list of projects and gists that Jennifer Tesolin has worked on.';
     return (
         <Layout>
             <Head>
-                <title>{`Portfolio -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
 
             <h1 id="main-content">Portfolio</h1>

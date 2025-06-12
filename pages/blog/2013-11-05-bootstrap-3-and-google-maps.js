@@ -15,10 +15,12 @@ $("#myModal").on("shown.bs.modal", function () {
 
 export default function BootstrapThreeGmap() {
     const POST_TITLE = 'Bootstrap 3 and Google Maps';
+    const POST_DESCRIPTION = 'This post describes how to use Bootstrap and Google Maps together.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

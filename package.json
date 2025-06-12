@@ -9,10 +9,11 @@
     },
     "scripts": {
         "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
+        "lint": "next lint",
         "dev": "next dev",
         "build": "next build",
-        "export": "next build && next export",
-        "lint": "next lint"
+        "generate-meta": "node scripts/generate-meta.js",
+        "export": "npm run generate-meta && next build && next export"
     },
     "keywords": [],
     "repository": {
@@ -20,7 +21,7 @@
         "url": "git+https://github.com/jennifert/nextjs-site.git"
     },
     "author": "Jennifer Tesolin",
-    "license": "",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/jennifert/nextjs-site/issues"
     },

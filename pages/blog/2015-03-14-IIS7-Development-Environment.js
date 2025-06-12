@@ -55,10 +55,12 @@ const code4 = `
 
 export default function IisDevEnvironmentSeven() {
     const POST_TITLE = 'Creating a development environment for IIS 7+';
+    const POST_DESCRIPTION = 'This post describes how to enable IIS on Windows 7, along with enabling MySql and Php. You will need Administrator Access to complete these steps.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function LibraryResources() {
     const POST_TITLE = '6 resources that you may find at your local library';
+    const POST_DESCRIPTION = 'The library has more services than just book or disc lending. This post describes what can be found in the city of Toronto, Canada.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

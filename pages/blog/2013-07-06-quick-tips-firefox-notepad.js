@@ -5,10 +5,12 @@ import Layout from '../../components/layout'
 
 export default function Template() {
     const POST_TITLE = 'Quick Tips: Firefox and Notepad++';
+    const POST_DESCRIPTION = 'This posting is just to highlight some tips and tricks I found while working on sites.';
     return (
         <Layout>
             <Head>
-                <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
+                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
