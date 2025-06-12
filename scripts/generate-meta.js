@@ -24,6 +24,7 @@ function readMetaFromFile(filePath, routePrefix = '') {
     title: titleMatch ? titleMatch[1] : slug,
     description: descMatch ? descMatch[1] : '',
     date: dateMatch ? new Date(dateMatch[1]).toISOString() : new Date().toISOString(),
+    tags: [] // Placeholder for future support
   };
 }
 
@@ -84,6 +85,18 @@ function generateRSS(posts) {
 </rss>`;
 }
 
+function writeMetaJson(entries) {
+  const meta = entries.map(e => ({
+    route: e.route,
+    url: e.url,
+    title: e.title,
+    description: e.description,
+    date: e.date,
+    tags: e.tags || []
+  }));
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
+}
+
 function main() {
   const entries = collectPages();
   const sitemap = generateSitemap(entries);
@@ -91,8 +104,9 @@ function main() {
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemap.trim());
   fs.writeFileSync(path.join(OUTPUT_DIR, 'feed.xml'), feed.trim());
+  writeMetaJson(entries);
 
-  console.log('✅ sitemap.xml and feed.xml generated from page metadata.');
+  console.log('✅ sitemap.xml, feed.xml, and meta.json generated.');
 }
 
 main();
