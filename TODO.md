@@ -6,9 +6,9 @@
   - Set `publish_directory: out`
 
 ## 🧠 SEO / Metadata Cleanup
-- [ ] Standardize `<meta name="description" content={SITE_DESCRIPTION} />` on all pages
-- [ ] Ensure each page has a unique `<title>...</title>` tag
-- [ ] Refactor layout/meta component to handle shared tags cleanly
+- [x] Standardize `<meta name="description" content={SITE_DESCRIPTION} />` on all pages
+- [x] Ensure each page has a unique `<title>...</title>` tag
+- [x] Refactor layout/meta component to handle shared tags cleanly
 
 ## 🖼️ Image Handling
 - [ ] Review all `src="/images/...` or local `public/images/...` references
