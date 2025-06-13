@@ -84,6 +84,30 @@ npm run generate-meta
 Make sure all blog/page files are updated with correct `POST_TITLE`, `POST_DESCRIPTION`, and `POST_TAGS` constants. These are used to populate the metadata automatically.
 
 
+
+### 🧾 Metadata Checklist for Pages and Blog Posts
+
+Ensure each file in `pages/` or `pages/blog/` contains:
+
+```js
+export const POST_TITLE = "My Page or Post Title";
+export const POST_DESCRIPTION = "A short, clear description used in meta tags and search.";
+export const POST_TAGS = ["tag1", "tag2"]; // Optional but recommended
+```
+
+These are used to generate:
+
+| File            | Purpose                    |
+|-----------------|----------------------------|
+| `meta.json`     | Search index and sitemap   |
+| `sitemap.xml`   | SEO                        |
+| `feed.xml`      | RSS title + excerpt        |
+| `<title>` tag   | Browser tab, SEO, social   |
+| `<meta name="description">` | SEO & previews |
+
+⚠ If any fields are missing, the page may be skipped in `meta.json` or show default/fallback metadata.
+
+
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
 Next.js 15 and Tailwind 4.1 introduce stricter PostCSS rules. PrismJS plugin styles (like toolbar or line numbers) can break if imported directly. Here's the fix:
