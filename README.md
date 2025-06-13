@@ -1,31 +1,34 @@
 # nextjs-site
-The current website for jenntesolin.com. Built with NextJS and TailWind CSS.
 
-Will be re-working the code base. Images will be moved here at some point.
+The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
+
+This repo is currently being reworked. Images and style improvements are in progress.
+
+---
 
 ## Requirements
-- Node: 20.x
-- NPM: 19.x
 
-## Version Information:
-- Tailwind: 4.x
+- Node.js: 20.x
+- NPM: 9.x (or compatible with Node 20)
+
+## Version Information
+
+- Tailwind CSS: 4.x
 - PostCSS: 8.x
-- Next: 15.x
+- Next.js: 15.x
 - PrismJS: 1.x
-- React & React-Dom: 19.x
+- React / React-DOM: 19.x
 - ESLint: 9.x
 
 ---
 
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
-Next.js 15 and TailwindCSS 4.1 introduce stricter PostCSS handling, which can break when importing CSS directly from `node_modules`, especially for PrismJS plugin styles.
-
-To avoid breaking Tailwind and PostCSS handling, we use a `.prismcss` suffix and a custom Webpack rule.
+Next.js 15 and Tailwind 4.1 introduce stricter PostCSS rules. PrismJS plugin styles (like toolbar or line numbers) can break if imported directly. Here's the fix:
 
 ### ✅ 1. Add a Custom Webpack Rule
 
-In `next.config.js`, add the following:
+In `next.config.js`, add this rule:
 
 ```js
 webpack: (config) => {
@@ -37,13 +40,13 @@ webpack: (config) => {
 };
 ```
 
-This isolates Prism plugin CSS files and prevents them from being passed through Next.js's PostCSS pipeline.
+This isolates `.prismcss` imports from the PostCSS pipeline.
 
 ---
 
-### ✅ 2. Import PrismJS Styles with `?prismcss`
+### ✅ 2. Import Prism Styles with `?prismcss` Suffix
 
-In your `_app.js` or Prism-related components:
+In `_app.js` or related components:
 
 ```js
 import 'prismjs/themes/prism-tomorrow.css?prismcss';
@@ -51,25 +54,26 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css?prismcss';
 import 'prismjs/plugins/toolbar/prism-toolbar.css?prismcss';
 ```
 
-Using `?prismcss` ensures the Webpack override targets only these files.
+This ensures only Prism styles are handled by the custom rule.
 
----
-
-### ❌ Do NOT import Prism styles without the `?prismcss` suffix
-
-This will break the build because the raw `.css` files will go through the wrong loader:
+### ❌ Avoid Raw `.css` Imports
 
 ```js
-// 🚫 This will fail:
+// 🚫 Incorrect:
 import 'prismjs/plugins/toolbar/prism-toolbar.css';
 ```
 
-Always use the `?prismcss` suffix when importing Prism plugin styles.
+This causes a build failure in Tailwind/PostCSS 8+ environments.
+
+---
 
 ## Development Tasks
-- See [TODO.md](./TODO.md) for detailed ongoing project work.
+
+See [TODO.md](./TODO.md) for the active task board and enhancements.
+
+---
 
 ## License
 
 - 📄 **Code** is licensed under the [MIT License](./LICENSE)
-- 📝 **Content** (articles, posts, images) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)
+- 📝 **Content** (articles, posts, and media) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)

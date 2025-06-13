@@ -1,12 +1,20 @@
 /* TEAM */
 Developer: Jennifer Tesolin
-Site: me@jenntesolin.com
-Github: jennifert
+Contact: me@jenntesolin.com
+GitHub: https://github.com/jennifert
 
 /* SITE */
-Last update: 2025-06-12 20:40:22 -0500
+Last update: 2025-06-12
 Language: English
 DocType: HTML5
-Standards: HTML5, CSS, javascript
-Components: Webpack, Next.JS, JSON, Tailwind, PostCSS, XML
-Software: VS Code, Affinity Photo, Figma
+Standards: HTML5, CSS, JavaScript (ES6+)
+Components: Next.js 15, Tailwind CSS 4, PostCSS 8, PrismJS, ESLint, RSS/XML
+Build Tools: Node.js 20, Webpack (via Next), generate-meta.js
+Static Output: next export
+Search: Static meta.json, no API
+Accessibility: Keyboard nav, ARIA, screen reader friendly
+
+/* DESIGN & TOOLS */
+Editor: VS Code
+Design Tools: Figma, Affinity Photo
+Icons: (pending / currently text-based)

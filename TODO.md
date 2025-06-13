@@ -49,3 +49,10 @@
 ## 🖼️ Image Fixes & Cleanup
 - [ ] Optionally replace social icons with inline SVG for accessibility + performance
 
+
+## 💼 Portfolio Enhancements
+
+- [ ] Fix and improve styles for portfolio cards
+- [ ] Add tag-based filter UI for portfolio
+- [ ] Highlight featured projects (`featured: true`)
+- [ ] Sort portfolio projects by date (newest first)

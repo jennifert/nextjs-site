@@ -1,30 +1,76 @@
 [
-    {
-        "id": 1,
-        "title": "Slim 3 YAML Search Web Service",
-        "summary": "A web service built using slim 3 and the 'mnapoli/front-yaml' composer library to search in Yaml tags in a folder _post.",
-        "repo": "https://github.com/jennifert/Slim-3-web-Service-with-Sample-TypeScript-client-side-code",
-        "demo": ""
-    },
-    {
-        "id": 2,
-        "title": "Archer CMS",
-        "summary": "A github repo that is my MERN project for the Fall 2017 Juno (HackerYou) Fullstack Master class. ",
-        "repo": "https://github.com/jennifert/archer-cms",
-        "demo": ""
-    },
-    {
-        "id": 3,
-        "title": "Beginner JavaScript Demos",
-        "summary": "These are just some small demos using JavaScript libraries and technology. Started as a code area for demos I created. Expected to have other JS bits.",
-        "repo": "https://github.com/jennifert/JavaScript-Demos",
-        "demo": ""
-    },
-    {
-        "id": 4,
-        "title": "Github Gists",
-        "summary": "Here are a few helpful gists to get you started on your development journey. Gists include: NPM Build Scripts, Jekyll Config files, and more.",
-        "repo": "https://gist.github.com/jennifert",
-        "demo": ""
-    }
+  {
+    "id": 1,
+    "title": "Slim 3 YAML Search Web Service",
+    "summary": "A web service built using Slim 3 and the 'mnapoli/front-yaml' composer library to search in YAML tags in a folder _post.",
+    "repo": "https://github.com/jennifert/Slim-3-web-Service-with-Sample-TypeScript-client-side-code",
+    "demo": "",
+    "tags": [
+      "PHP",
+      "Slim",
+      "API"
+    ],
+    "tech": [
+      "PHP",
+      "Slim 3",
+      "Composer"
+    ],
+    "date": "2020-01-15",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Archer CMS",
+    "summary": "A GitHub repo that is my MERN project for the Fall 2017 Juno (HackerYou) Fullstack Master class.",
+    "repo": "https://github.com/jennifert/archer-cms",
+    "demo": "",
+    "tags": [
+      "JavaScript",
+      "MERN",
+      "CMS"
+    ],
+    "tech": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "date": "2017-10-01",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Beginner JavaScript Demos",
+    "summary": "Small demos using JavaScript libraries and technology. Started as a code area for demos I created.",
+    "repo": "https://github.com/jennifert/JavaScript-Demos",
+    "demo": "",
+    "tags": [
+      "JavaScript",
+      "Demos"
+    ],
+    "tech": [
+      "HTML",
+      "JS",
+      "DOM"
+    ],
+    "date": "2019-05-01",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Github Gists",
+    "summary": "Helpful gists to get started with development. Includes: NPM Build Scripts, Jekyll Config files, and more.",
+    "repo": "https://gist.github.com/jennifert",
+    "demo": "",
+    "tags": [
+      "Config",
+      "Snippets"
+    ],
+    "tech": [
+      "NPM",
+      "Jekyll",
+      "CLI"
+    ],
+    "date": "2021-03-01",
+    "featured": false
+  }
 ]
