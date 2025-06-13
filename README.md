@@ -27,6 +27,7 @@ This repo is currently being reworked. Images and style improvements are in prog
 - [📎 Handling PrismJS Plugin CSS with Next.js](#-handling-prismjs-plugin-css-with-nextjs)
 - [Development Tasks](#development-tasks)
 - [License](#license)
+- [🤖 humans.txt](#-humanstxt)
 
 ## Requirements
 
@@ -173,3 +174,9 @@ See [TODO.md](./TODO.md) for the active task board and enhancements.
 
 - 📄 **Code** is licensed under the [MIT License](./LICENSE)
 - 📝 **Content** (articles, posts, and media) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)
+
+---
+
+## 🤖 humans.txt
+
+For developer credits and site stack details, see [`/humans.txt`](./public/humans.txt)
