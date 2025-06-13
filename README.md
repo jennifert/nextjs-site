@@ -1,5 +1,14 @@
 # nextjs-site
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?logo=tailwindcss&logoColor=white)
+![PostCSS](https://img.shields.io/badge/PostCSS-8-dd3a0a?logo=postcss&logoColor=white)
+![PrismJS](https://img.shields.io/badge/PrismJS-1.x-%23734f96?logo=prism&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-License--CC_BY--NC--SA_4.0-lightgrey)
+
+
 The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
 
 This repo is currently being reworked. Images and style improvements are in progress.
@@ -21,6 +30,34 @@ This repo is currently being reworked. Images and style improvements are in prog
 - ESLint: 9.x
 
 ---
+
+
+## 🚀 Quick Start
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/jennifert/nextjs-site.git
+   cd nextjs-site
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build and export for static hosting:
+   ```bash
+   npm run build
+   npm run export
+   ```
+
+Output will be in the `out/` directory, suitable for DigitalOcean or other static hosts.
+
 
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
