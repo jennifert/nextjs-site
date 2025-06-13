@@ -8,12 +8,11 @@
         "npm": ">=9.8.0"
     },
     "scripts": {
-        "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
         "lint": "next lint",
         "dev": "next dev",
         "build": "next build",
         "generate-meta": "node scripts/generate-meta.js",
-        "export": "npm run generate-meta && next build && next export"
+        "export": "npm run generate-meta && next build"
     },
     "keywords": [],
     "repository": {

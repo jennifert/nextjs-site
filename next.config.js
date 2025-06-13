@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  output: 'export', // ✅ Enables static HTML export
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
