@@ -8,7 +8,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-License--CC_BY--NC--SA_4.0-lightgrey)
 
-
 The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
 
 This repo is currently being reworked. Images and style improvements are in progress.
@@ -30,7 +29,6 @@ This repo is currently being reworked. Images and style improvements are in prog
 - ESLint: 9.x
 
 ---
-
 
 ## 🚀 Quick Start
 
@@ -67,6 +65,24 @@ npm run lint
 ```
 
 This will run ESLint using your custom configuration and report any warnings or errors.
+
+
+## 🛠 Generate Sitemap, Feed, and Search Metadata
+
+To automatically generate:
+
+- `public/meta.json` for search and sitemap
+- `public/sitemap.xml` for SEO
+- `public/feed.xml` for RSS readers
+
+Run the following command:
+
+```bash
+npm run generate-meta
+```
+
+Make sure all blog/page files are updated with correct `POST_TITLE`, `POST_DESCRIPTION`, and `POST_TAGS` constants. These are used to populate the metadata automatically.
+
 
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
