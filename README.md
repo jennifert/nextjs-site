@@ -58,6 +58,31 @@ This repo is currently being reworked. Images and style improvements are in prog
 
 Output will be in the `out/` directory, suitable for DigitalOcean or other static hosts.
 
+### 🧪 Lint the Code
+
+To check for code quality and accessibility issues:
+
+```bash
+npm run lint
+```
+
+This will run ESLint using your custom configuration and report any warnings or errors.
+
+
+5. Lint the code:
+   ```bash
+   npm run lint
+   ```
+
+6. (Optional) Format code with Prettier (if configured):
+   ```bash
+   npm run format
+   ```
+
+7. (Optional) Run accessibility checks or other tools:
+   - `axe-linter` will be auto-run on commit if enabled.
+
+
 
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
