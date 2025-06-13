@@ -49,6 +49,10 @@ export default function Footer(props) {
                     <li>
                         <Link href="/sitemap" className="underline focus:ring-2">Sitemap</Link>
                     </li>
+                    
+                    <li>
+                        <Link href="/humans.txt" rel="author" className="underline focus:ring-2">Humans.txt</Link>
+                    </li>
                 </ul>
             </nav>
             <div className="copyright">

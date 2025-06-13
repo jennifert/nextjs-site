@@ -56,3 +56,9 @@
 - [ ] Add tag-based filter UI for portfolio
 - [ ] Highlight featured projects (`featured: true`)
 - [ ] Sort portfolio projects by date (newest first)
+
+
+## 🖼️ Social Sharing
+
+- [ ] Add OpenGraph meta tags (`og:title`, `og:description`, `og:image`) for blog posts and pages
+- [ ] Use featured image (if any) or fallback to site logo

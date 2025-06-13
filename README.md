@@ -1,12 +1,14 @@
 # nextjs-site
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?logo=tailwindcss&logoColor=white)
-![PostCSS](https://img.shields.io/badge/PostCSS-8-dd3a0a?logo=postcss&logoColor=white)
-![PrismJS](https://img.shields.io/badge/PrismJS-1.x-%23734f96?logo=prism&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-License--CC_BY--NC--SA_4.0-lightgrey)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?logo=tailwindcss)](https://tailwindcss.com/)
+[![PostCSS](https://img.shields.io/badge/PostCSS-8-dd3a0a?logo=postcss)](https://postcss.org/)
+[![PrismJS](https://img.shields.io/badge/PrismJS-1.x-%23734f96?logo=prism)](https://prismjs.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)](https://eslint.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC_BY--NC--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 
 The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
 
@@ -25,7 +27,6 @@ This repo is currently being reworked. Images and style improvements are in prog
 - [📎 Handling PrismJS Plugin CSS with Next.js](#-handling-prismjs-plugin-css-with-nextjs)
 - [Development Tasks](#development-tasks)
 - [License](#license)
-
 
 ## Requirements
 
@@ -79,7 +80,6 @@ npm run lint
 
 This will run ESLint using your custom configuration and report any warnings or errors.
 
-
 ## 🛠 Generate Sitemap, Feed, and Search Metadata
 
 To automatically generate:
@@ -95,8 +95,6 @@ npm run generate-meta
 ```
 
 Make sure all blog/page files are updated with correct `POST_TITLE`, `POST_DESCRIPTION`, and `POST_TAGS` constants. These are used to populate the metadata automatically.
-
-
 
 ### 🧾 Metadata Checklist for Pages and Blog Posts
 
@@ -119,7 +117,6 @@ These are used to generate:
 | `<meta name="description">` | SEO & previews |
 
 ⚠ If any fields are missing, the page may be skipped in `meta.json` or show default/fallback metadata.
-
 
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
