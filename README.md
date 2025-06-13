@@ -74,16 +74,6 @@ This will run ESLint using your custom configuration and report any warnings or 
    npm run lint
    ```
 
-6. (Optional) Format code with Prettier (if configured):
-   ```bash
-   npm run format
-   ```
-
-7. (Optional) Run accessibility checks or other tools:
-   - `axe-linter` will be auto-run on commit if enabled.
-
-
-
 ## 📎 Handling PrismJS Plugin CSS with Next.js
 
 Next.js 15 and Tailwind 4.1 introduce stricter PostCSS rules. PrismJS plugin styles (like toolbar or line numbers) can break if imported directly. Here's the fix:
