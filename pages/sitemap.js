@@ -32,7 +32,7 @@ export default function SitemapPage({ grouped }) {
                     <h2 className="text-xl font-semibold capitalize mb-2">{group}</h2>
                     <ul className="list-disc pl-5">
                         {pages.map((page) => (
-                            <li key={page.route}>
+                            <li key={page.route + page.title}>
                                 <Link href={page.route} className="underline hover:underline focus:ring-2 focus:ring-white">
                                     {page.title}
                                 </Link>

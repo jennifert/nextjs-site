@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import Form from '../components/form'
+import SearchPage from '../pages/search'
 import { SITE_TITLE } from '../lib/constants'
 
 export default function Nav({ children, href }) {
@@ -31,13 +31,11 @@ export default function Nav({ children, href }) {
                             : <Link href="/portfolio" className="other-page">Portfolio</Link>}
                     </li>
 
-                    {/* <li>
-                            {router.pathname === "/sitemap" ? <Link href="/"><a className="current-page" aria-current="page">Sitemap</a></Link>
-                                : <Link href="/sitemap"><a className="other-page">Sitemap</a></Link>}
-                        </li> */}
+                    <li>
+                        {router.pathname === "/search" ? <Link href="/" className="current-page" aria-current="page">Search</Link>
+                            : <Link href="/search" className="other-page">Search</Link>}
+                    </li>
                 </ul>
-
-                {/* <Form /> */}
 
             </div>
         </nav>

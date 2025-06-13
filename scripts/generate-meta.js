@@ -99,12 +99,19 @@ function writeMetaJson(entries) {
 
 function main() {
   const entries = collectPages();
-  const sitemap = generateSitemap(entries);
-  const feed = generateRSS(entries.filter(e => e.route.startsWith('/blog')));
+  const seen = new Set();
+  const uniqueEntries = entries.filter(e => {
+    if (seen.has(e.route)) return false;
+    seen.add(e.route);
+    return true;
+  });
+
+  const sitemap = generateSitemap(uniqueEntries);
+  const feed = generateRSS(uniqueEntries.filter(e => e.route.startsWith('/blog')));
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemap.trim());
   fs.writeFileSync(path.join(OUTPUT_DIR, 'feed.xml'), feed.trim());
-  writeMetaJson(entries);
+  writeMetaJson(uniqueEntries);
 
   console.log('✅ sitemap.xml, feed.xml, and meta.json generated.');
 }

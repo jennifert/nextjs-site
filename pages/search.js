@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Layout from '../components/layout';
 import Link from 'next/link';
 
@@ -15,6 +15,7 @@ export async function getStaticProps() {
 export default function SearchPage({ entries }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState(entries);
+  const resultsRef = useRef();
 
   useEffect(() => {
     if (!searchTerm) {
@@ -32,12 +33,21 @@ export default function SearchPage({ entries }) {
     );
   }, [searchTerm, entries]);
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (resultsRef.current) {
+        resultsRef.current.focus();
+      }
+    }
+  };
+
   return (
     <Layout>
       <h1 id="main-content">Search</h1>
       <p className="mb-4">Search blog posts and pages using title, description, or tags.</p>
-      <form
-        role="search"
+      <div className="relative w-full">
+      <form role="search"
         onSubmit={e => e.preventDefault()}
         className="relative flex w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto"
       >
@@ -52,19 +62,22 @@ export default function SearchPage({ entries }) {
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
             placeholder="Search..."
+            onKeyDown={handleKeyDown}
+            aria-label="Search site content"
           />
-          <button
-            type="submit"
-            className="bg-white hover:bg-indigo-700 text-indigo-500 hover:text-white font-bold py-2 px-4 rounded"
-          >
-            Search
-          </button>
         </div>
       </form>
+    </div>
 
-      <ul className="mt-6 list-disc pl-6">
+      <ul
+        className="mt-6 list-disc pl-6"
+        aria-live="polite"
+        aria-label="Search results"
+        tabIndex="-1"
+        ref={resultsRef}
+      >
         {results.length > 0 ? results.map(entry => (
-          <li key={entry.route} className="mb-2">
+          <li key={`${entry.route}-${entry.title}`} className="mb-2">
             <Link href={entry.route} className="underline hover:underline focus:ring-2 focus:ring-white">
               {entry.title}
             </Link>
