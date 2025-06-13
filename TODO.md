@@ -48,7 +48,15 @@
 
 ## 🖼️ Image Fixes & Cleanup
 - [ ] Optionally replace social icons with inline SVG for accessibility + performance
-
+  - Example: 
+    ```js
+    <Image
+      src="/images/blog/2012-11-08-japan-trip-2011/photo1.jpg"
+      alt="Japan trip street scene"
+      width={800}
+      height={600}
+    />
+    ```
 
 ## 💼 Portfolio Enhancements
 
