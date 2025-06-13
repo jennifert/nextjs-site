@@ -57,6 +57,8 @@
       height={600}
     />
     ```
+- [ ] Restore image paths based on audit in [`image-references.md`](./image-references.md)
+
 
 ## 💼 Portfolio Enhancements
 
