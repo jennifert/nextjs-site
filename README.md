@@ -46,16 +46,16 @@ This repo is currently being reworked. Images and style improvements are in prog
 
 ## 🎨 Color Reference
 
-This site uses Tailwind’s built-in color palette. Below are commonly used colors in layout and components:
+This site uses Tailwind’s built-in palette. Key color usage:
 
-| Usage           | Tailwind Class     | Sample                                                              |
-|----------------|--------------------|----------------------------------------------------------------------|
-| Primary Nav BG | `bg-indigo-500`    | ![#6366F1](https://via.placeholder.com/10/6366F1?text=+) `#6366F1`  |
-| Link Focus     | `focus:ring-white` | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) `#FFFFFF`  |
-| Warning BG     | `bg-yellow-200`    | ![#FEF3C7](https://via.placeholder.com/10/FEF3C7?text=+) `#FEF3C7`  |
-| Warning Text   | `text-yellow-600`  | ![#B45309](https://via.placeholder.com/10/B45309?text=+) `#B45309`  |
-| Card Border    | `border-gray-300`  | ![#D1D5DB](https://via.placeholder.com/10/D1D5DB?text=+) `#D1D5DB`  |
-| Footer/Text    | `text-white`       | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) `#FFFFFF`  |
+| **Usage**        | **Tailwind Class**     | **Hex Code** |
+|------------------|------------------------|--------------|
+| Primary Nav BG   | `bg-indigo-500`        | `#6366F1`    |
+| Link Focus Ring  | `focus:ring-white`     | `#FFFFFF`    |
+| Warning BG       | `bg-yellow-200`        | `#FEF3C7`    |
+| Warning Text     | `text-yellow-600`      | `#B45309`    |
+| Card Border      | `border-gray-300`      | `#D1D5DB`    |
+| Footer Text      | `text-white`           | `#FFFFFF`    |
 
 ---
 
