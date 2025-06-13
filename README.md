@@ -14,6 +14,19 @@ This repo is currently being reworked. Images and style improvements are in prog
 
 ---
 
+## 📚 Table of Contents
+
+- [Requirements](#requirements)
+- [Version Information](#version-information)
+- [🚀 Quick Start](#-quick-start)
+  - [Lint the Code](#-lint-the-code)
+- [🛠 Generate Sitemap, Feed, and Search Metadata](#-generate-sitemap-feed-and-search-metadata)
+  - [🧾 Metadata Checklist for Pages and Blog Posts](#-metadata-checklist-for-pages-and-blog-posts)
+- [📎 Handling PrismJS Plugin CSS with Next.js](#-handling-prismjs-plugin-css-with-nextjs)
+- [Development Tasks](#development-tasks)
+- [License](#license)
+
+
 ## Requirements
 
 - Node.js: 20.x
