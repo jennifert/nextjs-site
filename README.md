@@ -194,3 +194,12 @@ See [TODO.md](./TODO.md) for the active task board and enhancements.
 ## 🤖 humans.txt
 
 For developer credits and site stack details, see [`/humans.txt`](./public/humans.txt)
+
+---
+
+## :gem: Acknowledgments
+
+This project would not be possible without these fantastic community resources:
+
+- [Shields.io](https://shields.io/) — For README badges
+- [Awesome README](https://github.com/matiassingers/awesome-readme) — For formatting inspiration
