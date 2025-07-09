@@ -8,11 +8,12 @@
 [![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)](https://eslint.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC_BY--NC--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
+[![Node.js](https://img.shields.io/badge/Node.js-22.16.0-brightgreen?logo=nodedotjs)](https://nodejs.org/)
+[![npm](https://img.shields.io/badge/npm-10.9.2-red?logo=npm)](https://www.npmjs.com/)
 
 The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
 
-This repo is currently being reworked. Images and style improvements are in progress.
+🚧 This site is actively being reworked — image references, layout polish, and metadata improvements are in progress.
 
 ---
 
@@ -25,15 +26,16 @@ This repo is currently being reworked. Images and style improvements are in prog
   - [Lint the Code](#-lint-the-code)
 - [🛠 Generate Sitemap, Feed, and Search Metadata](#-generate-sitemap-feed-and-search-metadata)
   - [🧾 Metadata Checklist for Pages and Blog Posts](#-metadata-checklist-for-pages-and-blog-posts)
-- [📎 Handling PrismJS Plugin CSS with Next.js](#-handling-prismjs-plugin-css-with-nextjs)
+- [📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)](#-handling-prismjs-plugin-css-with-nextjs)
+- [Local Environment Variables](#environment-variables)
 - [Development Tasks](#development-tasks)
 - [License](#license)
 - [🤖 humans.txt](#-humanstxt)
 
 ## Requirements
 
-- Node.js: 20.x
-- NPM: 9.x (or compatible with Node 20)
+- Node.js: 22.16.0
+- NPM: 10.9.2
 
 ## Version Information
 
@@ -97,6 +99,8 @@ This will run ESLint using your custom configuration and report any warnings or 
 
 ## 🛠 Generate Sitemap, Feed, and Search Metadata
 
+⚠ These files are auto-generated. Do not edit meta.json, sitemap.xml, or feed.xml manually.
+
 To automatically generate:
 
 - `public/meta.json` for search and sitemap
@@ -133,7 +137,7 @@ These are used to generate:
 
 ⚠ If any fields are missing, the page may be skipped in `meta.json` or show default/fallback metadata.
 
-## 📎 Handling PrismJS Plugin CSS with Next.js
+## 📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)
 
 Next.js 15 and Tailwind 4.1 introduce stricter PostCSS rules. PrismJS plugin styles (like toolbar or line numbers) can break if imported directly. Here's the fix:
 
@@ -178,9 +182,15 @@ This causes a build failure in Tailwind/PostCSS 8+ environments.
 
 ---
 
+## 🔐 Local Environment Variables
+
+This site currently does not require a `.env` file.
+
+---
+
 ## Development Tasks
 
-See [TODO.md](./TODO.md) for the active task board and enhancements.
+🗂️ See [TODO.md](./TODO.md) for the active task board and enhancements.
 
 ---
 

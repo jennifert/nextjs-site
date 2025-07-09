@@ -31,6 +31,7 @@ coverage/
 
 # System files
 .DS_Store
+Thumbs.db
 
 # DigitalOcean deployment
 .do/
@@ -43,6 +44,9 @@ public/img/forest.jpg
 public/img/fox.jpg
 public/img/man.jpg
 public/img/reeds.jpg
+
+# Testing - for future
+/coverage
 
 # Optional - GitHub Copilot/other AI tools
 .history/
