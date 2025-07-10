@@ -22,15 +22,15 @@ The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
 - [Requirements](#requirements)
 - [Version Information](#version-information)
 - [🎨 Color Reference](#-color-reference)
-- [🚀 Quick Start](#️quick-start)
-  - [Lint the Code](#️lint-the-code)
-- [🛠 Generate Sitemap, Feed, and Search Metadata](#️generate-sitemap-feed-feedxml-and-search)
-  - [🧾 Metadata Checklist for Pages and Blog Posts](#️metadata-checklist-for-pages-and-blog-posts)
-- [📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)](#️prismjs-plugin-css-handling-nextjs-15--tailwind-4)
-- [Local Environment Variables](#local-environment-variables)
+- [🚀 Quick Start](#-quick-start)
+  - [Lint the Code](#-lint-the-code)
+- [🛠 Generate Sitemap, Feed, and Search Metadata](#-generate-sitemap-feed-and-search-metadata)
+  - [🧾 Metadata Checklist for Pages and Blog Posts](#-metadata-checklist-for-pages-and-blog-posts)
+- [📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)](#-prismjs-plugin-css-handling-nextjs-15--tailwind-4)
+- [Local Environment Variables](#-local-environment-variables)
 - [Development Tasks](#development-tasks)
 - [License](#license)
-- [🤖 humans.txt](#humans.txt)
+- [🤖 humans.txt](#-humanstxt)
 
 
 ## Requirements
