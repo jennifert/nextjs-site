@@ -42,6 +42,7 @@
 
 ### 💼 Portfolio Enhancements
 - [ ] Add tag-based filter UI for portfolio
+- [ ] Add capability in /search to look for not just blogs and pages but portfolio items. Or not needed?
 
 ### 🖼️ Social Sharing
 - [ ] Add OpenGraph meta tags (`og:title`, `og:description`, `og:image`) to blog posts and pages
