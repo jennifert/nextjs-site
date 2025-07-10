@@ -1,9 +1,6 @@
 # 📸 Image References by File
 
-## `pages/gallery.js`
-- `/mayan_ruins_oibwvu.jpg`
-- `/tall_ship_ppbewf.jpg`
-- `/peace_arc_vqd9tj.jpg`
+The images below will need to be fixed still.
 
 ## `pages/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3.js`
 - `/custom-bootstrap-3_gt447z.png`
@@ -61,3 +58,38 @@
 - `/github-square_nmpyub.svg`
 - `/rss-square_hsohh9.svg`
 - `/linkedin_t8xmbz.svg`
+
+## 📸 Blog Image Audit - Comparison with `image-references.md`
+
+### 🟥 Missing Images (Referenced but Not Found in `/blog` folder)
+These are listed in `image-references.md` but were not found in the organized `blog/` folder (hashes removed):
+
+- `custom-bootstrap-3.png`
+- `github-square.svg`
+- `jekyll-add-subdomain.png`
+- `jekyll-domain-success-primary.png`
+- `jekyll-subdomain-pending.png`
+- `linkedin.svg`
+- `node_installer.png`
+- `rss-square.svg`
+
+➡️ **Action:** Check if these are still needed or can be removed from `image-references.md`. Re-add if used in posts.
+
+---
+
+### 🟨 Extra Images (Found in folder but not referenced in Markdown)
+These files exist in `/blog` but are **not currently referenced** in `image-references.md`:
+
+- `jekyll-create-app-assign-domain-done-min.png`
+- `jekyll-create-app-site-deployed-min.png`
+- `jekyll-new-cmd1.png`
+- `node.png`
+
+➡️ **Action:** Consider removing these if unused, or add them to `image-references.md` if relevant.
+
+---
+
+### ✅ Summary
+- Centralizing images in `/public/blog/...` made comparison easier ✅
+- Only **8 missing** images remain — great progress!
+- Update markdown or image folder based on current usage.
