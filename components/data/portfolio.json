@@ -78,7 +78,7 @@
     "title": "Pokemon Team Builder",
     "summary": "A modular Gen 1 Pokémon team builder built with vanilla JavaScript, Vite, and Tailwind CSS.",
     "repo": "https://github.com/jennifert/pokemon-builder-public",
-    "demo": "",
+    "demo": "https://team-builder-app-7tqzs.ondigitalocean.app/",
     "tags": [
       "pokemon",
       "javascript"
