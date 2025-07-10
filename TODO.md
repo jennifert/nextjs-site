@@ -1,8 +1,37 @@
 # ✅ TODO List for jenntesolin.com Project
 
+## 🔝 Current Top Priorities
+
+1. 🖼️ **Fix and finalize all blog and gallery images**
+   - ✅ Organize into correct `/public/blog/...` folders
+   - ✅ Clean filename hashes
+   - ✅ Compare to `image-references.md`
+   - ⏳ Restore remaining missing files (see image references) may already be in folder, may need to recreate unfortunately.
+   - ⏳ Update any broken `<Image />` paths in blog posts easiest to just see public/blogs, its using same folder as page file name.
+        - [ ] 🚨 Restore and optimize all images based on [`image-references.md`](./image-references.md)
+        - Update broken `src` paths as needed
+        - Remove loader code (e.g., blurDataURL or dynamic placeholders)
+        - Example:
+            ```js
+            <Image
+            src="/images/blog/2012-11-08-japan-trip-2011/photo1.jpg"
+            alt="Japan trip street scene"
+            width={800}
+            height={600}
+            />
+            ```
+2. 🚀 **Deploy to DigitalOcean**
+    - Target: [jenntesolin.com](http://jenntesolin.com)
+   - Will update domain DNS after confirming image fixes + production build
+   - ⏳ Finalize working `deploy.yaml`
+        - [ ] 🚨 Add `.do/app.yaml` for **DigitalOcean App Platform** deployment
+   - ⏳ Test live site behavior post-deploy
+   - ⏳ Confirm environment variables + build script
+   - ⏳ Set up GitHub Actions or push pipeline
+
+> Once these two are complete, resume other lower-priority tasks (broken links, feature enhancements, accessibility).
+
 ## IN Progress
-### 🔧 Deployment / Hosting
-- [ ] 🚨 Add `.do/app.yaml` for **DigitalOcean App Platform** deployment
 
 ### 📝 Content Maintenance & Metadata
 - [ ] 🚨 Search blog content for flagged terms like **"outdated"**
@@ -22,18 +51,6 @@
 
 ### 🖼️ Image Fixes & Cleanup
 - [ ] Swap out footer icons in `/public/icons` with your preferred optimized versions before launch
-- [ ] 🚨 Restore and optimize all images based on [`image-references.md`](./image-references.md)
-  - Update broken `src` paths as needed
-  - Remove loader code (e.g., blurDataURL or dynamic placeholders)
-  - Example:
-    ```js
-    <Image
-      src="/images/blog/2012-11-08-japan-trip-2011/photo1.jpg"
-      alt="Japan trip street scene"
-      width={800}
-      height={600}
-    />
-    ```
     - [ ] Add custom favicon images to `/public/icons`:
         - [ ] `favicon-16x16.png`
         - [ ] `favicon-32x32.png`
