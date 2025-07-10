@@ -33,18 +33,6 @@ coverage/
 .DS_Store
 Thumbs.db
 
-# DigitalOcean deployment
-.do/
-
-# Ignore specific unused or temp project files
-public/test.html
-public/img/bird.jpg
-public/img/drone.jpg
-public/img/forest.jpg
-public/img/fox.jpg
-public/img/man.jpg
-public/img/reeds.jpg
-
 # Testing - for future
 /coverage
 

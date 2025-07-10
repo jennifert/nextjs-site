@@ -1,0 +1,17 @@
+name: jenntesolin-static-site
+services:
+  - name: web
+    github:
+      repo: jennifert/nextjs-site
+      branch: main
+    run_command: npm run export
+    build_command: npm install
+    source_dir: /
+    environment_slug: node-js
+    routes:
+      - path: /
+        preserve_path_prefix: true
+    static_sites:
+      - name: web
+        environment_slug: html
+        output_dir: /out
