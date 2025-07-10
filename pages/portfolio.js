@@ -3,17 +3,7 @@ import Head from 'next/head'
 import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 import data from '../components/data/portfolio.json';
-import PorfolioCard from '../components/portfoliocard'
-
-const portfoliodata = data.map((data) => {
-    return (
-
-            <PorfolioCard key={data.id} title={data.title} summary={data.summary} repo={data.repo} demo={data.demo} />
-
-    )
-}
-)
-
+import PortfolioCard from '../components/portfolio-card'
 
 export default function Portfolio() {
     const POST_TITLE = 'Portfolio';
@@ -26,10 +16,16 @@ export default function Portfolio() {
             </Head>
 
             <h1 id="main-content">Portfolio</h1>
-            <div className="flex flex-wrap">
-                {portfoliodata}
+            <div className="flex flex-wrap -mx-4">
+                {[...data]
+                    .sort((a, b) => a.title.localeCompare(b.title))
+                    .map((item, index) => (
+                        <div key={item.id} className="xl:w-1/3 md:w-1/2 w-full mb-4 px-4">
+                            <PortfolioCard {...item} />
+                        </div>
+                    ))}
             </div>
-            
+
         </Layout>
     )
 }

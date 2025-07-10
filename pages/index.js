@@ -4,17 +4,8 @@ import Link from 'next/link'
 import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL, SITE_DESCRIPTION, SITE_DOMAIN } from '../lib/constants'
 import Layout from '../components/layout'
 import data from '../components/data/portfolio.json';
-import PorfolioCard from '../components/portfoliocard'
+import PortfolioCard from '../components/portfolio-card'
 import LatestPosts from '../components/latest-posts';
-
-const portfoliodata = data.slice(0, 3).map((data) => {
-    return (
-
-        <PorfolioCard key={data.id} title={data.title} summary={data.summary} repo={data.repo} demo={data.demo} />
-
-    )
-}
-)
 
 function HomePage() {
     const POST_TITLE = SITE_TITLE;
@@ -33,8 +24,20 @@ function HomePage() {
             </p>
             <section id="latest-portfolio" aria-labelledby="about-portfolio">
                 <h2 id="about-portfolio">Latest Portfolio Pieces</h2>
-                <div className="flex flex-wrap">
-                    {portfoliodata}
+                <div className="flex flex-wrap -mx-4">
+                    {[...data]
+                        .filter(item => item.featured)
+                        .sort((a, b) => {
+                            const aDate = new Date(a.lastUpdated || a.date)
+                            const bDate = new Date(b.lastUpdated || b.date)
+                            return bDate - aDate
+                        })
+                        .slice(0, 3)
+                        .map((item, index) => (
+                            <div key={item.id} className="xl:w-1/3 md:w-1/2 w-full mb-4 px-4">
+                                <PortfolioCard {...item} />
+                            </div>
+                        ))}
                 </div>
             </section>
 
