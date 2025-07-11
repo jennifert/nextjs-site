@@ -1,4 +1,9 @@
+# Set your desired Node.js version
+node_version = "22.16.0"
+
 [build]
-  node_version = "22.16.0"
+  command = "npm run generate-meta && npm run build && npx next export"
   publish = "out"
-  command = "npm run export"
+
+[functions]
+  node_bundler = "esbuild"
