@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 <form class="navbar-search pull-left">
@@ -54,12 +55,8 @@ const code2 = `
 </asp:Menu>
 `.trim();
 
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
-
 export default function AspNetBootstrapNav() {
-    const POST_TITLE = 'Asp.net Menu Control - Styling with Bootstrap';
+    const POST_TITLE = 'Asp.net Menu Control - Styling with Bootstrap 2';
     const POST_DESCRIPTION = 'Thanks to an interesting post, was able to update the Bootstrap with master pages example with asp.net menu controls instead of being hard coded.';
     return (
         <Layout>

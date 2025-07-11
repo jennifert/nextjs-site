@@ -14,8 +14,12 @@ export default function PiProjects() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Outdated: This post is outdated, and is in the queue for an overhaul. The links below have been double checked for accuracy, but are not the latest content.
+                    </small>
+                </p>
                 <p>This post contains a list of resources and tips and tricks found while putting together my Raspmbc media centre.  Please note all links below are leaving this site.</p>
-                <p><b>Important:</b> This post is outdated, and is in the queue for an overhaul.</p>
                 <h2>Raspberry PI Info</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/"rel="nofollow noreferrer">RaspberryPi.org</a></li>
@@ -28,8 +32,6 @@ export default function PiProjects() {
                     <li><a className="underline focus:ring-2" href="http://lifehacker.com/5976912/a-beginners-guide-to-diying-with-the-raspberry-pi"rel="nofollow noreferrer">A Beginner&apos;s Guide to DIYing</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewforum.php?f=15"rel="nofollow noreferrer">Raspberry Pi: Project listings</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=76&amp;t=48364"rel="nofollow noreferrer">Without Monitor - setup</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.raspberryshake.com/raspberry-pi-wireless-network-setup/"rel="nofollow noreferrer">Wireless network setup</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.howtogeek.com/141157/how-to-configure-your-raspberry-pi-for-remote-shell-desktop-and-file-transfer/all/"rel="nofollow noreferrer">How to Configure Your Raspberry Pi for Remote Shell, Desktop, and File Transfer</a></li>
                     <li><a className="underline focus:ring-2" href="http://lifehacker.com/5978594/turn-a-raspberry-pi-into-an-airplay-receiver-for-streaming-music-in-your-living-room">Airplay Receiver with iOS6 support</a></li>
                     <li><a className="underline focus:ring-2" href="http://lifehacker.com/build-your-own-portable-raspberry-pi-emulation-machine-836727686"rel="nofollow noreferrer">Build Your Own Portable Raspberry Pi Emulation Machine</a></li>
                     <li><a className="underline focus:ring-2" href="http://lifehacker.com/roll-your-own-anonymizing-tor-proxy-with-a-raspberry-pi-513525281"rel="nofollow noreferrer">Roll Your Own Anonymizing Tor Proxy with a Raspberry Pi</a></li>
@@ -49,7 +51,7 @@ export default function PiProjects() {
                 </ul>
                 <h2>Kits and Accesses</h2>
                 <ul className="list-disc list-inside m-2">
-                    <li><a className="underline focus:ring-2" href="https://www.modmypi.com/raspberry-pi-set-up-kits/basic-raspberry-pi-set-up-kit"rel="nofollow noreferrer">Basic Raspberry Pi Set-Up Kit</a></li>
+                    <li><a className="underline focus:ring-2" href="https://thepihut.com/collections/raspberry-pi-store"rel="nofollow noreferrer">Basic Raspberry Pi Set-Up Kit</a></li>
                     <li><a className="underline focus:ring-2" href="http://arstechnica.com/gadgets/2012/05/raspberry-pi-foundation-demos-14mp-camera-module-for-35-computer/"rel="nofollow noreferrer">Raspberry Pi foundation demos 14MP camera module for $35 computer</a></li>
                 </ul>
                 <h2>Media Streaming Info and resources</h2>
@@ -61,8 +63,6 @@ export default function PiProjects() {
                     <li><a className="underline focus:ring-2" href="http://www.makeuseof.com/tag/the-raspberry-pi-home-theater-what-you-can-and-cannot-do/"rel="nofollow noreferrer">The Raspberry Pi Home Theater: What You Can And Cannot Do</a></li>
                     <li><a className="underline focus:ring-2" href="http://wiki.xbmc.org/?title=Add-on%3aPleXBMC"rel="nofollow noreferrer">Raspmbc add on: plexmbx</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.playon.tv/"rel="nofollow noreferrer">PlayOn: For RaspMBC netflix and Hulu Streaming (without Plex)</a></li>
-                    <li><a className="underline focus:ring-2" href="http://mymediaexperience.com/raspberry-pi-xbmc-with-raspbmc/"rel="nofollow noreferrer">RaspMBC set-up Guide</a></li>
-                    <li><a className="underline focus:ring-2" href="http://lifehacker.com/5900626/create-a-kickass-seamless-play+everything-media-center-the-complete-guide"rel="nofollow noreferrer">Create a Kick Ass, Seamless, Play-Everything Media Center: The Complete Guide</a></li>
                 </ul>
                 <h2>Other Builds (please read all Build Documentation)</h2>
                 <ul className="list-disc list-inside m-2">

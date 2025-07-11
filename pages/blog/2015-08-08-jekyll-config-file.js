@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 # Site settings
@@ -72,6 +73,12 @@ export default function JekyllConfig() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Under review: This post was originally written on August 8, 2015 and covers the structure and usage of a Jekyll <code>_config.yml</code> file. While core concepts remain the same, newer versions of Jekyll and GitHub Pages may support additional features or revised config options.
+                    </small>
+                </p>
+
                 <p>The Jekyll configuration file (<code>_config.yml</code>) houses important information for your site. This post highlights some items used in my previous homepage that used <a className="underline focus:ring-2" href="https://github.com/jennifert/jekyll-site" rel="nofollow noreferrer">Jekyll Github repository to build as a static site</a>.</p>
                 <p>This file has quite a few areas of editing, especially if you want to override some of the <a className="underline focus:ring-2" href="https://jekyllrb.com/docs/configuration/default/" rel="nofollow noreferrer">default Jekyll options</a>.</p>
                 <p>My <code>_config.yml</code> contains 3 sections, which are explain in more detail below.</p>

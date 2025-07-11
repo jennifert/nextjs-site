@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 html:5>(div.navbar.navbar-default.navbar-fixed-top>div.container>div.navbar-header>btn:r.navbar-toggle>span.sr-only{Toggle navigation}+span.icon-bar+span.icon+span.icon^a.navbar-brand{Welcome!}^div.collapse.navbar-collapse>ul.nav.navbar-nav>li*3>a^li.dropdown>a.dropdown-toggle{Dropdown }>b.caret^ul.dropdown-menu>li*3>a^li.divider+li.dropdown-header{Nav Header}+li*3>a^^^^^^^div.container>div.page-header>h1{Page Header Heer}^p.lead>lorem^^div#footer>div.container>p.text-muted{Copy Right Info}^^script:src{js/jquery-1.11.0.min.js}+script:src{js/bootstrap.min.js})
@@ -76,7 +77,8 @@ export default function EmmetBootStrapStickyFooter() {
                             plugins={["line-numbers"]}
                         />
                     </li>
-                    <li>In the file styles.css paste the bootstrap example styles from the <a className="underline focus:ring-2" href="view-source:https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="nofollow noreferrer">Bootstrap example css file</a></li>
+                    <li>In the file styles.css paste the bootstrap example styles from the <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="nofollow noreferrer">Bootstrap example css file</a></li>
+                    {/* https://wayback-api.archive.org/web/20250711171355/https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/sticky-footer-navbar.css */}
                 </ol>
             </section>
         </Layout>

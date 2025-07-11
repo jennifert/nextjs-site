@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 $method = 'direct';
@@ -25,7 +26,7 @@ export default function WordpressDevTips() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <h2>Stop WordPress updating by ftp message</h2>
-                <p>As per the following post, &quot;<a className="underline focus:ring-2" href="http://www.sixfive.com.au/2012/10/wordpress-needs-to-access-your-web-server-please-enter-your-ftp-credentials-to-proceed/" rel="nofollow noreferrer">WordPress needs access to your web server</a>&quot;, you can prevent WordPress for asking for your ftp credentials when requesting an update.</p>
+                <p>As per the following post, &quot;<a className="underline focus:ring-2" href="https://sixfive.io/wordpress-needs-to-access-your-web-server-please-enter-your-ftp-credentials-to-proceed/" rel="nofollow noreferrer">WordPress needs access to your web server</a>&quot;, you can prevent WordPress for asking for your ftp credentials when requesting an update.</p>
                 <p>Add the below lines to your wp.config.php file, just above &quot;/* That&apos;s all, stop editing! Happy blogging. *&quot;</p>
                 <PrismCode
                     code={code}

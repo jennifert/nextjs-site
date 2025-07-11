@@ -3,7 +3,8 @@ import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 gem install jekyll bundler
@@ -36,10 +37,6 @@ const code7 = `
 bundle exec jekyll build
 `.trim();
 
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
-
 export default function JekyllDev() {
     const POST_TITLE = 'Jekyll: Setting up your development environment';
     const POST_DESCRIPTION = 'Jekyll is a static site generator that runs on NodeJS. Its a great alternative to WordPress that eliminates the need for databases.';
@@ -51,8 +48,17 @@ export default function JekyllDev() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Update in progress: This post was originally written on&nbsp;
+                        <a className="underline focus:ring-2" href="https://web.archive.org/web/20180926123004/https://www.jenntesolin.com/blog/2015/03/17/Jekyll-Set-Up-Publish/">
+                            March 17, 2015
+                        </a>
+                        &nbsp;and has been updated for macOS Catalina and later. It is currently under review and may receive further updates.
+                    </small>
+                </p>
+
                 <p>Jekyll is a static site generator that runs on NodeJS. Its a great alternative to WordPress that eliminates the need for databases.</p>
-                <p><em>This post was originally written on March 17, 2015. It has been updated for Mac OS Catalina forward.</em></p>
 
                 <h2>Requirements</h2>
                 {/* TODO replace link with proper one */}
@@ -84,7 +90,7 @@ export default function JekyllDev() {
                     <li><a className="underline focus:ring-2" href="https://jekyllrb.com/docs/pagination/" rel="nofollow noreferrer">jekyll-paginate</a></li>
                 </ul>
 
-                <p><p>There is a list over on the <a className="underline focus:ring-2" href="https://jekyllrb.com/docs/plugins/" rel="nofollow noreferrer">jekyll website</a> (separated by category).</p></p>
+                <p>There is a list over on the <a className="underline focus:ring-2" href="https://jekyllrb.com/docs/plugins/" rel="nofollow noreferrer">jekyll website</a> (separated by category).</p>
 
                 <h2>A new Jekyll instance</h2>
                 <p><em>Skip to next section to import your WordPress blog.</em></p>
@@ -96,14 +102,14 @@ export default function JekyllDev() {
                 />
                 <p>Sample output for running <kbd>jekyll new my-site-name</kbd>.</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/jekyll-new-cmd1_t6pjkc"
-                    alt="Screenshot"
+                    src="/blog/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd1.png"
+                    alt=""
                     width={700}
                     height={394}
+                    priority={false}
                 />
                 <p>Jekyll will now generate a site in the folder &quot;my-site-name&quot;.</p>
-                
+
                 <p>To override the default jekyll theme, you will need to create two folders as seen in the list below. These are <code>assets</code>, <code>sass</code>, <code>_includes</code> and <code>_layouts</code>. For more information check out <a className="underline focus:ring-2" href="https://jekyllrb.com/docs/themes/#overriding-theme-defaults" rel="nofollow noreferrer">overriding theme defaults</a>.</p>
 
                 <ul className="list-disc list-inside m-2">
@@ -129,11 +135,11 @@ export default function JekyllDev() {
 
                 <p>Below is what the directory will look like in the terminal, as well as the output running the <code>serve</code>command to preview your site locally:</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/jekyll-new-cmd2_kgpdsb.png"
+                    src="/blog/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd2.png"
                     alt="Jekyll serve command terminal output"
                     width={593}
                     height={443}
+                    priority={false}
                 />
 
                 <h2>WordPress Import instructions</h2>
@@ -146,11 +152,11 @@ export default function JekyllDev() {
                 <h2>Drafts</h2>
                 <p>To work on a post locally (but not moving it live), create a folder at the root called <code>_drafts</code>. Next, add a markdown or html file without the date (for example: template.html instead of 2019-12-11-template.html).</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/jekyll-new-cmd2b_elcfqa.png"
+                    src="/blog/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd2b.png"
                     alt=""
                     width={403}
                     height={70}
+                    priority={false}
                 />
                 <p>Finally, run the below in your terminal:</p>
                 <PrismCode
@@ -182,17 +188,13 @@ export default function JekyllDev() {
 
                 <p>The first chunk of files below shows the root of my Jekyll site, while the second shows the production ready files. Note that some files from the root of the Jekyll site are not included. These are excluded in <code>_config.yml</code></p>
                 <Image
-                    //loader={blogLoader}
-                    src="/jekyll-new-cmd3_aie8s2.png"
+                    src="/blog/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd3.png"
                     alt=""
                     width={700}
                     height={394}
+                    priority={false}
                 />
                 <p>Note that if you use GitHub pages, you will need to compile the files on your computer first then commit your files to the master branch.</p>
-
-                {/* <ol className="list-decimal list-inside m-2">
-
-                </ol> */}
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

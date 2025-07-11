@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 // code by: Torstein Hønsi: //jsfiddle.net/G9h8z/1/embed/
@@ -56,14 +57,6 @@ export default function HighchartsNewWindow() {
                     language="javascript"
                     plugins={["line-numbers"]}
                 />
-
-                {/* <ul className="list-disc list-inside m-2">
-
-                </ul>
-
-                <ol className="list-decimal list-inside m-2">
-
-                </ol> */}
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

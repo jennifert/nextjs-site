@@ -14,7 +14,11 @@ export default function RaspMBC() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p><b>Important:</b> This post is outdated, and is in the queue for an overhaul.</p>
+                <p className="alert-warning">
+                    <small>
+                        Outdated: This post is outdated, and is in the queue for an overhaul.
+                    </small>
+                </p>
                 <p>The <a className="underline focus:ring-2" href="http://www.raspberrypi.org/faqs" rel="nofollow noreferrer">Raspberry Pi Foundation</a> described the pi as &quot;The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It&apos;s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video.&quot;. This post is to assist in setting up your Raspberry Pi With an XMBC build called Raspmbc.</p>
                 <h2>Choosing the Modal</h2>
                 <p>If you are going to be doing video streaming (especially over HDMI), it is recommended to buy the Version B. This is because. the modal has more memory than previous model, and has better video streaming. It can be purchased at any of the following sites:</p>
@@ -45,9 +49,9 @@ export default function RaspMBC() {
                     <li>Optional: Usb to wall outlet</li>
                 </ul>
                 <h2>Install Raspmbc on your card.</h2>
-                <p>Adding Raspmbc to your SD Card: <a className="underline focus:ring-2" href="http://www.raspbmc.com/wiki/user/windows-installation/" rel="nofollow noreferrer">Windows</a> or <a className="underline focus:ring-2" href="http://www.raspbmc.com/wiki/user/os-x-linux-installation/" rel="nofollow noreferrer">Os X/Linux</a>.</p>
+                <p>Adding Raspmbc to your SD Card: <a className="underline focus:ring-2" href="https://osmc.tv/" rel="nofollow noreferrer">OSMBC site</a>.</p>
                 <p>Now, plug your ad card into the slot on your Pi, and let it run. For some reason it did no like the mouse, so I went through the install steps with just a keyboard - USB worked great after.</p>
-                <p>Now, for initial set-up, its r<a className="underline focus:ring-2" href="http://www.raspbmc.com/wiki/user/using-ssh/" rel="nofollow noreferrer">ecommended to use ssh</a> to make initial configurations.</p>
+                <p>Now, for initial set-up, its recommended to use ssh to make initial configurations.</p>
                 <h2>Initial commands</h2>
                 <pre><kbd>
                     sudo apt-get update<br />
@@ -55,17 +59,15 @@ export default function RaspMBC() {
                     sudo apt-get install ffmpeg
                 </kbd></pre>
                 <h2>Optional</h2>
-                <p>Add your <a className="underline focus:ring-2" href="http://www.raspberrypi.com/license-keys/">license keys</a> to <a className="underline focus:ring-2" href="http://htpcbuild.com/hardware/standalone-htpc-build/raspberry-pi-htpc/raspberry-pi-codec-license-install/">config.txt</a>.</p>
+                <p>Add your license keys to config.txt.</p>
                 <h3>Some other settings to tweak on raspmbc are:</h3>
                 <p>Video resolution: Settings &gt; System &gt; Video Output &gt; Resolution<br />
                 Over clock: rograms &gt; Raspbmc Settings &gt; System Configuration &gt; System Performance Profile &gt; Fast<br />
                 Enable airplay: System &gt; Network &gt; “Allow XBMC to receive <em>AirPlay</em> content<br />
                 Turn of thumbnails: Settings &gt; Video &gt; File lists &gt; disable “Extract thumbnail and video information</p>
                 <h3>Set-up PlayOn</h3>
-                <p>Unfortunately, <a className="underline focus:ring-2" href="http://forum.xbmc.org/showthread.php?pid=1375570" rel="nofollow noreferrer">plex media centre</a> did not work with my set up, so for Netflix and other channels, I used playOn. It was around $50 (CAD) (about 30 US) and can work well on an XP virtual machine. I recommend testing only my media (free) before purchasing. The below is based on <a className="underline focus:ring-2" href="http://www.playon.tv/support/playon-for-mac" rel="nofollow noreferrer">playOn&apos;s parallel&apos;s guide</a>.</p>
+                <p>Unfortunately, <a className="underline focus:ring-2" href="http://forum.xbmc.org/showthread.php?pid=1375570" rel="nofollow noreferrer">plex media centre</a> did not work with my set up, so for Netflix and other channels, I used playOn. It was around $50 (CAD) (about 30 US) and can work well on an XP virtual machine. I recommend testing only my media (free) before purchasing. The below is based on <a className="underline focus:ring-2" href="https://www.playon.tv/faq" rel="nofollow noreferrer">playOn&apos;s parallel&apos;s guide</a>.</p>
                 <h4>Need:</h4>
-                <p><a className="underline focus:ring-2" href="http://www.vmware.com/products/fusion/" rel="nofollow noreferrer">VmWare Fusion</a> (be sure to update software) Feel free to try <a className="underline focus:ring-2" href="https://www.virtualbox.org/" rel="nofollow noreferrer">Virtual Box</a>, which is free virtualization software.<br />
-                    <a className="underline focus:ring-2" href="http://www.hotspotshield.com/‎" rel="nofollow noreferrer">Hotspot Shield</a> (for outside of US)</p>
                 <h4>Set up Virtual Machine:</h4>
                 <ol>
                     <li>Create an XP machine with 2GB RAM in &quot;bridge Networking - Auto-detect&quot; Mode and a static virtual disk (not expanding). Use at least a 16GB virtual disk. Playon Suggests utilizing 2 cores to stream.</li>
@@ -79,23 +81,19 @@ export default function RaspMBC() {
                 <h4>Enable in Raspmbx:</h4>
                 <ol>
                     <li>Basic: Files &gt; Add Videos... &gt; Browse &gt; UPnP Devices &gt; PlayOn... &gt; OK</li>
-                    <li>Advanced (seamless channels): <a className="underline focus:ring-2" href="http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/" rel="nofollow noreferrer">http://mymediaexperience.com/integrate-netflix-and-hulu-into-xbmc/</a></li>
                 </ol>
                 <p>That&apos;s it. Hope it helps someone.</p>
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">
-                    <li><a className="underline focus:ring-2" href="http://www.packtpub.com/raspberry-pi-media-center/book" rel="nofollow noreferrer">Raspberri Pi: Media Centre</a></li>
                     <li><a title="Used for extra info" href="http://elinux.org/RPi_Hardware_Basic_Setup#Typical_Hardware_You_Will_Need" rel="nofollow noreferrer">Equipment</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/quick-start-guide" rel="nofollow noreferrer">Quick start guide</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/faqs" rel="nofollow noreferrer">FAQ</a></li>
-                    <li><a className="underline focus:ring-2" href="http://rasplex.com/" rel="nofollow noreferrer">Rasplex</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.raspbmc.com/" rel="nofollow noreferrer">Raspmbc</a></li>
-                    <li><a className="underline focus:ring-2" href="http://www.macocd.com/styled/styled-4/index.html" rel="nofollow noreferrer">Setting up a Raspberry Pi as an XBMC Device using RaspBMC</a></li>
+                    <li><a className="underline focus:ring-2" href="https://www.raspberrypi.com/documentation/" rel="nofollow noreferrer">Quick start guide</a></li>
+                    <li><a className="underline focus:ring-2" href="https://www.rasplex.com/" rel="nofollow noreferrer">Rasplex</a></li>
+                    <li><a className="underline focus:ring-2" href="https://osmc.tv/" rel="nofollow noreferrer">osmc</a></li>
+                    <li>Setting up a Raspberry Pi as an XBMC Device using RaspBM</li>
                     <li><a className="underline focus:ring-2" href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=35&amp;t=31102&amp;start=25" rel="nofollow noreferrer">Discussion: Netflix on Raspbmc</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.makeuseof.com/tag/the-raspberry-pi-home-theater-what-you-can-and-cannot-do/" rel="nofollow noreferrer">The Raspberry Pi Home Theater: What You Can And Cannot Do</a></li>
                     <li><a className="underline focus:ring-2" href="http://wiki.xbmc.org/?title=Add-on%3aPleXBMC" rel="nofollow noreferrer">Raspmbc add on: plexmbx</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.playon.tv/" rel="nofollow noreferrer">PlayOn: For RaspMBC netflix and hulu Streaming (without Plex)</a></li>
-                    <li><a className="underline focus:ring-2" href="http://mymediaexperience.com/raspberry-pi-xbmc-with-raspbmc/" rel="nofollow noreferrer">RaspMBC set-up Guide</a></li>
                     <li><a className="underline focus:ring-2" href="http://lifehacker.com/5900626/create-a-kickass-seamless-play+everything-media-center-the-complete-guide" rel="nofollow noreferrer">Create a Kickass, Seamless, Play-Everything Media Center: The Complete Guide</a></li>
                 </ul>
             </section>

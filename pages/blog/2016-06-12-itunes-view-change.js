@@ -4,10 +4,6 @@ import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
 
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
-
 export default function ItunesView() {
     const POST_TITLE = 'Change your iTunes media view mode';
     const POST_DESCRIPTION = 'In the latest iTunes release, there has been quite a few tweaks to the interface. One option that has moved is the change view in playlist.';
@@ -24,11 +20,11 @@ export default function ItunesView() {
                 <p>To change this click on “View” &gt; “View as” &gt; “Songs”. After songs is selected, you should see just a list of songs.</p>
 
                 <Image
-                    //loader={blogLoader}
-                    src="/itunes-View-Thumb_f7aq61.png"
+                    src="/blog/2016-06-12-itunes-view-change/itunes-View-Thumb.png"
                     alt="Preview of instructions"
                     width={400}
                     height={426}
+                    priority={true}
                 />
                 
             </section>

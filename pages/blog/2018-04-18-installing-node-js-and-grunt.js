@@ -3,7 +3,8 @@ import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 npm config set proxy http://proxy.example.org:8080
@@ -277,10 +278,6 @@ npm cache clean -f
 npm install --save-dev jshint
 `.trim();
 
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
-
 export default function InstallNodeGrunt() {
     const POST_TITLE = 'Installing Node JS and Grunt';
     const POST_DESCRIPTION = 'This tutorial focuses on installing the platform, and provides resources for using Grunt.';
@@ -292,27 +289,32 @@ export default function InstallNodeGrunt() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                
+                <p className="alert-warning">
+                    <small>
+                        Under review: This post was originally written on <a className="underline focus:ring-2" href="https://web.archive.org/web/20180926123105/https://www.jenntesolin.com/blog/2013/05/08/installing-node-js-and-grunt-on-mountain-lion/" rel="nofollow noreferrer">May 8, 2013</a> and was fully re-written in 2018 to reflect newer versions of Node.js and Grunt. It is currently under review for accuracy.
+                    </small>
+                </p>
+
+
                 <p>This tutorial focuses on installing the platform, and provides resources for using Grunt.</p>
-                <p><em>This was originally from May 8, 2013 and has been re-written for the latest version of Node and Grunt.</em></p>
 
                 <h2>Step 1: Install Node</h2>
                 <p><b>If you installed with homebrew, skip to Proxy or Grunt step(s)</b></p> {/* TODO link to homebrew post  */}
                 <p>Otherwise, Download the latest stable binary from <a className="underline focus:ring-2" href="https://nodejs.org/en/download/" rel="nofollow noreferrer">nodejs.org</a>. On production servers is recommended to use the latest STABLE version. The default settings will be fine.</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/nodejs-home_hckxx5.png"
+                    src="/blog/2018-04-18-installing-node-js-and-grunt/nodejs-home.png"
                     alt=""
                     width={440}
                     height={368}
+                    priority={true}
                 />
                 <p>Verify your path as per installer message: Make sure that <strong>/usr/local/bin</strong> is in your $PATH.</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/node_installer_aargfq.png"
+                    src="/blog/2018-04-18-installing-node-js-and-grunt/node_installer.png"
                     alt=""
                     width={400}
                     height={281}
+                    priority={false}
                 />
                 <p>Note: I found this Stackoverflow post useful: <a className="underline focus:ring-2" href="https://stackoverflow.com/questions/42323485/set-environment-variables-on-mac-os-x-sierra#42323635" rel="nofollow noreferrer">Set environment variables: bash profile</a>. Please note to check that the path in the installer is shown in case it differs between versions. For my install, the path was correctly set.</p>
 
@@ -320,7 +322,7 @@ export default function InstallNodeGrunt() {
                 <p>If you require the use of a proxy with node, you set it with the below (this to this post <a href="https://jjasonclark.com/how-to-setup-node-behind-web-proxy/" rel="nofollow noreferrer">How to setup Node.js and Npm behind a corporate web proxy</a>).</p>
                 <PrismCode
                     code={code}
-                        language="shell-session"
+                    language="shell-session"
                     plugins={["line-numbers"]}
                 />
                 <h2>Step 3: Grunt set-up</h2>
@@ -342,12 +344,12 @@ export default function InstallNodeGrunt() {
                     plugins={["line-numbers"]}
                 />
                 <Image
-                    //loader={blogLoader}
-                    src="/node-npm-init_swbv7j.png"
+                    src="/blog/2018-04-18-installing-node-js-and-grunt/node-npm-init.png"
                     alt=""
                     width={400}
                     height={233}
-                    />
+                    priority={false}
+                />
                 <p>Open your favorite text editor, and edit the file &quot;package.json&quot; replace the text so it will fit your project:</p>
                 <PrismCode
                     code={code4}
@@ -384,7 +386,7 @@ export default function InstallNodeGrunt() {
                     language="javascript"
                     plugins={["line-numbers"]}
                 />
-                
+
                 <h3>Sample Grunt file</h3>
                 <p>TThe various commands you can run in your terminal are as follows:</p>
                 <ol className="list-decimal list-inside m-2">

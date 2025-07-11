@@ -3,7 +3,8 @@ import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 brew update
@@ -13,10 +14,6 @@ brew install git-gui
 `.trim();
 
 const code2 = `brew install --cask github`.trim();
-
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
 
 export default function InstallingGit() {
     const POST_TITLE = 'Installing Git and Github on your Mac';
@@ -29,6 +26,11 @@ export default function InstallingGit() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p>
+                <small className="alert-warning">
+                    Update in progress: This post is currently under review and may be updated soon with newer information.
+                </small>
+                </p>
                 <p>This post describes how to install git and github on your mac installation. There are two common ways to install. Both methods are described below. Please note the first way requires homebrew.</p>
                 <h2>Installing with homebrew</h2>
                 <p>To install GIT, just run the below commands and enter your information when requested. Brew update/upgrade is being run to show best practice. Files should always be updated before trying to run commands.</p>
@@ -49,12 +51,12 @@ export default function InstallingGit() {
                 <p>Download the DMG file from the <a className="underline focus:ring-2" href="https://sourceforge.net/projects/git-osx-installer/" rel="nofollow noreferrer">Official Binary installer from Sourceforge</a>.</p>
                 <p>Alternatively, if you use github, you can download the <a className="underline focus:ring-2" href="https://desktop.github.com/" rel="nofollow noreferrer">github desktop DMG</a> file, then install the git command line tools from the app itself.</p>
                 <p>To install the git command line tools from within the GitHub application, click on the app name &quot;GitHub Desktop&quot;, then choose &quot;Install command line tool&quot;.</p>
-                <Image
-                    //loader={blogLoader}
-                    src="/github-cmd-tools_lni0uq.png"
+               <Image
+                    src="/blog/2019-12-12-git-github/github-cmd-tools.png"
                     alt=""
                     width={700}
                     height={504}
+                    priority={false}
                 />
                 
             </section>

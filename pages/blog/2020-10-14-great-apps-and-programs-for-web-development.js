@@ -15,7 +15,16 @@ export default function DevPrograms() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p className="my-5">Below is an updated list of different applications that you an use to create your projects in. This time, I tried to separate for paid, free, and subscriptions.</p>
-                <p><small className="alert-warning">This post is an updated version from: <a className="underline focus:ring-2" href="https://web.archive.org/web/20210318195843/https://jenntesolin.com/blog/2013/05/30/great-apps-and-programs-for-web-development/">May 30, 2013</a>.</small></p>
+                <p className="alert-warning">
+                    <small>
+                        This post is an updated version from&nbsp;
+                        <a className="underline focus:ring-2" href="https://web.archive.org/web/20210318195843/https://jenntesolin.com/blog/2013/05/30/great-apps-and-programs-for-web-development/">
+                            May 30, 2013
+                        </a>
+                        &nbsp;and is currently under review — more updates may be added soon.
+                    </small>
+                </p>
+
                 <h2>Cross Platform Apps</h2>
                 <h3>Free</h3>
                 <ul className="list-disc list-inside m-2">

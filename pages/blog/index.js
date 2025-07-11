@@ -31,8 +31,8 @@ export default function Blog() {
                     </li>
                     <li>
                         <Link
-                            href="/blog/2018-09-26-using-ios-and-android-together"
-                            className="underline focus:ring-2">Using iOS and Android devices together</Link> on <time dateTime="2018-09-26T19:00">September 09, 2018</time>
+                            href="/blog/2025-07-10-using-ios-and-android-together"
+                            className="underline focus:ring-2">Using iOS and Android devices together</Link> on <time dateTime="2025-07-10T19:00">July 10, 2025</time>
                     </li>
                 </ul>
 
@@ -131,7 +131,7 @@ export default function Blog() {
                             className="underline focus:ring-2">Jekyll: Easy searching with JSON and jQuery</Link> on <time dateTime="2015-05-22T19:00">May 22, 2015</time>
                     </li>
                 </ul>
-                
+
                 <h2>Lists</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
@@ -153,7 +153,7 @@ export default function Blog() {
                         <Link href="/blog/2013-05-24-ios-7-wishlist" className="underline focus:ring-2">iOS 7 Wishlist</Link> on <time dateTime="2013-05-24T19:00">May 24, 2013</time>
                     </li>
                 </ul>
-                
+
                 <h2>MySql</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
@@ -172,9 +172,9 @@ export default function Blog() {
                             className="underline focus:ring-2">Quick tips: MySql Case</Link> on <time dateTime="2013-08-11T19:00">August 11, 2013</time>
                     </li>
                 </ul>
-               
-                
-                <h2>PHP</h2>
+
+
+                <h2>PHP and WordPress</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>
                         <Link
@@ -185,6 +185,11 @@ export default function Blog() {
                         <Link
                             href="/blog/2016-06-14-compare-integars-php"
                             className="underline focus:ring-2">Comparing integer variables using PHP</Link> on <time dateTime="2016-06-14T19:00">June 14, 2016</time>
+                    </li>
+                    <li>
+                        <Link
+                            href="/blog/2014-09-24-Moving-a-WordPress-Blog"
+                            className="underline focus:ring-2">Moving a WordPress blog</Link> on <time dateTime="2014-09-24T19:00">September 24, 2014</time>
                     </li>
                     <li>
                         <Link
@@ -202,8 +207,8 @@ export default function Blog() {
                             className="underline focus:ring-2">WordPress Quick-tip: Display x number of posts outside your blog</Link> on <time dateTime="2013-05-23T19:30">May 23, 2013</time>
                     </li>
                 </ul>
-                
-                
+
+
                 <h2>Raspberri Pi</h2>
                 <ul className="list-disc list-inside m-2">
                     <li>

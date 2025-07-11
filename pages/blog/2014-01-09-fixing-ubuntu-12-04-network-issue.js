@@ -22,7 +22,7 @@ export default function UbuntuTwelveIssues() {
                     <li>Network .... not compatible with this version of Ubuntu.</li>
                 </ul>
                 <p>To fix this, I first I tried reconfiguring the networking, then adding DNS servers into the network interfaces with no luck. Also, tried editing various files mentioned in other posts.</p>
-                <p>Finally I ran across a post from <a className="underline focus:ring-2" href="http://ubuntuforums.org/showthread.php?t=2001421&amp;p=12197022#post12197022" rel="nofollow noreferrer">Ask Ubuntu Forums</a>.  So, here are the steps mentioned to resolve this issue:</p>
+                <p>Finally I ran across a post from Ask Ubuntu Forums (no longer available). So, here are the steps mentioned to resolve this issue:</p>
                 
                 <p>Create a copy of the following file: /etc/network/interfaces:</p>
                 <pre><kbd>

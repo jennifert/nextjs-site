@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 extension_dir = "C:\PHP5\ext"
@@ -64,6 +65,12 @@ export default function IisDevEnvironmentSeven() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Under review: This post was originally written on March 14, 2015 and is based on a development environment using IIS 7 on Windows 7. While much of the setup remains relevant, modern versions of Windows (10/11) may use updated tools such as WSL or newer IIS features.
+                    </small>
+                </p>
+
                 <p>This post describes how to enable IIS on Windows 7, along with enabling MySql and Php. You will need Administrator Access to complete these steps.</p>
 
                 <h2>Enable IIS</h2>
@@ -84,11 +91,11 @@ export default function IisDevEnvironmentSeven() {
                 />
                 <p>Now, in the IIS manager, left click once on your server name, and then select &quot;Handler Mappings&quot;</p>
                 <p>Click <code>Actions &gt; Add Module Mapping</code> and then enter the following:</p>
-                <p>Request path: <kbd>*.php</kbd><br/>
+                <p>Request path: <kbd>*.php</kbd><br />
                     Module: <kbd>FastCgiModule</kbd><br />
                     Executable: <kbd>c:\PHP5\php-cgi.exe</kbd><br />
                     Name: <kbd>PHP_via_FastCGI</kbd></p>
-                
+
                 <p>In the same Window, Click <code>Request Restrictions &gt; Mapping</code>. Next, check off &quot;invoke handler only if request is mapped to&quot;, then click &quot;File or Folder&quot;. Now, click  &quot;OK&quot; in all dialog boxes to accept changes.</p>
 
                 <p>In the IIS manager, click on your Default website, and then &quot;Default Document&quot;, and then add index.php to the list.</p>

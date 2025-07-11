@@ -3,10 +3,8 @@ import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-import { PrismCode } from '../../components/prism'
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -46,19 +44,11 @@ export default function FontAwesomeBootstrapThree() {
 
                 <h2>Custom Bootstrap CSS</h2>
                 <p>The second way is to <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/customize/">configure your own download</a>. The steps are under: &quot;LESS files&quot; &gt; &quot;Components&quot; (middle column) &gt; Uncheck &quot;Glyphicons&quot;.</p>
-                <p>Enter in any other information (or remove JS not being used, and then scroll to the bottom of the page and click &quot;Compile and download&quot;.</p>
+                <p>Enter in any other information (or remove JS not being used), and then scroll to the bottom of the page and click &quot;Compile and download&quot;.</p>
                 <PrismCode
                     code={code2}
                     language="html"
                     plugins={["line-numbers"]}
-                />
-
-                <Image
-                    //loader={blogLoader}
-                    src="/custom-bootstrap-3_gt447z.png"
-                    alt="Screenshot "
-                    width={400}
-                    height={233}
                 />
 
                 <h2>Notes:</h2>

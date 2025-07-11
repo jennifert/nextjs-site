@@ -41,8 +41,10 @@ export default function MovingWordpress() {
 
                 <h2>Moving to Jekyll</h2>
 
-                Check out my latest blog post for an in-depth look at <a className="underline focus:ring-2" href="https://jenntesolin.com/blog/2015/03/17/Jekyll-Set-Up-Publish/" rel="nofollow noreferrer">Jekyll: Setting up your development environment</a>.{/* TODO Change to here when post is ready. Use link */}
-
+                Check out&nbsp;
+                <Link href="/blog/2019-12-11-Jekyll-Set-Up-Publish" className="underline focus:ring-2">
+                    Jekyll: Setting up your development environment
+                </Link>.
             </section>
         </Layout>
     )

@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 www.jenntesolin.com
@@ -39,6 +40,12 @@ export default function ConfigJekyllAzureGithubPages() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Under review: This post covers using Jekyll with GitHub Pages and Microsoft Azure. Some platform processes or limitations (like domain support on Azure&lsquo;s free tier) may have changed since writing and are currently being reviewed for accuracy.
+                    </small>
+                </p>
+
                 <p>Sometimes hosting can be expensive, and some reputable hosts have free but limited hosting. This post described how to configure Github pages and Microsoft Azure.</p>
                 <p>Just a note before getting started, personally I use plugins with Jekyll, so I have 2 repositories: 1) For development (which I connect to Azure), and 2) For the live site (Github pages). This is because when using the built in Jekyll server my custom JSON/jQuery search does not work there. Also, azure does not allow domain names to be configured for free.</p>
 
@@ -51,7 +58,7 @@ export default function ConfigJekyllAzureGithubPages() {
                 />
                 <p>The Github pages are the best to follow for setting up, so please for the rest of <a className="underline focus:ring-2" href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll" rel="nofollow noreferrer">Github Pages guide</a>.</p>
                 <p>This walks you through with prompts and changes with your Github set-up.</p>
-                
+
                 <h2>Azure</h2>
                 <p>First, make sure you have a &quot;.deployment&quot; file pointing to your final complied website. If your using the basic Jekyll set-up, it would be:</p>
                 <PrismCode
@@ -74,9 +81,9 @@ export default function ConfigJekyllAzureGithubPages() {
                 <p>Click on &quot;Publishing&quot; under &quot;Continuous deployment&quot; to set up your web application and it will being up various providers. Pick Github then follow the prompts to authorize Microsoft to access your Github account.</p>
 
                 <p>Next, select which repository you would like to connect to and click &quot;OK&quot;.</p>
-                
+
                 <p>Grab another coffee or give your email a quick check, as the two services will need a bit of time to connect and serve from the branch you connected to (for example &quot;Master&quot;).</p>
-                
+
             </section>
         </Layout>
     )

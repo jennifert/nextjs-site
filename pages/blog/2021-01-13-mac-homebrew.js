@@ -3,7 +3,8 @@ import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-import { PrismCode } from '../../components/prism'
+import dynamic from 'next/dynamic'
+const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
 const code = `
 xcode-select --install
@@ -79,10 +80,6 @@ gem update --system
 gem update
 `.trim();
 
-// const blogLoader = ({ src, width, quality }) => {
-//     return `https://res.cloudinary.com/dkeghqshh/image/upload/v1612975704/jenntesolin.com/blog${src}?w=${width}&q=${quality || 75}`
-// }
-
 export default function MacHomebrew() {
     const POST_TITLE = 'Installing Homebrew and Fixing Ruby on your Mac';
     const POST_DESCRIPTION = 'This post describes how to install homebrew, as as well as casks (software applications).';
@@ -95,7 +92,16 @@ export default function MacHomebrew() {
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
                 <p>This post describes how to install homebrew, as as well as casks (software applications).</p>
-                <p><small className="alert-warning">This post is an updated version from: <a className="underline focus:ring-2" href="https://web.archive.org/web/20210318175731/https://jenntesolin.com/blog/2019/12/10/mac-ruby/">Dec. 10, 2019</a>.</small></p>
+                <p className="alert-warning">
+                    <small>
+                        Outdated: This is an updated version of a&nbsp;
+                        <a className="underline focus:ring-2" href="https://web.archive.org/web/20210318175731/https://jenntesolin.com/blog/2019/12/10/mac-ruby/">
+                            post from Dec. 10, 2019
+                        </a>,
+                        but some parts — especially around Ruby and Java — still need to be revised.
+                    </small>
+                </p>
+
                 <h2>Getting ready</h2>
 
                 <h3>Step 1: Open Your Terminal program</h3>
@@ -120,11 +126,11 @@ export default function MacHomebrew() {
                 <h2>Install homebrew</h2>
                 <p>Homebrew is basically a package manager for the Mac, and in this being used to fix the default Ruby version that comes with the Mac. It will also be used further into the tutorial to install other development items.</p>
                 <Image
-                    //loader={blogLoader}
-                    src="/homebrew-site_mknkil.png"
-                    alt="Screenshot "
+                    src="/blog/2021-01-13-mac-homebrew/homebrew-site.png"
+                    alt=""
                     width={700}
                     height={1139}
+                    priority={false}
                 />
                 <h3>Copy Install Script</h3>
                 <p>Go to the homebrew site (<a className="underline focus:ring-2" href="https://brew.sh/" rel="nofollow noreferrer noopener">brew.sh</a>) and check out the latest download code and run in in the terminal. It should look something like this:</p>
@@ -263,8 +269,8 @@ export default function MacHomebrew() {
                     plugins={["line-numbers"]}
                 />
 
-                <p><p><kbd>exec zsh</kbd>: will restart your terminal so the path kicks in. If you do not ant to run this, simple type <kbd>exit</kbd>, then quit your terminal application and reopen it.</p>
-                    <p>Next, update your ruby gems:</p></p>
+                <p><kbd>exec zsh</kbd>: will restart your terminal so the path kicks in. If you do not ant to run this, simple type <kbd>exit</kbd>, then quit your terminal application and reopen it.</p>
+                <p>Next, update your ruby gems:</p>
                 <PrismCode
                     code={code17}
                     language="shell-session"

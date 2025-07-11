@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import SearchPage from '../pages/search'
 import { SITE_TITLE } from '../lib/constants'
 
 export default function Nav({ children, href }) {

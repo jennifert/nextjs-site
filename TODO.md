@@ -2,45 +2,27 @@
 
 ## 🔝 Current Top Priorities
 
-1. 🖼️ **Fix and finalize all blog and gallery images**
-   - ✅ Organize into correct `/public/blog/...` folders
-   - ✅ Clean filename hashes
-   - ✅ Compare to `image-references.md`
-   - ⏳ Restore remaining missing files (see image references) may already be in folder, may need to recreate unfortunately.
-   - ⏳ Update any broken `<Image />` paths in blog posts easiest to just see public/blogs, its using same folder as page file name.
-        - [ ] 🚨 Restore and optimize all images based on [`image-references.md`](./image-references.md)
-        - Update broken `src` paths as needed
-        - Remove loader code (e.g., blurDataURL or dynamic placeholders)
-        - Example:
-            ```js
-            <Image
-            src="/images/blog/2012-11-08-japan-trip-2011/photo1.jpg"
-            alt="Japan trip street scene"
-            width={800}
-            height={600}
-            />
-            ```
-2. 🚀 **Deploy to DigitalOcean**
-    - Target: [jenntesolin.com](http://jenntesolin.com)
-   - Will update domain DNS after confirming image fixes + production build
-   - ⏳ Finalize working `deploy.yaml`
-        - [ ] 🚨 Add `.do/app.yaml` for **DigitalOcean App Platform** deployment
-   - ⏳ Test live site behavior post-deploy
-   - ⏳ Confirm environment variables + build script
-   - ⏳ Set up GitHub Actions or push pipeline
 
-> Once these two are complete, resume other lower-priority tasks (broken links, feature enhancements, accessibility).
 
 ## IN Progress
 
 ### 📝 Content Maintenance & Metadata
-- [ ] 🚨 Search blog content for flagged terms like **"outdated"**
+- [ ] 🚨 Search blog content for flagged terms like **"outdated"** and **Update in progress**. Work through outdated first.
 - [ ] 🚨 Detect and log broken or unreachable links
-
+- [ ] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
+- [ ] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
+- [ ] Update `generate-meta.js` to extract `POST_TAGS` values into `meta.json`
+- [ ] Update `generate-meta.js` to extract `POST_DATE` along with `POST_TAGS`
+- [ ] Display post date on blog index, sitemap, and post pages. blog index has but should be hard coded.
+- [ ] Add JSON-LD structured data to blog posts via `<Head>`
+    - Use `POST_TITLE`, `POST_DESCRIPTION`, `POST_DATE`, `POST_TAGS`
+    - Include article-level schema (`@type: Article`)
+    - [x] Create `PostJsonLd` component for JSON-LD metadata
+    - [ ] Include `<PostJsonLd />` in post `<Head>` block
+    
 ### 🧠 Tag Support
 - [ ] Enhance tag support to also filter/search by tag mentions or keywords in `meta.json`
 - [ ] Add `export const POST_TAGS = ['tag1', 'tag2']` to each page or blog post
-- [ ] Update `generate-meta.js` to extract `POST_TAGS` values into `meta.json`
 - [ ] Use tags in search, filters, or tag-based navigation components
 
 ### 🎹 Accessibility Improvements
@@ -69,14 +51,20 @@
 - [ ] Refactor `nav.js` to loop through route items instead of hardcoding `<Link>` elements
 
 ## Completed
+### 🚀 **Deploy to DigitalOcean**
+    - Target: [jenntesolin.com](http://jenntesolin.com)
+   - Will update domain DNS after confirming image fixes + production build
+   - ⏳ Test live site behavior post-deploy
+   - ⏳ Confirm environment variables + build script
+   - ⏳ Set up GitHub Actions or push pipeline
 
 ### 🖼️ Image Fixes & Cleanup
 - [x] Optionally replace social icons with inline SVG for accessibility + performance
 - [x] Fixed Gallery Images, alsi moved from being hard coded to Components/data/gallerydata.js
+- [x] 🚨 Restore and optimize all images
 
 ### 💼 Portfolio Enhancements
 - [x] 🚨 Fix and improve styles for portfolio cards
-- [ ] Add tag-based filter UI for portfolio
 - [x] Highlight featured projects (`featured: true`)
 - [x] Sort portfolio projects by date (newest first)
 

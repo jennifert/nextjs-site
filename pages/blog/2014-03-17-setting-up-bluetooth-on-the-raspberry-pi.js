@@ -14,6 +14,11 @@ export default function BluetoothPi() {
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
+                <p className="alert-warning">
+                    <small>
+                        Outdated: This post is under review for accuracy.
+                    </small>
+                </p>
                 <p>Setting up a bluetooth dongle can be quite interesting when using Raspmbc. Here is a guide on setting up.</p>
                 <h2>Requirements:</h2>
                 <ul>
