@@ -1,9 +1,13 @@
-# Set your desired Node.js version
+# netlify.toml
+
 node_version = "22.16.0"
 
 [build]
   command = "npm run generate-meta && npm run build && npx next export"
   publish = "out"
 
-[functions]
-  node_bundler = "esbuild"
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+  [plugins.inputs]
+  skip = true
