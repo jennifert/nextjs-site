@@ -82,6 +82,7 @@ export default function Footer(props) {
                         {ARTICLE_LICENSE_TEXT}
                     </a>
                 </p>
+                <p>🚧 Some images and screenshots are being restored — full gallery and post content coming soon!</p>
             </div>
         </footer>
     )
