@@ -9,10 +9,9 @@
     },
     "scripts": {
         "lint": "next lint",
-        "dev": "next dev",
-        "build": "next build",
         "generate-meta": "node scripts/generate-meta.js",
-        "build:local": "npm run generate-meta && next build",
+        "dev": "next dev",
+        "build": "npm run generate-meta && next build",
         "sync:jekyll": "node scripts/sync-to-jekyll.js"
     },
     "keywords": [],
