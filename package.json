@@ -12,7 +12,7 @@
         "dev": "next dev",
         "build": "next build",
         "generate-meta": "node scripts/generate-meta.js",
-        "export": "npm run generate-meta && next build && next export",
+        "export": "npm run generate-meta && next build",
         "sync:jekyll": "node scripts/sync-to-jekyll.js"
     },
     "keywords": [],
