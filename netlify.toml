@@ -1,0 +1,4 @@
+[build]
+  node_version = "22.16.0"
+  publish = "out"
+  command = "npm run export"

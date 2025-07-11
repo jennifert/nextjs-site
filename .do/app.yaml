@@ -1,9 +1,0 @@
-name: jenntesolin-static-site
-static_sites:
-  - name: jenntesolin
-    github:
-      repo: jennifert/nextjs-site
-      branch: main
-    output_dir: /out
-    build_command: npm install && npm run export
-    environment_slug: html
