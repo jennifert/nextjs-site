@@ -189,6 +189,29 @@ This site currently does not require a `.env` file.
 
 ---
 
+## 🧾 Headers and Caching (DigitalOcean App Platform)
+
+To address aggressive or inconsistent caching behavior on deployed pages (especially with trailing slashes or refreshed routes), a `_headers` file is used in the `out/` directory after export.
+
+This ensures consistent behavior across static pages, especially when deployed to DigitalOcean's App Platform.
+
+### 📂 Example: `public/_headers`
+
+```
+/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+```
+
+This disables aggressive page caching, ensuring fresh loads for all routes.
+
+> ✅ No additional config is required in `next.config.js` for this.
+
+The `_headers` file must be present in the output directory **before deployment**. It will be included during `npm run export`.
+
+---
+
 ## Development Tasks
 
 🗂️ See [TODO.md](./TODO.md) for the active task board and enhancements.
