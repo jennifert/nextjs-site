@@ -4,6 +4,7 @@ module.exports = {
     output: 'export', // ✅ Enables static HTML export
     reactStrictMode: true,
     poweredByHeader: false,
+    trailingSlash: true,
     images: {
         unoptimized: true,
         loader: 'default',
