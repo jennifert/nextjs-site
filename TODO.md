@@ -8,21 +8,14 @@
 
 ### 📝 Content Maintenance & Metadata
 - [ ] 🚨 Search blog content for flagged terms like **"outdated"** and **Update in progress**. Work through outdated first.
-- [x] 🚨 Detect and log broken or unreachable links
-- [x] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
-- [x] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
 - [ ] Update `generate-meta.js` to extract `POST_TAGS` values into `meta.json`
 - [ ] Update `generate-meta.js` to extract `POST_DATE` along with `POST_TAGS`
 - [ ] Display post date on blog index, sitemap, and post pages. blog index has but should be hard coded.
-- [x] Add JSON-LD structured data to blog posts via `<Head>`
-    - Use `POST_TITLE`, `POST_DESCRIPTION`, `POST_DATE`, `POST_TAGS`
-    - Include article-level schema (`@type: Article`)
-    - [x] Create `PostJsonLd` component for JSON-LD metadata
-    - [x] Include `<PostJsonLd />` in post `<Head>` block
+- [ ] Add JSON-LD structured data to blog posts update to include  article-level schema (`@type: Article`) in blog posts.
+- [ ] Add breadcrumbs to the top pf the page
     
 ### 🧠 Tag Support
 - [ ] Enhance tag support to also filter/search by tag mentions or keywords in `meta.json`
-- [ ] Add `export const POST_TAGS = ['tag1', 'tag2']` to each page or blog post
 - [ ] Use tags in search, filters, or tag-based navigation components
 
 ### 🎹 Accessibility Improvements
@@ -52,6 +45,15 @@
 - [ ] Refactor `nav.js` to loop through route items instead of hardcoding `<Link>` elements
 
 ## Completed
+### 📝 Content Maintenance & Metadata
+- [x] 🚨 Detect and log broken or unreachable links
+- [x] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
+- [x] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
+- [x] Add JSON-LD structured data to blog posts via `<Head>`
+    - Use `POST_TITLE`, `POST_DESCRIPTION`, `POST_DATE`, `POST_TAGS`
+    - Include article-level schema (`@type: Article`)
+    - [x] Create `PostJsonLd` component for JSON-LD metadata
+    - [x] Include `<PostJsonLd />` in post `<Head>` block
 ### 🚀 **Deploy to DigitalOcean**
     - Target: [jenntesolin.com](http://jenntesolin.com)
    - Will update domain DNS after confirming image fixes + production build
@@ -82,3 +84,6 @@
 ### 🗺️ Sitemap Display
 - [x] Use `meta.json` to generate a human-readable `sitemap.js` page
 - [x] Group routes by prefix and render page titles as links
+
+### 🧠 Tag Support
+- [x] Add `export const POST_TAGS = ['tag1', 'tag2']` to each page or blog post

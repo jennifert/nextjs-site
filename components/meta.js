@@ -9,6 +9,7 @@ export default function Meta() {
       <link type="text/plain" rel="author" href="/humans.txt" />
       <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
       <meta name="theme-color" content="#317EFB" />
+      <meta name="google-site-verification" content="Q8UByE2wXyZ401kKeeWvvOkSSx3fW_vaGE-UO0Q_uDA" />
       {/* You can add OG tags here later if needed */}
     </>
   )
