@@ -17,7 +17,8 @@ export const POST_TAGS = ['home'];
 function HomePage() {
     return (
         <Layout home>
-            <Head>
+            <Head>              
+                <meta name="google-site-verification" content="Q8UByE2wXyZ401kKeeWvvOkSSx3fW_vaGE-UO0Q_uDA" />
                 <title>{`${POST_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
                 <PostJsonLd
