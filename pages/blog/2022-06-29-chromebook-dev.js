@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
+const SafeIframe = dynamic(() => import('../../components/SafeIframe'), { ssr: false });
 
 const code = `
 sudo apt-get update
@@ -28,14 +31,31 @@ flatpak install flathub com.visualstudio.code
 flatpak run com.visualstudio.code
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'A Guide for Setting Up a Chromebook for Web Development';
+export const POST_DESCRIPTION = 'A set-up on a budget chromebook for web development including IDE, browsers, and more.';
+export const POST_TAGS = ['development', 'chrome']
+
 export default function ChromebookDev() {
-    const POST_TITLE = 'A Guide for Setting Up a Chromebook for Web Development';
-    const POST_DESCRIPTION = 'A set-up on a budget chromebook for web development including IDE, browsers, and more.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2022-06-29'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2022-06-29-chromebook-dev'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -61,7 +81,7 @@ export default function ChromebookDev() {
                     <li>OS: Chrome OS, Linux Dev Environment</li>
                     <li>Updates supported until:  2026</li>
                     <li>Year first manufactured: 2022</li>
-                    <li>Amazon price (without sale): $270 <a className="underline focus:ring-2" href="https://www.amazon.ca/gp/product/B0886W3LTR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" rel="nofollow noreferrer">Listing of Chromebook being used</a> (note the screen is also updated to 15in.</li>
+                    <li>Amazon price (without sale): $270 <a className="underline focus:ring-2" href="https://www.amazon.ca/gp/product/B0886W3LTR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" rel="nofollow noreferrer">Listing of Chromebook being used</a> (note the screen is also updated to 15 inches)</li>
                 </ul>
 
                 <p>Note, this machine does not have an HDMI port, though a USB (or USB-C) hub or dock could work for you in this area. the <a className="underline focus:ring-2" href="https://www.amazon.ca/gp/product/B08733BK1W/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" rel="nofollow noreferrer">USB C Hub by QGeeM</a> worked well . If you have another one used for another device, give it a try.</p>
@@ -92,17 +112,22 @@ export default function ChromebookDev() {
 
                 <p>First, Google's guide (section Turn on Linux) to <a className="underline focus:ring-2" href="https://www.howtogeek.com/316056/how-to-get-android-apps-to-see-external-storage-on-chromebooks/">Set up Linux on your Chromebook</a></p>
 
-                <iframe src="https://player.vimeo.com/video/725837207?h=e4d9819af7" allow="fullscreen" allowFullScreen title="Video demo: Turning on your linux environment"></iframe>
+                <SafeIframe
+                    src="https://player.vimeo.com/video/725837207?h=e4d9819af7"
+                    title="Video demo: Turning on your linux environment"
+                />
 
                 <p>Once its successfully installed, make a <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/9592813?hl=en&ref_topic=3415446">back-up of your environment</a> (this way if something goes wrong, you can restore).</p>
 
-                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" allow="fullscreen" allowFullScreen title="Backing Up your linux environment to Google Drive"></iframe>
-
+                <SafeIframe
+                    src="https://player.vimeo.com/video/725837231?h=4c2c805c44"
+                    title="Backing Up your linux environment to Google Drive"
+                />
                 <p>Check out the <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/10057656?hl=en&ref_topic=3415446">Port-Forwarding</a> guide if you want to see on other devices.</p>
 
                 <h3>Managing linux &amp; command line instals</h3>
                 <p>Now, open your apps launchpad, and in the Linux folder, click "Terminal", then run the below commands to update the files in the Linux Environment.</p>
-                
+
                 <PrismCode
                     code={code}
                     language="shell-session"
@@ -127,13 +152,19 @@ export default function ChromebookDev() {
                 />
 
                 <p>Here is a video demo of installing VS code using the official debian file.</p>
-                <iframe src="https://player.vimeo.com/video/725837231?h=4c2c805c44" allow="fullscreen" allowFullScreen title="Video demo: Installing VS Code on Chromebook"></iframe>
+                <SafeIframe
+                    src="https://player.vimeo.com/video/725837231?h=4c2c805c44"
+                    title="Video demo: Installing VS Code on Chromebook"
+                />
                 <h3>Installing a Package Manager</h3>
                 <p>A popular package manager is called "FlatPak", they have extra programs you can install, including a GUI/Graphic app to search for and install programs.</p>
                 <p>Here are the steps to install Flatpak:</p>
                 <ol className="list-decimal list-inside m-2">
                     <li>Follow the official documentation (starting at step 2): <a className="underline focus:ring-2" href="https://flatpak.org/setup/Chrome%20OS">Chrome OS Quick Setup</a>
-                        <iframe src="https://player.vimeo.com/video/725837334?h=0289253177" allow="fullscreen" allowFullScreen title="Video demo: Installing Flatpak and GUI"></iframe>
+                        <SafeIframe
+                            src="https://player.vimeo.com/video/725837334?h=0289253177"
+                            title="Video demo: Installing Flatpak and GUI"
+                        />
                     </li>
                     <li>If you want to use a GUI to install apps, run this command:
                         <PrismCode
@@ -143,7 +174,10 @@ export default function ChromebookDev() {
                         />
 
                         <p>Using the package manager to find software:</p>
-                        <iframe src="https://player.vimeo.com/video/725837422?h=4b76fd2030" allow="fullscreen" allowFullScreen title="Video demo: Using the package manager"></iframe>
+                        <SafeIframe
+                            src="https://player.vimeo.com/video/725837422?h=4b76fd2030"
+                            title="Video demo: Using the package manager"
+                        />
                     </li>
                     <li>Alternatively, you can search <a className="underline focus:ring-2" href="https://flathub.org/">flathub.org</a>, and install via the command line. The first command below installs Visual Studio Code, while the second one runs the program.
                         <PrismCode
@@ -156,8 +190,10 @@ export default function ChromebookDev() {
 
                 <h3>Removing Linux</h3>
                 <p>Check out the section <a className="underline focus:ring-2" href="https://support.google.com/chromebook/answer/9145439?hl=en" rel="nofollow noreferrer">"Turn Off Linux"</a> for details to completely remove linux and its files.</p>
-                <iframe src="https://player.vimeo.com/video/725837496?h=07168ac02d" allow="fullscreen" allowFullScreen title="Video demo: Turn Off Linux"></iframe>
-
+                <SafeIframe
+                    src="https://player.vimeo.com/video/725837496?h=07168ac02d"
+                    title="Video demo: Turn Off Linux"
+                />
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="https://chromeos.dev/en/linux/setup" rel="nofollow noreferrer">Linux Set-Up</a></li>

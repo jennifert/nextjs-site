@@ -1,7 +1,10 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
+
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -37,14 +40,31 @@ $(function () {
 });
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Quick Tip: Highcharts credit in a new window';
+export const POST_DESCRIPTION = 'Here is a great fiddle by Torstein Hønsi, that shows how to have highcharts credits open in a new window/tab.';
+export const POST_TAGS = ['javascript', 'tips']
+
 export default function HighchartsNewWindow() {
-    const POST_TITLE = 'Quick Tip: Highcharts credit in a new window';
-    const POST_DESCRIPTION = 'Here is a great fiddle by Torstein Hønsi, that shows how to have highcharts credits open in a new window/tab.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2017-05-27'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2017-05-27-highcharts-new-window'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

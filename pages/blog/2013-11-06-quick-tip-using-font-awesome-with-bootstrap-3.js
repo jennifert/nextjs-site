@@ -1,8 +1,10 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
-import Image from 'next/image'
+import PostJsonLd from '../../components/PostJsonLd'
+// import Image from 'next/image'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -16,14 +18,30 @@ const code2 = `
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 `.trim();
 
+export const POST_TITLE = 'Quick Tip: Using Font Awesome 4 With Bootstrap 3';
+export const POST_DESCRIPTION = 'This is a quick post on how to use Font Awesome 4 With Bootstrap 3 on your pages.';
+export const POST_TAGS = ['css', 'bootstrap', 'fontawesome', 'fonts']
+
 export default function FontAwesomeBootstrapThree() {
-    const POST_TITLE = 'Quick Tip: Using Font Awesome 4 With Bootstrap 3';
-    const POST_DESCRIPTION = 'This is a quick post on how to use Font Awesome 4 With Bootstrap 3 on your pages.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2013-11-06'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2013-11-06-quick-tip-using-font-awesome-with-bootstrap-3'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -57,7 +75,6 @@ export default function FontAwesomeBootstrapThree() {
                 <ul className="list-disc list-inside m-2">
                     <li><a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/css/#forms" rel="nofollow noreferrer">Bootstrap 3: forms</a></li>
                     <li><a className="underline focus:ring-2" href="https://fontawesome.com/v4.7/examples/" rel="nofollow noreferrer">Font-Awesome 4: Examples</a></li>
-                    <li><a className="underline focus:ring-2" href="https://github.com/MaxCDN/bootstrap-cdn/issues/180" rel="nofollow noreferrer">Found CDN for no icons from github Issue Post.</a></li>
                     <li><a className="underline focus:ring-2" href="http://www.bootstrapcdn.com/" rel="nofollow noreferrer">Bootstrap CDN</a></li>
                 </ul>
             </section>

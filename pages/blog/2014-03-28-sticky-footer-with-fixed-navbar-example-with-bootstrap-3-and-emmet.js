@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -20,18 +22,35 @@ const code3 = `
 <![endif]-->
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO';
+export const POST_DESCRIPTION = 'This post describes how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.';
+export const POST_TAGS = ['css', 'bootstrap', 'emmet']
+
 export default function EmmetBootStrapStickyFooter() {
-    const POST_TITLE = 'Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO';
-    const POST_DESCRIPTION = 'This post described how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2014-03-28'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
-                <p>This post described how to use <a className="underline focus:ring-2" href="https://emmet.io/" rel="nofollow noreferrer">Emmet</a> short codes to quickly create the bootstrap example: <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/" rel="nofollow noreferrer">Sticky footer with fixed navbar</a> using Bootstrap 3.  Feel free to read and implement suggestions.</p>
+                <p>This post describes how to use <a className="underline focus:ring-2" href="https://emmet.io/" rel="nofollow noreferrer">Emmet</a> short codes to quickly create the bootstrap example: <a className="underline focus:ring-2" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/" rel="nofollow noreferrer">Sticky footer with fixed navbar</a> using Bootstrap 3.  Feel free to read and implement suggestions.</p>
 
                 <h2>Step 1: Set up: Set up html, and body content, js</h2>
                 <h3>Emmet Code</h3>

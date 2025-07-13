@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
@@ -278,14 +280,31 @@ npm cache clean -f
 npm install --save-dev jshint
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Installing Node JS and Grunt';
+export const POST_DESCRIPTION = 'This tutorial focuses on installing the platform, and provides resources for using Grunt.';
+export const POST_TAGS = ['javascript', 'node', 'grunt']
+
 export default function InstallNodeGrunt() {
-    const POST_TITLE = 'Installing Node JS and Grunt';
-    const POST_DESCRIPTION = 'This tutorial focuses on installing the platform, and provides resources for using Grunt.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2018-04-18'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2018-04-18-installing-node-js-and-grunt'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -319,7 +338,7 @@ export default function InstallNodeGrunt() {
                 <p>Note: I found this Stackoverflow post useful: <a className="underline focus:ring-2" href="https://stackoverflow.com/questions/42323485/set-environment-variables-on-mac-os-x-sierra#42323635" rel="nofollow noreferrer">Set environment variables: bash profile</a>. Please note to check that the path in the installer is shown in case it differs between versions. For my install, the path was correctly set.</p>
 
                 <h2>Step 2: Use a proxy with node</h2>
-                <p>If you require the use of a proxy with node, you set it with the below (this to this post <a href="https://jjasonclark.com/how-to-setup-node-behind-web-proxy/" rel="nofollow noreferrer">How to setup Node.js and Npm behind a corporate web proxy</a>).</p>
+                <p>If you require the use of a proxy with node, you set it with the below (this to this post <a href="https://web.archive.org/web/20190504045736/https://jjasonclark.com/how-to-setup-node-behind-web-proxy/" rel="nofollow noreferrer">How to setup Node.js and Npm behind a corporate web proxy</a>).</p>
                 <PrismCode
                     code={code}
                     language="shell-session"

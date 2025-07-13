@@ -1,20 +1,32 @@
 
 import Head from 'next/head'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { SITE_TITLE, HOME_OG_IMAGE_URL, SEARCH_URL, SITE_DESCRIPTION, SITE_DOMAIN } from '../lib/constants'
 import Layout from '../components/layout'
 import data from '../components/data/portfolio.json';
 import PortfolioCard from '../components/portfolio-card'
 import LatestPosts from '../components/latest-posts';
+import PostJsonLd from '../components/PostJsonLd'
+
+export const POST_TITLE = SITE_TITLE;
+export const POST_DESCRIPTION = SITE_DESCRIPTION;
+export const POST_DATE = '2025-01-01'; // Placeholder
+export const POST_TAGS = ['home'];
+
 
 function HomePage() {
-    const POST_TITLE = SITE_TITLE;
-    const POST_DESCRIPTION = SITE_DESCRIPTION;
     return (
         <Layout home>
             <Head>
-                <title>{POST_TITLE}</title>
+                <title>{`${POST_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname="/index"
+                />
             </Head>
             <h1 id="main-content">Home</h1>
             <p>Welcome to my website that features my portfolio consisting of Github Repositories and Photography, as well as tutorials that include tips and tricks for web development and at the odd times traveling.</p>

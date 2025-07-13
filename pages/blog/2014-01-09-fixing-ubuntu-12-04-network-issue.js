@@ -1,16 +1,34 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
+
+export const POST_TITLE = 'Fixing Ubuntu 12.04 network issue';
+export const POST_DESCRIPTION = 'While upgrading an Ubuntu virtual machine from Version 10 LTs to 12.04 LTS, I ran into networking issues with the static IP address and DNS servers.';
+export const POST_TAGS = ['servers', 'ubuntu', 'network']
 
 export default function UbuntuTwelveIssues() {
-    const POST_TITLE = 'Fixing Ubuntu 12.04 network issue';
-    const POST_DESCRIPTION = 'While upgrading an Ubuntu virtual machine from Version 10 LTs to 12.04 LTS, I ran into networking issues with the static IP address and DNS servers.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2014-01-09'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2014-01-09-fixing-ubuntu-12-04-network-issue'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -23,7 +41,7 @@ export default function UbuntuTwelveIssues() {
                 </ul>
                 <p>To fix this, I first I tried reconfiguring the networking, then adding DNS servers into the network interfaces with no luck. Also, tried editing various files mentioned in other posts.</p>
                 <p>Finally I ran across a post from Ask Ubuntu Forums (no longer available). So, here are the steps mentioned to resolve this issue:</p>
-                
+
                 <p>Create a copy of the following file: /etc/network/interfaces:</p>
                 <pre><kbd>
                     sudo cp /etc/network/interfaces /etc/network/iBKUp

@@ -8,17 +8,17 @@
 
 ### 📝 Content Maintenance & Metadata
 - [ ] 🚨 Search blog content for flagged terms like **"outdated"** and **Update in progress**. Work through outdated first.
-- [ ] 🚨 Detect and log broken or unreachable links
-- [ ] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
-- [ ] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
+- [x] 🚨 Detect and log broken or unreachable links
+- [x] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
+- [x] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
 - [ ] Update `generate-meta.js` to extract `POST_TAGS` values into `meta.json`
 - [ ] Update `generate-meta.js` to extract `POST_DATE` along with `POST_TAGS`
 - [ ] Display post date on blog index, sitemap, and post pages. blog index has but should be hard coded.
-- [ ] Add JSON-LD structured data to blog posts via `<Head>`
+- [x] Add JSON-LD structured data to blog posts via `<Head>`
     - Use `POST_TITLE`, `POST_DESCRIPTION`, `POST_DATE`, `POST_TAGS`
     - Include article-level schema (`@type: Article`)
     - [x] Create `PostJsonLd` component for JSON-LD metadata
-    - [ ] Include `<PostJsonLd />` in post `<Head>` block
+    - [x] Include `<PostJsonLd />` in post `<Head>` block
     
 ### 🧠 Tag Support
 - [ ] Enhance tag support to also filter/search by tag mentions or keywords in `meta.json`
@@ -32,6 +32,7 @@
   - Consider `aria-live` for live result regions
 
 ### 🖼️ Image Fixes & Cleanup
+- [ ] Fix footer icons
 - [ ] Swap out footer icons in `/public/icons` with your preferred optimized versions before launch
     - [ ] Add custom favicon images to `/public/icons`:
         - [ ] `favicon-16x16.png`

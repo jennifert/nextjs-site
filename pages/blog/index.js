@@ -2,15 +2,27 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
+
+export const POST_TITLE = BLOG_TITLE;
+export const POST_DESCRIPTION = 'A listing of all posts available currently.';
+export const POST_DATE = '2025-01-01'; // Placeholder
+export const POST_TAGS = ['blog'];
+
 
 export default function Blog() {
-    const POST_TITLE = BLOG_TITLE;
-    const POST_DESCRIPTION = 'Sorry, the server is having trouble loading the page';
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} | ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                   pathname="/blog"
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{BLOG_TITLE}</h1>

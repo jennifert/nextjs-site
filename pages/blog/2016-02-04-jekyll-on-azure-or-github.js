@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -29,14 +31,31 @@ class HelloWorld {
 }
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Configure Jekyll on Microsoft Azure or Github pages';
+export const POST_DESCRIPTION = 'This post described how to configure Github pages and Microsoft Azure.';
+export const POST_TAGS = ['jekyll', 'git', 'microsoft']
+
 export default function ConfigJekyllAzureGithubPages() {
-    const POST_TITLE = 'Configure Jekyll on Microsoft Azure or Github pages';
-    const POST_DESCRIPTION = 'This post described how to configure Github pages and Microsoft Azure.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2016-02-04'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2016-02-04-jekyll-on-azure-or-github'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -76,7 +95,7 @@ export default function ConfigJekyllAzureGithubPages() {
 
                 <p>You will need to wait a bit for your host to be created, so maybe grab a coffee and come back. The new site will be on the dashboard. to see your server information click on the website name you created.</p>
 
-                <p>In this example, I am connecting to my Github account that I use for development. If you wish, you can always just configure FTP (and other things like programming versions of languages like .Net, PHP, etc.) by accessing it in your <a className="underline focus:ring-2" href="https://docs.microsoft.com/en-us/azure/app-service/configure-common" rel="nofollow noreferrer">control panel</a>.</p>
+                <p>In this example, I am connecting to my Github account that I use for development. If you wish, you can always just configure FTP (and other things like programming versions of languages like .Net, PHP, etc.) by accessing it in your <a className="underline focus:ring-2" href="https://learn.microsoft.com/en-us/azure/app-service/configure-common" rel="nofollow noreferrer">control panel</a>.</p>
 
                 <p>Click on &quot;Publishing&quot; under &quot;Continuous deployment&quot; to set up your web application and it will being up various providers. Pick Github then follow the prompts to authorize Microsoft to access your Github account.</p>
 

@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -78,55 +80,73 @@ while ($query->have_posts()) {
 ?>;
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'WordPress Quick-tip: Display x number of posts outside your blog.';
+export const POST_DESCRIPTION = 'Sometime, you want to display posts outside of WordPress. Here are some resources to help.';
+export const POST_TAGS = ['php', 'wordpress']
+
 export default function TipDisplayWordpress() {
-    const POST_TITLE = 'WordPress Quick-tip: Display x number of posts outside your blog.';
-    const POST_DESCRIPTION = 'Sometime, you want to display posts outside of WordPress. Here are some resources to help.';
-   return (
-      <Layout>
-         <Head>
-            <title>{`${POST_TITLE} - ${BLOG_TITLE} -  ${SITE_TITLE}`}</title>
-         </Head>
-         <section aria-labelledby="main-content">
-            <h1 id="main-content">{POST_TITLE}</h1>
-               <p>Sometime, you want to display posts outside of WordPress. Here are some resources to help.</p>
-               
-               <p>From the <a  className="underline focus:ring-2" href="http://codex.wordpress.org/Integrating_WordPress_with_Your_Website" rel="nofollow noreferrer">Integrating WordPress in your Website</a> codex file, the first place you start is to include a WordPress header file:</p>
-            <PrismCode
-                   code={code}
-               language="php"
-               plugins={["line-numbers"]}
-               />
-               <p>If you are using a multi-site blog, you will also need to add the below under the require:</p>
-               <PrismCode
-                   code={code2}
-                   language="php"
-                   plugins={["line-numbers"]}
-               />
-               <p>From the codex, the quickest example of showing a post is the following code:</p>
-               <PrismCode
-                   code={code3}
-                   language="php"
-                   plugins={["line-numbers"]}
-               />
-               <p>Using the <a  className="underline focus:ring-2" href="http://codex.wordpress.org/Class_Reference/WP_Query" rel="nofollow noreferrer">WPQuery</a> function, you can target the number of days to show. The codex has the example code:</p>
-               <PrismCode
-                   code={code4}
-                   language="php"
-                   plugins={["line-numbers"]}
-               />
-               <p>Unfortunately, the number seemed to bit off. To fit it, I used the idea in the following post (<a  className="underline focus:ring-2" href="http://stackoverflow.com/questions/9010693/wordpress-display-posts-newer-than-30-days" rel="nofollow noreferrer">StackOverflow: Display posts newer than 30 days</a>) to add in my argument, -1.  Now, your same code should be similar to below:</p>
-               <PrismCode
-                   code={code5}
-                   language="php"
-                   plugins={["line-numbers"]}
-               />
-               <p>Full source code:</p>
-               <PrismCode
-                   code={code6}
-                   language="php"
-                   plugins={["line-numbers"]}
-               />
-         </section>
-      </Layout>
-   )
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2013-05-23'
+
+    return (
+        <Layout>
+            <Head>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
+                <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2013-05-23-wordpress-quicktip-display-x-number-of-posts-outside-your-blog'}
+                />
+            </Head>
+            <section aria-labelledby="main-content">
+                <h1 id="main-content">{POST_TITLE}</h1>
+                <p>Sometime, you want to display posts outside of WordPress. Here are some resources to help.</p>
+
+                <p>From the <a className="underline focus:ring-2" href="http://codex.wordpress.org/Integrating_WordPress_with_Your_Website" rel="nofollow noreferrer">Integrating WordPress in your Website</a> codex file, the first place you start is to include a WordPress header file:</p>
+                <PrismCode
+                    code={code}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+                <p>If you are using a multi-site blog, you will also need to add the below under the require:</p>
+                <PrismCode
+                    code={code2}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+                <p>From the codex, the quickest example of showing a post is the following code:</p>
+                <PrismCode
+                    code={code3}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+                <p>Using the <a className="underline focus:ring-2" href="http://codex.wordpress.org/Class_Reference/WP_Query" rel="nofollow noreferrer">WPQuery</a> function, you can target the number of days to show. The codex has the example code:</p>
+                <PrismCode
+                    code={code4}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+                <p>Unfortunately, the number seemed to bit off. To fit it, I used the idea in the following post (<a className="underline focus:ring-2" href="http://stackoverflow.com/questions/9010693/wordpress-display-posts-newer-than-30-days" rel="nofollow noreferrer">StackOverflow: Display posts newer than 30 days</a>) to add in my argument, -1.  Now, your same code should be similar to below:</p>
+                <PrismCode
+                    code={code5}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+                <p>Full source code:</p>
+                <PrismCode
+                    code={code6}
+                    language="php"
+                    plugins={["line-numbers"]}
+                />
+            </section>
+        </Layout>
+    )
 }

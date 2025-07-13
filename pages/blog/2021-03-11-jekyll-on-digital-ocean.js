@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
@@ -10,14 +12,31 @@ const code = `
 bundle lock --add-platform x86_64-linux
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Jekyll Static Sites on the Digital App Platform';
+export const POST_DESCRIPTION = 'This tutorial describes how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.';
+export const POST_TAGS = ['jekyll']
+
 export default function JekyllOnDigitalOcean() {
-    const POST_TITLE = 'Jekyll Static Sites on the Digital App Platform';
-    const POST_DESCRIPTION = 'This tutorial describes how to host your Jekyll static site (including plugins) on the new Digital Ocean App Platform.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2021-03-11'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2021-03-11-jekyll-on-digital-ocean'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -137,7 +156,7 @@ export default function JekyllOnDigitalOcean() {
                     priority={false}
                 />
 
-                <p>When you have a successful build, the interface will update with your live link. Click your digital ocean domain to have a look (if will be under your app name). For example, my link is: <a className="underline focus:ring-2" href="https://jekyll-site-cick5.ondigitalocean.app/">https://jekyll-site-cick5.ondigitalocean.app/</a></p>
+                <p>When you have a successful build, the interface will update with your live link. Click your digital ocean domain to have a look (if will be under your app name). For example, my link is: <a className="underline focus:ring-2" href="https://sea-lion-app-g2mm7.ondigitalocean.app/" rel="nofollow noreferrer">https://sea-lion-app-g2mm7.ondigitalocean.app/</a></p>
                 <Image
                     src="/blog/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-redeploy-sucess.png"
                     alt=""
@@ -176,31 +195,31 @@ export default function JekyllOnDigitalOcean() {
 
                 <p>You should first add your DNS or CNAME settings to your domain manager first, then wait 48-72 hours. Once it&apos;s been 72 hours, come back to the Add Domain page then click the button &quot;Add Domain&quot;. Once you click that button, the page will redirect back to your settings in the domain section. You should now see &quot;pending&quot; for your custom domain. It will take about 24 hours for the app platform to configure the rest.</p>
                 <p>Once it successfully configures, you will see a success message and log details (if you click view more). </p>
-                <Image
+                {/* <Image
                     src="/blog/2021-03-11-jekyll-on-digital-ocean/jekyll-domain-success-primary.png"
                     alt=""
                     width={800}
                     height={444}
                     priority={false}
-                />
+                /> */}
 
-                <p>Once you see &quot;Active&quot; as your status, repeat the steps to add &quot;www&quot; as a sub-domain (as seen below):</p>
-                <Image
+                <p>Now you see &quot;Active&quot; as your status, repeat the steps to add &quot;www&quot; as a sub-domain (as seen below):</p>
+                {/* <Image
                     src="/blog/2021-03-11-jekyll-on-digital-ocean/jekyll-add-subdomain.png"
                     alt=""
                     width={800}
                     height={680}
                     priority={false}
-                />
+                /> */}
 
                 <p>That&apos;s it! You should now just need to wait for the domain to update.</p>
-                <Image
+                {/* <Image
                     src="/blog/2021-03-11-jekyll-on-digital-ocean/jekyll-subdomain-pending.png"
                     alt=""
                     width={800}
                     height={202}
                     priority={false}
-                />
+                /> */}
 
                 <h2>Resources:</h2>
                 <ul className="list-disc list-inside m-2">

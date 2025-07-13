@@ -2,8 +2,8 @@
   {
     "route": "/blog/2012-11-08-japan-trip-2011",
     "url": "https://jenntesolin.com/blog/2012-11-08-japan-trip-2011",
-    "title": "Planning a vacation to Japan",
-    "description": "This post describes useful phrases, getting around and more in Japan.",
+    "title": "Japan Trip 2011: Planning and Tips",
+    "description": "Useful phrases, transit advice, and budget tips from my 2011 Japan trip.",
     "date": "2012-11-08T00:00:00.000Z",
     "tags": []
   },
@@ -155,7 +155,7 @@
     "route": "/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet",
     "url": "https://jenntesolin.com/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet",
     "title": "Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO",
-    "description": "This post described how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.",
+    "description": "This post describes how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.",
     "date": "2014-03-28T00:00:00.000Z",
     "tags": []
   },
@@ -339,16 +339,16 @@
     "route": "/",
     "url": "https://jenntesolin.com/",
     "title": "index",
-    "description": "Sorry, the server is having trouble loading the page",
-    "date": "2025-07-11T18:12:22.158Z",
+    "description": "A listing of all posts available currently.",
+    "date": "2025-07-13T05:15:26.463Z",
     "tags": []
   },
   {
     "route": "/blog/template",
     "url": "https://jenntesolin.com/blog/template",
-    "title": "The post name",
-    "description": "Description of the post",
-    "date": "2025-07-11T18:12:22.159Z",
+    "title": "New Blog Post Title",
+    "description": "Short description of what this post is about.",
+    "date": "2025-07-13T05:15:26.463Z",
     "tags": []
   },
   {
@@ -356,7 +356,7 @@
     "url": "https://jenntesolin.com/gallery",
     "title": "Gallery",
     "description": "A gallery of photos that Jennifer Tesolin has taken",
-    "date": "2025-07-11T18:12:22.159Z",
+    "date": "2025-07-13T05:15:26.463Z",
     "tags": []
   },
   {
@@ -364,15 +364,15 @@
     "url": "https://jenntesolin.com/portfolio",
     "title": "Portfolio",
     "description": "A list of projects and gists that Jennifer Tesolin has worked on.",
-    "date": "2025-07-11T18:12:22.159Z",
+    "date": "2025-07-13T05:15:26.463Z",
     "tags": []
   },
   {
     "route": "/search",
     "url": "https://jenntesolin.com/search",
-    "title": "search",
-    "description": "",
-    "date": "2025-07-11T18:12:22.159Z",
+    "title": "Search",
+    "description": "Search for a post or page, by title or tags.",
+    "date": "2025-07-13T05:15:26.464Z",
     "tags": []
   },
   {
@@ -380,7 +380,7 @@
     "url": "https://jenntesolin.com/series",
     "title": "Dev Series",
     "description": "Connected blog posts such as chromebook development, mac local development.",
-    "date": "2025-07-11T18:12:22.159Z",
+    "date": "2025-07-13T05:15:26.464Z",
     "tags": []
   }
 ]

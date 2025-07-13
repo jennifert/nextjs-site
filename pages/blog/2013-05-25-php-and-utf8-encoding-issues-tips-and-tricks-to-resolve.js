@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -33,14 +35,30 @@ const code3 = `
 <meta charset="UTF-8">
 `.trim();
 
+export const POST_TITLE = 'PHP and UTF8 encoding issues - Tips and tricks to resolve';
+export const POST_DESCRIPTION = 'Typically, having the proper character encoding on a page can be a bit of a pain, even if you have the right meta-tag. Here are some tips on how to ease the issue.';
+export const POST_TAGS = ['php', 'UTF8']
+
 export default function PhpUtfEncode() {
-    const POST_TITLE = 'PHP and UTF8 encoding issues - Tips and tricks to resolve';
-    const POST_DESCRIPTION = 'Typically, having the proper character encoding on a page can be a bit of a pain, even if you have the right meta-tag. Here are some tips on how to ease the issue.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2013-05-25'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2013-05-25-php-and-utf8-encoding-issues-tips-and-tricks-to-resolve'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>

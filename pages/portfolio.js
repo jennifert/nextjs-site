@@ -1,18 +1,29 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
 import data from '../components/data/portfolio.json';
 import PortfolioCard from '../components/portfolio-card'
+import PostJsonLd from '../components/PostJsonLd'
+
+export const POST_TITLE = 'Portfolio';
+export const POST_DESCRIPTION = 'A list of projects and gists that Jennifer Tesolin has worked on.';
+export const POST_DATE = '2025-01-01'; // Placeholder
+export const POST_TAGS = ['Portfolio', 'projects', 'development'];
 
 export default function Portfolio() {
-    const POST_TITLE = 'Portfolio';
-    const POST_DESCRIPTION = 'A list of projects and gists that Jennifer Tesolin has worked on.';
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} | ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname="/portfolio"
+                />
             </Head>
 
             <h1 id="main-content">Portfolio</h1>

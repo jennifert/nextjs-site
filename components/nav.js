@@ -2,40 +2,59 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { SITE_TITLE } from '../lib/constants'
 
-export default function Nav({ children, href }) {
+export default function Nav() {
     const router = useRouter();
     return (
         <nav aria-label="Site menu">
             <div className="container">
-                <p className="site-title">
-                    {SITE_TITLE}
-                </p>
+                <p className="site-title">{SITE_TITLE}</p>
                 <ul>
                     <li>
-                        {router.pathname === "/" ? <Link href="/" className="current-page" aria-current="page">Home</Link>
-                            : <Link href="/" className="other-page">Home</Link>}
+                        <Link
+                            href="/"
+                            className={router.pathname === "/" ? "current-page" : "other-page"}
+                            aria-current={router.pathname === "/" ? "page" : undefined}
+                        >
+                            Home
+                        </Link>
                     </li>
-
                     <li>
-                        {router.pathname === "/blog" ? <Link href="/" className="current-page" aria-current="page">Blog</Link>
-                            : <Link href="/blog" className="other-page">Blog</Link>}
+                        <Link
+                            href="/blog"
+                            className={router.pathname === "/blog" ? "current-page" : "other-page"}
+                            aria-current={router.pathname === "/blog" ? "page" : undefined}
+                        >
+                            Blog
+                        </Link>
                     </li>
                     <li>
-                        {router.pathname === "/gallery" ? <Link href="/" className="current-page" aria-current="page">Gallery</Link>
-                            : <Link href="/gallery" className="other-page">Gallery</Link>}
+                        <Link
+                            href="/gallery"
+                            className={router.pathname === "/gallery" ? "current-page" : "other-page"}
+                            aria-current={router.pathname === "/gallery" ? "page" : undefined}
+                        >
+                            Gallery
+                        </Link>
                     </li>
-
                     <li>
-                        {router.pathname === "/portfolio" ? <Link href="/" className="current-page" aria-current="page">Portfolio</Link>
-                            : <Link href="/portfolio" className="other-page">Portfolio</Link>}
+                        <Link
+                            href="/portfolio"
+                            className={router.pathname === "/portfolio" ? "current-page" : "other-page"}
+                            aria-current={router.pathname === "/portfolio" ? "page" : undefined}
+                        >
+                            Portfolio
+                        </Link>
                     </li>
-
                     <li>
-                        {router.pathname === "/search" ? <Link href="/" className="current-page" aria-current="page">Search</Link>
-                            : <Link href="/search" className="other-page">Search</Link>}
+                        <Link
+                            href="/search"
+                            className={router.pathname === "/search" ? "current-page" : "other-page"}
+                            aria-current={router.pathname === "/search" ? "page" : undefined}
+                        >
+                            Search
+                        </Link>
                     </li>
                 </ul>
-
             </div>
         </nav>
     );

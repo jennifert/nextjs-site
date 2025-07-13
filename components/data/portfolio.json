@@ -42,7 +42,7 @@
     "id": 3,
     "title": "Slim 3 YAML Search Web Service",
     "summary": "A web service built using Slim 3 and the 'mnapoli/front-yaml' composer library to search in YAML tags in a folder _post.",
-    "repo": "https://github.com/jennifert/Slim-3-web-Service-with-Sample-TypeScript-client-side-code",
+    "repo": "https://github.com/jennifert/php-jekyll-search",
     "demo": "",
     "tags": [
       "PHP",

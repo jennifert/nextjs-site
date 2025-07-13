@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE, BLOG_TITLE } from '../../lib/constants'
 import Layout from '../../components/layout'
+import PostJsonLd from '../../components/PostJsonLd'
 import dynamic from 'next/dynamic'
 const PrismCode = dynamic(() => import('../../components/prism'), { ssr: false })
 
@@ -54,14 +56,31 @@ const code4 = `
 </configuration>
 `.trim();
 
+// Metadata for the post
+export const POST_TITLE = 'Creating a development environment for IIS 7+';
+export const POST_DESCRIPTION = 'This post describes how to enable IIS on Windows 7, along with enabling MySql and Php. You will need Administrator Access to complete these steps.';
+export const POST_TAGS = ['server', 'iis', 'development']
+
 export default function IisDevEnvironmentSeven() {
-    const POST_TITLE = 'Creating a development environment for IIS 7+';
-    const POST_DESCRIPTION = 'This post describes how to enable IIS on Windows 7, along with enabling MySql and Php. You will need Administrator Access to complete these steps.';
+    const router = useRouter()
+
+    // Try to extract the date from the filename/route (e.g., 2012-11-08)
+    const fileSlug = router?.pathname?.split('/')?.pop() || ''
+    const dateMatch = fileSlug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const POST_DATE = dateMatch ? dateMatch[1] : '2015-03-14'
+
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} - ${BLOG_TITLE} - ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname={router?.pathname || '/blog/2015-03-14-IIS7-Development-Environment'}
+                />
             </Head>
             <section aria-labelledby="main-content">
                 <h1 id="main-content">{POST_TITLE}</h1>
@@ -159,7 +178,7 @@ export default function IisDevEnvironmentSeven() {
                     <li><a className="underline focus:ring-2" href="https://www.iandevlin.com/blog/2010/03/net/configuring-rss-with-iis/" rel="nofollow noreferrer">Configuring RSS with IIS</a></li>
                     <li><a className="underline focus:ring-2" href="https://stackoverflow.com/questions/4920576/create-virtual-directory-at-http-localhost/4920620#4920620" rel="nofollow noreferrer">How do I change permissions on wwwroot</a></li>
                     <li><a className="underline focus:ring-2" href="https://web.archive.org/web/20160401063938/http://php.net/manual/en/install.windows.iis7.php" rel="nofollow noreferrer">PHP.net Installation Docs</a></li>
-                    <li><a className="underline focus:ring-2" href="https://docs.microsoft.com/en-us/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis#PHP_Security_Recommendations_" rel="nofollow noreferrer">Security Recommendations</a></li>
+                    <li><a className="underline focus:ring-2" href="https://web.archive.org/web/20220501165321/https://docs.microsoft.com/en-us/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis" rel="nofollow noreferrer">Security Recommendations</a></li>
                     <li><a className="underline focus:ring-2" href="https://wordpress.org/support/article/editing-wp-config-php/" rel="nofollow noreferrer">WordPress: Editing wp.config.php</a></li>
                     <li><a className="underline focus:ring-2" href="https://docs.microsoft.com/en-us/iis/manage/configuring-security/how-to-set-up-ssl-on-iis" rel="nofollow noreferrer">How to Set Up SSL on IIS 7</a></li>
                     <li><a className="underline focus:ring-2" href="https://deanhume.com/set-up-iis-7-to-run-a-secure-site-locally-https/" rel="nofollow noreferrer">Set up IIS 7 to run a secure site locally - HTTPS</a></li>

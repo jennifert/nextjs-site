@@ -1,16 +1,28 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
+import PostJsonLd from '../components/PostJsonLd'
+
+
+export const POST_TITLE = '500 - Server-side error occurred';
+export const POST_DESCRIPTION = 'Sorry, the server is having trouble loading the page';
+export const POST_DATE = '2025-01-01'; // Placeholder
+export const POST_TAGS = ['405', 'error', 'server-trouble'];
 
 export default function Custom500() {
-    const POST_TITLE = '500';
-    const POST_DESCRIPTION = 'Sorry, the server is having trouble loading the page';
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} | ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname="/500"
+                />
             </Head>
 
             <section aria-labelledby="main-content">

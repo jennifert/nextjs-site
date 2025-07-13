@@ -12,7 +12,8 @@
         "generate-meta": "node scripts/generate-meta.js",
         "dev": "next dev",
         "build": "npm run generate-meta && next build",
-        "sync:jekyll": "node scripts/sync-to-jekyll.js"
+        "sync:jekyll": "node scripts/sync-to-jekyll.js",
+        "check:links": "npm run build && linkinator ./out"
     },
     "keywords": [],
     "repository": {
@@ -42,6 +43,7 @@
         "eslint": "^9.28.0",
         "eslint-config-next": "^15.3.3",
         "eslint-plugin-jsx-a11y": "^6.10.2",
+        "linkinator": "^6.1.4",
         "postcss": "^8.5.5",
         "style-loader": "^4.0.0",
         "tailwindcss": "^4.1.10"

@@ -2,15 +2,26 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { SITE_TITLE } from '../lib/constants'
 import Layout from '../components/layout'
+import PostJsonLd from '../components/PostJsonLd'
+
+const POST_TITLE = 'Dev Series';
+const POST_DESCRIPTION = 'Connected blog posts such as chromebook development, mac local development.';
+export const POST_DATE = '2025-01-01'; // Placeholder
+export const POST_TAGS = ['Series', 'development'];
 
 export default function Series() {
-    const POST_TITLE = 'Dev Series';
-    const POST_DESCRIPTION = 'Connected blog posts such as chromebook development, mac local development.';
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} - {SITE_TITLE}</title>
+                <title>{`${POST_TITLE} | ${SITE_TITLE}`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
+                <PostJsonLd
+                    title={POST_TITLE}
+                    description={POST_DESCRIPTION}
+                    date={POST_DATE}
+                    tags={POST_TAGS}
+                    pathname="/series" // or whatever path this is
+                />
             </Head>
 
             <section aria-labelledby="main-content">
@@ -43,14 +54,6 @@ export default function Series() {
                             href="/blog/2019-12-11-Jekyll-Set-Up-Publish"
                             className="underline focus:ring-2">Jekyll: Setting up your development environment</Link>
                     </li>
-                    {/* 
-                     Apache
-                    ASP.net
-                    Composer
-                    MySql/Maria DB
-                    PHP
-                    Python
-                    */}
                 </ul>
 
                 <h2>Windows Local Development</h2>

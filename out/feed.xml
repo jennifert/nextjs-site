@@ -7,10 +7,10 @@
     <language>en-us</language>
     
   <item>
-    <title>Planning a vacation to Japan</title>
+    <title>Japan Trip 2011: Planning and Tips</title>
     <link>https://jenntesolin.com/blog/2012-11-08-japan-trip-2011</link>
     <guid>https://jenntesolin.com/blog/2012-11-08-japan-trip-2011</guid>
-    <description>This post describes useful phrases, getting around and more in Japan.</description>
+    <description>Useful phrases, transit advice, and budget tips from my 2011 Japan trip.</description>
     <pubDate>Thu, 08 Nov 2012 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -143,7 +143,7 @@
     <title>Creating the Sticky footer with fixed navbar example with Bootstrap 3 using Emmet.IO</title>
     <link>https://jenntesolin.com/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet</link>
     <guid>https://jenntesolin.com/blog/2014-03-28-sticky-footer-with-fixed-navbar-example-with-bootstrap-3-and-emmet</guid>
-    <description>This post described how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.</description>
+    <description>This post describes how to use Emmet short codes to quickly create the bootstrap example Sticky footer with fixed navbar.</description>
     <pubDate>Fri, 28 Mar 2014 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -301,11 +301,11 @@
     <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>The post name</title>
+    <title>New Blog Post Title</title>
     <link>https://jenntesolin.com/blog/template</link>
     <guid>https://jenntesolin.com/blog/template</guid>
-    <description>Description of the post</description>
-    <pubDate>Fri, 11 Jul 2025 18:12:22 GMT</pubDate>
+    <description>Short description of what this post is about.</description>
+    <pubDate>Sun, 13 Jul 2025 05:15:26 GMT</pubDate>
   </item>
   </channel>
 </rss>

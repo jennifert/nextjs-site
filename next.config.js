@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     output: 'export', // ✅ Enables static HTML export
-    reactStrictMode: true,
+    reactStrictMode: false,
     poweredByHeader: false,
     trailingSlash: true,
     images: {
