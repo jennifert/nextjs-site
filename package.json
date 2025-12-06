@@ -27,25 +27,25 @@
     },
     "homepage": "https://github.com/jennifert/nextjs-site/#readme",
     "dependencies": {
-        "@babel/runtime": "^7.27.6",
+        "@babel/runtime": "^7.28.4",
         "@tailwindcss/forms": "^0.5.10",
-        "html-react-parser": "^5.2.5",
-        "next": "^15.4.7",
+        "html-react-parser": "^5.2.10",
+        "next": "^16.0.7",
         "prismjs": "^1.30.0",
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+        "react": "^19.2.1",
+        "react-dom": "^19.2.1"
     },
     "devDependencies": {
-        "@tailwindcss/postcss": "^4.1.10",
-        "autoprefixer": "^10.4.21",
+        "@tailwindcss/postcss": "^4.1.17",
+        "autoprefixer": "^10.4.22",
         "babel-plugin-prismjs": "^2.1.0",
         "css-loader": "^7.1.2",
-        "eslint": "^9.28.0",
-        "eslint-config-next": "^15.3.3",
+        "eslint": "^9.39.1",
+        "eslint-config-next": "^16.0.7",
         "eslint-plugin-jsx-a11y": "^6.10.2",
-        "linkinator": "^6.1.4",
-        "postcss": "^8.5.5",
+        "linkinator": "^7.5.1",
+        "postcss": "^8.5.6",
         "style-loader": "^4.0.0",
-        "tailwindcss": "^4.1.10"
+        "tailwindcss": "^4.1.17"
     }
 }

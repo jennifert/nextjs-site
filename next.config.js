@@ -1,21 +1,22 @@
 const path = require('path');
 
-module.exports = {
-    output: 'export', // ✅ Enables static HTML export
-    reactStrictMode: false,
-    poweredByHeader: false,
-    trailingSlash: true,
-    images: {
-        unoptimized: true,
-        loader: 'default',
-    },
-    webpack: (config) => {
-        // 👉 ONLY apply custom loaders to .prismcss virtual extension
-        config.module.rules.push({
-            test: /\.prismcss$/,
-            use: ['style-loader', 'css-loader'],
-        });
+const nextConfig = {
+  output: 'export',          // static HTML export
+  reactStrictMode: false,
+  poweredByHeader: false,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+    loader: 'default',
+  },
 
-        return config;
-    },
+  // You *can* add a turbopack section if you ever need custom rules,
+  // but for Prism + CSS you don't need anything here.
+  // turbopack: {
+  //   rules: {
+  //     // custom loader rules go here if you ever need them
+  //   },
+  // },
 };
+
+module.exports = nextConfig;
