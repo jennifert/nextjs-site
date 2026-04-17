@@ -158,6 +158,15 @@ Notes are used by:
 - the sitemap
 - structured data / page metadata
 
+### Available MDX components
+
+Notes can also use a small set of custom components when needed:
+
+- `Image` — wraps `next/image` for screenshots and note images
+- `SafeIframe` — wraps iframe embeds in a reusable container for safer styling and future tweaks
+
+These components are mapped in `pages/notes/[slug].js`.
+
 ## Search, Sitemap, and Metadata
 
 Search and sitemap pages currently rely on generated metadata and site content.
@@ -190,7 +199,7 @@ This helps ensure static pages are refreshed more consistently after deploys.
 
 ## Project Notes
 
-See [TODO.md](./TODO.md) for the current task list and migration notes.
+See [TODO.md](./TODO.md) for the current task list and migration notes, and [CHANGELOG.md](./CHANGELOG.md) for recent project updates.
 
 ## License
 
