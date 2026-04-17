@@ -3,7 +3,6 @@
 ## 🔝 Current Top Priorities
 - [ ] Finish the Next.js overhaul and move old blog posts to MDX
     - Finish converting old `.js` posts to `.mdx`
-= [ ] Do another passthrough of `README.md` to make sure its up to date.
 
 ### 📝 Content Maintenance & Metadata
 - [ ] Standardize and choose only one!  Quick Tip:, Quick tips:, and Quick Tips:.
