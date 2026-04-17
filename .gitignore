@@ -3,9 +3,8 @@ node_modules/
 npm-debug.log*
 
 # Build outputs
-.next/
-out/*
-!out/.gitkeep
+.next/ 
+#out/
 dist/
 build/
 coverage/
