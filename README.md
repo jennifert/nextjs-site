@@ -34,8 +34,8 @@ The current website for **jenntesolin.com** (moving hosts, see under about for t
 
 ## Requirements
 
-- Node.js: 22.16.0
-- npm: 10.9.2
+- Node.js: v25.9.0
+- npm: 11.12.1
 
 ## Version Information
 
