@@ -1,0 +1,16 @@
+---
+title: "Bootstrap and ASP.NET 4.0 master pages"
+description: "Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected."
+date: "2013-04-10"
+tags: ["bootstrap", "asp"]
+---
+
+Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected.
+
+After a lot of searching for a demo that used ASP.NET inside a master page, I came across a post on <a href="http://geekswithblogs.net/JeremyMorgan/archive/2012/09/18/how-to-use-twitter-bootstrap-on-an-asp.net-website.aspx" target="_blank" rel="nofollow noopener noreferrer">geekswithblogs.net</a>. However, the suggested `ResolveUrl` approach did not work correctly in my case.
+
+After some more debugging, I found a Stack Overflow post that used <a href="http://stackoverflow.com/questions/12452109/asp-net-2012-unobtrusive-validation-with-jquery" target="_blank" rel="nofollow noopener noreferrer">ScriptManager</a>. That finally got jQuery and the other scripts working properly.
+
+I uploaded the example code to my <a href="https://github.com/jennifert/Boostrap-ASP_Net-MasterPages" target="_blank" rel="nofollow noopener noreferrer">GitHub repository</a>, so hopefully it will be useful to anyone running into the same problem.
+
+Please note that this example uses Web Forms and C#.

@@ -1,0 +1,22 @@
+---
+title: "Quick Tip: MySQL CONCAT"
+description: "A quick example of using MySQL’s CONCAT function to combine two columns into one value."
+date: "2013-08-26"
+tags: ["tips", "sql", "mysql"]
+---
+
+While working on a project, I needed a way to combine two MySQL columns without handling it later in PHP or .NET.
+
+In this case, I wanted to join a first name and last name into a single full name value. For example, `Jenn` from `firstname` and `Tesolin` from `lastname` would be returned as `Jenn Tesolin`.
+
+MySQL’s `CONCAT` function is a simple way to do that directly in the query.
+
+```sql
+SELECT
+    CONCAT(firstname, ' ', lastname) As fullname
+FROM authors
+```
+
+Check out the <a href="https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_concat" target="_blank" rel="nofollow noopener noreferrer">official MySQL manual reference</a> for more examples and information.
+
+Hope this helps someone else.

@@ -1,0 +1,54 @@
+---
+title: "PHP and UTF-8 encoding issues: Tips and tricks to resolve them"
+description: "Character encoding can still be a pain, even when the right meta tag is in place. Here are a few tips that can help resolve common UTF-8 issues in PHP and MySQL."
+date: "2013-05-25"
+tags: ["php", "utf-8", "encoding"]
+---
+
+Character encoding can still be a pain, even when the right meta tag is in place. Here are a few tips that can help resolve common UTF-8 issues in PHP and MySQL.
+
+## 1. Add the following to the top of your PHP page:
+```php
+ini_set('default_charset', 'UTF-8');
+header('content-type: text/html; charset: utf-8');
+mb_language('uni');
+mb_internal_encoding('UTF-8');
+```
+
+## 2. MySQL collation
+
+Make sure your MySQL databases and tables use a UTF-8 collation. This can usually be changed in phpMyAdmin under the relevant database or table options.
+
+## 3. Make sure your MySQL connection declares UTF-8
+```php
+//currently: PDO
+$conn_info = 'mysql:host=localhost; dbname=test; charset=UTF8';
+$dbh = new PDO($conn_info, $db_user, $db_password);
+
+//Before 5.3.6: PDO
+$db = new PDO($con, $db_user, $db_password);
+$db->exec('set names utf8');
+
+//not recommended!
+if ($db = @mysql_connect($host, $username, $password)) {
+		mysql_select_db($databasename, $db);
+		mysql_set_charset("utf8");
+		mysql_query('SET NAMES utf8');
+        //code here
+}
+```
+
+## 4. Make sure the PHP file is saved as UTF-8, not ASCII
+
+Text editors such as Sublime Text can convert a file to UTF-8 for you, since some editors and IDEs may still use ASCII by default. In Sublime Text, go to **File → Save with Encoding → UTF-8**.
+
+It is also recommended to use PDO for database access. Check out this Tuts+ article, <a href="https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059" target="_blank" rel="nofollow noopener noreferrer">Why You Should Be Using PHP's PDO for Database Access</a>, for more information.
+
+## 5. Make sure your web page uses the UTF-8 meta tag as well:
+```php
+<meta charset="UTF-8">
+```
+
+## 6. Lastly
+
+Be sure to check your code editor’s settings to confirm that the file is being viewed and saved as UTF-8.

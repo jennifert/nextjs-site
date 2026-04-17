@@ -4,17 +4,17 @@ Contact: me@jenntesolin.com
 GitHub: https://github.com/jennifert
 
 /* SITE */
-Last update: 2025-06-12
-Language: English
+Last update: 2026-04-20
+Language: English (Canada)
 DocType: HTML5
 Standards: HTML5, CSS, JavaScript (ES6+)
-Components: Next.js 15, Tailwind CSS 4, PostCSS 8, PrismJS, ESLint, RSS/XML
-Build Tools: Node.js 20, Webpack (via Next), generate-meta.js
+Components: Next.js 16.x, React 19.x, MDX, Pico CSS, ESLint, RSS/XML
+Build Tools: Node.js, Webpack (via Next)
 Static Output: next export
 Search: Static meta.json, no API
-Accessibility: Keyboard nav, ARIA, screen reader friendly
+Accessibility: Keyboard navigation, ARIA, screen reader friendly
 
 /* DESIGN & TOOLS */
-Editor: VS Code
+Editor: VS Codium
 Design Tools: Figma, Affinity Photo
-Icons: (pending / currently text-based)
+Icons: Currently text-based

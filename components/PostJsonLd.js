@@ -1,6 +1,9 @@
-import { SITE_AUTHOR, SITE_URL } from '../lib/constants'
-
 export default function PostJsonLd({ title, description, date, tags, pathname }) {
+  const SITE_AUTHOR = 'Jenn Tesolin'
+  const SITE_URL = 'https://jenntesolin.com'
+
+  const cleanPath = `/${(pathname || '').replace(/^\/+/, '')}`
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -13,7 +16,7 @@ export default function PostJsonLd({ title, description, date, tags, pathname })
     "datePublished": date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${SITE_URL}${pathname.replace(/^\/+/, '')}`
+      "@id": `${SITE_URL}${cleanPath}`
     },
     "keywords": tags?.join(', ')
   }

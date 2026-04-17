@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 import PostJsonLd from '../components/PostJsonLd'
 
-export const POST_TITLE = '404: Page Not Found'
+export const POST_TITLE = 'Privacy'
 export const POST_DESCRIPTION = 'Sorry, the page you’re looking for doesn’t exist.'
 export const POST_DATE = '2026-04-20'
-export const POST_TAGS = ['404', 'error', 'not-found']
+export const POST_TAGS = ['Privacy']
 
-export default function Custom404() {
+export default function PrivacyPage() {
     return (
         <Layout>
             <Head>
@@ -21,25 +21,30 @@ export default function Custom404() {
                 description={POST_DESCRIPTION}
                 date={POST_DATE}
                 tags={POST_TAGS}
-                pathname="/404"
+                pathname="/privacy"
             />
 
             <main id="main-content">
                 <section>
                     <h1>{POST_TITLE}</h1>
+                    <p>This site does not currently use contact forms, analytics, or advertising trackers.</p>
+
+                    <p>Site search runs locally in the browser against a static JSON file and does not send search queries to me.</p>
+
+                    <p>If any cookies are set by the hosting platform or site framework, they are intended only for basic site delivery or functionality.</p>
+
+                    <p>If this changes in the future, this page will be updated.</p>
+
                     <p>
-                        Sorry, the page you are looking for cannot be found. If you arrived here
-                        from a broken link, feel free to{' '}
+                        If you notice content on this site that should not be public or believe something sensitive has
+                        been exposed, please report it through the&nbsp;
                         <a
-                            href="https://github.com/jennifert/nextjs-site/issues"
+                            href="https://github.com/jennifert/nextjs-site/security"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            report it on GitHub
+                            repository security page
                         </a>.
-                    </p>
-                    <p>
-                        <Link href="/">Back to home</Link>
                     </p>
                 </section>
             </main>

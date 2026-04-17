@@ -1,239 +1,209 @@
 # nextjs-site
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?logo=tailwindcss)](https://tailwindcss.com/)
-[![PostCSS](https://img.shields.io/badge/PostCSS-8-dd3a0a?logo=postcss)](https://postcss.org/)
-[![PrismJS](https://img.shields.io/badge/PrismJS-1.x-%23734f96?logo=prism)](https://prismjs.com/)
+[![Pico CSS](https://img.shields.io/badge/Pico_CSS-v2-0E7490)](https://picocss.com/)
+[![MDX](https://img.shields.io/badge/MDX-3.1.1-black)](https://mdxjs.com/)
 [![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)](https://eslint.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC_BY--NC--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Node.js](https://img.shields.io/badge/Node.js-22.16.0-brightgreen?logo=nodedotjs)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-10.9.2-red?logo=npm)](https://www.npmjs.com/)
 
-The current website for jenntesolin.com — built with Next.js and Tailwind CSS.
+The current website for **jenntesolin.com** — built with Next.js and React, with older notes being migrated to MDX over time.
 
-🚧 This site is actively being reworked — image references, layout polish, and metadata improvements are in progress.
+🚧 This site has been significantly reworked. Some older content is still being migrated and updated.
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Requirements](#requirements)
 - [Version Information](#version-information)
-- [🎨 Color Reference](#-color-reference)
-- [🚀 Quick Start](#-quick-start)
-  - [🧪 Lint the Code](#-lint-the-code)
-- [🛠 Generate Sitemap, Feed, and Search Metadata](#-generate-sitemap-feed-and-search-metadata)
-  - [🧾 Metadata Checklist for Pages and Blog Posts](#-metadata-checklist-for-pages-and-blog-posts)
-- [📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)](#-prismjs-plugin-css-handling-nextjs-15--tailwind-4)
-- [🔐 Local Environment Variables](#-local-environment-variables)
-- [🗂️ Development Tasks](#development-tasks)
-- [📄License](#license)
-- [🤖 humans.txt](#-humanstxt)
-- [:gem: Acknowledgments](#gem-acknowledgments)
+- [Current Stack](#current-stack)
+- [Quick Start](#quick-start)
+- [Linting](#linting)
+- [Content Structure](#content-structure)
+- [Notes and MDX](#notes-and-mdx)
+- [Search, Sitemap, and Metadata](#search-sitemap-and-metadata)
+- [Headers and Caching](#headers-and-caching-digitalocean-app-platform)
+- [Project Notes](#project-notes)
+- [License](#license)
+- [humans.txt](#humanstxt)
+- [Acknowledgments](#acknowledgments)
 
 ## Requirements
 
 - Node.js: 22.16.0
-- NPM: 10.9.2
+- npm: 10.9.2
 
 ## Version Information
 
-- Tailwind CSS: 4.x
-- PostCSS: 8.x
-- Next.js: 15.x
-- PrismJS: 1.x
-- React / React-DOM: 19.x
+- Next.js: 16.x
+- React / React DOM: 19.x
+- Pico CSS: 2.x
+- MDX: 3.x
 - ESLint: 9.x
 
-## 🎨 Color Reference
+## Current Stack
 
-This site uses Tailwind’s built-in palette. Key color usage:
+This site currently uses:
 
-| **Usage**        | **Tailwind Class**     | **Hex Code** |
-|------------------|------------------------|--------------|
-| Primary Nav BG   | `bg-indigo-500`        | `#6366F1`    |
-| Link Focus Ring  | `focus:ring-white`     | `#FFFFFF`    |
-| Warning BG       | `bg-yellow-200`        | `#FEF3C7`    |
-| Warning Text     | `text-yellow-600`      | `#B45309`    |
-| Card Border      | `border-gray-300`      | `#D1D5DB`    |
-| Footer Text      | `text-white`           | `#FFFFFF`    |
+- **Next.js** for routing and page generation
+- **React** for components
+- **MDX** for notes and older post content
+- **Pico CSS (classless)** for base styling
+- **Custom CSS** in `styles/style.css` for layout and site-specific tweaks
+- **ESLint** for linting
 
----
+### Styling Notes
 
-## 🚀 Quick Start
+The site is being rebuilt with a simple, accessibility-first styling approach.
+
+Base classless styling comes from `styles/pico.classless.min.css`, while most custom styling changes should be made in `styles/style.css`.
+
+In general:
+
+- Use Pico CSS for sensible default HTML styling.
+- Use `styles/style.css` for custom layout and component tweaks.
+- Avoid overcomplicating page-level styles unless needed.
+
+## Quick Start
 
 1. Clone the repo:
+
    ```bash
    git clone https://github.com/jennifert/nextjs-site.git
    cd nextjs-site
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
-3. Run the development server:
+3. Start the development server:
+
    ```bash
    npm run dev
    ```
 
-4. Build and export for static hosting:
+4. Build the site:
+
    ```bash
    npm run build
-   npm run export
    ```
 
-Output will be in the `out/` directory, suitable for DigitalOcean or other static hosts.
+5. Start the production server locally:
 
-### 🧪 Lint the Code
+   ```bash
+   npm run start
+   ```
 
-To check for code quality and accessibility issues:
+## Linting
+
+Run ESLint with:
 
 ```bash
 npm run lint
 ```
 
-This will run ESLint using your custom configuration and report any warnings or errors.
+## Content Structure
 
-## 🛠 Generate Sitemap, Feed, and Search Metadata
+This project currently uses a mix of standard Next.js pages and MDX content.
 
-⚠ These files are auto-generated. Do not edit meta.json, sitemap.xml, or feed.xml manually.
+### Main pages
 
-To automatically generate:
+Top-level pages live in `pages/`, for example:
 
-- `public/meta.json` for search and sitemap
-- `public/sitemap.xml` for SEO
-- `public/feed.xml` for RSS readers
+- `pages/index.js`
+- `pages/about.js`
+- `pages/projects.js`
+- `pages/photography.js`
+- `pages/notes.js`
 
-Run the following command:
+### Notes content
 
-```bash
-npm run generate-meta
+Notes are stored in:
+
+```txt
+content/notes/*.mdx
 ```
 
-Make sure all blog/page files are updated with correct `POST_TITLE`, `POST_DESCRIPTION`, and `POST_TAGS` constants. These are used to populate the metadata automatically.
+Supporting note utilities live in:
 
-### 🧾 Metadata Checklist for Pages and Blog Posts
+- `lib/notes.js`
+- `pages/notes/[slug].js`
 
-Ensure each file in `pages/` or `pages/blog/` contains:
+## Notes and MDX
 
-```js
-export const POST_TITLE = "My Page or Post Title";
-export const POST_DESCRIPTION = "A short, clear description used in meta tags and search.";
-export const POST_TAGS = ["tag1", "tag2"]; // Optional but recommended
-```
+Older post content is being migrated from `.js` page files to `.mdx`.
 
-These are used to generate:
+Each note should include frontmatter similar to:
 
-| File            | Purpose                    |
-|-----------------|----------------------------|
-| `meta.json`     | Search index and sitemap   |
-| `sitemap.xml`   | SEO                        |
-| `feed.xml`      | RSS title + excerpt        |
-| `<title>` tag   | Browser tab, SEO, social   |
-| `<meta name="description">` | SEO & previews |
-
-⚠ If any fields are missing, the page may be skipped in `meta.json` or show default/fallback metadata.
-
-## 📎 PrismJS Plugin CSS Handling (Next.js 15 + Tailwind 4)
-
-Next.js 15 and Tailwind 4.1 introduce stricter PostCSS rules. PrismJS plugin styles (like toolbar or line numbers) can break if imported directly. Here's the fix:
-
-### ✅ 1. Add a Custom Webpack Rule
-
-In `next.config.js`, add this rule:
-
-```js
-webpack: (config) => {
-  config.module.rules.push({
-    test: /\.prismcss$/,
-    use: ['style-loader', 'css-loader'],
-  });
-  return config;
-};
-```
-
-This isolates `.prismcss` imports from the PostCSS pipeline.
-
+```md
 ---
-
-### ✅ 2. Import Prism Styles with `?prismcss` Suffix
-
-In `_app.js` or related components:
-
-```js
-import 'prismjs/themes/prism-tomorrow.css?prismcss';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css?prismcss';
-import 'prismjs/plugins/toolbar/prism-toolbar.css?prismcss';
-```
-
-This ensures only Prism styles are handled by the custom rule.
-
-### ❌ Avoid Raw `.css` Imports
-
-```js
-// 🚫 Incorrect:
-import 'prismjs/plugins/toolbar/prism-toolbar.css';
-```
-
-This causes a build failure in Tailwind/PostCSS 8+ environments.
-
+title: "Example Note Title"
+description: "A short description for search, metadata, and previews."
+date: "2026-04-20"
+tags: ["tag1", "tag2"]
 ---
-
-## 🔐 Local Environment Variables
-
-This site currently does not require a `.env` file.
-
----
-
-## 🧾 Headers and Caching (DigitalOcean App Platform)
-
-To address aggressive or inconsistent caching behavior on deployed pages (especially with trailing slashes or refreshed routes), a `_headers` file is used in the `out/` directory after export.
-
-This ensures consistent behavior across static pages, especially when deployed to DigitalOcean's App Platform.
-
-### 📂 Example: `public/_headers`
-
 ```
+
+Notes are used by:
+
+- the notes index page
+- the site search
+- the sitemap
+- structured data / page metadata
+
+## Search, Sitemap, and Metadata
+
+Search and sitemap pages currently rely on generated metadata and site content.
+
+Files commonly involved include:
+
+- `public/meta.json`
+- `public/sitemap.xml`
+- `public/feed.xml`
+
+As the site is updated, metadata generation should account for both:
+
+- standard pages in `pages/`
+- MDX notes in `content/notes/`
+
+## Headers and Caching (DigitalOcean App Platform)
+
+To help avoid overly aggressive caching on deployed pages, a `_headers` file can be included in the output.
+
+### Example: `public/_headers`
+
+```txt
 /*
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
 ```
 
-This disables aggressive page caching, ensuring fresh loads for all routes.
+This helps ensure static pages are refreshed more consistently after deploys.
 
-> ✅ No additional config is required in `next.config.js` for this.
+## Project Notes
 
-The `_headers` file must be present in the output directory **before deployment**. It will be included during `npm run export`.
-
----
-
-## Development Tasks
-
-🗂️ See [TODO.md](./TODO.md) for the active task board and enhancements.
-
----
+See [TODO.md](./TODO.md) for the current task list and migration notes.
 
 ## License
 
-- 📄 **Code** is licensed under the [MIT License](./LICENSE)
-- 📝 **Content** (articles, posts, and media) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)
+- **Code** is licensed under the [MIT License](./LICENSE)
+- **Content** (articles, notes, and media) is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT)
 
----
+## humans.txt
 
-## 🤖 humans.txt
+For developer credits and site stack details, see [`public/humans.txt`](./public/humans.txt)
 
-For developer credits and site stack details, see [`/humans.txt`](./public/humans.txt)
+## Acknowledgments
 
----
-
-## :gem: Acknowledgments
-
-This project would not be possible without these fantastic community resources:
-
-- [Shields.io](https://shields.io/) — For README badges
+- [Shields.io](https://shields.io/) for README badges
+- [MDX](https://mdxjs.com/) for content authoring
+- [Next.js](https://nextjs.org/) for the site framework
 - [Awesome README](https://github.com/matiassingers/awesome-readme) — For formatting inspiration

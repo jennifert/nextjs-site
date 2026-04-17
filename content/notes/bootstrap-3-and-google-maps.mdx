@@ -1,0 +1,33 @@
+---
+title: "Bootstrap 3 and Google Maps"
+description: "Outdated: Notes on updating an older Google Maps setup for Bootstrap 3 tabs and modals."
+date: "2013-11-05"
+tags: ["javascript", "css", "google", "bootstrap"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services. For the most current example code, see the <a href="https://github.com/jennifert/JavaScript-Demos/tree/master/GoogleMaps" target="_blank" rel="nofollow noopener noreferrer">GitHub demo folder</a>.</small>
+
+Bootstrap 3 introduced changes that could stop Google Maps from displaying correctly inside tabs or modals. This post shows how to update older Bootstrap 2 code to work with that change.
+
+To use it in a tab, change the following:
+
+```js
+$("#myModal").modal({ show: false }).on("shown", function(){
+```
+
+To:
+
+```js
+$("#myModal").on("shown.bs.modal", function () {
+//or shown.bs.tab for tabs
+```
+
+That’s it.
+
+<a href="https://github.com/jennifert/JavaScript-Demos/tree/master/GoogleMaps" target="_blank" rel="nofollow noopener noreferrer">Check out the demo on GitHub</a> for examples covering Bootstrap v2 through v5.
+
+## Resources
+
+- <a href="http://stackoverflow.com/questions/19741208/goole-maps-in-navbar-in-bootstrap-3" target="_blank" rel="nofollow noopener noreferrer">Google Maps in Navbar in Bootstrap 3</a>
+- <a href="https://getbootstrap.com/docs/3.4/" target="_blank" rel="nofollow noopener noreferrer">Bootstrap Documentation: v3</a>
+- <a href="https://getbootstrap.com/docs/3.4/javascript/#modals" target="_blank" rel="nofollow noopener noreferrer">Bootstrap Documentation: Modals</a>

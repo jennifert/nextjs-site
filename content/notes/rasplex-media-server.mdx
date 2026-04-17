@@ -1,0 +1,45 @@
+---
+title: "Using RasPlex for your Media Server"
+description: "Update in progress: An older post about setting up a Raspberry Pi media centre with RasPlex."
+date: "2014-04-24"
+tags: ["streaming", "server", "raspberry-pi"]
+---
+
+> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update.</small>
+
+After trying quite a few Raspberry Pi operating systems and configurations, <a href="http://www.RasPlex.com/" target="_blank" rel="nofollow noopener noreferrer">RasPlex</a> became my preferred choice for a home media centre. At the time, it was one of the easiest options I found, with support for Wi-Fi, Bluetooth, HDMI output with analog speakers, and more. The best part was that the whole setup only took about 15 minutes. RasPlex also requires Plex Media Server, which was free and included access to various online channels.
+
+## Set up the SD card
+
+The first step is to <a href="https://www.rasplex.com/get-started/rasplex-installers.html" target="_blank" rel="nofollow noopener noreferrer">download the installer</a> for your operating system onto your computer. Installers were available for Mac, Linux, and Windows, and it was worth reading the notes on how to mount the installer properly.
+
+Next, select the version of RasPlex you want and choose your SD card drive. If you are not sure which drive to use, check your disk utility first. Then press “Update links” and click “Download.” It will prompt you for a download location and then show the progress in the terminal. Once that is finished, choose “Write SD card.”
+
+<Image
+  src="/notes/2014-04-24-rasplex-media-server/rasplex-1.png"
+  alt="A sample of the installer running"
+  width="636"
+  height="633"
+/>
+
+## Set up your Raspberry Pi
+
+Make sure all of your devices, including Bluetooth and Wi-Fi accessories, are connected before booting the machine. Let it complete the initial setup and restart itself.
+
+Once it reboots, follow the on-screen instructions for setup. At first, only the keyboard worked for me. Some of the setup options include Bluetooth, Wi-Fi, and connecting to your Plex Media Server.
+
+When you reach the menu, press the left arrow key to open the settings area. From there, you can adjust audio settings, enable SSH access, and make other changes. During setup it will usually choose HDMI audio, so if you are using stereo speakers you may need to switch the output to analog.
+
+<Image
+  src="/notes/2014-04-24-rasplex-media-server/RasPlex-2.jpg"
+  alt="RasPlex setup screen"
+  width="500"
+  height="333"
+/>
+
+That’s it. Hopefully this is still useful as a reference point while the post is being refreshed.
+
+## Resources
+
+- <a href="https://github.com/RasPlex/RasPlex/wiki/Guides" target="_blank" rel="nofollow noopener noreferrer">RasPlex GitHub guide pages</a>
+- <a href="https://www.RasPlex.com/docs/setup.html" target="_blank" rel="nofollow noopener noreferrer">Official RasPlex setup</a>

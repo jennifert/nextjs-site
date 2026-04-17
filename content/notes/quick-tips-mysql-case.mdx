@@ -1,0 +1,28 @@
+---
+title: "Quick tips: MySQL CASE"
+description: "How to use MySQL’s CASE function to handle conditional output in a SQL statement."
+date: "2013-08-11"
+tags: ["tips", "sql", "mysql"]
+---
+
+On this project, I needed to display a person’s title in French as part of a query result. The value depended on the person’s gender, which came from one table, while the masculine and feminine title values came from another table.
+
+In this case, the query checks the `Gender` column on the person record and then chooses the appropriate French title from the related title table. The result is returned as `titlefr` in the `SELECT`.
+
+Rather than handling all of that logic in the application layer, I looked for a SQL-based solution and found MySQL’s `CASE` function.
+
+`CASE` works a lot like a switch statement. The official <a href="https://dev.mysql.com/doc/refman/5.7/en/case.html" target="_blank" rel="nofollow noopener noreferrer">MySQL manual reference</a> explains it in more detail.
+
+```sql
+SELECT
+  person.name,
+  CASE
+    WHEN person.Gender = 'Female' THEN titles.titlef
+    WHEN person.Gender = 'Male' THEN titles.titlem
+  END AS titlefr
+FROM person
+JOIN titles
+  ON person.title_id = titles.id;
+```
+
+Hope this helps someone else.

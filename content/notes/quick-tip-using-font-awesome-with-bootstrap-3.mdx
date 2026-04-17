@@ -1,0 +1,46 @@
+---
+title: "Quick Tip: Using Font Awesome 4 with Bootstrap 3"
+description: "A quick post on how to use Font Awesome 4 with Bootstrap 3."
+date: "2013-11-06"
+tags: ["tips", "bootstrap", "css", "fonts", "font-awesome"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+This is a quick post on how to use <a href="http://fontawesome.io/" target="_blank" rel="nofollow noopener noreferrer">Font Awesome 4</a> with Bootstrap 3.
+
+These examples use the Font Awesome CDN, although there are other ways to include it in a project. For more setup options, see the <a href="https://fontawesome.com/v4.7/get-started/" target="_blank" rel="nofollow noopener noreferrer">Font Awesome 4 Getting Started</a> page.
+
+To use Font Awesome with Bootstrap 3, you may want a version of Bootstrap without Glyphicons included. This post shows two ways to do that.
+
+## Bootstrap CDN
+
+The first option is to use the official Bootstrap CDN version without Glyphicons included.
+
+```html
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+```
+
+- <a href="https://github.com/jennifert/JavaScript-Demos/blob/master/Bootstrap/fontawesome_bootstrap3.html" target="_blank" rel="nofollow noopener noreferrer">View the full page code on GitHub</a>
+
+## Custom Bootstrap CSS
+
+The second option is to <a href="https://getbootstrap.com/docs/3.4/customize/" target="_blank" rel="nofollow noopener noreferrer">configure your own Bootstrap download</a>. Under **LESS files** → **Components**, uncheck **Glyphicons**.
+
+You can also remove any JavaScript components you are not using. When finished, scroll to the bottom of the page and click **Compile and download**.
+
+```html
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+```
+
+## Notes
+
+Bootstrap 3 requires IE9+ or the latest versions of Safari, Chrome, or Firefox. Font Awesome 4 has its own browser support notes, so it is worth reviewing the <a href="https://fontawesome.com/v4.7/get-started/" target="_blank" rel="nofollow noopener noreferrer">Getting Started</a> page for compatibility details.
+
+## Resources
+
+- <a href="https://getbootstrap.com/docs/3.4/css/#forms" target="_blank" rel="nofollow noopener noreferrer">Bootstrap 3: Forms</a>
+- <a href="https://fontawesome.com/v4.7/examples/" target="_blank" rel="nofollow noopener noreferrer">Font Awesome 4: Examples</a>
+- <a href="http://www.bootstrapcdn.com/" target="_blank" rel="nofollow noopener noreferrer">Bootstrap CDN</a>

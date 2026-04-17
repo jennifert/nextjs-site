@@ -1,89 +1,44 @@
 # ✅ TODO List for jenntesolin.com Project
 
 ## 🔝 Current Top Priorities
-
-
-
-## IN Progress
+- [ ] Finish the Next.js overhaul and move old blog posts to MDX
+    - Finish converting old `.js` posts to `.mdx`
+= [ ] Do another passthrough of `README.md` to make sure its up to date.
 
 ### 📝 Content Maintenance & Metadata
-- [ ] 🚨 Search blog content for flagged terms like **"outdated"** and **Update in progress**. Work through outdated first.
-- [ ] Update `generate-meta.js` to extract `POST_TAGS` values into `meta.json`
-- [ ] Update `generate-meta.js` to extract `POST_DATE` along with `POST_TAGS`
-- [ ] Display post date on blog index, sitemap, and post pages. blog index has but should be hard coded.
-- [ ] Add JSON-LD structured data to blog posts update to include  article-level schema (`@type: Article`) in blog posts.
-- [ ] Add breadcrumbs to the top pf the page
-    
+- [ ] Standardize and choose only one!  Quick Tip:, Quick tips:, and Quick Tips:.
+- [ ] Display post dates on the notes index, sitemap, and note pages
+- [ ] Make sure metadata scripts include both pages and notes
+- [ ] Review old notes for broken links, outdated references, and wording cleanups
+- [ ] Check old PDFs and attachments still resolve correctly
+- [ ] Populate the href of all photos in json data.
+- [ ] Refactor `scripts/generate-meta.js` for the new site structure
+    - include metadata from `pages/*.js`
+    - include note metadata from `content/notes/*.mdx`
+    - switch routes from `/blog/` to `/notes/`
+    - update RSS output to use notes instead of blog posts
+    - make sure `meta.json`, `feed.xml`, and `sitemap.xml` all reflect the new structure
+
+### 🗂️ Routing & Structure
+- [ ] Add redirects from old `/blog/...` URLs to new `/notes/...` URLs
+- [ ] Confirm search, sitemap, and 404 page use updated Notes wording
+- [ ] Decide whether search should include only notes or all pages
+
+### 🎨 Notes / MDX
+- [ ] Search note content for flagged terms like **"outdated"** and **"Update in progress"**, then fix as needed
+  - Update in progress message: `> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update.</small>`
+  - Outdated message: `> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>`
+  - Review older posts and add one of these notices where appropriate
+
 ### 🧠 Tag Support
-- [ ] Enhance tag support to also filter/search by tag mentions or keywords in `meta.json`
-- [ ] Use tags in search, filters, or tag-based navigation components
-
-### 🎹 Accessibility Improvements
-- [ ] Add full keyboard support to search form
-  - Focus management
-  - `Enter` key support
-  - Consider `aria-live` for live result regions
-
-### 🖼️ Image Fixes & Cleanup
-- [ ] Fix footer icons
-- [ ] Swap out footer icons in `/public/icons` with your preferred optimized versions before launch
-    - [ ] Add custom favicon images to `/public/icons`:
-        - [ ] `favicon-16x16.png`
-        - [ ] `favicon-32x32.png`
-        - [ ] `apple-icon.png`
-    - [ ] Update `meta.js` to include favicon and Apple icon `<link>` tags
-
-### 💼 Portfolio Enhancements
-- [ ] Add tag-based filter UI for portfolio
-- [ ] Add capability in /search to look for not just blogs and pages but portfolio items. Or not needed?
+- [ ] Improve tag support for MDX notes and pages
+- [ ] Allow search/filtering by tags
+- [ ] Consider a tag archive or tag-based navigation later
 
 ### 🖼️ Social Sharing
-- [ ] Add OpenGraph meta tags (`og:title`, `og:description`, `og:image`) to blog posts and pages
-- [ ] Use a featured image (if available), otherwise fall back to a default site image
+- [ ] Add Open Graph meta tags (`og:title`, `og:description`, `og:image`) to notes and pages
+- [ ] Use a featured image when available, otherwise fall back to a default site image
 
-## 🧼 Optional Cleanup
-- [ ] Refactor `nav.js` to loop through route items instead of hardcoding `<Link>` elements
-
-## Completed
-### 📝 Content Maintenance & Metadata
-- [x] 🚨 Detect and log broken or unreachable links
-- [x] Add `POST_DATE = 'YYYY-MM-DD'` to each blog post file. get from filename.
-- [x] Add  `POST_TAGS = ['list', 'pokemon', 'game-design']` to each blog post file. get from blog/index as well as post content 
-- [x] Add JSON-LD structured data to blog posts via `<Head>`
-    - Use `POST_TITLE`, `POST_DESCRIPTION`, `POST_DATE`, `POST_TAGS`
-    - Include article-level schema (`@type: Article`)
-    - [x] Create `PostJsonLd` component for JSON-LD metadata
-    - [x] Include `<PostJsonLd />` in post `<Head>` block
-### 🚀 **Deploy to DigitalOcean**
-    - Target: [jenntesolin.com](http://jenntesolin.com)
-   - Will update domain DNS after confirming image fixes + production build
-   - ⏳ Test live site behavior post-deploy
-   - ⏳ Confirm environment variables + build script
-   - ⏳ Set up GitHub Actions or push pipeline
-
-### 🖼️ Image Fixes & Cleanup
-- [x] Optionally replace social icons with inline SVG for accessibility + performance
-- [x] Fixed Gallery Images, alsi moved from being hard coded to Components/data/gallerydata.js
-- [x] 🚨 Restore and optimize all images
-
-### 💼 Portfolio Enhancements
-- [x] 🚨 Fix and improve styles for portfolio cards
-- [x] Highlight featured projects (`featured: true`)
-- [x] Sort portfolio projects by date (newest first)
-
-### 🔍 Search for Static Blog
-- [x] Use `meta.json` (generated by `generate-meta.js`) for search
-- [x] Implement React-based search UI without an API
-- [x] Include `POST_TITLE`, `POST_DESCRIPTION`, `route`, and optionally `tags`
-
-### 🧠 SEO / Metadata Cleanup
-- [x] Standardize `<meta name="description" content={SITE_DESCRIPTION} />` on all pages
-- [x] Ensure each page has a unique `<title>...</title>` tag
-- [x] Refactor layout/meta component to handle shared tags cleanly
-
-### 🗺️ Sitemap Display
-- [x] Use `meta.json` to generate a human-readable `sitemap.js` page
-- [x] Group routes by prefix and render page titles as links
-
-### 🧠 Tag Support
-- [x] Add `export const POST_TAGS = ['tag1', 'tag2']` to each page or blog post
+### 🧭 Nice-to-have Later
+- [ ] Add breadcrumbs to note detail pages if needed
+- [ ] Add Prism.js back in

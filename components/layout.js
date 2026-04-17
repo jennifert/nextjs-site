@@ -1,10 +1,9 @@
-// import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import Nav from '../components/nav'
 import Footer from '../components/footer'
+import Header from './header'
 import Meta from './meta'
 
-export default function Layout({ children }) {
+export default function Layout({ children, home = false }) {
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
         setMounted(true);
@@ -12,8 +11,8 @@ export default function Layout({ children }) {
 
     if (!mounted) {
         return (
-            <div className="min-h-screen bg-white text-center p-8">
-                <p className="text-gray-500">Loading site...</p>
+            <div className="not-mounted">
+                <p>Loading site... Please ensure Javascript is enabled.</p>
             </div>
         );
     }
@@ -21,10 +20,10 @@ export default function Layout({ children }) {
     return (
         <>
             <Meta />
-            <span className="sr-only"><a href="#main-content">Skip to main content</a></span>
-            <header><Nav /></header>
-            <main>{children}</main>
-            <Footer />
+            <a href="#main-content" className="skip-link">Skip to main content</a>
+            <Header />
+            {children}
+            <Footer home={home} />
         </>
     )
 }

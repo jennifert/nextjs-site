@@ -1,0 +1,27 @@
+---
+title: "Quick Tip: MySQL REPLACE"
+description: "How to use MySQL’s REPLACE() function to change text in SELECT and UPDATE queries."
+date: "2013-10-23"
+tags: ["tips", "sql", "mysql"]
+---
+
+While looking for ways to improve my MySQL queries, I came across MySQL’s `REPLACE()` function. It can be useful when you need to swap one piece of text for another in a query result or directly in stored data.
+
+This post shows a simple example using `REPLACE()` in both `SELECT` and `UPDATE` queries.
+
+## Using REPLACE() in a SELECT query
+
+```sql
+SELECT field1,
+      REPLACE(stringVar, 'search for', 'string to replace with') AS field2,
+      field3
+FROM testdb
+```
+
+## Using REPLACE() in an UPDATE query
+
+```sql
+UPDATE testDB2
+SET stringVar = REPLACE (stringVar, 'search for', 'string to replace with')
+WHERE id=1
+```

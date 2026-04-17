@@ -1,22 +1,43 @@
-
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
 const SITE_URL = 'https://jenntesolin.com';
 const PAGES_DIR = path.join(__dirname, '../pages');
+const NOTES_DIR = path.join(__dirname, '../content/notes');
 const OUTPUT_DIR = path.join(__dirname, '../public');
 
-const EXCLUDED_FILES = new Set(['_app.js', '_document.js', '404.js', '500.js', 'sitemap.js', 'template.js']);
+const EXCLUDED_FILES = new Set([
+  '_app.js',
+  '_document.js',
+  '404.js',
+  '500.js',
+  'template.js'
+]);
 
-function readMetaFromFile(filePath, routePrefix = '') {
+const EXCLUDED_PAGE_DIRS = new Set([
+  'notes',
+  'api'
+]);
+
+function readMetaFromPageFile(filePath) {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const slug = path.basename(filePath, '.js');
-  const route = slug === 'index' ? '/' : `/${routePrefix}${slug}`;
+  const route = slug === 'index' ? '/' : `/${slug}`;
   const url = SITE_URL + route;
 
   const titleMatch = raw.match(/const\s+POST_TITLE\s*=\s*['"`](.*?)['"`]/);
   const descMatch = raw.match(/const\s+POST_DESCRIPTION\s*=\s*['"`](.*?)['"`]/);
-  const dateMatch = filePath.match(/(\d{4}-\d{2}-\d{2})/);
+  const dateMatch = raw.match(/const\s+POST_DATE\s*=\s*['"`](.*?)['"`]/);
+  const tagsMatch = raw.match(/const\s+POST_TAGS\s*=\s*\[(.*?)\]/s);
+
+  let tags = [];
+  if (tagsMatch) {
+    tags = tagsMatch[1]
+      .split(',')
+      .map(tag => tag.trim().replace(/^['"`]|['"`]$/g, ''))
+      .filter(Boolean);
+  }
 
   return {
     route,
@@ -24,30 +45,54 @@ function readMetaFromFile(filePath, routePrefix = '') {
     title: titleMatch ? titleMatch[1] : slug,
     description: descMatch ? descMatch[1] : '',
     date: dateMatch ? new Date(dateMatch[1]).toISOString() : new Date().toISOString(),
-    tags: [] // Placeholder for future support
+    tags
   };
 }
 
 function collectPages() {
   const entries = fs.readdirSync(PAGES_DIR, { withFileTypes: true });
-  let pages = [];
+  const pages = [];
 
   for (const entry of entries) {
     const entryPath = path.join(PAGES_DIR, entry.name);
 
     if (entry.isFile() && entry.name.endsWith('.js') && !EXCLUDED_FILES.has(entry.name)) {
-      pages.push(readMetaFromFile(entryPath));
+      pages.push(readMetaFromPageFile(entryPath));
     }
 
-    if (entry.isDirectory() && entry.name === 'blog') {
-      const blogFiles = fs.readdirSync(entryPath).filter(f => f.endsWith('.js'));
-      blogFiles.forEach(file => {
-        pages.push(readMetaFromFile(path.join(entryPath, file), 'blog/'));
-      });
+    if (entry.isDirectory() && !EXCLUDED_PAGE_DIRS.has(entry.name)) {
+      // skip nested page directories for now unless you want to support them explicitly
+      continue;
     }
   }
 
   return pages;
+}
+
+function collectNotes() {
+  if (!fs.existsSync(NOTES_DIR)) return [];
+
+  const files = fs.readdirSync(NOTES_DIR).filter(file => file.endsWith('.mdx'));
+
+  return files.map(file => {
+    const fullPath = path.join(NOTES_DIR, file);
+    const raw = fs.readFileSync(fullPath, 'utf-8');
+    const { data } = matter(raw);
+
+    const slug = file.replace(/\.mdx$/, '');
+    const route = `/notes/${slug}`;
+    const url = SITE_URL + route;
+
+    return {
+      route,
+      url,
+      title: data.title || slug,
+      description: data.description || '',
+      date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
+      tags: data.tags || [],
+      draft: data.draft || false
+    };
+  }).filter(note => !note.draft);
 }
 
 function generateSitemap(entries) {
@@ -63,23 +108,32 @@ function generateSitemap(entries) {
 </urlset>`;
 }
 
+function escapeXml(str = '') {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function generateRSS(posts) {
   const items = posts.map(post => `
   <item>
-    <title>${post.title}</title>
+    <title>${escapeXml(post.title)}</title>
     <link>${post.url}</link>
     <guid>${post.url}</guid>
-    <description>${post.description}</description>
+    <description>${escapeXml(post.description)}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
   </item>`).join('');
 
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>Jenn Tesolin Blog</title>
+    <title>Jenn Tesolin Notes</title>
     <link>${SITE_URL}</link>
-    <description>Articles and tutorials from Jenn Tesolin</description>
-    <language>en-us</language>
+    <description>Notes and write-ups from Jenn Tesolin</description>
+    <language>en-ca</language>
     ${items}
   </channel>
 </rss>`;
@@ -94,20 +148,28 @@ function writeMetaJson(entries) {
     date: e.date,
     tags: e.tags || []
   }));
+
   fs.writeFileSync(path.join(OUTPUT_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
 }
 
 function main() {
-  const entries = collectPages();
+  const pages = collectPages();
+  const notes = collectNotes();
+  const entries = [...pages, ...notes];
+
   const seen = new Set();
-  const uniqueEntries = entries.filter(e => {
-    if (seen.has(e.route)) return false;
-    seen.add(e.route);
+  const uniqueEntries = entries.filter(entry => {
+    if (seen.has(entry.route)) return false;
+    seen.add(entry.route);
     return true;
   });
 
+  uniqueEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   const sitemap = generateSitemap(uniqueEntries);
-  const feed = generateRSS(uniqueEntries.filter(e => e.route.startsWith('/blog')));
+  const feed = generateRSS(
+    uniqueEntries.filter(entry => entry.route.startsWith('/notes/'))
+  );
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemap.trim());
   fs.writeFileSync(path.join(OUTPUT_DIR, 'feed.xml'), feed.trim());

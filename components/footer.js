@@ -1,88 +1,63 @@
-import Image from 'next/image'
-import parse from 'html-react-parser';
 import Link from 'next/link'
-import { COPYRIGHT, ARTICLE_LICENSE_LINK, ARTICLE_LICENSE_TEXT } from '../lib/constants'
+// import { useRouter } from 'next/router'
 
-export default function Footer(props) {
+export default function Footer({ home = false }) {
+    // const router = useRouter();
     return (
         <footer>
-            <nav aria-label="Social Media">
-                <ul className="social-logos">
-                    <li>
-                        <a href="https://github.com/jennifert?tab=repositories" rel="nofollow noreferrer" aria-label="Github Repositories">
-                            Github
-                            <Image
-                                src="/icons/github.png"
-                                alt="Github Repositories"
-                                width={30}
-                                height={30}
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/feed.xml" rel="nofollow noreferrer" aria-label="Site Feed">
-                            RSS
-                            <Image
-                                src="/icons/rssfeed.png"
-                                alt="Site Feed"
-                                width={30}
-                                height={30}
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" rel="nofollow noreferrer" aria-label="LinkedIn Profile">
-                            LinkedIn
-                            <Image
-                                src="/icons/linkedin.png"
-                                alt="LinkedIn Profile"
-                                width={30}
-                                height={30}
-                            />
-                        </a>
-                    </li>
-
-                    <li>
-                        <Link href="/sitemap" className="underline focus:ring-2">
-                            Sitemap
-                            <Image
-                                src="/icons/sitemap.png"
-                                alt="Sitemap"
-                                width={30}
-                                height={30}
-                            />
-                        </Link>
-                    </li>
-                    
-                    <li>
-                        <Link href="/humans.txt" rel="author" className="underline focus:ring-2">
-                            Humans.txt
-                            <Image
-                                src="/icons/humanstxt.png"
-                                alt="Humans.txt"
-                                width={30}
-                                height={30}
-                            />
-                        </Link>
-                    </li>
+            <nav aria-label="Footer links" className="footer-links">
+                <ul>
+                    <li><small><a href="https://github.com/jennifert?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a></small></li>
+                    <li><small><a href="http://ca.linkedin.com/pub/jennifer-tesolin/2b/5bb/3a6" target="_blank" rel="noopener noreferrer">LinkedIn</a></small></li>
+                    <li><small><a href="https://www.flickr.com/photos/203901042@N06/" target="_blank" rel="noopener noreferrer">Flickr</a></small></li>
+                    <li><small><a href="/feed.xml">RSS</a></small></li>
+                    <li><small><Link href="/search">Search</Link></small></li>
+                    <li><small><Link href="/privacy">Privacy</Link></small></li>
+                    <li><small><a href="/humans.txt" rel="author">Humans.txt</a></small></li>
+                    <li><small><Link href="/sitemap">Sitemap</Link></small></li>
                 </ul>
             </nav>
-            <div className="copyright">
-                <p>{parse(COPYRIGHT)}</p>
-            </div>
-            <div className="license">
+
+            {!home && (
+
                 <p>
-                    Content licensed under{' '}
-                    <a
-                        href={ARTICLE_LICENSE_LINK}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="underline focus:ring-2"
-                    >
-                        {ARTICLE_LICENSE_TEXT}
-                    </a>
+
+                    <small>A home for projects, photography, and other interests.</small>
+
                 </p>
-                <p>🚧 Some styles, images and screenshots are being restored — full gallery and post content coming soon!</p>
+
+            )}
+
+            <div className="copyright">
+                <p><small>&copy; 2026 Jennifer Tesolin.</small></p>
+                <p>
+                    <small>
+                        Content licensed under{' '}
+                        <a
+                            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CC BY-NC-SA 4.0
+                        </a>.
+                        Source code for this site is{' '}
+                        <a
+                            href="https://github.com/jennifert/nextjs-site/blob/main/LICENSE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            MIT licensed
+                        </a>{' '}
+                        and available on{' '}
+                        <a
+                            href="https://github.com/jennifert/nextjs-site"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>.
+                    </small>
+                </p>
             </div>
         </footer>
     )
