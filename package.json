@@ -10,6 +10,9 @@
         "start": "next start",
         "lint": "npx eslint ."
     },
+    "engines": {
+        "node": "22.x"
+    },
     "keywords": [
         "nextjs",
         "mdx",
