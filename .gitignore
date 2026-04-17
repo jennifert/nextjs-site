@@ -4,7 +4,8 @@ npm-debug.log*
 
 # Build outputs
 .next/
-#out/
+out/*
+!out/.gitkeep
 dist/
 build/
 coverage/
