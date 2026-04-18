@@ -1,0 +1,51 @@
+---
+title: "Fixing Ubuntu 12.04 network issue"
+description: "Outdated: Notes on fixing a network issue after upgrading an Ubuntu virtual machine from 10 LTS to 12.04 LTS."
+date: "2014-01-09"
+tags: ["servers", "ubuntu", "network"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+While upgrading an Ubuntu virtual machine from version 10 LTS to 12.04 LTS, I ran into networking issues with the static IP address and DNS servers. The web server was still accessible on the network, but the virtual machine could not ping Google or download updates.
+
+## Errors encountered
+
+- waiting for 60 more seconds for ...
+- Booting without full network capability
+- Network ... not compatible with this version of Ubuntu
+
+## What I tried first
+
+To fix this, I first tried reconfiguring the networking and adding DNS servers to the network interfaces, but that did not help. I also tried editing various files mentioned in other posts.
+
+Eventually, I came across a post on the Ask Ubuntu forums. These were the steps that resolved the issue for me.
+
+## Fix
+
+Create a copy of the following file:
+
+```bash
+sudo cp /etc/network/interfaces /etc/network/iBKUp
+```
+
+Edit the network interface file as root:
+
+```bash
+sudo nano /etc/network/interfaces
+```
+
+Make sure the file only contains:
+
+```bash
+auto lo
+iface lo inet loopback
+```
+
+Reboot the machine.
+
+After these steps, the machine should hopefully boot normally and the network settings should resolve themselves as well.
+
+In the network settings, re-add the static IP information to your wired connection, then reboot once more.
+
+Hope this helps others.

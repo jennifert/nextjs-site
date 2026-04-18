@@ -1,0 +1,61 @@
+---
+title: "Creating the Sticky Footer with Fixed Navbar example using Bootstrap 3 and Emmet"
+description: "Outdated: This post describes how to use Emmet shortcuts to quickly create Bootstrap’s Sticky Footer with Fixed Navbar example."
+date: "2014-03-28"
+tags: ["css", "emmet", "bootstrap"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+This post describes how to use <a href="https://emmet.io/" target="_blank" rel="nofollow noopener noreferrer">Emmet</a> shortcuts to quickly create Bootstrap’s <a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/" target="_blank" rel="nofollow noopener noreferrer">Sticky Footer with Fixed Navbar</a> example using Bootstrap 3.
+
+## Step 1: Set up the HTML, body content, and JavaScript
+
+### Emmet code
+
+```plaintext
+html:5>(div.navbar.navbar-default.navbar-fixed-top>div.container>div.navbar-header>btn:r.navbar-toggle>span.sr-only{Toggle navigation}+span.icon-bar+span.icon+span.icon^a.navbar-brand{Welcome!}^div.collapse.navbar-collapse>ul.nav.navbar-nav>li*3>a^li.dropdown>a.dropdown-toggle{Dropdown }>b.caret^ul.dropdown-menu>li*3>a^li.divider+li.dropdown-header{Nav Header}+li*3>a^^^^^^^div.container>div.page-header>h1{Page Header Heer}^p.lead>lorem^^div#footer>div.container>p.text-muted{Copy Right Info}^^script:src{js/jquery-1.11.0.min.js}+script:src{js/bootstrap.min.js})
+```
+
+There are a few limitations with Emmet, such as not being able to define the JavaScript source location directly, so we will need to make some manual tweaks.
+
+### Tweaking the output
+
+For this specific code, we will need to:
+
+1. Add `role="navigation"` to `navbar.navbar-default.navbar-fixed-top`
+2. Add `data-toggle="collapse" data-target=".navbar-collapse"` to the toggle navigation `<button>`
+3. Add your link under `navbar-brand`
+4. Update the links, text, and active item in `nav.navbar-nav`
+5. In the dropdown toggle, add `data-toggle="dropdown"`
+6. Edit the `h1` tag inside the `page-header` div
+7. Update the copyright information
+8. Move the JavaScript path between the `<script>` tags into `src=""`
+
+## Step 2: Insert the rest of the header information
+
+### Emmet code
+
+Next, use an edit point to fill in the header tags. Please note that you will need to place your cursor under the `<title>` tag.
+
+```plaintext
+meta:vp+link:favicon+meta:compat+link:css{css/bootstrap.min.css}+link:css
+```
+
+### Tweaking the output
+
+Now we will need to make a few more changes.
+
+1. Add `favicon.ico` if needed
+2. Change `ie=7` to `ie=edge` in the meta tag
+3. In the `style.css` file where Bootstrap is nested, cut and paste the Bootstrap stylesheet in place of `styles.css`
+4. Between the updated Bootstrap CSS and `styles.css`, paste your conditional comments
+
+```plaintext
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+```
+
+In `styles.css`, paste the Bootstrap example styles from the <a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" target="_blank" rel="nofollow noopener noreferrer">Bootstrap example CSS file</a>.

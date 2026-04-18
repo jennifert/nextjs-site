@@ -1,0 +1,54 @@
+---
+title: "Raspberry Pi: Setting Up Bluetooth"
+description: "Outdated: Notes on setting up a Bluetooth dongle with Raspbmc on a Raspberry Pi."
+date: "2014-03-17"
+tags: ["diy", "raspberry-pi"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+Setting up a Bluetooth dongle with Raspbmc could be a bit tricky. This post collects the steps and notes that helped me get it working.
+
+## Requirements
+
+- Raspberry Pi
+- Bluetooth dongle
+- Wi-Fi or Ethernet connection
+
+## Steps
+
+I found the <a href="https://web.archive.org/web/20140706151942/http://www.ctheroux.com/2012/08/a-step-by-step-guide-to-setup-a-bluetooth-keyboard-and-mouse-on-the-raspberry-pi/" target="_blank" rel="nofollow noopener noreferrer">following guide</a> very helpful, but I kept running into errors.
+
+To fix that, run the following commands after rebooting and instead of the original Bluetooth install step:
+
+```bash
+apt-get install obex-data-server
+apt-get install bluetooth bluez-utils blueman bluez-compat
+```
+
+If you have tried to install Bluetooth in the past and it is still broken, run:
+
+```bash
+sudo dpkg --configure -a
+```
+
+Unfortunately, I still ran into pairing problems with the following error:
+
+> Creating device failed: org.bluez.Error.AuthenticationRejected: Authentication Rejected
+
+Based on another article, the next step was to edit:
+
+```bash
+sudo nano /usr/bin/bluez-simple-agent
+```
+
+Then change `KeyboardDisplay` to `DisplayYesNo`.
+
+## Note
+
+Some Bluetooth devices did not work well on Raspbmc, especially audio devices. At the time, it was often suggested on the Raspberry Pi forums to use OpenELEC or Xbian instead.
+
+## Resources
+
+- <a href="https://web.archive.org/web/20140706151942/http://www.ctheroux.com/2012/08/a-step-by-step-guide-to-setup-a-bluetooth-keyboard-and-mouse-on-the-raspberry-pi/" target="_blank" rel="nofollow noopener noreferrer">Step-by-step guide for setting up a keyboard and mouse on Raspberry Pi</a>
+- <a href="https://web.archive.org/web/20210127000542/http://www.correlatedcontent.com/blog/bluetooth-keyboard-on-the-raspberry-pi/" target="_blank" rel="nofollow noopener noreferrer">Bluetooth keyboard on the Raspberry Pi</a>

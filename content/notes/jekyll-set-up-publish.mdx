@@ -1,0 +1,151 @@
+---
+title: "Jekyll: Setting up your development environment"
+description: "Update in progress: Jekyll is a static site generator built with Ruby. This post covers an older setup for getting a local Jekyll development environment running."
+date: "2019-12-11"
+tags: ["jekyll"]
+---
+
+> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update.</small>
+
+Jekyll is a static site generator built with Ruby. It can be a great alternative to WordPress when you want to avoid the overhead of a database-driven site.
+
+## Requirements
+
+To use Jekyll, you will need to have Ruby installed.
+
+## Install Jekyll dependencies
+
+To install Jekyll, run the following command:
+
+```bash
+gem install jekyll bundler
+```
+
+You can also import your existing WordPress posts by first exporting your blog to an XML file using the WordPress export tool.
+
+Once the export file is ready, install the Jekyll Importer with the command below:
+
+```bash
+gem install jekyll-import
+```
+
+Here are a few other plugins that may be useful for your blog:
+
+- <a href="https://github.com/JesseHerrick/jekyll-angular" target="_blank" rel="nofollow noopener noreferrer">jekyll-angular</a>
+- <a href="https://github.com/jekyll/jekyll-feed" target="_blank" rel="nofollow noopener noreferrer">jekyll-feed</a>
+- <a href="https://jekyllrb.com/docs/pagination/" target="_blank" rel="nofollow noopener noreferrer">jekyll-paginate</a>
+
+There is a larger list on the <a href="https://jekyllrb.com/docs/plugins/" target="_blank" rel="nofollow noopener noreferrer">Jekyll website</a>, organized by category.
+
+## A new Jekyll instance
+
+*Skip to the next section if you want to import an existing WordPress blog.*
+
+First, run the command below, replacing `my-site-name` with the folder name for your site.
+
+```bash
+jekyll new my-site-name
+cd my-site-name
+bundle exec jekyll serve
+```
+
+Sample output for running `jekyll new my-site-name`:
+
+<Image
+    src="/notes/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd1.png"
+    alt="Jekyll new command output in the terminal"
+    width="700"
+    height="394"
+/>
+
+Jekyll will now generate a site in the `my-site-name` folder.
+
+To override the default Jekyll theme, you may need to create folders such as `assets`, `sass`, `_includes`, and `_layouts`. For more information, see <a href="https://jekyllrb.com/docs/themes/#overriding-theme-defaults" target="_blank" rel="nofollow noopener noreferrer">overriding theme defaults</a>.
+
+- `_config.yml`: stores site configuration data such as the site name, description, and base URL. Check out <a href="https://gist.github.com/jennifert/de156dc7b792a3f3a0e4b63aa66e768a" target="_blank" rel="nofollow noopener noreferrer">my sample config file</a>.
+- `_posts`: where your posts are stored in Markdown or HTML format. Check out <a href="https://gist.githubusercontent.com/jennifert/896428b15cd586f91fd36872a0bff1d5/raw/acedbfb817fb90e6ce0fb713043edae79c93f448/jekyll-post.markdown" target="_blank" rel="nofollow noopener noreferrer">my sample post formatting</a>.
+- `_site`: where the generated production files are built.
+- `about.md`: the about page for your site.
+- `feed.xml`: your RSS feed file, usually generated automatically.
+- `index.md`: your site’s main page.
+- `404.html`: your site’s “page not found” file.
+- `Gemfile`: the list of Ruby gems used by the site.
+- `assets`: where you can store JavaScript and other files.
+- `sass`: your Sass files.
+- `_includes`: stores shared pieces such as the menu, header, footer, or analytics code.
+- `_layouts`: combines your includes into layouts for posts, pages, and the index.
+
+```bash
+cd my-site-name
+bundle exec jekyll serve
+```
+
+Below is what the directory looks like in the terminal, along with the output from running the `serve` command to preview the site locally:
+
+<Image
+    src="/notes/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd2.png"
+    alt="Jekyll serve command output in the terminal"    
+    width="593"
+    height="443"
+/>
+
+## WordPress import instructions
+
+Use one of the links below depending on whether your site is hosted on WordPress.com or self-hosted WordPress:
+
+- <a href="https://import.jekyllrb.com/docs/wordpressdotcom/" target="_blank" rel="nofollow noopener noreferrer">Jekyll Import docs: WordPress.com</a>
+- <a href="https://import.jekyllrb.com/docs/wordpress/" target="_blank" rel="nofollow noopener noreferrer">Jekyll Import docs: self-hosted WordPress</a>
+
+## Drafts
+
+To work on a post locally without publishing it, create a folder at the root called `_drafts`. Then add a Markdown or HTML file without the date in the filename, for example `template.html` instead of `2019-12-11-template.html`.
+
+<Image
+    src="/notes/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd2b.png"
+    alt="Example drafts folder in the terminal"
+    width="403"
+    height="70"
+/>
+
+Finally, run the following in your terminal:
+
+```bash
+bundle exec jekyll serve --drafts
+```
+
+Changes can be previewed on the fly using this method as well. When you are ready to publish, move the file to `_posts` and add the date.
+
+## Ruby 3.0+ issues
+
+As noted in the <a href="https://github.com/github/pages-gem/issues/752" target="_blank" rel="nofollow noopener noreferrer">Jekyll GitHub issue</a>, you may need to run the following command:
+
+```bash
+bundle add webrick
+```
+
+## Publishing your new site
+
+The final step is to push your site online. First, instead of `jekyll serve`, you will want to run `jekyll build` as shown below. This replaces your development paths with your production configuration. You may also want to read <a href="/notes/jekyll-the-configuration-file">Jekyll: The configuration file</a>.
+
+```bash
+bundle exec jekyll build
+```
+
+Move into the root of `_site`. These are the production-ready files that should be uploaded to your server.
+
+The first screenshot below shows the root of my Jekyll site, while the second shows the production-ready files. Note that some files from the root of the Jekyll site are not included, since these are excluded in `_config.yml`.
+
+<Image
+    src="/notes/2019-12-11-Jekyll-Set-Up-Publish/jekyll-new-cmd3.png"
+    alt="Jekyll root and production build files in the terminal"
+    width="700"
+    height="394"
+/>
+
+Note that if you use GitHub Pages, you may need to compile the files on your computer first and then commit the generated files to the appropriate branch.
+
+## Resources
+
+- <a href="https://stackoverflow.com/questions/tagged/jekyll" target="_blank" rel="nofollow noreferrer noopener">Jekyll on Stack Overflow</a>
+- <a href="https://jekyllrb.com/docs/posts/" target="_blank" rel="nofollow noopener noreferrer">Jekyll docs: Working with drafts</a>
+- <a href="https://jekyllrb.com/docs/troubleshooting/#installation-problems" target="_blank" rel="nofollow noopener noreferrer">Jekyll docs: Installation problems</a>

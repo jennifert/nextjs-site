@@ -1,0 +1,112 @@
+---
+title: "Jekyll: The configuration file"
+description: "Update in progress: The Jekyll configuration file `_config.yml` holds important settings for your site. This post highlights some items used in one of my older sites."
+date: "2015-08-08"
+tags: ["jekyll"]
+---
+
+> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update. For a newer example, check out my <a href="https://github.com/jennifert/jekyll-site/blob/master/_config.yml" target="_blank" rel="nofollow noopener noreferrer">latest config file on GitHub</a>.</small>
+
+The Jekyll configuration file (`_config.yml`) holds important settings for your site. This post highlights some of the options I used in an older version of my homepage, which was built from my <a href="https://github.com/jennifert/jekyll-site" target="_blank" rel="nofollow noopener noreferrer">Jekyll GitHub repository</a> as a static site.
+
+This file includes quite a few settings you may want to edit, especially if you need to override some of the <a href="https://jekyllrb.com/docs/configuration/default/" target="_blank" rel="nofollow noopener noreferrer">default Jekyll options</a>.
+
+My `_config.yml` contained three main sections, which are explained in more detail below.
+
+## Site settings
+
+This section defines what your site is and where it lives.
+
+- `title`: Usually your site or company name.
+- `description`: Used for the meta description tag.
+- `baseurl`: As the official docs put it, this “serves the site from the specified URL.” Do **not** include your hostname.
+- `url`: The full URL of your site.
+- `timezone`: Your time zone. Use a format such as `America/Toronto` or `America/New_York`.
+- `plugins`: Any plugins used by the site.
+
+```yaml
+# Site settings
+title: Jennifer Tesolin
+description: "This is Jennifer Tesolin's personal web site. Located on this site are tutorials and tips for web developers."
+baseurl: ""
+url: "https://jenntesolin.com"
+timezone : "America/Toronto"
+plugins: [jekyll-paginate]
+```
+
+## Build settings
+
+This section tells Jekyll how to build the site and which files to use.
+
+- `exclude`: Tells Jekyll what not to include in the build. Format: `[file1, file2]`
+- `markdown`: Which Markdown flavour you want to use.
+- `markdown_ext`: File extensions to use for Markdown files.
+- `permalink`: What your site URLs will look like. Example: `/blog/:year/:month/:day/:title/`
+- `paginate`: How many posts to show per page.
+- `paginate_path`: The URL format for paginated results. Example: `blog/page:num`
+- `gems`: Jekyll-specific gems included in the build.
+- `name`: Your site name.
+- `feed path`: Location of the RSS or Atom feed file.
+
+```yaml
+# Build Settings
+exclude: [Gemfile, Gemfile.lock, README.md, vendor, bin,changelog.md,wordpress.xml,package.json,Gruntfile.js,node_modules, .ruby-version]
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+textile_ext:   textile
+permalink: /blog/:year/:month/:day/:title/
+paginate: 10
+paginate_path: "blog/page:num"
+gems:
+  - jekyll-feed
+name: Jennifer Tesolin Website
+feed:
+  path: atom.xml
+```
+
+## Author information
+
+This section is used to display information about the site owner, such as name, email, Twitter handle, GitHub repository, and location. The nested values should be indented one level under `author:`.
+
+```yaml
+author :
+  name : Jennifer Tesolin
+  email : me@jenntesolin.com
+  location : Toronto (Canada)
+  github : jennifert
+  twitter : jenntes
+```
+
+## Issues encountered
+
+One issue I ran into was that it did not seem easy to create new elements in the configuration file and then reuse them elsewhere. For example, when converting this site to Jekyll, I was unable to add another social network item under the author section and then reuse it in files such as `include/footer.html` and `humans.txt`.
+
+## Additional information and elements
+
+The <a href="https://jekyllrb.com/docs/configuration/" target="_blank" rel="nofollow noopener noreferrer">configuration docs</a> from the official Jekyll site are worth reading. They include a lot of useful information and other settings you can use in your file.
+
+## Bonus: Git ignore for Jekyll
+
+Here is a sample of my `.gitignore` file:
+
+```gitignore
+# OS X / Windows Files
+.DS_Store
+Thumbs.db
+
+# NODE
+.node_modules
+node_modules
+*/node_modules
+/node_modules/*
+npm-debug.log
+package-lock.json
+.env
+
+# JEKYLL
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.rvmrc
+*.gem
+```

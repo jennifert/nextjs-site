@@ -1,0 +1,31 @@
+---
+title: "WordPress Blog Migration"
+description: "This post describes a few ways to move WordPress, either to a different server or to Jekyll."
+date: "2014-09-24"
+tags: ["php", "wordpress", "jekyll"]
+---
+
+This post describes a few ways to move WordPress, either to a different server or to Jekyll.
+
+## Steps to make an exact copy
+
+This includes all plugins, themes, posts, and other site content.
+
+1. Download a copy of the database and save it somewhere safe. Once downloaded, make a second copy as a backup in case something goes wrong.
+2. Search the SQL file for the current domain URL and replace it with the new domain.
+3. Update the site location in the `wp-config.php` file.
+4. Import the MySQL database and add the user at the new location.
+5. Upload your WordPress files and test the site.
+
+I tried a few other methods, including web applications, but those caused problems such as not fully disconnecting the databases. Be sure that **all** URL references have been changed. In one case, upgrading the copied WordPress site also upgraded the original because one reference had been missed.
+
+## The safest way to move (but not an exact copy)
+
+1. Download copies of your themes and plugins.
+2. Download an export of your posts. If you are using multisite, you will need to do this for each site.
+3. Download a fresh copy of WordPress and set up your plugins and themes again.
+4. Import the posts and map users, making sure to check the box to download linked media.
+
+## Moving to Jekyll
+
+See [Jekyll: Setting up your development environment](/notes/jekyll-set-up-publish).

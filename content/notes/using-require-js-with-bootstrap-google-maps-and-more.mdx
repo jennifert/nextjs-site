@@ -1,0 +1,200 @@
+---
+title: "Using RequireJS with Bootstrap, Google Maps, and more"
+description: "Outdated: This post describes how to move an older Google Maps and Bootstrap setup into a config file for use with RequireJS."
+date: "2013-11-06"
+tags: ["javascript", "google", "bootstrap", "css"]
+---
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+RequireJS is a JavaScript file and module loader. It is a useful tool for organizing and loading JavaScript on your website.
+
+This post describes how to move an older Google Maps and Bootstrap setup into a `config` file for use with RequireJS.
+
+<Image
+  src="/notes/2013-11-06-using-require-js-with-bootstrap-google-maps-and-more/require-js-directory-structure.jpg"
+  alt="RequireJS directory structure"
+  width="306"
+  height="367"
+/>
+
+## Step 1
+
+First, <a href="http://requirejs.org/docs/download.html#requirejs" target="_blank" rel="nofollow noopener noreferrer">download the latest version</a>. At the time of writing, that was 2.1.9. For production, you will probably want the minified version.
+
+## Step 2
+
+Check out <a href="https://github.com/millermedeiros/requirejs-plugins" target="_blank" rel="nofollow noopener noreferrer">Miller Medeiros’ GitHub repository</a> and download any plugins you are interested in using.
+
+## Step 3
+
+For your script tag, you will just need:
+
+```html
+<script data-main="js/config" src="js/require.js"></script>
+```
+
+For `data-main`, use the path to the JavaScript config file, but do not include the `.js` extension.
+
+## Step 4
+
+Create a file called `config.js` and place it in your `js` directory. The first part of the file sets the locations of the scripts you are going to use.
+
+Your JavaScript files should be in the same directory as `require.js` and `config.js`. When referencing a path, do not add the `.js` extension. The example below shows a minimal setup for Google Maps v3 with Bootstrap 3.
+
+```js
+require.config({
+    paths: {
+        'jquery': 'http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.3',
+        'jquery.bootstrap': 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
+        'async': 'async',
+        'goog': 'goog',
+        'propertyParser' : 'propertyParser'
+    },
+    shim: {
+        'jquery.bootstrap': ['jquery']
+    }
+});
+```
+
+
+Shims help ensure that jQuery loads before Bootstrap.
+
+## Step 5
+
+Next, you will need to `require` the items under your config:
+
+```js
+//require.config code from above here
+require(['jquery','jquery.bootstrap','goog!maps,3,other_params:sensor=false'], function($) {
+    //jquery code will be moved here
+});
+```
+
+## Step 6
+
+Finally, your code will need to be adjusted slightly so the jQuery and Bootstrap code can load maps correctly in a modal.
+
+```js
+var myLatlng = new google.maps.LatLng(43.65644,-79.380686);
+
+    $(function() {
+
+        //start of modal google map
+      $('#mapmodals').on('shown.bs.modal', function () {
+        var mapOptions = {
+              center: myLatlng,
+              zoom: 14,
+              mapTypeControl: false,
+              center:myLatlng,
+              panControl:false,
+              rotateControl:false,
+              streetViewControl: false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+
+            var contentString = '<div id="mapInfo">'+
+            '<p><strong>Cineplex Odeon Yong & Dundas</strong><br>'+
+            'Suite 402<br>10 Dundas Street East<br>' +
+            'Toronto, ON<br>'+
+            'P: (416) 977-9262</p>'+
+            '<a href="http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CF4QFjAA&url=http%3A%2F%2Fwww.cineplex.com%2FTheatres%2FTheatreDetails%2FCineplex-Odeon-Yonge-Dundas-Cinemas-formerly-AMC-.aspx&ei=wVxnUdfWM8GtqgGc5YGoCQ&usg=AFQjCNFrLpCFDXGjtGx6y1GSkSNvhdrMpA&bvm=bv.45107431,d.aWM" target="_blank">Now Playing</a>'+
+            '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Cineplex Odeon Yong & Dundas",
+                  maxWidth: 200,
+                  maxHeight: 200
+          });
+
+
+          google.maps.event.addListener(marker, 'click', function() {
+             infowindow.open(map,marker);
+          });
+
+          google.maps.event.addDomListener(window, 'load');
+          google.maps.event.trigger(map, "resize");
+          map.setCenter(myLatlng);
+      });
+      //end of modal google map
+    }); //end jquery functions
+```
+
+## Completed `config.js` file
+
+The full code is below. Alternatively, you can also check out my <a href="https://github.com/jennifert/JavaScript-Demos/tree/master/RequireJs" target="_blank" rel="nofollow noopener noreferrer">JavaScript repository</a>.
+
+```js
+require.config({
+    paths: {
+        'jquery': 'https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.3',
+        'jquery.bootstrap': 'https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
+        'async': 'async',
+        'goog': 'goog',
+        'propertyParser' : 'propertyParser'
+    },
+    shim: {
+        'jquery.bootstrap': ['jquery']
+    }
+});
+
+require(['jquery','jquery.bootstrap','goog!maps,3'], function($) {
+     var myLatlng = new google.maps.LatLng(43.65644,-79.380686);
+
+    $(function() {
+
+        //start of modal google map
+      $('#mapmodals').on('shown.bs.modal', function () {
+        var mapOptions = {
+              center: myLatlng,
+              zoom: 14,
+              mapTypeControl: false,
+              center:myLatlng,
+              panControl:false,
+              rotateControl:false,
+              streetViewControl: false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+
+            var contentString = '<div id="mapInfo">'+
+            '<p><strong>Cineplex Odeon Yong & Dundas</strong><br>'+
+            'Suite 402<br>10 Dundas Street East<br>' +
+            'Toronto, ON<br>'+
+            'P: (416) 977-9262</p>'+
+            '<a href="http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CF4QFjAA&url=http%3A%2F%2Fwww.cineplex.com%2FTheatres%2FTheatreDetails%2FCineplex-Odeon-Yonge-Dundas-Cinemas-formerly-AMC-.aspx&ei=wVxnUdfWM8GtqgGc5YGoCQ&usg=AFQjCNFrLpCFDXGjtGx6y1GSkSNvhdrMpA&bvm=bv.45107431,d.aWM" target="_blank">Now Playing</a>'+
+            '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Cineplex Odeon Yong & Dundas",
+                  maxWidth: 200,
+                  maxHeight: 200
+          });
+
+
+          google.maps.event.addListener(marker, 'click', function() {
+             infowindow.open(map,marker);
+          });
+
+          google.maps.event.addDomListener(window, 'load');
+          google.maps.event.trigger(map, "resize");
+          map.setCenter(myLatlng);
+      });
+      //end of modal google map
+    }); //end jquery functions
+});
+```

@@ -1,0 +1,196 @@
+---
+title: "Installing Homebrew and Fixing Ruby on macOS"
+description: "Update in progress: Notes on installing Homebrew, managing packages, and updating Ruby on macOS."
+date: "2021-01-13"
+tags: ["macOS", "homebrew", "ruby"]
+---
+
+> <small>Update in progress: This post is being kept for reference while I work on a fuller update.</small>
+
+## Getting ready
+
+### Step 1: Open Terminal
+
+Search in Launchpad or Spotlight for `Terminal.app`.
+
+### Step 2: Accept the license agreements
+
+Copy and paste the commands below into your terminal. Be sure to read and accept the agreements.
+
+```bash
+xcode-select --install
+sudo xcodebuild -license
+```
+
+### Step 3: Check whether Ruby is installed
+
+Make sure you can run Ruby from the command line by typing:
+
+```bash
+ruby -v
+```
+
+## Install Homebrew
+
+Homebrew is a package manager for macOS. In this post, it is being used to help work around the older default Ruby version that comes with macOS. It can also be used later to install other development tools.
+
+<Image
+src="/notes/2021-01-13-mac-homebrew/homebrew-site.png"
+alt="Homebrew website"
+  width="700"
+  height="1139"
+/>
+
+### Copy the install script
+
+Go to the Homebrew site at <a href="https://brew.sh/" rel="nofollow noreferrer noopener">brew.sh</a>, copy the latest install command, and run it in the terminal. It should look something like this:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once the install is complete, it is a good idea to run the commands below to confirm the installation is working and fully up to date.
+
+```bash
+brew doctor
+```
+
+### Update Homebrew packages
+
+To update packages, run `brew update` and `brew upgrade` like below:
+
+```bash
+brew update
+brew upgrade
+```
+
+Once in a while, you may also want to clean up unneeded files with:
+
+```bash
+brew cleanup
+```
+
+### Install some Homebrew packages
+
+You can install a package, called a formula, either one at a time or in batches.
+
+One at a time:
+
+```bash
+brew install wget
+```
+
+Or several at once:
+
+```bash
+brew install wget node python@3
+```
+
+#### ffmpeg
+
+`ffmpeg` is a useful library for converting video and handling other media tasks. To install it with the default settings:
+
+```bash
+brew tap homebrew-ffmpeg/ffmpeg
+brew install homebrew-ffmpeg/ffmpeg/ffmpeg
+```
+
+Check the Homebrew ffmpeg repository for more options: <a href="https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/" target="_blank" rel="nofollow noopener noreferrer">ffmpeg GitHub repository</a>
+
+#### MongoDB
+
+Installing MongoDB is similar to `ffmpeg`. Run the following:
+
+```bash
+brew tap mongodb/brew
+brew install mongodb-community
+```
+
+To run it as a background service:
+
+```bash
+brew services start mongodb/brew/mongodb-community
+```
+
+To run it on demand in the terminal:
+
+```bash
+mongod --config /usr/local/etc/mongod.conf
+```
+
+### Enable and install casks
+
+Casks are applications that you can install directly through Homebrew instead of downloading a file manually. I like using casks because they can also run verification checks and show errors more clearly if something goes wrong.
+
+```bash
+brew tap homebrew/cask-versions
+```
+
+At the time of writing, I could not find a way to bulk install casks, so they needed to be installed one at a time by replacing `"firefox"` with the cask name.
+
+```bash
+brew install --cask firefox
+```
+
+A few useful casks are listed below. To find more, check the <a href="https://formulae.brew.sh/" target="_blank" rel="nofollow noopener noreferrer">Homebrew formulae site</a>.
+
+For some installations, if they fail, try again after enabling them in:
+
+`System Preferences → Security & Privacy → General`
+
+- visual-studio
+- figma
+- valentina-studio
+- virtualbox
+- virtualbox-extension-pack
+- github
+- vlc
+- handbrake
+- iterm2
+- spotify
+- sequel-pro
+- firefox
+- keepassxc
+- visual-studio-code
+- calibre
+- appcleaner
+- tor-browser
+- jetbrains-toolbox
+- xampp
+- google-chrome
+- dash
+- netbeans
+- adoptopenjdk
+- postman
+
+If you want to run multiple Java versions, check out this guide: <a href="https://dev.to/gabethere/installing-java-on-a-mac-using-homebrew-and-jevn-12m8" target="_blank" rel="nofollow noopener noreferrer">Installing Java on a Mac using Homebrew and jenv</a>
+
+### Update Ruby and installed gems
+
+Run the following command:
+
+```bash
+brew install ruby
+```
+
+Next, make sure you add Ruby to your shell configuration. Below is the shell setup for the default terminal in Big Sur:
+
+```bash
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+exec zsh
+```
+
+`exec zsh` will restart your terminal so the updated path takes effect. If you do not want to run that command, simply type `exit`, then quit Terminal and reopen it.
+
+Next, update your Ruby gems:
+
+```bash
+gem update --system
+gem update
+```
+
+If you want to manage multiple Ruby versions instead, follow this DigitalOcean guide: <a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos" target="_blank" rel="nofollow noopener noreferrer">How to install Ruby on Rails with rbenv on macOS</a>
+
+## Resources
+
+- <a href="https://stackoverflow.com/a/58316584" target="_blank" rel="nofollow noopener noreferrer">Stack Overflow: fixing Ruby</a>

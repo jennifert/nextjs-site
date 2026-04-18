@@ -1,0 +1,198 @@
+---
+title: "Jekyll: Static Sites on the DigitalOcean App Platform"
+description: "Update in progress: This tutorial describes how to host your Jekyll static site, including plugins, on the DigitalOcean App Platform."
+date: "2021-03-11"
+tags: ["jekyll", "server"]
+---
+
+> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update.</small>
+
+This tutorial describes how to host your Jekyll static site, including plugins, on the DigitalOcean App Platform.
+
+## Requirements
+
+- A GitHub or GitLab account
+- A DigitalOcean account
+- A Jekyll site that builds successfully on your local machine
+- The correct Ruby version set in your `Gemfile`
+
+## Create your app
+
+The first step is to <a href="https://www.digitalocean.com/products/app-platform/" target="_blank" rel="nofollow noopener noreferrer">open the DigitalOcean App Platform</a>. Once you are logged in, click the **Create App** button as shown below.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-click-create-app.png"
+    alt="DigitalOcean App Platform create app button"
+    width="800"
+    height="133"
+/>
+
+### Step 1: Select your source
+
+The App Platform supports sources from GitHub or GitLab. Choose one, then allow DigitalOcean to access your repository.
+
+Make sure **Auto deploy** is selected if you want your site to update automatically whenever you commit code to your repository. Click **Next** to continue.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-step-1.png"
+    alt="DigitalOcean App Platform source selection step"
+    width="800"
+    height="503"
+/>
+
+### Step 2: Configure your app
+
+In this section, there are three key things to check for a Jekyll site on the static platform:
+
+1. Make sure **Static Site** is selected, since it may default to **Web Service**
+2. Make sure your build command is correct
+3. Make sure your output directory is set to the folder where the built files will be generated
+
+If anything is incorrect, click **Edit**, make your changes, and then click **Close** to save them.
+
+Now click **Next** to continue.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-step-2.png"
+    alt="DigitalOcean App Platform app configuration step"
+    width="652"
+    height="1079"
+/>
+
+### Step 3: Name your static site
+
+This is the name you will see on your dashboard, and it will also become part of your live URL before you add a custom domain. Choose a name, then click **Next**.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-step-3.png"
+    alt="DigitalOcean App Platform app naming step"
+    width="548"
+    height="394"
+/>
+
+### Step 4: Finalize and launch
+
+The **Starter** plan should be selected by default for a static site. If another option is selected, change it to **Starter**.
+
+Finally, click **Launch Starter App**.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-step-4.png"
+    alt="DigitalOcean App Platform launch step"
+    width="800"
+    height="709"
+/>
+
+## Initial deploy
+
+The page should now look similar to the image below, showing the current build status and other deployment information. Click **View Logs** in the build status message to see the live output while your app is being built.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-initial-deploy.png"
+    alt="Initial deploy status in DigitalOcean App Platform"
+    width="800"
+    height="303"
+/>
+
+## Fixing a build error
+
+If you are not building on a Linux machine locally, you may run into an error about an unsupported platform.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-initial-deploy-fail-log.png"
+    alt="Initial deploy build error log"
+    width="800"
+    height="284"
+/>
+
+In your terminal, you may need to add the Linux platform to your lockfile, following the instructions shown in the server log output. In my case, I needed to run:
+
+```bash
+bundle lock --add-platform x86_64-linux
+```
+
+The image below shows the terminal output.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-add-do-platform-bundle.png"
+    alt="Terminal output for adding Linux platform to bundle lockfile"
+    width="593"
+    height="182"
+/>
+
+Be sure to commit your changes to your remote repository. Your site should then automatically try to build again. If you have **Auto deploy** turned off, you will need to deploy manually from the App Platform interface.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-redeploy.png"
+    alt="Redeploy button in DigitalOcean App Platform"
+    width="800"
+    height="355"
+/>
+
+Click **View Logs** again from the build status message to check the new status. If it still fails, for example because of missing packages, add them to your bundle and recommit your files.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-redeploy-log.png"
+    alt="Redeploy log in DigitalOcean App Platform"
+    width="800"
+    height="340"
+/>
+
+Once the build succeeds, the interface will update with your live link. Click the DigitalOcean domain to view your site. In my case, the URL was:
+
+`https://sea-lion-app-g2mm7.ondigitalocean.app/`
+
+This link is no longer active, but the process is the same.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-redeploy-sucess.png"
+    alt="Successful redeploy in DigitalOcean App Platform"
+    width="800"
+    height="850"
+/>
+
+## Configure your custom domain
+
+For this step, click the **Settings** tab, then scroll down to the domains section and click **Edit**.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-settings-domain-configure.png"
+    alt="Settings page for domain configuration"
+    width="800"
+    height="590"
+/>
+
+An **Add** button will appear under your current site. Click it to continue.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-click-add-domain-configure.png"
+    alt="Add domain button in DigitalOcean App Platform"
+    width="800"
+    height="355"
+/>
+
+You will be taken to a screen titled **Add Domain**. Enter your domain name, then choose whether you want DigitalOcean to manage the DNS or whether you want to add a CNAME yourself. In my case, I selected DNS.
+
+For more information on the difference, see <a href="https://www.digitalocean.com/docs/app-platform/how-to/manage-domains/" target="_blank" rel="nofollow noopener noreferrer">How to Manage Domains in App Platform</a>.
+
+<Image
+    src="/notes/2021-03-11-jekyll-on-digital-ocean/jekyll-create-app-assign-domain-configure.png"
+    alt="Add domain screen in DigitalOcean App Platform"
+    width="800"
+    height="703"
+/>
+
+You should add your DNS or CNAME settings in your domain manager first, then wait for DNS propagation. Once that has had time to update, return to the **Add Domain** page and click **Add Domain**.
+
+After that, the page will redirect back to the domain settings section. You should see the custom domain marked as **Pending**. It may take additional time for App Platform to finish the rest of the configuration.
+
+Once it completes, you should see a success message and additional details.
+
+When the status becomes **Active**, repeat the process to add `www` as a subdomain if needed.
+
+That’s it. At that point, you just need to wait for the domain updates to finish propagating.
+
+## Resources
+
+- <a href="https://github.com/jennifert/jekyll-site" target="_blank" rel="nofollow noopener noreferrer">My Jekyll site repo</a>
+- <a href="https://devcenter.heroku.com/articles/ruby-versions" target="_blank" rel="nofollow noopener noreferrer">Select your Ruby version</a>

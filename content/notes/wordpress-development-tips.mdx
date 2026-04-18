@@ -1,0 +1,37 @@
+---
+title: "WordPress Development Tips: Updates and Deprecated Notices"
+description: "Outdated: A few WordPress development tips for update prompts and deprecated plugin notices."
+date: "2014-01-20"
+tags: ["tips", "php", "wordpress"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+This post collects a couple of small WordPress development tips I found useful at the time.
+
+## Stop the WordPress FTP credentials prompt
+
+As described in <a href="https://sixfive.io/wordpress-needs-to-access-your-web-server-please-enter-your-ftp-credentials-to-proceed/" target="_blank" rel="nofollow noopener noreferrer">WordPress needs access to your web server</a>, you can prevent WordPress from asking for FTP credentials when requesting an update.
+
+Add the following lines to your `wp-config.php` file, just above `/* That's all, stop editing! Happy blogging. */`
+
+```php
+$method = 'direct';
+define('FS_METHOD','direct');
+```
+
+## Fix issues with your own plugin or another plugin
+
+A useful plugin for WordPress development is called **Log Deprecated Notices**.
+
+First, change `WP_DEBUG` to `true` in your `wp-config.php` file.
+
+```php
+define( 'WP_DEBUG', true );
+```
+
+Next, download the latest version from the <a href="http://wordpress.org/extend/plugins/log-deprecated-notices/" target="_blank" rel="nofollow noopener noreferrer">Log Deprecated Notices plugin page</a>. Once installed, it will appear under **Tools → Deprecated Calls**.
+
+The deprecated call and line number will be displayed, along with an alternative suggestion for fixing it.
+
+> Note: It is best to do this only in a development environment.

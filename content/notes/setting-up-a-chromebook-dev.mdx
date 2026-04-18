@@ -1,0 +1,162 @@
+---
+title: "A guide to setting up a Chromebook for web development"
+description: "Outdated: Notes on using a budget Chromebook for web development, including Linux, IDEs, browsers, and other tools."
+date: "2022-06-29"
+tags: ["chromebook", "development"]
+---
+
+> <small>This post is based on an older Chromebook setup and is being kept mainly as a reference.</small>
+
+A setup guide for using a budget Chromebook for web development, including IDEs, browsers, and other tools.
+
+**Note:** This post mostly focuses on web development tools and workflows. A budget machine like this is not ideal for intensive gaming, such as many Steam titles. Some applications, including video editors running under Linux, may also feel slow. It also helps to be comfortable using the command line.
+
+## Background
+
+I originally started out looking for a tablet under $300, but I was not happy with the available development apps, keyboard options, screen sizes, and overall experience. When I found an Amazon sale on a Chromebook for $199 CAD during Boxing Day, and saw that it supported Linux, I decided to give it a try.
+
+I figured that if it could support an IDE and browser for travel, along with some streaming services that could save content to an SD card, it would still be worth it.
+
+## The machine
+
+The device I went with was an **Acer Chromebook 311** with:
+
+- Display: 11.6in
+- Processor: Intel Celeron N4000
+- RAM: 4GB
+- Storage: 32GB eMMC
+- OS: ChromeOS with Linux development environment
+- Updates supported until: 2026
+- Year first manufactured: 2022
+- Amazon price (without sale): $270 <a href="https://www.amazon.ca/gp/product/B0886W3LTR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank" rel="nofollow noopener noreferrer">Listing of the Chromebook used</a> (note that the screen size in the listing has since changed)
+
+This machine does not have an HDMI port, although a USB or USB-C hub or dock can help with that. The <a href="https://www.amazon.ca/gp/product/B08733BK1W/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank" rel="nofollow noopener noreferrer">QGeeM USB-C hub</a> worked well in my setup. If you already have a similar hub, it is worth trying.
+
+## Recommended specs and upgrades
+
+For development, especially when effectively running two environments, the following specs would provide a better experience than the basics:
+
+- Storage: 64GB or higher, unless you plan to put your Linux environment on an SD card
+- If you are gaming or doing a lot of video editing, I would also suggest upgrading the RAM and/or processor
+
+Here is an Amazon.ca listing with mostly the same specs, but with <a href="https://www.amazon.ca/gp/product/B08YP7N7GC/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1" target="_blank" rel="nofollow noopener noreferrer">64GB of storage</a> instead of 32GB.
+
+## Initial setup
+
+When you first get the machine, especially if you are new to ChromeOS, here are some good steps to start with after signing in to your Google account:
+
+1. Make sure all ChromeOS and Play Store updates are installed. You may need to reboot a few times.
+2. Optional: <a href="https://support.google.com/chromebook/answer/10364515?hl=en" target="_blank" rel="nofollow noopener noreferrer">Set up a PIN</a> instead of entering your full login information every time, though this is less secure.
+3. If you are using external storage, <a href="https://www.howtogeek.com/316056/how-to-get-android-apps-to-see-external-storage-on-chromebooks/" target="_blank" rel="nofollow noopener noreferrer">How to Get Android Apps to See External Storage on Chromebooks</a> from How-To Geek is a helpful guide.
+4. Browse the <a href="https://chrome.google.com/webstore/category/collection/chrome-dev-tools-extensions?hl=en" target="_blank" rel="nofollow noopener noreferrer">Google Chrome DevTools extensions</a> if you want browser-based tools as well.
+
+## Enabling the Linux development environment
+
+For this section, you will need administrator access, so you may not be able to do this on a school or work device without permission.
+
+First, follow Google’s guide for <a href="https://support.google.com/chromebook/answer/9145439?hl=en" target="_blank" rel="nofollow noopener noreferrer">setting up Linux on your Chromebook</a>.
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837207?h=e4d9819af7"
+    title="Video demo: Turning on your Linux environment"
+/>
+
+Once it is successfully installed, create a <a href="https://support.google.com/chromebook/answer/9592813?hl=en&ref_topic=3415446" target="_blank" rel="nofollow noopener noreferrer">backup of your environment</a> so you can restore it later if something goes wrong.
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837231?h=4c2c805c44"
+    title="Video demo: Backing up your Linux environment to Google Drive"
+/>
+
+Check out the <a href="https://support.google.com/chromebook/answer/10057656?hl=en&ref_topic=3415446" target="_blank" rel="nofollow noopener noreferrer">port forwarding guide</a> if you want to test on other devices.
+
+### Managing Linux and command-line installs
+
+Now open your app launcher, go into the Linux folder, click **Terminal**, and run the commands below to update the packages in your Linux environment.
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Once everything is finished, right-click the terminal icon in the shelf and click **Shut down Linux**.
+
+If you want to upgrade your Linux container to the next version, or try to fix certain install issues, use the following command:
+
+```bash
+sudo apt-get update && sudo apt-get dist-upgrade
+```
+The Linux distribution being used here is Debian, so if you are familiar with Debian packages and tooling, follow Debian-style instructions for installing software. For example, the command below installs Node.js:
+
+```bash
+sudo apt-get install nodejs -y
+```
+
+Here is a video demo of installing VS Code using the official Debian package.
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837231?h=4c2c805c44"
+    title="Video demo: Installing VS Code on Chromebook"
+/>
+
+### Installing a package manager
+
+A popular package manager is called **Flatpak**. It gives you access to additional applications, including GUI tools for browsing and installing software.
+
+Here are the steps to install Flatpak:
+
+1. Follow the official documentation starting at step 2: <a href="https://flatpak.org/setup/Chrome%20OS" target="_blank" rel="nofollow noopener noreferrer">ChromeOS Quick Setup</a>
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837334?h=0289253177"
+    title="Video demo: Installing Flatpak and a GUI browser"
+/>
+
+2. If you want to use a GUI to install apps, run this command:
+
+```bash
+apt install gnome-software-plugin-flatpak
+```
+
+Using the package manager to find software:
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837422?h=4b76fd2030"
+    title="Video demo: Using the package manager"
+/>
+
+3. Alternatively, you can search <a href="https://flathub.org/" target="_blank" rel="nofollow noopener noreferrer">flathub.org</a> and install software through the command line. The first command below installs Visual Studio Code, while the second runs the program.
+
+```bash
+flatpak install flathub com.visualstudio.code
+flatpak run com.visualstudio.code
+```
+
+### Removing Linux
+
+See the section <a href="https://support.google.com/chromebook/answer/9145439?hl=en" target="_blank" rel="nofollow noopener noreferrer">Turn off Linux</a> for details on fully removing Linux and its files.
+
+<SafeIframe
+    src="https://player.vimeo.com/video/725837496?h=07168ac02d"
+    title="Video demo: Turning off Linux"
+/>
+
+## Resources
+
+- <a href="https://chromeos.dev/en/linux/setup" target="_blank" rel="nofollow noopener noreferrer">Linux setup</a>
+- <a href="https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started#_enable-linux-on-your-chromebook" target="_blank" rel="nofollow noopener noreferrer">Official Linux install guide from Microsoft</a>
+- <a href="https://flathub.org/apps/details/com.visualstudio.code" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Visual Studio Code</a>
+- <a href="https://flathub.org/apps/details/com.github.alecaddd.sequeler" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Sequeler</a> (SQL client)
+- <a href="https://flathub.org/apps/details/org.kde.kdenlive" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Kdenlive</a> (video editor)
+- <a href="https://flathub.org/apps/details/fr.handbrake.ghb" target="_blank" rel="nofollow noopener noreferrer">Flatpak: HandBrake</a>
+- <a href="https://flathub.org/apps/details/com.google.AndroidStudio" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Android Studio</a>
+- <a href="https://flathub.org/apps/details/com.boxy_svg.BoxySVG" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Boxy SVG</a> (scalable vector graphics editor)
+- <a href="https://flathub.org/apps/details/io.github.shiftey.Desktop" target="_blank" rel="nofollow noopener noreferrer">Flatpak: GitHub Desktop</a>
+- <a href="https://flathub.org/apps/details/com.github.gijsgoudzwaard.image-optimizer" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Image Optimizer</a>
+- <a href="https://flathub.org/apps/details/com.jetbrains.IntelliJ-IDEA-Community" target="_blank" rel="nofollow noopener noreferrer">Flatpak: IntelliJ IDEA Community</a> (Java IDE)
+- <a href="https://flathub.org/apps/details/com.jetbrains.PyCharm-Community" target="_blank" rel="nofollow noopener noreferrer">Flatpak: PyCharm Community</a> (Python IDE)
+- <a href="https://flathub.org/apps/details/org.apache.netbeans" target="_blank" rel="nofollow noopener noreferrer">Flatpak: NetBeans</a>
+- <a href="https://flathub.org/apps/details/net.poedit.Poedit" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Poedit</a> (translation editor)
+- <a href="https://flathub.org/apps/details/org.mozilla.firefox" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Firefox</a>
+- <a href="https://flathub.org/apps/details/com.brave.Browser" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Brave</a> (browser)
+- <a href="https://flathub.org/apps/category/Development" target="_blank" rel="nofollow noopener noreferrer">Flatpak: Entire developer tools catalog</a>

@@ -1,0 +1,23 @@
+---
+title: "PHP Tip: Comparing integers and numeric strings"
+description: "This post describes how to compare variables containing integers using PHP."
+date: "2016-06-14"
+tags: ["php", "tip"]
+---
+
+This post describes how to compare variables containing integers using PHP.
+
+To compare values more reliably in PHP, it can help to look at the `intval()` function. Without it, you may run into cases where two variables do not compare the way you expect. For example, your script may report that they are **not** the same.
+
+```php
+$a = 5;
+$b = '5';
+
+if (intval($a) == intval($b)) {
+    echo "it's the same";
+}
+```
+
+## Resources
+
+- <a href="https://www.php.net/manual/en/function.intval.php" target="_blank" rel="nofollow noopener noreferrer">`intval()` on PHP.net</a>

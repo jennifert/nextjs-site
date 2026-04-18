@@ -7,6 +7,139 @@
     <language>en-ca</language>
     
   <item>
+    <title>Using iOS and Android devices together</title>
+    <link>https://jenntesolin.com/notes/using-ios-and-android-together</link>
+    <guid>https://jenntesolin.com/notes/using-ios-and-android-together</guid>
+    <description>Tips for using Android and Apple devices together, including calendar, contacts, iCloud mail, and music.</description>
+    <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>A guide to setting up a Chromebook for web development</title>
+    <link>https://jenntesolin.com/notes/setting-up-a-chromebook-dev</link>
+    <guid>https://jenntesolin.com/notes/setting-up-a-chromebook-dev</guid>
+    <description>Outdated: Notes on using a budget Chromebook for web development, including Linux, IDEs, browsers, and other tools.</description>
+    <pubDate>Wed, 29 Jun 2022 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: Static Sites on the DigitalOcean App Platform</title>
+    <link>https://jenntesolin.com/notes/jekyll-on-digital-ocean</link>
+    <guid>https://jenntesolin.com/notes/jekyll-on-digital-ocean</guid>
+    <description>Update in progress: This tutorial describes how to host your Jekyll static site, including plugins, on the DigitalOcean App Platform.</description>
+    <pubDate>Thu, 11 Mar 2021 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Installing Homebrew and Fixing Ruby on macOS</title>
+    <link>https://jenntesolin.com/notes/install-homebrew-fix-ruby</link>
+    <guid>https://jenntesolin.com/notes/install-homebrew-fix-ruby</guid>
+    <description>Update in progress: Notes on installing Homebrew, managing packages, and updating Ruby on macOS.</description>
+    <pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Great apps and programs for web development</title>
+    <link>https://jenntesolin.com/notes/apps-and-programs-for-development</link>
+    <guid>https://jenntesolin.com/notes/apps-and-programs-for-development</guid>
+    <description>Update in progress: A list of applications you can use for web development, grouped into free, paid, and subscription-based tools.</description>
+    <pubDate>Wed, 14 Oct 2020 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Installing Git and GitHub on your Mac</title>
+    <link>https://jenntesolin.com/notes/install-git-github</link>
+    <guid>https://jenntesolin.com/notes/install-git-github</guid>
+    <description>Update in progress: This post describes older ways to install Git and GitHub tools on macOS.</description>
+    <pubDate>Thu, 12 Dec 2019 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: Setting up your development environment</title>
+    <link>https://jenntesolin.com/notes/jekyll-set-up-publish</link>
+    <guid>https://jenntesolin.com/notes/jekyll-set-up-publish</guid>
+    <description>Update in progress: Jekyll is a static site generator built with Ruby. This post covers an older setup for getting a local Jekyll development environment running.</description>
+    <pubDate>Wed, 11 Dec 2019 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Installing Node.js and Grunt on macOS</title>
+    <link>https://jenntesolin.com/notes/instal-node-js-and-grunt</link>
+    <guid>https://jenntesolin.com/notes/instal-node-js-and-grunt</guid>
+    <description>Outdated: Notes on installing Node.js and Grunt on macOS, preserved for reference.</description>
+    <pubDate>Wed, 18 Apr 2018 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Quick Tip: Highcharts credit in a new window</title>
+    <link>https://jenntesolin.com/notes/highcharts-new-window</link>
+    <guid>https://jenntesolin.com/notes/highcharts-new-window</guid>
+    <description>A quick example of opening a Highcharts credit link in a new window or tab.</description>
+    <pubDate>Sat, 27 May 2017 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Quick Tip: WordPress and Campaign Monitor</title>
+    <link>https://jenntesolin.com/notes/wordpress-and-campaign-monitor</link>
+    <guid>https://jenntesolin.com/notes/wordpress-and-campaign-monitor</guid>
+    <description>A quick and simple way to integrate your Campaign Monitor list with WordPress.</description>
+    <pubDate>Sat, 07 Jan 2017 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>6 resources you may find at your local library</title>
+    <link>https://jenntesolin.com/notes/six-library-resources</link>
+    <guid>https://jenntesolin.com/notes/six-library-resources</guid>
+    <description>A look at resources available through the Toronto Public Library, along with a reminder to check what your own local library offers.</description>
+    <pubDate>Fri, 06 Jan 2017 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>PHP Tip: Comparing integers and numeric strings</title>
+    <link>https://jenntesolin.com/notes/php-compare-integars</link>
+    <guid>https://jenntesolin.com/notes/php-compare-integars</guid>
+    <description>This post describes how to compare variables containing integers using PHP.</description>
+    <pubDate>Tue, 14 Jun 2016 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Change your iTunes media view mode</title>
+    <link>https://jenntesolin.com/notes/itunes-view-change</link>
+    <guid>https://jenntesolin.com/notes/itunes-view-change</guid>
+    <description>A quick tip on changing playlist view mode in a newer iTunes release.</description>
+    <pubDate>Sun, 12 Jun 2016 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: Configure Jekyll for GitHub Pages</title>
+    <link>https://jenntesolin.com/notes/jekyll-on-github-pages</link>
+    <guid>https://jenntesolin.com/notes/jekyll-on-github-pages</guid>
+    <description>Update in progress: Notes on configuring a Jekyll site for GitHub Pages, with older hosting details kept only where still useful.</description>
+    <pubDate>Thu, 04 Feb 2016 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: Fix pagination after upgrading to version 3</title>
+    <link>https://jenntesolin.com/notes/jekyll-pagination-upgrade-to-3</link>
+    <guid>https://jenntesolin.com/notes/jekyll-pagination-upgrade-to-3</guid>
+    <description>In Jekyll 3, built-in pagination was deprecated. This post describes how to resolve the error.</description>
+    <pubDate>Wed, 28 Oct 2015 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: The configuration file</title>
+    <link>https://jenntesolin.com/notes/jekyll-config-file</link>
+    <guid>https://jenntesolin.com/notes/jekyll-config-file</guid>
+    <description>Update in progress: The Jekyll configuration file `_config.yml` holds important settings for your site. This post highlights some items used in one of my older sites.</description>
+    <pubDate>Sat, 08 Aug 2015 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Jekyll: Custom Search</title>
+    <link>https://jenntesolin.com/notes/jekyll-custom-search</link>
+    <guid>https://jenntesolin.com/notes/jekyll-custom-search</guid>
+    <description>This post describes how to create a basic search using JSON and jQuery.</description>
+    <pubDate>Fri, 22 May 2015 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Creating a Development Environment for IIS 7+</title>
+    <link>https://jenntesolin.com/notes/iis7-development-environment</link>
+    <guid>https://jenntesolin.com/notes/iis7-development-environment</guid>
+    <description>Outdated: This post describes how to enable IIS on Windows 7, along with setting up MySQL and PHP. Administrator access is required.</description>
+    <pubDate>Sat, 14 Mar 2015 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>WordPress Blog Migration</title>
+    <link>https://jenntesolin.com/notes/wordpress-blog-migration</link>
+    <guid>https://jenntesolin.com/notes/wordpress-blog-migration</guid>
+    <description>This post describes a few ways to move WordPress, either to a different server or to Jekyll.</description>
+    <pubDate>Wed, 24 Sep 2014 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Using RasPlex for your Media Server</title>
     <link>https://jenntesolin.com/notes/rasplex-media-server</link>
     <guid>https://jenntesolin.com/notes/rasplex-media-server</guid>
@@ -14,10 +147,52 @@
     <pubDate>Thu, 24 Apr 2014 00:00:00 GMT</pubDate>
   </item>
   <item>
+    <title>Creating the Sticky Footer with Fixed Navbar example using Bootstrap 3 and Emmet</title>
+    <link>https://jenntesolin.com/notes/bootstrap-3-and-emmet</link>
+    <guid>https://jenntesolin.com/notes/bootstrap-3-and-emmet</guid>
+    <description>Outdated: This post describes how to use Emmet shortcuts to quickly create Bootstrap’s Sticky Footer with Fixed Navbar example.</description>
+    <pubDate>Fri, 28 Mar 2014 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Raspberry Pi: Setting Up Bluetooth</title>
+    <link>https://jenntesolin.com/notes/raspberry-pi-setting-up-bluetooth</link>
+    <guid>https://jenntesolin.com/notes/raspberry-pi-setting-up-bluetooth</guid>
+    <description>Outdated: Notes on setting up a Bluetooth dongle with Raspbmc on a Raspberry Pi.</description>
+    <pubDate>Mon, 17 Mar 2014 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>WordPress Development Tips: Updates and Deprecated Notices</title>
+    <link>https://jenntesolin.com/notes/wordpress-development-tips</link>
+    <guid>https://jenntesolin.com/notes/wordpress-development-tips</guid>
+    <description>Outdated: A few WordPress development tips for update prompts and deprecated plugin notices.</description>
+    <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fixing Ubuntu 12.04 network issue</title>
+    <link>https://jenntesolin.com/notes/fixing-ubuntu-12-04-network-issue</link>
+    <guid>https://jenntesolin.com/notes/fixing-ubuntu-12-04-network-issue</guid>
+    <description>Outdated: Notes on fixing a network issue after upgrading an Ubuntu virtual machine from 10 LTS to 12.04 LTS.</description>
+    <pubDate>Thu, 09 Jan 2014 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>ASP.NET Menu Control: Styling with Bootstrap 2</title>
+    <link>https://jenntesolin.com/notes/bootstrap-nav-style-asp-menu</link>
+    <guid>https://jenntesolin.com/notes/bootstrap-nav-style-asp-menu</guid>
+    <description>Outdated: Notes on adapting an ASP.NET menu control to work with Bootstrap 2 instead of using hard-coded navigation.</description>
+    <pubDate>Thu, 07 Nov 2013 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Quick Tip: Using Font Awesome 4 with Bootstrap 3</title>
     <link>https://jenntesolin.com/notes/quick-tip-using-font-awesome-with-bootstrap-3</link>
     <guid>https://jenntesolin.com/notes/quick-tip-using-font-awesome-with-bootstrap-3</guid>
     <description>A quick post on how to use Font Awesome 4 with Bootstrap 3.</description>
+    <pubDate>Wed, 06 Nov 2013 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Using RequireJS with Bootstrap, Google Maps, and more</title>
+    <link>https://jenntesolin.com/notes/using-require-js-with-bootstrap-google-maps-and-more</link>
+    <guid>https://jenntesolin.com/notes/using-require-js-with-bootstrap-google-maps-and-more</guid>
+    <description>Outdated: This post describes how to move an older Google Maps and Bootstrap setup into a config file for use with RequireJS.</description>
     <pubDate>Wed, 06 Nov 2013 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -38,7 +213,7 @@
     <title>Raspberry Pi: List of Projects and Resources</title>
     <link>https://jenntesolin.com/notes/raspberry-pi-list-of-projects-and-resources</link>
     <guid>https://jenntesolin.com/notes/raspberry-pi-list-of-projects-and-resources</guid>
-    <description>This post collects resources, guides, and tips I found while putting together my Raspbmc media centre.</description>
+    <description>Update in progress: This post collects resources, guides, and tips I found while putting together my Raspbmc media centre.</description>
     <pubDate>Thu, 05 Sep 2013 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -94,7 +269,7 @@
     <title>Bootstrap and ASP.NET 4.0 master pages</title>
     <link>https://jenntesolin.com/notes/bootstrap-and-master-pages</link>
     <guid>https://jenntesolin.com/notes/bootstrap-and-master-pages</guid>
-    <description>Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected.</description>
+    <description>Outdated: Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected.</description>
     <pubDate>Wed, 10 Apr 2013 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -108,7 +283,7 @@
     <title>Japan Trip 2011: Planning and Tips</title>
     <link>https://jenntesolin.com/notes/japan-trip-2011</link>
     <guid>https://jenntesolin.com/notes/japan-trip-2011</guid>
-    <description>Useful phrases, transit advice, and budget tips from my 2011 Japan trip.</description>
+    <description>Update in progress: Useful phrases, transit advice, and budget tips from my 2011 Japan trip.</description>
     <pubDate>Thu, 08 Nov 2012 00:00:00 GMT</pubDate>
   </item>
   </channel>

@@ -1,0 +1,70 @@
+---
+title: "ASP.NET Menu Control: Styling with Bootstrap 2"
+description: "Outdated: Notes on adapting an ASP.NET menu control to work with Bootstrap 2 instead of using hard-coded navigation."
+date: "2013-11-07"
+tags: ["bootstrap", "asp-net", "css"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+Thanks to a useful post titled <a href="https://techbrij.com/responsive-menu-twitter-bootstrap-asp-net" target="_blank" rel="nofollow noopener noreferrer">Responsive ASP.NET Menu Control With Twitter Bootstrap</a>, I was able to update my earlier Bootstrap and master pages example to use ASP.NET menu controls instead of hard-coded navigation.
+
+For the menu control, you would add the code below in place of the `div` with `nav-collapse collapse`. The menu in this example is based on the Bootstrap 2 example <a href="https://getbootstrap.com/2.3.2/examples/hero.html" target="_blank" rel="nofollow noopener noreferrer">Basic marketing site</a>.
+
+One downside to the menu control is that it injects inline styles. Also, if you want to display a search form in the menu bar, you can start with the example from the <a href="https://getbootstrap.com/2.3.2/components.html#navbar" target="_blank" rel="nofollow noopener noreferrer">Bootstrap documentation</a> and then change the `<form>` to a `<span>`.
+
+## Before
+
+```html
+<form class="navbar-search pull-left">
+    <input type="text" class="search-query" placeholder="Search">
+</form>
+<div class="nav-collapse collapse">
+    <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="nav-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+</div>
+```
+
+## After
+
+```html
+<span class="navbar-search pull-left">
+    <input type="text" placeholder="Search">
+</span>
+<asp:Menu ID="NavigationMenu" runat="server" EnableViewState="false"
+    IncludeStyleBlock="false" Orientation="Horizontal"
+    CssClass="nav-collapse collapse"
+    StaticMenuStyle-CssClass="nav"
+    StaticSelectedStyle-CssClass="active"
+    DynamicMenuStyle-CssClass="dropdown-menu">
+    <Items>
+        <asp:MenuItem Text="Home" ToolTip="Home" />
+        <asp:MenuItem Text="Demos" ToolTip="Demos">
+            <asp:MenuItem Text="Contact" ToolTip="Contact" />
+            <asp:MenuItem Text="Google Map" ToolTip="Google Map" />
+        </asp:MenuItem>
+        <asp:MenuItem Text="Movies" ToolTip="Movies">
+            <asp:MenuItem Text="Action" ToolTip="Action" />
+            <asp:MenuItem Text="Drama" ToolTip="Drama" />
+            <asp:MenuItem Text="Musical" ToolTip="Musical" />
+        </asp:MenuItem>
+    </Items>
+</asp:Menu>
+```
+
+You can also view the <a href="https://github.com/jennifert/Boostrap-ASP_Net-MasterPages/blob/master/BootstrapASP.Master" target="_blank" rel="nofollow noopener noreferrer">full master file on GitHub</a>.

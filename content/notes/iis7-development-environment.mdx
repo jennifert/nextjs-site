@@ -1,0 +1,183 @@
+---
+title: "Creating a Development Environment for IIS 7+"
+description: "Outdated: This post describes how to enable IIS on Windows 7, along with setting up MySQL and PHP. Administrator access is required."
+date: "2015-03-14"
+tags: ["php", "asp-net", "server", "iis"]
+---
+
+> <small>Outdated: This post is preserved for reference and may no longer reflect current tools or services.</small>
+
+This post describes how to enable IIS on Windows 7, along with setting up MySQL and PHP. You will need administrator access to complete these steps.
+
+## Enable IIS
+
+To avoid permission issues when editing files with your logged-in account, create a folder outside of `inetpub`, making sure the full path has no spaces.
+
+For example:
+
+`C:\webroot\`
+
+Next, update the folder permissions. Right-click the new folder and add permissions for any required users such as `IIS_IUSRS`, `IUSR`, and `NETWORK SERVICE` as needed.
+
+Now, use the following <a href="https://web.archive.org/web/20160620015739/http://windows.microsoft.com/en-ca/windows7/install-internet-information-services-iis-7-5" target="_blank" rel="nofollow noopener noreferrer">guide</a> to install IIS on your machine. After the initial setup, the default web root will be under the `inetpub` folder.
+
+Since our new folder is already created, go ahead and point the server to use that location instead.
+
+In IIS Manager, go to:
+
+`Default Web Site > Manage Web Site > Advanced Settings > Physical Path`
+
+Then change the path to the folder you created at the start of this step.
+
+## Install PHP
+
+Go back into the **Turn Windows features on or off** menu, then expand **Application Development Features**. Enable the **CGI** checkbox.
+
+Download the latest stable version of PHP (Non Thread Safe) and unzip it into a directory such as:
+
+`C:\PHP5`
+
+Next, rename `php.ini-production` to `php.ini`. Open the file and edit it to match the items below:
+
+```ini
+extension_dir = "C:\PHP5\ext"
+log_errors = On<
+error_log = "C:\inetpub\temp\php-errors.log"
+fastcgi.impersonate = 1
+fastcgi.logging = 0
+cgi.fix_pathinfo=1
+cgi.force_redirect = 0
+display_errors = Off
+upload_max_filesize = 8M
+post_max_size = 8M
+```
+
+In IIS Manager, click once on your server name and then select **Handler Mappings**.
+
+Click:
+
+`Actions > Add Module Mapping`
+
+Then enter the following:
+
+- Request path: `*.php`
+- Module: `FastCgiModule`
+- Executable: `C:\PHP5\php-cgi.exe`
+- Name: `PHP_via_FastCGI`
+
+In the same window, click **Request Restrictions > Mapping**. Then check **Invoke handler only if request is mapped to**, and select **File or Folder**. Click **OK** through the dialog boxes to save the changes.
+
+In IIS Manager, click on your **Default Web Site**, then **Default Document**, and add `index.php` to the list.
+
+Finally, restart the Default Web Site and review the **Security recommendations** link in the Resources section for more ways to secure the setup.
+
+## Install MySQL
+
+Download the latest stable version. At the time of writing, that was MySQL 5.x. Be sure to skip straight to the download near the bottom of the page.
+
+> <small>July 21, 2021 note: If you use PHP 5.6 or below, MySQL may not work well with MySQL 8.</small>
+
+For most uses, the typical install is fine. Use the default MySQL options, and be sure to set a strong password for the `root` account.
+
+> Note: Never use `root` in your web applications.
+
+Next, go into your `php.ini` file and uncomment:
+
+```ini
+extension=php_mysql.dll
+extension=php_mysqli.dll
+```
+
+Save the file, then restart IIS.
+
+Finally, create a MySQL user and database for your application. Be sure to use a strong password here as well.
+
+## Install the URL Rewrite plugin for IIS
+
+Go to the <a href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank" rel="nofollow noopener noreferrer">Microsoft site</a> to download the latest version.
+
+Once installed successfully, restart the server again.
+
+This step allows you to use “pretty URLs” in your blog.
+
+## Download and install WordPress
+
+Download the latest version from <a href="https://wordpress.org/download/#download-install" target="_blank" rel="nofollow noopener noreferrer">WordPress.org</a>. At the time of writing, that was version 4.1.1.
+
+You can also check the <a href="https://make.wordpress.org/polyglots/teams/" target="_blank" rel="nofollow noopener noreferrer">translations</a> page to download WordPress in your language, although some translations may not be on the latest version.
+
+If you want to use WordPress in a subfolder, unzip it into your web root and rename the folder as needed, for example:
+
+`C:\webroot\blog`
+
+If you want WordPress at the root of the site, move the files out of the unzipped `wordpress` folder directly into:
+
+`C:\webroot\`
+
+Next, edit the `wp-config.php` file. You may need to rename the sample config file first. Update the WordPress username, password, and database name to match what you created after installing MySQL.
+
+Open the <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="nofollow noopener noreferrer">secret key generator</a> to automatically generate your secret keys, then paste them into `wp-config.php`.
+
+Next, add the line below just above the comment that tells you to stop editing. This prevents WordPress from asking for FTP credentials during updates:
+
+```php
+define('FS_METHOD','direct');
+```
+
+> Note: Do not use this setting on external servers.
+
+Save your changes, then open one of the following addresses in your browser:
+
+- <a href="http://localhost/blog/wp-admin/install.php" target="_blank" rel="nofollow noopener noreferrer">Finish install from a subfolder</a>
+- <a href="http://localhost/wp-admin/install.php" target="_blank" rel="nofollow noopener noreferrer">Finish install from the root</a>
+
+Follow the setup steps and choose your site name and admin user as prompted.
+
+If you run into issues, consult the <a href="https://wordpress.org/support/article/how-to-install-wordpress/" target="_blank" rel="nofollow noopener noreferrer">WordPress documentation</a>.
+
+## Add MIME types to IIS
+
+If you are not able to serve content such as fonts, JSON, or video files, you may need to add the MIME type to your `web.config` file as shown below. Instead of editing `web.config`, this can also be done directly in the <a href="https://sourcedaddy.com/windows-7/defining-new-mime-type.html" target="_blank" rel="nofollow noopener noreferrer">IIS server settings</a>.
+
+```xml
+<?xml version="1.0"?>
+<configuration>
+    <system.webServer>
+        <staticContent>
+          <mimeMap fileExtension=".json" mimeType="application/json" />
+          <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject" />
+          <mimeMap fileExtension=".otf" mimeType="font/otf" />
+          <mimeMap fileExtension=".ttf" mimeType="application/octet-stream" />
+          <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+          <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+          <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
+          <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
+          <mimeMap fileExtension=".m4v" mimeType="video/m4v" />
+          <mimeMap fileExtension=".ogg" mimeType="video/ogg" />
+          <mimeMap fileExtension=".ogv" mimeType="video/ogg" />
+          <mimeMap fileExtension=".oga" mimeType="audio/ogg" />
+          <mimeMap fileExtension=".spx" mimeType="audio/ogg" />
+          <mimeMap fileExtension=".svg" mimeType="images/svg+xml" />
+          <mimeMap fileExtension=".svgz" mimeType="images/svg+xml" />
+          <mimeMap fileExtension=".appcache" mimeType="text/cache-manifest" />
+          <mimeMap fileExtension=".rss" mimeType="application/rss+xml" />
+     </staticContent>
+    </system.webServer>
+</configuration>
+```
+
+If the MIME types you need are not listed above, they may be included in this <a href="https://web.archive.org/web/20170917212327/http://www.serverintellect.com/support/iis/mime-types/" target="_blank" rel="nofollow noopener noreferrer">list of common MIME types</a>.
+
+## Resources
+
+- <a href="https://web.archive.org/web/20180303023536/http://www.uipress.com/add-json-handler-support-in-iis-7/" target="_blank" rel="nofollow noopener noreferrer">Add JSON Handler Support</a>
+- <a href="https://codingstill.com/2013/01/set-mime-types-for-web-fonts-in-iis/" target="_blank" rel="nofollow noopener noreferrer">Add Web Font Handler Support</a>
+- <a href="https://docs.c1.orckestra.com/Layout/LayoutFAQ?q=Can+I+use+HTML5+and+CSS3+related+files+like+.svg%2C+.woff+and+.ogg%3F" target="_blank" rel="nofollow noopener noreferrer">Common HTML5 and CSS3 Handler Support</a>
+- <a href="https://www.iandevlin.com/blog/2010/03/net/configuring-rss-with-iis/" target="_blank" rel="nofollow noopener noreferrer">Configuring RSS with IIS</a>
+- <a href="https://stackoverflow.com/questions/4920576/create-virtual-directory-at-http-localhost/4920620#4920620" target="_blank" rel="nofollow noopener noreferrer">How do I change permissions on wwwroot</a>
+- <a href="https://web.archive.org/web/20160401063938/http://php.net/manual/en/install.windows.iis7.php" target="_blank" rel="nofollow noopener noreferrer">PHP installation docs</a>
+- <a href="https://web.archive.org/web/20220501165321/https://docs.microsoft.com/en-us/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis" target="_blank" rel="nofollow noopener noreferrer">Security recommendations</a>
+- <a href="https://wordpress.org/support/article/editing-wp-config-php/" target="_blank" rel="nofollow noopener noreferrer">WordPress: Editing wp-config.php</a>
+- <a href="https://docs.microsoft.com/en-us/iis/manage/configuring-security/how-to-set-up-ssl-on-iis" target="_blank" rel="nofollow noopener noreferrer">How to set up SSL on IIS 7</a>
+- <a href="https://deanhume.com/set-up-iis-7-to-run-a-secure-site-locally-https/" target="_blank" rel="nofollow noopener noreferrer">Set up IIS 7 to run a secure site locally with HTTPS</a>
+- <a href="https://weblogs.asp.net/scottgu/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates" target="_blank" rel="nofollow noopener noreferrer">Tip/Trick: Enabling SSL on IIS 7.0 using self-signed certificates</a>

@@ -54,6 +54,18 @@
     ]
   },
   {
+    "route": "/notes/using-ios-and-android-together",
+    "url": "https://jenntesolin.com/notes/using-ios-and-android-together",
+    "title": "Using iOS and Android devices together",
+    "description": "Tips for using Android and Apple devices together, including calendar, contacts, iCloud mail, and music.",
+    "date": "2025-07-10T00:00:00.000Z",
+    "tags": [
+      "ios",
+      "android",
+      "tips"
+    ]
+  },
+  {
     "route": "/photography",
     "url": "https://jenntesolin.com/photography",
     "title": "Photography",
@@ -84,6 +96,211 @@
     ]
   },
   {
+    "route": "/notes/setting-up-a-chromebook-dev",
+    "url": "https://jenntesolin.com/notes/setting-up-a-chromebook-dev",
+    "title": "A guide to setting up a Chromebook for web development",
+    "description": "Outdated: Notes on using a budget Chromebook for web development, including Linux, IDEs, browsers, and other tools.",
+    "date": "2022-06-29T00:00:00.000Z",
+    "tags": [
+      "chromebook",
+      "development"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-on-digital-ocean",
+    "url": "https://jenntesolin.com/notes/jekyll-on-digital-ocean",
+    "title": "Jekyll: Static Sites on the DigitalOcean App Platform",
+    "description": "Update in progress: This tutorial describes how to host your Jekyll static site, including plugins, on the DigitalOcean App Platform.",
+    "date": "2021-03-11T00:00:00.000Z",
+    "tags": [
+      "jekyll",
+      "server"
+    ]
+  },
+  {
+    "route": "/notes/install-homebrew-fix-ruby",
+    "url": "https://jenntesolin.com/notes/install-homebrew-fix-ruby",
+    "title": "Installing Homebrew and Fixing Ruby on macOS",
+    "description": "Update in progress: Notes on installing Homebrew, managing packages, and updating Ruby on macOS.",
+    "date": "2021-01-13T00:00:00.000Z",
+    "tags": [
+      "macOS",
+      "homebrew",
+      "ruby"
+    ]
+  },
+  {
+    "route": "/notes/apps-and-programs-for-development",
+    "url": "https://jenntesolin.com/notes/apps-and-programs-for-development",
+    "title": "Great apps and programs for web development",
+    "description": "Update in progress: A list of applications you can use for web development, grouped into free, paid, and subscription-based tools.",
+    "date": "2020-10-14T00:00:00.000Z",
+    "tags": [
+      "tips"
+    ]
+  },
+  {
+    "route": "/notes/install-git-github",
+    "url": "https://jenntesolin.com/notes/install-git-github",
+    "title": "Installing Git and GitHub on your Mac",
+    "description": "Update in progress: This post describes older ways to install Git and GitHub tools on macOS.",
+    "date": "2019-12-12T00:00:00.000Z",
+    "tags": [
+      "git",
+      "github",
+      "macOS",
+      "homebrew"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-set-up-publish",
+    "url": "https://jenntesolin.com/notes/jekyll-set-up-publish",
+    "title": "Jekyll: Setting up your development environment",
+    "description": "Update in progress: Jekyll is a static site generator built with Ruby. This post covers an older setup for getting a local Jekyll development environment running.",
+    "date": "2019-12-11T00:00:00.000Z",
+    "tags": [
+      "jekyll"
+    ]
+  },
+  {
+    "route": "/notes/instal-node-js-and-grunt",
+    "url": "https://jenntesolin.com/notes/instal-node-js-and-grunt",
+    "title": "Installing Node.js and Grunt on macOS",
+    "description": "Outdated: Notes on installing Node.js and Grunt on macOS, preserved for reference.",
+    "date": "2018-04-18T00:00:00.000Z",
+    "tags": [
+      "javascript",
+      "node",
+      "grunt"
+    ]
+  },
+  {
+    "route": "/notes/highcharts-new-window",
+    "url": "https://jenntesolin.com/notes/highcharts-new-window",
+    "title": "Quick Tip: Highcharts credit in a new window",
+    "description": "A quick example of opening a Highcharts credit link in a new window or tab.",
+    "date": "2017-05-27T00:00:00.000Z",
+    "tags": [
+      "tips",
+      "javascript",
+      "highcharts"
+    ]
+  },
+  {
+    "route": "/notes/wordpress-and-campaign-monitor",
+    "url": "https://jenntesolin.com/notes/wordpress-and-campaign-monitor",
+    "title": "Quick Tip: WordPress and Campaign Monitor",
+    "description": "A quick and simple way to integrate your Campaign Monitor list with WordPress.",
+    "date": "2017-01-07T00:00:00.000Z",
+    "tags": [
+      "tips",
+      "php",
+      "wordpress",
+      "campaign-monitor"
+    ]
+  },
+  {
+    "route": "/notes/six-library-resources",
+    "url": "https://jenntesolin.com/notes/six-library-resources",
+    "title": "6 resources you may find at your local library",
+    "description": "A look at resources available through the Toronto Public Library, along with a reminder to check what your own local library offers.",
+    "date": "2017-01-06T00:00:00.000Z",
+    "tags": [
+      "tips"
+    ]
+  },
+  {
+    "route": "/notes/php-compare-integars",
+    "url": "https://jenntesolin.com/notes/php-compare-integars",
+    "title": "PHP Tip: Comparing integers and numeric strings",
+    "description": "This post describes how to compare variables containing integers using PHP.",
+    "date": "2016-06-14T00:00:00.000Z",
+    "tags": [
+      "php",
+      "tip"
+    ]
+  },
+  {
+    "route": "/notes/itunes-view-change",
+    "url": "https://jenntesolin.com/notes/itunes-view-change",
+    "title": "Change your iTunes media view mode",
+    "description": "A quick tip on changing playlist view mode in a newer iTunes release.",
+    "date": "2016-06-12T00:00:00.000Z",
+    "tags": [
+      "tips",
+      "itunes",
+      "apple"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-on-github-pages",
+    "url": "https://jenntesolin.com/notes/jekyll-on-github-pages",
+    "title": "Jekyll: Configure Jekyll for GitHub Pages",
+    "description": "Update in progress: Notes on configuring a Jekyll site for GitHub Pages, with older hosting details kept only where still useful.",
+    "date": "2016-02-04T00:00:00.000Z",
+    "tags": [
+      "jekyll",
+      "github"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-pagination-upgrade-to-3",
+    "url": "https://jenntesolin.com/notes/jekyll-pagination-upgrade-to-3",
+    "title": "Jekyll: Fix pagination after upgrading to version 3",
+    "description": "In Jekyll 3, built-in pagination was deprecated. This post describes how to resolve the error.",
+    "date": "2015-10-28T00:00:00.000Z",
+    "tags": [
+      "jekyll"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-config-file",
+    "url": "https://jenntesolin.com/notes/jekyll-config-file",
+    "title": "Jekyll: The configuration file",
+    "description": "Update in progress: The Jekyll configuration file `_config.yml` holds important settings for your site. This post highlights some items used in one of my older sites.",
+    "date": "2015-08-08T00:00:00.000Z",
+    "tags": [
+      "jekyll"
+    ]
+  },
+  {
+    "route": "/notes/jekyll-custom-search",
+    "url": "https://jenntesolin.com/notes/jekyll-custom-search",
+    "title": "Jekyll: Custom Search",
+    "description": "This post describes how to create a basic search using JSON and jQuery.",
+    "date": "2015-05-22T00:00:00.000Z",
+    "tags": [
+      "jekyll",
+      "javascript",
+      "json"
+    ]
+  },
+  {
+    "route": "/notes/iis7-development-environment",
+    "url": "https://jenntesolin.com/notes/iis7-development-environment",
+    "title": "Creating a Development Environment for IIS 7+",
+    "description": "Outdated: This post describes how to enable IIS on Windows 7, along with setting up MySQL and PHP. Administrator access is required.",
+    "date": "2015-03-14T00:00:00.000Z",
+    "tags": [
+      "php",
+      "asp-net",
+      "server",
+      "iis"
+    ]
+  },
+  {
+    "route": "/notes/wordpress-blog-migration",
+    "url": "https://jenntesolin.com/notes/wordpress-blog-migration",
+    "title": "WordPress Blog Migration",
+    "description": "This post describes a few ways to move WordPress, either to a different server or to Jekyll.",
+    "date": "2014-09-24T00:00:00.000Z",
+    "tags": [
+      "php",
+      "wordpress",
+      "jekyll"
+    ]
+  },
+  {
     "route": "/notes/rasplex-media-server",
     "url": "https://jenntesolin.com/notes/rasplex-media-server",
     "title": "Using RasPlex for your Media Server",
@@ -93,6 +310,65 @@
       "streaming",
       "server",
       "raspberry-pi"
+    ]
+  },
+  {
+    "route": "/notes/bootstrap-3-and-emmet",
+    "url": "https://jenntesolin.com/notes/bootstrap-3-and-emmet",
+    "title": "Creating the Sticky Footer with Fixed Navbar example using Bootstrap 3 and Emmet",
+    "description": "Outdated: This post describes how to use Emmet shortcuts to quickly create Bootstrap’s Sticky Footer with Fixed Navbar example.",
+    "date": "2014-03-28T00:00:00.000Z",
+    "tags": [
+      "css",
+      "emmet",
+      "bootstrap"
+    ]
+  },
+  {
+    "route": "/notes/raspberry-pi-setting-up-bluetooth",
+    "url": "https://jenntesolin.com/notes/raspberry-pi-setting-up-bluetooth",
+    "title": "Raspberry Pi: Setting Up Bluetooth",
+    "description": "Outdated: Notes on setting up a Bluetooth dongle with Raspbmc on a Raspberry Pi.",
+    "date": "2014-03-17T00:00:00.000Z",
+    "tags": [
+      "diy",
+      "raspberry-pi"
+    ]
+  },
+  {
+    "route": "/notes/wordpress-development-tips",
+    "url": "https://jenntesolin.com/notes/wordpress-development-tips",
+    "title": "WordPress Development Tips: Updates and Deprecated Notices",
+    "description": "Outdated: A few WordPress development tips for update prompts and deprecated plugin notices.",
+    "date": "2014-01-20T00:00:00.000Z",
+    "tags": [
+      "tips",
+      "php",
+      "wordpress"
+    ]
+  },
+  {
+    "route": "/notes/fixing-ubuntu-12-04-network-issue",
+    "url": "https://jenntesolin.com/notes/fixing-ubuntu-12-04-network-issue",
+    "title": "Fixing Ubuntu 12.04 network issue",
+    "description": "Outdated: Notes on fixing a network issue after upgrading an Ubuntu virtual machine from 10 LTS to 12.04 LTS.",
+    "date": "2014-01-09T00:00:00.000Z",
+    "tags": [
+      "servers",
+      "ubuntu",
+      "network"
+    ]
+  },
+  {
+    "route": "/notes/bootstrap-nav-style-asp-menu",
+    "url": "https://jenntesolin.com/notes/bootstrap-nav-style-asp-menu",
+    "title": "ASP.NET Menu Control: Styling with Bootstrap 2",
+    "description": "Outdated: Notes on adapting an ASP.NET menu control to work with Bootstrap 2 instead of using hard-coded navigation.",
+    "date": "2013-11-07T00:00:00.000Z",
+    "tags": [
+      "bootstrap",
+      "asp-net",
+      "css"
     ]
   },
   {
@@ -107,6 +383,19 @@
       "css",
       "fonts",
       "font-awesome"
+    ]
+  },
+  {
+    "route": "/notes/using-require-js-with-bootstrap-google-maps-and-more",
+    "url": "https://jenntesolin.com/notes/using-require-js-with-bootstrap-google-maps-and-more",
+    "title": "Using RequireJS with Bootstrap, Google Maps, and more",
+    "description": "Outdated: This post describes how to move an older Google Maps and Bootstrap setup into a config file for use with RequireJS.",
+    "date": "2013-11-06T00:00:00.000Z",
+    "tags": [
+      "javascript",
+      "google",
+      "bootstrap",
+      "css"
     ]
   },
   {
@@ -138,7 +427,7 @@
     "route": "/notes/raspberry-pi-list-of-projects-and-resources",
     "url": "https://jenntesolin.com/notes/raspberry-pi-list-of-projects-and-resources",
     "title": "Raspberry Pi: List of Projects and Resources",
-    "description": "This post collects resources, guides, and tips I found while putting together my Raspbmc media centre.",
+    "description": "Update in progress: This post collects resources, guides, and tips I found while putting together my Raspbmc media centre.",
     "date": "2013-09-05T00:00:00.000Z",
     "tags": [
       "diy",
@@ -212,7 +501,8 @@
     "date": "2013-05-24T00:00:00.000Z",
     "tags": [
       "ios",
-      "wishlist"
+      "wishlist",
+      "apple"
     ]
   },
   {
@@ -230,11 +520,11 @@
     "route": "/notes/bootstrap-and-master-pages",
     "url": "https://jenntesolin.com/notes/bootstrap-and-master-pages",
     "title": "Bootstrap and ASP.NET 4.0 master pages",
-    "description": "Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected.",
+    "description": "Outdated: Working with Bootstrap in ASP.NET 4.0 master pages can be a little tricky out of the box, especially when script paths and validation scripts do not load as expected.",
     "date": "2013-04-10T00:00:00.000Z",
     "tags": [
       "bootstrap",
-      "asp"
+      "asp-net"
     ]
   },
   {
@@ -253,7 +543,7 @@
     "route": "/notes/japan-trip-2011",
     "url": "https://jenntesolin.com/notes/japan-trip-2011",
     "title": "Japan Trip 2011: Planning and Tips",
-    "description": "Useful phrases, transit advice, and budget tips from my 2011 Japan trip.",
+    "description": "Update in progress: Useful phrases, transit advice, and budget tips from my 2011 Japan trip.",
     "date": "2012-11-08T00:00:00.000Z",
     "tags": [
       "travel",

@@ -1,0 +1,26 @@
+---
+title: "Jekyll: Fix pagination after upgrading to version 3"
+description: "In Jekyll 3, built-in pagination was deprecated. This post describes how to resolve the error."
+date: "2015-10-28"
+tags: ["jekyll"]
+---
+
+In Jekyll 3, built-in pagination was deprecated. This post describes how to resolve the error.
+
+> **Deprecation:** You appear to have pagination turned on, but you have not included the `jekyll-paginate` gem. Ensure you have `gems: [jekyll-paginate]` in your configuration file.
+
+First, make sure you have the gem installed by running the following in your terminal:
+
+```shell-session
+gem install jekyll-paginate
+```
+
+Next, open `_config.yml` and add the following line:
+
+```yaml
+# Site settings
+gems :
+    - jekyll-paginate
+```
+
+After that, when you run `bundle exec jekyll serve` or `bundle exec jekyll build`, the error message should no longer appear.

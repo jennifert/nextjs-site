@@ -1,5 +1,15 @@
 # Changelog
 
+## 5.0.1 - 2026-04-18
+
+### Changed
+- Finished migration of older posts into MDX notes
+- Continued refining migrated note wording, links, and metadata
+
+### Fixed
+- Cleaned up older note content during migration
+- Repaired or updated outdated internal and external links where needed
+
 ## 5.0.0 - 2026-04-17
 
 ### Added
@@ -22,7 +32,3 @@
 - Fixed footer layout and horizontal link styling
 - Improved migrated note wording, metadata, and status messaging
 - Cleaned up outdated notices and note descriptions
-
-### In Progress
-- Ongoing migration of older posts into MDX notes
-- Ongoing review of older content, links, attachments, and metadata

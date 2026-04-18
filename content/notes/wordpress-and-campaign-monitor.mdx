@@ -1,0 +1,49 @@
+---
+title: "Quick Tip: WordPress and Campaign Monitor"
+description: "A quick and simple way to integrate your Campaign Monitor list with WordPress."
+date: "2017-01-07"
+tags: ["tips", "php", "wordpress", "campaign-monitor"]
+---
+
+A quick and simple way to integrate your Campaign Monitor list with WordPress.
+
+## Add a subscribe form to your site
+
+The easiest way is to use the WordPress text widget and paste the Campaign Monitor form code into it. To generate a form, go to your list in Campaign Monitor and click **Grow your audience**. Next, click **Copy/paste a form to your site**.
+
+Select the list or lists you want, then click **Generate code**. This will give you the form code to place in your site. You can later customize settings such as the confirmation message, thank-you note, and other options.
+
+## Email subscribers
+
+When this post was first written, the automation functionality in Campaign Monitor was not yet available. Since then, automation has become the suggested way to integrate with WordPress. It uses Campaign Monitor directly and avoids adding extra bulk to your theme files and site.
+
+### Campaign Monitor automation
+
+Campaign Monitor automation can read and parse RSS feeds. First, make sure to add the <a href="https://www.campaignmonitor.com/create/rss-to-email/" target="_blank" rel="nofollow noopener noreferrer">RSS to Email</a> tags to your template, and <a href="https://help.campaignmonitor.com/s/article/create-a-subscriber-list" target="_blank" rel="nofollow noopener noreferrer">create your list</a> as you normally would.
+
+Next, <a href="https://help.campaignmonitor.com/s/article/recurring-rss-to-email-campaigns" target="_blank" rel="nofollow noopener noreferrer">follow Campaign Monitor’s guide</a> for email automation using the list and template mentioned above.
+
+That’s it.
+
+### If you do not have an RSS or Atom feed
+
+Add the <a title="Campaign Monitor Wrapper for PHP" href="https://campaignmonitor.github.io/createsend-php/" target="_blank" rel="nofollow noopener noreferrer">Campaign Monitor Wrapper for PHP</a> to your theme directory so you can access the functionality. Next, use the “create a draft campaign” and “send a draft campaign” features to send an email.
+
+This code would go in your `functions.php` file, for example:
+
+```php
+// be sure to require once the API wrapper.
+function email_alert() {
+    //campaign monitor code
+}
+add_filter ( 'publish_post', 'email_alert' );
+```
+
+## Integrating with other languages and systems
+
+For the most part, the steps would be similar. You may just need to choose a different <a href="https://www.campaignmonitor.com/api/v3-3/wrappers/" target="_blank" rel="nofollow noopener noreferrer">API wrapper for v3</a> depending on the language you are using, especially if you are not working with an Atom or RSS feed.
+
+## Resources
+
+- <a href="https://wordpress.org/support/topic/add_action-with-publish_post/" target="_blank" rel="nofollow noopener noreferrer">WordPress.org support: Publish actions</a>
+- <a href="https://www.campaignmonitor.com/api/" target="_blank" rel="nofollow noopener noreferrer">Campaign Monitor API documentation</a>

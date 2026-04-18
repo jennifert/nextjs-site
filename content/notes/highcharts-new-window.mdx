@@ -1,0 +1,48 @@
+---
+title: "Quick Tip: Highcharts credit in a new window"
+description: "A quick example of opening a Highcharts credit link in a new window or tab."
+date: "2017-05-27"
+tags: ["tips", "javascript", "highcharts"]
+---
+
+Here is a quick example, originally based on a JSFiddle by Torstein Hønsi, that shows how to make a Highcharts credit link open in a new window or tab.
+
+> **Note:** If you are using Highcharts under the free license terms, make sure you follow their attribution requirements. For example, if you replace the default credit text, you should confirm that your usage still complies with the Highcharts license.
+
+```javascript
+// Originally based on a JSFiddle example by Torstein Hønsi.
+// Original source: https://jsfiddle.net/G9h8z/1/embed/ (link no longer available)
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            events: {
+                load: function() {
+                    this.credits.element.onclick = function() {
+                        window.open(
+                            'http://www.example.com',
+                            '_blank' // Opens the credit link in a new window or tab.
+                        );
+                    }
+                }
+            }
+        },
+
+        credits: {
+            text: 'Example.com'
+        },
+
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+        }]
+    });
+});
+```
+
+## Resources
+
+- <a href="https://codepen.io/TorsteinHonsi/pens/public" target="_blank" rel="nofollow noopener noreferrer">Torstein Hønsi’s public CodePen examples</a>
+- <a href="https://www.highcharts.com/docs/getting-started/your-first-chart" target="_blank" rel="nofollow noopener noreferrer">Highcharts: Your first chart</a>

@@ -1,0 +1,43 @@
+---
+title: "Installing Git and GitHub on your Mac"
+description: "Update in progress: This post describes older ways to install Git and GitHub tools on macOS."
+date: "2019-12-12"
+tags: ["git", "github", "macOS", "homebrew"]
+---
+
+> <small>Update in progress: This post is based on an older setup and is being kept for reference while I work on a fuller update.</small>
+
+This post describes a few older ways to install Git and GitHub tools on a Mac. Two common methods are outlined below. Please note that the first method requires Homebrew.
+
+## Installing with Homebrew
+
+To install Git, run the commands below and enter your information when prompted. `brew update` and `brew upgrade` are included here as part of a typical update workflow before installing packages.
+
+```bash
+brew update
+brew upgrade
+brew install git
+brew install git-gui
+```
+
+If you use GitHub, you can also install the GitHub Desktop cask by running the command below in your terminal. Once installed, open the app and choose **Install Command Line Tool** from the menu.
+
+
+```bash
+brew install --cask github
+```
+
+## Installing with DMG files
+
+You can also download a DMG installer. For Git, this post originally used the <a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="nofollow noopener noreferrer">official binary installer on SourceForge</a>.
+
+Alternatively, if you use GitHub, you can download the <a href="https://desktop.github.com/" target="_blank" rel="nofollow noopener noreferrer">GitHub Desktop DMG</a> and install the Git command line tools from within the app.
+
+To install the Git command line tools from GitHub Desktop, click the app name **GitHub Desktop**, then choose **Install Command Line Tool**.
+
+<Image
+    src="/notes/2019-12-12-git-github/github-cmd-tools.png"
+    alt="GitHub Desktop menu showing Install Command Line Tool"
+    width="700"
+    height="504"
+/>

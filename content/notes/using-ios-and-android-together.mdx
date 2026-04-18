@@ -1,0 +1,52 @@
+---
+title: "Using iOS and Android devices together"
+description: "Tips for using Android and Apple devices together, including calendar, contacts, iCloud mail, and music."
+date: "2025-07-10"
+tags: ["ios", "android", "tips"]
+---
+
+Using an Android device in an Apple-heavy environment can be a bit tricky, but here are some tips and resources that can help. This post updates an older one titled “Moving from an iOS Device to Android (iCloud).”
+
+I am not partnered with or sponsored by any of the programs below. They are simply tools I have researched and used over the years.
+
+## Calendar and contacts
+
+The most reliable way to keep your calendar and contacts in sync between Apple and Android devices is to use your Google account as the main source, rather than trying to sync directly with iCloud.
+
+On your Apple devices, you can add your Google account in:
+
+- **Calendar:** Go to *Settings > Calendar > Accounts* and add your Google account. Your Google Calendar events will then appear directly in the iOS or macOS Calendar app.
+- **Contacts:** Go to *Settings > Contacts > Accounts* and add your Google account. You can then choose to sync Google Contacts directly into your Contacts app.
+
+Once this is set up, your events and contacts should sync automatically across Android and Apple devices through your Google account, with no third-party apps required.
+
+This method also avoids compatibility problems with older CalDAV and CardDAV sync tools, which may no longer work reliably.
+
+**Note:** Older apps like SmoothSync for Contacts and Calendar previously allowed iCloud sync on Android through CalDAV and CardDAV, but many are no longer reliable or actively supported on newer Android and iOS versions.
+
+## iCloud mail sync
+
+The easiest way to sync your iCloud email is to use this <a href="https://support.apple.com/en-us/HT202304" title="IMAP settings for iCloud" target="_blank" rel="nofollow noopener noreferrer">IMAP email guide</a> from Apple. You will need to generate an app-specific password for your email client.
+
+<a href="https://www.androidcentral.com/how-set-your-icloud-email-account-android" target="_blank" rel="nofollow noopener noreferrer">Android Central</a> also has a few notes on working around SSL issues if you run into them.
+
+## iTunes and Apple Music on Android
+
+### Apple Music
+
+If you use Apple Music, or have an iTunes library and use an Android device, there are two main ways to access your music.
+
+- <a href="https://play.google.com/store/apps/details?id=com.apple.android.music" target="_blank" rel="nofollow noopener noreferrer">Apple Music for Android</a>
+
+This official app from Apple lets you stream your Apple Music subscription and access purchased music from iTunes, provided iCloud Music Library is enabled.
+
+### iTunes library sync
+
+To sync a local iTunes library, there are still tools originally created by JRT Studio that can move and play music on Android. These apps also work on some Amazon Fire devices if the <a href="https://www.howtogeek.com/232726/how-to-install-the-google-play-store-on-your-amazon-fire-tablet/" target="_blank" rel="nofollow noopener noreferrer">Google Play Store is installed</a>, or in some cases directly through the Amazon Appstore.
+
+**Ownership note:** <a href="https://mumastudios.com/" target="_blank" rel="nofollow noopener noreferrer">MumaStudios</a> acquired the iSyncr and Rocket Player apps from JRT Studio in 2022 and now handles their support and development.
+
+- <a href="https://play.google.com/store/apps/details?id=iTunes.Sync.Android" target="_blank" rel="nofollow noopener noreferrer">iSyncr</a>: Used to move files, playlists, and metadata from your iTunes library to your Android device. It requires installation on both your Mac and Android device.
+- <a href="https://play.google.com/store/apps/details?id=com.jrtstudio.AnotherMusicPlayer" target="_blank" rel="nofollow noopener noreferrer">Rocket Player</a>: A full-featured music player that integrates with iSyncr. It supports casting and a wide range of formats, although some require a premium license, including ALAC, TTA, APE, MPC, WAV, FLAC, WV, and WMA.
+
+**Note:** DRM-protected video files from iTunes still will not play on Android devices. Only DRM-free audio files, or music accessed through Apple Music and iCloud Music Library, will work more smoothly across platforms.
