@@ -10,9 +10,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-22.16.0-brightgreen?logo=nodedotjs)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-10.9.2-red?logo=npm)](https://www.npmjs.com/)
 
-The current website for **jenntesolin.com** (moving hosts, see under about for temp link) — built with Next.js and React, with older notes being migrated to MDX over time.
+The current website for **jenntesolin.com** — built with Next.js and React, with older notes now migrated to MDX.
 
-🚧 This site has been significantly reworked. Some older content is still being migrated and updated.
+🚧 This site has been significantly reworked. Content migration is complete, the domain is still being transferred, and a few improvements are still on the way.
 
 ---
 
