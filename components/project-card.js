@@ -31,7 +31,7 @@ export default function ProjectCard({
       {displayDate && (
         <p>
           <strong>{lastUpdated ? 'Updated' : 'Date'}:</strong>{' '}
-          {new Date(displayDate).toLocaleDateString()}
+          {displayDate}
         </p>
       )}
 

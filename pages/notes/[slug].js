@@ -54,7 +54,7 @@ export default function NotePage({ frontmatter, slug, mdxSource }) {
   return (
     <Layout>
       <Head>
-        <title>{title} | Jenn Tesolin</title>
+        <title>{`${title} | Jenn Tesolin`}</title>
         <meta name="description" content={description} />
       </Head>
 

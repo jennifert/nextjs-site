@@ -19,7 +19,7 @@ export default function Projects() {
     return (
         <Layout>
             <Head>
-                <title>{POST_TITLE} | Jenn Tesolin</title>
+                <title>{`${POST_TITLE} | Jenn Tesolin`}</title>
                 <meta name="description" content={POST_DESCRIPTION} />
             </Head>
 
