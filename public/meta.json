@@ -12,16 +12,6 @@
     ]
   },
   {
-    "route": "/",
-    "url": "https://jenntesolin.com/",
-    "title": "Jenn Tesolin | Web projects, photography, and creative side quests",
-    "description": "A personal site by Jenn Tesolin featuring web projects, photography, notes, and other creative side quests.",
-    "date": "2026-04-20T00:00:00.000Z",
-    "tags": [
-      "home"
-    ]
-  },
-  {
     "route": "/notes",
     "url": "https://jenntesolin.com/notes",
     "title": "Notes",
@@ -36,7 +26,7 @@
     "route": "/privacy",
     "url": "https://jenntesolin.com/privacy",
     "title": "Privacy",
-    "description": "Sorry, the page you’re looking for doesn’t exist.",
+    "description": "How this site respects privacy.",
     "date": "2026-04-20T00:00:00.000Z",
     "tags": [
       "Privacy"
@@ -51,6 +41,16 @@
     "tags": [
       "projects",
       "development"
+    ]
+  },
+  {
+    "route": "/",
+    "url": "https://jenntesolin.com/",
+    "title": "Jenn Tesolin | Web projects, photography, and creative side quests",
+    "description": "A personal site by Jenn Tesolin featuring web projects, photography, notes, and other creative side quests.",
+    "date": "2026-04-18T00:00:00.000Z",
+    "tags": [
+      "home"
     ]
   },
   {

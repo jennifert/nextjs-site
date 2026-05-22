@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import PostJsonLd from '../components/PostJsonLd'
 
 export const POST_TITLE = 'Privacy'
-export const POST_DESCRIPTION = 'Sorry, the page you’re looking for doesn’t exist.'
+export const POST_DESCRIPTION = 'How this site respects privacy.'
 export const POST_DATE = '2026-04-20'
 export const POST_TAGS = ['Privacy']
 
