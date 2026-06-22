@@ -92,5 +92,26 @@
     ],
     "date": "2025-07-09",
     "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Pokémon Verdant",
+    "summary": "A work-in-progress Pokémon Emerald enhancement project built with pokeemerald-expansion. Focused on modern QoL, one-save Hoenn Pokédex completion, easier team building, and a warmer postgame.",
+    "repo": "https://github.com/jennifert/pokeemerald-expansion",
+    "demo": "",
+    "tags": [
+      "pokemon",
+      "rom hacking",
+      "game modding",
+      "hobby project"
+    ],
+    "tech": [
+      "C",
+      "Make",
+      "GitHub",
+      "pokeemerald-expansion"
+    ],
+    "date": "2026-06-21",
+    "featured": true
   }
 ]

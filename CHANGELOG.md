@@ -1,4 +1,9 @@
 # Changelog
+## 5.0.2 - 2026-06-21
+
+### Updates
+- Added new project in JSON.
+- NPM updated
 
 ## 5.0.1 - 2026-04-18
 
