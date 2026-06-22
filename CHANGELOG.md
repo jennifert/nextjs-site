@@ -1,4 +1,13 @@
 # Changelog
+
+## 5.0.3 - 2026-06-22
+
+### Updates
+- Added new note
+
+### Fixed
+- Fixed projects featured.
+
 ## 5.0.2 - 2026-06-21
 
 ### Updates

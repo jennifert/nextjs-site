@@ -1,0 +1,175 @@
+---
+title: "Setting Up Pokémon Emerald Development on macOS"
+description: "This post describes how to set up the tools needed on macOS to build a Pokémon Emerald development project locally."
+date: "2026-06-22"
+tags: ["pokemon", "rom hacking", "game modding","hobby project"]
+---
+
+I’ve been working on a Pokémon Emerald ROM hacking project, and one of the first hurdles was getting the development environment set up on my Mac.
+
+This post is partly a note for future me, and partly for anyone else who is starting from a similar place. I’m still learning as I go, so this is not meant to be the only way to set things up. It is simply the process that worked for me.
+
+## 1. Install Xcode Command Line Tools
+
+First, open Terminal and install Apple’s command line tools:
+
+```bash
+xcode-select --install
+```
+
+This gives your Mac the basic developer tools needed to build software from the command line.
+
+## 2. Install Homebrew
+
+If you do not already have Homebrew installed, install it from the official Homebrew website:
+
+```text
+https://brew.sh/
+```
+
+Homebrew is a package manager for macOS. I use it to install the command line utilities and libraries needed by the Pokémon Emerald build tools.
+
+## 3. Install core build tools
+
+Next, install the basic tools used by build systems:
+
+```bash
+brew install make automake autoconf libtool pkg-config
+```
+
+I also installed CMake and Ninja:
+
+```bash
+brew install cmake ninja
+```
+
+## 4. Install image and audio libraries
+
+Some asset pipelines need image and audio handling libraries. I installed these with Homebrew:
+
+```bash
+brew install libpng libjpeg-turbo libogg libvorbis
+```
+
+The important one for the base Pokémon Emerald setup is `libpng`, but I installed the others as useful helpers for ROM hacking and asset-related work.
+
+## 5. Install extra helper tools
+
+I also installed a couple of general command line helpers:
+
+```bash
+brew install wget unzip
+```
+
+These are handy for downloading and unpacking files from Terminal.
+
+## 6. Install devkitPro pacman
+
+For Game Boy Advance development, you need devkitARM from devkitPro.
+
+Download the macOS package from devkitPro’s pacman releases page:
+
+```text
+https://github.com/devkitPro/pacman/releases
+```
+
+After downloading the `.pkg` file, open it.
+
+On macOS, you may get a warning because the package was downloaded from the internet. If that happens, go to:
+
+```text
+System Settings → Privacy & Security
+```
+
+Then choose the option to open it anyway.
+
+## 7. Install the GBA development tools
+
+Once devkitPro pacman is installed, run:
+
+```bash
+sudo dkp-pacman -Sy
+sudo dkp-pacman -S gba-dev
+sudo dkp-pacman -S devkitarm-rules
+```
+
+When `gba-dev` asks which packages to install, I accepted the default selection.
+
+## 8. Add devkitPro to your shell environment
+
+On my Mac, I use zsh, which is the default shell on newer versions of macOS.
+
+I added these environment variables:
+
+```bash
+export DEVKITPRO=/opt/devkitpro
+echo "export DEVKITPRO=/opt/devkitpro" >> ~/.zshrc
+
+export DEVKITARM=$DEVKITPRO/devkitARM
+echo "export DEVKITARM=\$DEVKITPRO/devkitARM" >> ~/.zshrc
+```
+
+Then restart Terminal, or run:
+
+```bash
+source ~/.zshrc
+```
+
+To check that the variables are set:
+
+```bash
+echo $DEVKITPRO
+echo $DEVKITARM
+```
+
+They should print something like:
+
+```text
+/opt/devkitpro
+/opt/devkitpro/devkitARM
+```
+
+## 9. Go to your project folder
+
+Next, go to the folder where your Pokémon Emerald project lives.
+
+For example, mine is in my Developer folder:
+
+```bash
+cd ~/Developer/pokeemerald
+```
+
+Use whatever path matches your own setup.
+
+## 10. Build the project
+
+From the project folder, run:
+
+```bash
+make
+```
+
+If everything is set up correctly, the project should build and create a `.gba` file.
+
+You can also try a faster build using your Mac’s CPU count:
+
+```bash
+make -j$(sysctl -n hw.ncpu)
+```
+
+## 11. Testing the ROM
+
+For quick testing, I used Delta from the Mac App Store as an iPad app on my Mac.
+
+Once the ROM builds, I can open the `.gba` file in the emulator and check whether the game runs.
+
+## Notes for future me
+
+A few things I want to remember:
+
+- Do not use GitHub’s “Download ZIP” option for projects that need Git history.
+- If Terminal says a command does not exist, restart Terminal and check your shell environment variables.
+- If `make` fails, read the first real error message carefully. The useful part is usually above the final failure line.
+- macOS security warnings are normal when opening downloaded developer tools, but I still want to make sure I am downloading them from the official project page.
+
+This setup got me to the point where I could build Pokémon Emerald locally on my Mac and start testing changes. From there, the fun part begins: making small changes, rebuilding, testing, and slowly learning how the project fits together.
