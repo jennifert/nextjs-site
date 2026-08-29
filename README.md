@@ -7,12 +7,12 @@
 [![ESLint](https://img.shields.io/badge/ESLint-9-purple?logo=eslint)](https://eslint.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC_BY--NC--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Node.js](https://img.shields.io/badge/Node.js-22.16.0-brightgreen?logo=nodedotjs)](https://nodejs.org/)
-[![npm](https://img.shields.io/badge/npm-10.9.2-red?logo=npm)](https://www.npmjs.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-25.9.0-brightgreen?logo=nodedotjs)](https://nodejs.org/)
+[![npm](https://img.shields.io/badge/npm-11.12.1-red?logo=npm)](https://www.npmjs.com/)
 
-The current website for **jenntesolin.com** — built with Next.js and React, with older notes now migrated to MDX.
+The current website for **jenntesolin.com** — built with Next.js and React, with older notes migrated to MDX.
 
-🚧 This site has been significantly reworked. Content migration is complete, the domain is still being transferred, and a few improvements are still on the way.
+🚧 This site has been significantly reworked. Content migration is complete, with additional improvements and maintenance continuing over time.
 
 ---
 
@@ -23,6 +23,7 @@ The current website for **jenntesolin.com** — built with Next.js and React, wi
 - [Current Stack](#current-stack)
 - [Quick Start](#quick-start)
 - [Linting](#linting)
+- [Link Checking](#link-checking)
 - [Content Structure](#content-structure)
 - [Notes and MDX](#notes-and-mdx)
 - [Search, Sitemap, and Metadata](#search-sitemap-and-metadata)
@@ -49,12 +50,13 @@ The current website for **jenntesolin.com** — built with Next.js and React, wi
 
 This site currently uses:
 
-- **Next.js** for routing and page generation
+- **Next.js** for routing and static page generation
 - **React** for components
 - **MDX** for notes and older post content
 - **Pico CSS (classless)** for base styling
 - **Custom CSS** in `styles/style.css` for layout and site-specific tweaks
 - **ESLint** for linting
+- **DigitalOcean App Platform** for static site hosting
 
 ### Styling Notes
 
@@ -67,6 +69,19 @@ In general:
 - Use Pico CSS for sensible default HTML styling.
 - Use `styles/style.css` for custom layout and component tweaks.
 - Avoid overcomplicating page-level styles unless needed.
+
+### Static Export
+
+The site is configured as a static Next.js export using:
+
+```js
+output: 'export',
+trailingSlash: true,
+```
+
+Running `npm run build` generates the deployable site in `out/`.
+
+The trailing-slash configuration ensures routes such as `/projects/` map cleanly to static files such as `out/projects/index.html`.
 
 ## Quick Start
 
@@ -95,10 +110,10 @@ In general:
    npm run build
    ```
 
-5. Start the production server locally:
+   The static site is generated in:
 
-   ```bash
-   npm run start
+   ```txt
+   out/
    ```
 
 ## Linting
@@ -108,6 +123,23 @@ Run ESLint with:
 ```bash
 npm run lint
 ```
+
+## Link Checking
+
+Check links in the generated static site with:
+
+```bash
+npm run check-links
+```
+
+Run a production build first so the `out/` directory is up to date:
+
+```bash
+npm run build
+npm run check-links
+```
+
+The checker reports broken internal links separately from external links that could not be verified.
 
 ## Content Structure
 
@@ -138,7 +170,7 @@ Supporting note utilities live in:
 
 ## Notes and MDX
 
-Older post content is being migrated from `.js` page files to `.mdx`.
+Older post content has been migrated from `.js` page files to `.mdx`.
 
 Each note should include frontmatter similar to:
 
@@ -169,18 +201,26 @@ These components are mapped in `pages/notes/[slug].js`.
 
 ## Search, Sitemap, and Metadata
 
-Search and sitemap pages currently rely on generated metadata and site content.
+Search, sitemap, RSS, and metadata files are generated from both standard pages and MDX notes.
 
-Files commonly involved include:
+Generate them with:
+
+```bash
+npm run generate-meta
+```
+
+Generated files include:
 
 - `public/meta.json`
 - `public/sitemap.xml`
 - `public/feed.xml`
 
-As the site is updated, metadata generation should account for both:
+The generator includes content from:
 
 - standard pages in `pages/`
 - MDX notes in `content/notes/`
+
+Generated URLs use trailing slashes to match the site's static export configuration.
 
 ## Headers and Caching (DigitalOcean App Platform)
 
