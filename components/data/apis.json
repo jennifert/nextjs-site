@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "A Song of Ice and Fire API",
-    "url": "https://anapioficeandfire.com/?ref=apilist.fun",
+    "url": "https://anapioficeandfire.com/",
     "category": "Anime, Manga & Fandom",
     "idea": "Build a Game of Thrones / A Song of Ice and Fire fan site with character pages and relationship information. Potential topics include Jon Snow Knows Nothing, Sansa and Arya, character relationships, houses, and character appearances.",
     "portfolioId": null
@@ -267,7 +267,7 @@
   {
     "id": 34,
     "name": "iTunes Search API",
-    "url": "https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/?ref=apilist.fun",
+    "url": "https://itunes.apple.com/search",
     "category": "Apple / Media Search",
     "idea": "Keep as a useful media-search API for a future project where Apple or iTunes catalogue information would be useful.",
     "portfolioId": null
