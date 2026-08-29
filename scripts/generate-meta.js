@@ -23,7 +23,7 @@ const EXCLUDED_PAGE_DIRS = new Set([
 function readMetaFromPageFile(filePath) {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const slug = path.basename(filePath, '.js');
-  const route = slug === 'index' ? '/' : `/${slug}`;
+  const route = slug === 'index' ? '/' : `/${slug}/`;
   const url = SITE_URL + route;
 
   const titleMatch = raw.match(/const\s+POST_TITLE\s*=\s*['"`](.*?)['"`]/);
@@ -80,7 +80,7 @@ function collectNotes() {
     const { data } = matter(raw);
 
     const slug = file.replace(/\.mdx$/, '');
-    const route = `/notes/${slug}`;
+    const route = `/notes/${slug}/`;
     const url = SITE_URL + route;
 
     return {
