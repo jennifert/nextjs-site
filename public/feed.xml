@@ -7,6 +7,13 @@
     <language>en-ca</language>
     
   <item>
+    <title>Setting Up Pokémon Emerald Development on macOS</title>
+    <link>https://jenntesolin.com/notes/pokemon-emerald-development</link>
+    <guid>https://jenntesolin.com/notes/pokemon-emerald-development</guid>
+    <description>This post describes how to set up the tools needed on macOS to build a Pokémon Emerald development project locally.</description>
+    <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Using iOS and Android devices together</title>
     <link>https://jenntesolin.com/notes/using-ios-and-android-together</link>
     <guid>https://jenntesolin.com/notes/using-ios-and-android-together</guid>
@@ -94,7 +101,7 @@
     <title>Change your iTunes media view mode</title>
     <link>https://jenntesolin.com/notes/itunes-view-change</link>
     <guid>https://jenntesolin.com/notes/itunes-view-change</guid>
-    <description>A quick tip on changing playlist view mode in a newer iTunes release.</description>
+    <description>Change your playlist view mode in a newer iTunes release.</description>
     <pubDate>Sun, 12 Jun 2016 00:00:00 GMT</pubDate>
   </item>
   <item>
@@ -231,14 +238,14 @@
     <pubDate>Mon, 26 Aug 2013 00:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>Quick tips: MySQL CASE</title>
+    <title>Quick Tip: MySQL CASE</title>
     <link>https://jenntesolin.com/notes/quick-tips-mysql-case</link>
     <guid>https://jenntesolin.com/notes/quick-tips-mysql-case</guid>
     <description>How to use MySQL’s CASE function to handle conditional output in a SQL statement.</description>
     <pubDate>Sun, 11 Aug 2013 00:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>Quick Tips: Firefox and Notepad++</title>
+    <title>Quick Tip: Firefox and Notepad++</title>
     <link>https://jenntesolin.com/notes/quick-tips-firefox-notepad</link>
     <guid>https://jenntesolin.com/notes/quick-tips-firefox-notepad</guid>
     <description>A couple of small tips I found useful while working on websites.</description>

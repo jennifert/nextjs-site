@@ -1,14 +1,8 @@
 # ✅ TODO List for jenntesolin.com Project
 
-## 🔝 Current Top Priorities
-- [ ] After the domain is live, add a manual broken-link check script for the production site using Node.js and Linkinator
-  - https://www.seancdavis.com/posts/using-nodejs-to-check-for-broken-links/
-
 ### 📝 Content Maintenance & Metadata
-- [ ] Standardize and choose one style: `Quick Tip:`, `Quick tips:`, or `Quick Tips:`
 - [ ] Display post dates on the notes index, sitemap, and note pages
 - [ ] Make sure metadata scripts include both pages and notes
-- [ ] Check the site for broken links
 - [ ] Revisit posts marked **Update in progress** and continue updating them
 - [ ] Populate the `href` values for all photo items in JSON data
 

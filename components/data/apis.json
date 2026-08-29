@@ -1,0 +1,283 @@
+[
+  {
+    "id": 1,
+    "name": "Deck of Cards API",
+    "url": "https://deckofcardsapi.com/",
+    "category": "Games",
+    "idea": "Build a free card-game app with games such as Blackjack, Solitaire, Hearts, and Crazy 8s.",
+    "portfolioId": null
+  },
+  {
+    "id": 2,
+    "name": "Deck of Cards — GitHub Alternative",
+    "url": "https://github.com/crobertsbmw/deckofcards",
+    "category": "Games",
+    "idea": "Look into using or self-hosting this instead of relying entirely on the hosted Deck of Cards API. Attribute the original GitHub project/API.",
+    "portfolioId": null
+  },
+  {
+    "id": 3,
+    "name": "Open Trivia Database",
+    "url": "https://opentdb.com/api_config.php",
+    "category": "Games",
+    "idea": "Build a Trivial Pursuit-style trivia game. A larger version could allow several people to join a local game using their phones.",
+    "portfolioId": null
+  },
+  {
+    "id": 4,
+    "name": "AniList GraphQL API",
+    "url": "https://graphql.anilist.co",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Build an anime watchlist and schedule. Store my watchlist locally, periodically retrieve updated show and episode information, and display the next episode on my Plex/status board. A larger project could provide anime search and information pages.",
+    "portfolioId": null
+  },
+  {
+    "id": 5,
+    "name": "MangaDex",
+    "url": "https://mangadex.org/",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Maintain a list of manga I'm following and check approximately every six hours for newly released English chapters.",
+    "portfolioId": null
+  },
+  {
+    "id": 6,
+    "name": "Marvel Developer API",
+    "url": "https://developer.marvel.com/",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Build a Marvel fan project, potentially focused on a particular character such as Ghost-Spider.",
+    "portfolioId": null
+  },
+  {
+    "id": 7,
+    "name": "A Song of Ice and Fire API",
+    "url": "https://anapioficeandfire.com/?ref=apilist.fun",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Build a Game of Thrones / A Song of Ice and Fire fan site with character pages and relationship information. Potential topics include Jon Snow Knows Nothing, Sansa and Arya, character relationships, houses, and character appearances.",
+    "portfolioId": null
+  },
+  {
+    "id": 8,
+    "name": "Game of Thrones Quotes",
+    "url": "https://gameofthronesquotes.xyz/",
+    "category": "Anime, Manga & Fandom",
+    "idea": "When someone opens a character page on the Game of Thrones fan site, retrieve and display a quote from that character.",
+    "portfolioId": null
+  },
+  {
+    "id": 9,
+    "name": "AO3 API",
+    "url": "https://ao3-api.readthedocs.io",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Add fanfiction discovery to the Game of Thrones project. Character or relationship pages could link to relevant Archive of Our Own searches or fanfiction.",
+    "portfolioId": null
+  },
+  {
+    "id": 10,
+    "name": "Musixmatch",
+    "url": "https://docs.musixmatch.com/overview",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Investigate using music metadata for a Nightwish fan page.",
+    "portfolioId": null
+  },
+  {
+    "id": 11,
+    "name": "TMDB",
+    "url": "https://developer.themoviedb.org/docs/getting-started",
+    "category": "Anime, Manga & Fandom",
+    "idea": "Bookmark for a future movie/TV project or watchlist-related project.",
+    "portfolioId": null
+  },
+  {
+    "id": 12,
+    "name": "The Cat API",
+    "url": "https://thecatapi.com/",
+    "category": "Cats & Animals",
+    "idea": "Build a hobby site devoted to Bengal house cats, using the API for cat information and imagery. The site could include breed information, photos, facts, and other Bengal-related resources.",
+    "portfolioId": null
+  },
+  {
+    "id": 13,
+    "name": "Unsplash Developers",
+    "url": "https://unsplash.com/developers",
+    "category": "Cats & Animals",
+    "idea": "Supplement the Bengal cat site with photographs from Unsplash. Display photo cards containing the photo, photographer, title or description, a short blurb, and a link to the full information while properly attributing the photographer and Unsplash.",
+    "portfolioId": null
+  },
+  {
+    "id": 14,
+    "name": "RescueGroups",
+    "url": "https://apilist.fun/api/rescuegroups",
+    "category": "Cats & Animals",
+    "idea": "Add an adoption/rescue section or link from the Bengal cat project to rescue information.",
+    "portfolioId": null
+  },
+  {
+    "id": 15,
+    "name": "HTTP Cats",
+    "url": "https://http.cat/",
+    "category": "Cats & Animals",
+    "idea": "Use cat HTTP status images for error pages on the Bengal cat site. For example, a 404 page could use the HTTP Cat 404 image.",
+    "portfolioId": null
+  },
+  {
+    "id": 16,
+    "name": "NASA APIs",
+    "url": "https://api.nasa.gov/index.html",
+    "category": "Space",
+    "idea": "Build a hobby site about Mars. Possible features could include Mars rover imagery, astronomy data, NASA imagery, and other Mars-related information exposed through NASA's APIs.",
+    "portfolioId": null
+  },
+  {
+    "id": 17,
+    "name": "DEV Community API",
+    "url": "https://docs.dev.to/api",
+    "category": "News & Feeds",
+    "idea": "Retrieve developer and technology headlines for a small news widget on my status board.",
+    "portfolioId": null
+  },
+  {
+    "id": 18,
+    "name": "Ars Technica RSS",
+    "url": "https://feeds.arstechnica.com/arstechnica/index",
+    "category": "News & Feeds",
+    "idea": "Use as one source for a small technology-news aggregator/status-board widget.",
+    "portfolioId": null
+  },
+  {
+    "id": 19,
+    "name": "How-To Geek RSS",
+    "url": "https://www.howtogeek.com/feed/",
+    "category": "News & Feeds",
+    "idea": "Use as another source for the technology-news widget.",
+    "portfolioId": null
+  },
+  {
+    "id": 20,
+    "name": "Reddit Canada RSS",
+    "url": "http://reddit.com/r/canada.rss",
+    "category": "News & Feeds",
+    "idea": "Include Canadian Reddit posts in the news/status widget while filtering duplicates from other sources.",
+    "portfolioId": null
+  },
+  {
+    "id": 21,
+    "name": "XKCD JSON API",
+    "url": "https://xkcd.com/json.html?ref=apilist.fun",
+    "category": "News & Feeds",
+    "idea": "Add an XKCD widget to the status board that either shows the latest comic or randomly retrieves an older comic.",
+    "portfolioId": null
+  },
+  {
+    "id": 22,
+    "name": "Steam Web API",
+    "url": "https://steamcommunity.com/dev",
+    "category": "Steam",
+    "idea": "Create a small service that stores my Steam wishlist information locally and checks approximately once per day for sales. The status board could show wishlist games currently on sale, discount percentages, current prices, and upcoming or relevant Steam sales.",
+    "portfolioId": null
+  },
+  {
+    "id": 23,
+    "name": "Homebrew Formulae",
+    "url": "https://formulae.brew.sh/",
+    "apiUrl": "https://formulae.brew.sh/docs/api/",
+    "category": "Homebrew / Developer Tools",
+    "idea": "Build a website that reads a Brewfile and lets someone check whether a package they want is already included. This may be somewhat redundant with command-line tools, but it could still make a useful small web-development project.",
+    "portfolioId": null
+  },
+  {
+    "id": 24,
+    "name": "GitHub Contributions",
+    "url": "https://github-contributions.vercel.app/",
+    "category": "Homebrew / Developer Tools",
+    "idea": "Add a contribution/activity visualization to project pages on my personal website.",
+    "portfolioId": null
+  },
+  {
+    "id": 25,
+    "name": "GitHub README Stats",
+    "url": "https://github.com/anuraghazra/github-readme-stats",
+    "category": "Homebrew / Developer Tools",
+    "idea": "Display useful GitHub statistics on personal project pages.",
+    "portfolioId": null
+  },
+  {
+    "id": 26,
+    "name": "DigitalOcean Status API",
+    "url": "https://status.digitalocean.com/api",
+    "category": "Website / Infrastructure",
+    "idea": "Investigate using DigitalOcean status information in a status-board widget for sites hosted on DigitalOcean. This would represent DigitalOcean/platform status rather than replacing actual uptime monitoring of an individual static site.",
+    "portfolioId": null
+  },
+  {
+    "id": 27,
+    "name": "Internet Archive API",
+    "url": "https://archive.readme.io/reference/getting-started?ref=apilist.fun",
+    "category": "Website / Infrastructure",
+    "idea": "Connect website deployments to Internet Archive preservation. After a GitHub commit or deployment, a workflow could determine which pages changed and request updated snapshots from the Internet Archive to keep archived versions of my sites reasonably current.",
+    "portfolioId": null
+  },
+  {
+    "id": 28,
+    "name": "Flickr API",
+    "url": "https://www.flickr.com/services/api/?ref=apilist.fun",
+    "category": "Photography",
+    "idea": "Use the Flickr API on my personal photography page to retrieve and display only my own photographs rather than using other photographers' work.",
+    "portfolioId": null
+  },
+  {
+    "id": 29,
+    "name": "Sunrise and Sunset API",
+    "url": "https://apilist.fun/api/sunrise-and-sunset",
+    "category": "Status Board Widgets",
+    "idea": "Create a tiny, text-only status-board widget showing today's sunrise and sunset times.",
+    "portfolioId": null
+  },
+  {
+    "id": 30,
+    "name": "Canadian Holidays",
+    "url": "https://canada-holidays.ca/add-holidays-to-calendar",
+    "category": "Status Board Widgets",
+    "idea": "Add a small calendar widget showing a countdown to the next Canadian holiday. Rather than repeatedly querying the source, import or store the holiday information locally approximately once per year, perhaps around December 25 for the upcoming year.",
+    "portfolioId": null
+  },
+  {
+    "id": 31,
+    "name": "Leaflet",
+    "url": "https://leafletjs.com/?ref=apilist.fun",
+    "category": "Maps",
+    "idea": "Add maps to projects that have location-based information. One possibility is using it on the Bengal cat/rescue project to show rescue organizations or other relevant locations.",
+    "portfolioId": null
+  },
+  {
+    "id": 32,
+    "name": "Fun Translations",
+    "url": "https://funtranslations.com/api?ref=apilist.fun",
+    "category": "Translation / Language",
+    "idea": "Potential fun extra for the flashcard builder. For a genuinely useful language feature, investigate a proper English/Japanese dictionary or translation API and provide quick word lookups from a flashcard.",
+    "portfolioId": null
+  },
+  {
+    "id": 33,
+    "name": "Best Buy API",
+    "url": "https://apilist.fun/api/best-buy",
+    "category": "Products",
+    "idea": "Build a small experimental or fan project around product information. Exact project idea still to be decided.",
+    "portfolioId": null
+  },
+  {
+    "id": 34,
+    "name": "iTunes Search API",
+    "url": "https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/?ref=apilist.fun",
+    "category": "Apple / Media Search",
+    "idea": "Keep as a useful media-search API for a future project where Apple or iTunes catalogue information would be useful.",
+    "portfolioId": null
+  },
+  {
+    "id": 35,
+    "name": "Government of Canada Open Data",
+    "url": "https://open.canada.ca/en?ref=apilist.fun",
+    "category": "Canadian Open Data",
+    "idea": "Investigated as a possible source of interesting Canadian public datasets and APIs. Nothing immediately jumped out as a fun project, but it is worth keeping bookmarked in case a useful dataset appears later.",
+    "portfolioId": null
+  }
+]

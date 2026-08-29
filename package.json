@@ -7,11 +7,12 @@
         "dev": "next dev",
         "build": "next build",
         "generate-meta": "node scripts/generate-meta.js",
+        "check-links": "node scripts/check-links.mjs",
         "start": "next start",
         "lint": "npx eslint ."
     },
     "engines": {
-        "node": "25.x"
+        "node": "26.x"
     },
     "keywords": [
         "nextjs",
@@ -43,7 +44,9 @@
         "react-dom": "^19.2.6"
     },
     "devDependencies": {
+        "chalk": "^6.0.0",
         "eslint": "^9.39.4",
-        "eslint-config-next": "^16.2.6"
+        "eslint-config-next": "^16.2.6",
+        "linkinator": "^8.0.4"
     }
 }
