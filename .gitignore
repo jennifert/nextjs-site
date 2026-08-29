@@ -1,43 +1,46 @@
-# Node
+# Dependencies
 node_modules/
-npm-debug.log*
 
-# Build outputs
-.next/ 
+# Next.js / build outputs
+.next/
 out/
 dist/
 build/
+
+# Testing / coverage
 coverage/
 
-# Tailwind/PostCSS/TypeScript cache
+# Caches
 .cache/
 .eslintcache
 *.tsbuildinfo
 
-# VS Code & local config
-.vscode/
-*.code-workspace
-
-# Environment variables
+# Environment variables / secrets
 .env*
 !.env.example
 
-# Logs and temp files
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime / temporary files
 *.pid
 *.pid.lock
 *.seed
 *.tgz
 
-# System files
+# Editors
+.vscode/
+*.code-workspace
+.idea/
+.history/
+
+# Operating system files
 .DS_Store
 Thumbs.db
 
-# Testing - for future
-/coverage
-
-# Optional - GitHub Copilot/other AI tools
-.history/
-
-# Optional - remove old lock/config fragments
+# Miscellaneous
 .lock-wscript
