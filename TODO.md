@@ -4,7 +4,6 @@
 - [ ] Display post dates on the notes index, sitemap, and note pages
 - [ ] Make sure metadata scripts include both pages and notes
 - [ ] Revisit posts marked **Update in progress** and continue updating them
-- [ ] Populate the `href` values for all photo items in JSON data
 
 ### 🗂️ Routing & Structure
 - [ ] Decide whether search should include only notes or all pages

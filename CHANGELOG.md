@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.4 - 2026-08-28
+
+- Update packages
+- Adding link checker.
+
 ## 5.0.3 - 2026-06-22
 
 ### Updates
