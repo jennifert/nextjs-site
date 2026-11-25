@@ -82,9 +82,9 @@ main#main-content section + section {
   margin-top: 3rem;
 }
 
-main#main-content p {
-  max-width: 75ch;
-}
+/*main#main-content p {*/
+/*  max-width: 75ch;*/
+/*}*/
 
 /* Cards / grids */
 .card-grid {
@@ -213,4 +213,59 @@ footer .footer-links li:not(:last-child)::after {
   aspect-ratio: 16 / 9;
   border: 0;
   display: block;
+}
+
+/*projct api list*/
+.status-planning {
+    background-color: #eee8fa;
+    color: #604495;
+}
+
+.status-development {
+    background-color: #fff2d6;
+    color: #805500;
+}
+
+.status-completed {
+    background-color: #e3f4e8;
+    color: #28633d;
+}
+
+.status-on-hold {
+    background-color: #f3e8e8;
+    color: #854444;
+}
+
+/* API category accordions */
+.api-category summary {
+    font-weight: 600;
+}
+
+.api-category .api-list {
+    margin-top: 1rem;
+}
+
+.api-category summary:hover {
+    color: var(--pico-primary);
+}
+
+/* Additional project statuses */
+
+.status-released {
+    background-color: #e3f4e8;
+    color: #28633d;
+}
+
+.status-maintained {
+    background-color: #e8f1fa;
+    color: #245780;
+}
+
+.status-archived {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.project-status {
+    margin-bottom: 0.75rem;
 }

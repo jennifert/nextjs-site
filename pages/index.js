@@ -61,7 +61,8 @@ function HomePage({ latestNotes }) {
 
         <section id="projects" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Projects</h2>
-          <p>Recent builds, experiments, and rebuilds.</p>
+          <p>Recent builds, experiments, rebuilds, and the occasional case of scope creep. Sometimes all it takes is 
+              discovering an interesting API for a new project to be born.</p>
 
           <p><Link href="/projects">See all projects</Link></p>
 
