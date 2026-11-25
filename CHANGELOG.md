@@ -1,5 +1,44 @@
 # Changelog
 
+## 2026-11-25 — Projects Page Refresh
+
+### Added
+
+- Personal introduction reflecting the site's hobby development and creative side quests.
+- Shared project and API status labels.
+- Reusable `ProjectStatus` component.
+- Current and archived project sections.
+- Automatically calculated project and API discovery counts.
+- Collapsible API categories with individual category counts.
+- Added automatic exclusion of local development URLs from link checking.
+- Added categorized link-checking results and a summary report.
+- Added a check for missing static build output.
+
+### Changed
+
+- Updated project cards on the homepage and Projects page.
+- Improved API discovery descriptions and status tracking.
+- Updated portfolio technology information and terminology.
+- Improved Projects page organization using native HTML accordions and classless Pico CSS.
+- Improved distinction between broken external links and links requiring manual verification.
+- Reduced link-checking concurrency to help minimize external rate limiting.
+- Improved internal link detection for local static builds.
+
+### Fixed
+
+- Corrected outdated Archer CMS database information.
+- Updated Pokémon Team Builder technology information.
+- Resolved duplicate portfolio entries and project IDs.
+- Fixed additional broken links identified during static site link checking.
+- Updated outdated external resource links.
+
+### Documentation
+
+- Updated README with project data structure and reusable component information.
+- Updated TODO with completed improvements and future development ideas.
+
+No additional dependencies were introduced.
+
 ## 5.0.4 - 2026-08-28
 
 - Update packages

@@ -141,7 +141,29 @@ npm run check-links
 
 The checker reports broken internal links separately from external links that could not be verified.
 
+### Link Checking Behaviour
+
+The link checker categorizes results as:
+
+- Passed links
+- Broken internal links
+- Potentially broken external links
+- External links requiring manual verification
+- Skipped links
+
+Local development URLs used in technical tutorials, such as `localhost` and `127.0.0.1`, are excluded from automated checking.
+
+External access restrictions, rate limits, and temporary server errors are reported separately for manual verification.
+
+The command only fails when broken internal links are detected or the link-checking process itself fails.
+
+A production build must exist before running the link checker.
+
+Port `8765` is reserved for the temporary local link-checking server.
+
 ## Content Structure
+
+- [Projects and API Discoveries](#projects-and-api-discoveries)
 
 This project currently uses a mix of standard Next.js pages and MDX content.
 
@@ -198,6 +220,59 @@ Notes can also use a small set of custom components when needed:
 - `SafeIframe` — wraps iframe embeds in a reusable container for safer styling and future tweaks
 
 These components are mapped in `pages/notes/[slug].js`.
+
+## Projects and API Discoveries
+
+The Projects page showcases current development projects, archived work, hobby projects, and potential ideas inspired by interesting APIs, datasets, and developer tools.
+
+### Project Data
+
+Project information is maintained in:
+
+- `components/data/portfolio.json` — Portfolio projects, technologies, tags, dates, links, statuses, and featured project selections.
+- `components/data/apis.json` — API discoveries, categories, potential project ideas, statuses, and optional portfolio relationships.
+
+Project IDs should remain unique and stable. API entries can be associated with portfolio projects using the `portfolioId` property.
+
+### Reusable Components
+
+- `ProjectCard` — Shared project cards used on the homepage and Projects page.
+- `ApiItem` — Displays API information, project ideas, statuses, and available demo links.
+- `ProjectStatus` — Shared status labels and styling for portfolio projects and API discoveries.
+
+### Project Statuses
+
+| Status | Description |
+|---|---|
+| `bookmarked` | An interesting resource saved for future exploration |
+| `idea` | A potential project or experiment |
+| `planning` | Research, documentation, or project design underway |
+| `development` | Currently under development |
+| `released` | A publicly available application |
+| `completed` | A completed project or implementation |
+| `maintained` | An actively maintained project |
+| `on-hold` | A temporarily paused project |
+| `archived` | An earlier project preserved for reference |
+
+### Project Organization
+
+The Projects page automatically:
+
+- Sorts projects by their last updated date or original project date.
+- Separates current projects from archived projects.
+- Calculates project and API discovery counts.
+- Groups API discoveries by category.
+- Displays category counts in collapsible sections.
+
+API categories use native HTML `details` and `summary` elements, styled by classless Pico CSS. No additional JavaScript or accordion library is required.
+
+The homepage displays up to three featured projects using the shared portfolio data and project card component.
+
+### Development Philosophy
+
+Personal projects are a playground for learning, experimenting with technologies, exploring interesting APIs, and revisiting earlier ideas.
+
+Powered by curiosity, documented extensively, and occasionally a victim of scope creep.
 
 ## Search, Sitemap, and Metadata
 
